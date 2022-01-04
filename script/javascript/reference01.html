@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Javascript</title>
+    <title>Reference</title>
 
     <style>
         @font-face {
@@ -110,72 +110,29 @@
 </head>
 
 <body>
+    <h1>변수란?</h1>
+    <p>변수는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이트럴 담을 수 있는 그릇이라고 할 수 있죠.
+        변수에는 데이터가 오직 한 개만 저장됩니다. 그러다 보니 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.
+        변수에 저장할 수 있는 데이터의 종류로는 문자형(String), 숫자형(Number), 논리형(Boolean) 그리고 빈(Null) 데이터가 있습니다.</p>
 
-    <h1><a href="../index.html">Javascript</a></h1>
-    <ul class="list1">
-        <li><a href="javascript01.html">데이터 저장하기</a></li>
-        <li><a href="javascript02.html">데이터 불러오기</a></li>
-        <li><a href="javascript03.html">데이터 실행하기</a></li>
-        <li><a href="javascript04.html">데이터 제어하기</a></li>
-    </ul>
+    <h2>변수 선언</h2>
+    <p>var 변수명; 또는 변수명=값</p>
 
-    <h2>데이터 저장하기</h2>
-    <ul>
-        <li>01. 변수 : 데이터 저장<a href="reference01.html" class="refer">참고</a></li>
-        <li>02. 변수 : 데이터 저장 + 데이터 변경</li>
-        <li>03. 변수 : 데이터 저장 + 데이터 변경+ 데이터 추가</li>
-    </ul>
+    <h2>변수를 저장할 수 있는 자료형</h2>
+    <h3>문자형</h3>
+    <p></p>
 
-    <hr>
+    <h3>숫자형</h3>
+    <p></p>
 
-    <!-- Javascript -->
-    <script>
-        //sample01
-        //01. 변수 : 데이터 저장소
-        {
-            var name = "천우진";
-            var x = 100; //변수 x에 숫자 100을 저장
-            var y = 200; //변수 y에 숫자 200을 저장
-            var z = "javascript"; //변수 z에 문자 javascript를 저장
+    <h3>논리형</h3>
+    <p></p>
 
-            document.write("<br>***01. 변수***<br>")
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
+    <h3>null & undefined 데이터</h3>
+    <p></p>
 
-        //02. 변수 : 데이터 저장 + 데이터 변경
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
-
-            x = 300;
-            y = 400;
-            z = "jquery";
-
-            document.write("<br>***02. 변수***<br>")
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
-
-        //03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
-
-            x += 300;
-            y += 400;
-            z += "jquery";
-
-            document.write("<br>***03. 변수***<br>")
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
-    </script>
+    <h3>typeof</h3>
+    <p></p>
 </body>
 
 </html>
