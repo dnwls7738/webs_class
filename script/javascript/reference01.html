@@ -107,114 +107,192 @@
             border-radius: 40px;
         }
     </style>
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <script src="../assets/js/prism.js"></script>
 </head>
 
 <body>
-    <h1>변수란?</h1>
-    <p>변수는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이트럴 담을 수 있는 그릇이라고 할 수 있죠.
-        변수에는 데이터가 오직 한 개만 저장됩니다. 그러다 보니 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.
-        변수에 저장할 수 있는 데이터의 종류로는 문자형(String), 숫자형(Number), 논리형(Boolean) 그리고 빈(Null) 데이터가 있습니다.</p>
+    <h1>자바스크립트 기초문법</h1>
 
-    <h2>변수 선언</h2>
-    <p>변수를 선언할 때는 다음 기본형과 같이 var 키워드를 변수명 앞에 붙입니다. 변수명에는 한글을 사용할 수 없으며, 영문과 숫자 그리고 일부 특수문자(_,$)만 포함 할 수 있습니다.
-        변수명은 의미에 맞게 만드는 것이 좋습니다. 가령, 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름지으면 되겠죠.
-        이때 변수명은 단어와 단어의 조합으로 지었고, 두 번째 단어의 첫 글자는 대문자로 표기했습니다. 이미 마치 낙타의 등과 같다고 해서 낙타(camel)표기법이라 부릅니다.
-        <br><br>
-        var 변수명; 또는 var 변수명=값;
-        <br><br>
-        변수를 선언하면 변수명으로 데이터를 저장할 수 있는 공간이 생성됩니다. 다음은 box라는 이름을 가진 변수에 100이라는 값을 대입한 예제입니다.
-        초기에는 값이 등록되지 않은 상태(undefined)입니다. box에 100을 대입하면 다음 그림과 같이 변수에 100이 저장됩니다.
-        <br><br>
-        var box;<br>
-        box=100;
-        <br><br>
-        변수에는 하나의 값만 넣을 수 있습니다. 만약 변수에 box에 값을 두 번 넣으면 어떻게 달라지게 될까요?
-        다음과 같이 변수 box에 새로운 데이터 30이 저장되면 기존에 저장되어 있던 데이터 100은 삭제되고 새로운 데이터 30이 저장됩니다.
-        <br><br>
-        05: &script& <br>
-        06: var box;<br>
-        07: box = 100;<br>
-        08: box = 30;<br>
-        09: document.write(box);&nbsp;&nbsp; //30 <br>
-        10: &script& <br>
-    </p>
-    <br><br>
-    <h2>변수를 저장할 수 있는 자료형</h2>
-    <p>변수에 저장할 수 있는 자료형(Data type)으로는 문자형(String), 숫자형(Number), 논리형(Boolean) 그리고 빈 데이터(Undefined)가 있습니다.
-        앞으로는 OO형 또는 OO형 데이터라고 부르겠습니다.
-    </p>
-    <br><br>
-    <h3>문자형</h3>
-    <p>문자형(String) 데이터는 다음과 같이 문자는 숫자를 큰따옴표("")또는 작은따옴표('')로 감싸고 있습니다.
-        또한 문자형 데이터에 HTML 태그를 포함하여 출력하면 태그로 인식합니다.
-        <br><br>
-        var 변수="사용할 문자나 숫자";<br>
-        var s ="javascript";<br>
-        var num ="100";<br>
-        var tag = "string"<br>
-    </p>
-    <br><br>
-    <h3>숫자형</h3>
-    <p>숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다. 만약 "100"과 같이 큰따옴표가 숫자를 감싸고 있다면 숫자가 아닌 문자형 데이터입니다.
-        이 경우에는 Number("100")를 이용하면 문자형 데이터를 숫자형으로 바꿀 수 있습니다.
-        <br><br>
-        var 변수=숫자; 또는 Number("문자형 숫자");<br>
-        var s = 100;<br>
-        var t = Number("500")&nbsp;&nbsp; //"500" -> 500
-    </p>
-    <br><br>
-    <h3>논리형</h3>
-    <p>논리형(Boolean) 데이터는 true(참) 또는 false(거짓)가 있습니다. 이 데이터는 주로 2개의 데이터를 비교할 때 나오는 결과입니다.
-        예를 들어 '100보다 10이 크다'는 잘못된 비교이므로 false라는 결과를 반환하게 됩니다. 논리형 데이터의 기본형은 다음과 같습니다.
-        <br><br>
-        var 변수=true of false; 또는 Boolean(데이터);<br>
-        var s = true; &nbsp;&nbsp;//true <br>
-        var t = 10>=100; &nbsp;&nbsp;//false<br>
-        var k = Boolean("hello"); &nbsp;&nbsp;//true<br><br>
-        Boolean()매서드에 데이터를 입력하면 논리형 데이터인 true 또는 false를 반환합니다. Boolean()매서드는 숫자0과 Null, Undefined, 빈 문자("")를 제외한 모든 데이터에
-        대해 true를 반환합니다.
-        다음과 같이 Boolean() 매서드에 숫자 0을 입력하면 false라는 값을 반환합니다. 그리고 Boolean() 매서드에 "홍길동"을 입력하면 true를 반환합니다.
-        <br><br>
-        var m = Boolean(0); &nbsp;&nbsp;//false <br>
-        var k = Boolean("홍길동"); &nbsp;&nbsp;//true
-        <br><br>
-        다음은 논리형 값, 비교연산자, Boolean 메서드를 사용해 변수에 논리형 데이터를 저장한 후 문서에 출력하는 예제와 결과 화면입니다.
-        <br><br>
-        06: &nbsp;&script& <br>
-        07: &nbsp;&nbsp; var a = true;<br>
-        08: &nbsp;&nbsp; var b = false;<br>
-        09: &nbsp;&nbsp; var c = 10>5; &nbsp;&nbsp;//true <br>
-        10: &nbsp;&nbsp; var d = Boolean(null); &nbsp;&nbsp;//false <br>
-        11: <br>
-        12: &nbsp;&nbsp; document.write(a,"&br&");<br>
-        13: &nbsp;&nbsp; document.write(b, "&br&");<br>
-        14: &nbsp;&nbsp; document.write(c,"&br&");<br>
-        15: &nbsp;&nbsp; document.write(d, "&br&");<br>
-        16: &nbsp;&script&
-    </p>
-    <br><br>
-    <h3>null & undefined 데이터</h3>
-    <p>undefined는 다음과 같이 변수 S에 값이 등록되기 전의 기본값이고, null은 변수에 저장된 값이 null인 경우를 가리킵니다. null은 변수에 저장된 데이터를 비우고자 할때 사용하는 값입니다.
-        <br><br>
-        var s; &nbsp;&nbsp;//undefined <br>
-        var t = hello; <br>
-        t = null;
-    </p>
-    <br><br>
-    <h3>typeof</h3>
-    <p>typof는 지정한 데이터 또는 변수에 저장된 잘형을 알고 싶을 때 사용합니다. 기본형은 다음과 같습니다.</p>
-    <br><br>
-    typof 변수 또는 데이터;<br><br>
-    다음은 typof를 이용하여 변수에 저장된 자료형을 알아내는 예제입니다.<br><br>
-    06: &script& <br>
-    07: var num = 100; <br>
-    08: var str = "자바스크립트"<br>
-    09:
-    10: document.write(typof num,"&br&");&nbsp;&nbsp;//Number <br>
-    11: document.write(typof str);&nbsp;&nbsp;//string <br>
-    12: &script&
+    <hr>
 
+    <h2>자바스크립트 선언문</h2>
+    <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다.
+        &lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트
+        영역이라고 부릅니다.
+    </p>
+    <div class="sample">
+        <div class="code">
+            <pre class="inline-numbers"><code class="language-js">&lt;script&gt;
+    자바스크립트코드;
+&lt;/script&gt;
+</code></pre>
+        </div>
+    </div>
+    <p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있습니다. 우리도
+        &lt;head&gt; 태그 영역에 선언 하겠습니다. <br><br>
+        다음은 선언문을 작성하는 예제입니다. 비주얼 스튜디오 코드를 실행한 후 [파일 - 열기 - statement_test.html]을 선택해 실습 파일을 엽니다. 그런 다음 예제를 보면서 문서를 작성해
+        보세요</p>
 
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">
+01: &lt;!DOCTYPE html&gt;
+02: &lt;html lang="ko"&gt;
+03: &lt;head&gt;
+04:    &lt;meta charset="UTF-8"&gt;
+05:    &lt;title&gt;Document&lt;/title&gt;
+06:    &lt;script&gt;
+07:        자바스크립트코드;
+08:    &lt;/script&gt;
+09: &lt;/head&gt;
+10: &lt;body&gt;
+11: &lt;/body&gt;
+12: &lt;/html&gt;
+     </code></pre>
+        </div>
+    </div>
+    <p>7행 document는 문서 객체이며 문서 출력 메서드인 write()를 이용하여 데이터를 문서에 출력할때 사용합니다.
+        작성한 문서를 저장한후 ctrl + Alt + O를 눌러 실행하면 오른쪽과 같은 결과 화면이 나타납니다.</p>
+
+    <hr>
+
+    <h2>자바스크립트 주석 처리</h2>
+    <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다.
+        이때 한 줄 주석일 경우에는"//한 줄 글 설명글" 작성하고, 여러줄 주석일 경우에는 /*여러 줄 설명글*/로 작성하면 됩니다.</p>
+
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">//한 줄 설명글인 경우
+/*
+설명글이 여러 줄인 경우
+이렇게 처리합니다. 
+*/
+&lt;!--HTML 소스의 설명글은 이렇게 처리합니다.--&gt;
+</code></pre>
+        </div>
+    </div>
+    코드를 작성할 때 이렇게 설명글을 달아 놓으면 시간이 흘러도 잊어버리지 않겠죠?
+
+    <hr>
+
+    <h2>내부 스크립트 외부로 분리하기</h2>
+    <p>
+        앞의 예제 [statement_c.html]에서 HTML 내부에 작성된 자바스크립트는 마지막에는 외부로 분리하는 작업을 해야 합니다.
+        그렇게 하면 자바스크립트 소스 찾기도 쉬울 뿐만 아니라 누군가가 소스를 손상시킬 염려도 없습니다.
+        즉 외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다.
+        다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.
+    </p>
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">&lt;script src="JS 파일 경로"&gt;&lt;/script&gt;
+</code></pre>
+        </div>
+    </div>
+    <p>
+        내부스크립트를 외부로 분리하려면 따로 파일을 만들어서 저장해야합니다. 
+        즉, HTML 파일과 JS(자바스크립트)파일을 분리하여 HTML 내에서 JS(자바스크립트)파일을 연동하면 됩니다.
+    </p>
+
+    <br><br>
+
+    <h3>내부 스크립트 분리하기</h3>
+    <p>
+        1. JS파일을 만들어 보겠습니다. 먼저 비줠 스튜디오 코드에서 [파일 - 새 파일 - 보통문서]를 선택하거나 단축기 ctrl + N을 눌러 빈문서를 엽니다.
+        그런다음 다음과 같이 코드를 작성하고 문서를 저장합니다.
+    </p>
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">01: document.write("환영합니다.");
+</code></pre>
+        </div>
+    </div>
+    <p>
+        2. [inport_test.html]파일을 열어 앞에서 작성한 [example.js]를 연동해 보겠습니다.  다음과 같이 코드를 작성합니다.
+        만약 연동이 잘 되지 않으면 src 값에 파일의 전체 경로를 넣어보세요
+    </p>
+
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">
+01: &lt;!DOCTYPE html&gt;
+02: &lt;html lang="ko"&gt;
+03: &lt;head&gt;
+04:    &lt;meta charset="UTF-8"&gt;
+05:    &lt;title&gt;외부 자바스크립트 연동&lt;/title&gt;
+06:    &lt;script src="JS 파일 경로"&gt;&lt;/script&gt;
+07: &lt;/head&gt;
+08: &lt;body&gt;
+09: &lt;/body&gt;
+10: &lt;/html&gt;
+     </code></pre>
+        </div>
+    </div>
+    <p>
+        내부 스크립트가 분리되었습니다. 이렇게 분리하면 소스를 분석할 때 찾기 쉬울뿐 아니라 다른 개발자가 잘못하여 소스를 손상시킬 일도 없겠죠.
+    </p>
+
+    <hr>
+
+    <h2>코드 입력 시 주의 사항</h2>
+    <p>다음은 자바스크립트를 작성할 떄 주의해야 할 몇가지 사항입니다.
+     지금은 읽어도 이해가 안될수 있습니다. 일단 가볍게 읽고 넘어가세요</p>
+     
+     <br><br>
+
+     <p>1. 자바스크립트는 대.소문자를 구분하여 작성합니다.</p>
+
+     <div class="sample">
+        <div clas="code">
+<pre class="inline-numbers"><code class="language-js">날짜 객체 생성: New date(); (X)
+날짜 객체 생성: new date(); (O)
+</code></pre>
+        </div>
+    </div>
+
+    <br><br>
+
+    <p>2. 코드 한 줄을 작성한 후에는 세미콜론(;)을 쓰는 것이 좋습니다.
+        세미콜론을 쓰지 않으면 다음 예제처럼 한줄에 2개의 코드를 작성할 경우 오류가 발생합니다.
+    </p>
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">document.write("hi") document.write("bye") (X)
+document.write("hi"); documnet.wirte("bye"); (O)
+</code></pre>
+        </div>
+    </div>
+
+    <br><br>
+
+    <p>3. 하지만 코드를 작성할 때는 한 줄에 한 문장만 작성하는 것이 가독성을 위해 좋습니다.</p>
+
+    <br><br>
+
+    <p>4. 문자형 데이터를 작성할 때는 큰따옴표("")와 작은따옴표('')의 겹칩 오류를 주위해야 합니다.</p>
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">큰따옴표 겹침 오류
+documnet.write("책에"자바스크립트는 대소문자를 구분해야합니다."라고 나와 있다.");
+
+잘된 예
+documnet.write('책에"자바스크립트는 대소문자를 구분해야 합니다."라고 나와 있다.');
+document.write("책에\"자바스크립트는 대소문자를 구분해야 합니다.\"라고 나와있다");
+</code></pre>
+        </div>
+    </div>
+
+    <br><br>
+
+    <p>5. 코드를 작성 할 때 중괄호{} 또는 소괄호()의 짝이 맞아야 합니다.</p>
+
+    <div class="sample">
+        <div clas="code">
+            <pre class="inline-numbers"><code class="language-js">document.write("welcome!"; (X)
+document.write("welcome!"); (O)
+</code></pre>
+        </div>
+    </div>
 </body>
 
 </html>
