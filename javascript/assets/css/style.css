@@ -263,3 +263,9 @@ a {
     padding: 2px 5px 0px 5px;
     display: inline-block;
 }
+
+@media (max-width: 800px){
+    .doc{
+        font-size: 18px;
+    }
+}
