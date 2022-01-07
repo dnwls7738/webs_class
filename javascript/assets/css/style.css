@@ -263,9 +263,15 @@ a {
     padding: 2px 5px 0px 5px;
     display: inline-block;
 }
-
-@media (max-width: 800px){
-    .doc{
-        font-size: 18px;
+@media (max-width: 800px) {
+    #main {
+        padding: 20px;
     }
-}
+
+    .doc {
+        font-size: 14px;
+    }
+
+    .doc h2{
+        font-size: 14px;
+    }
