@@ -1,91 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reference04</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/prism.css">
-    <script src="../assets/js/prism.js"></script>
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
 
 </head>
 
 <body>
-    <h1>식별자/키워드</h1>
 
-    <hr>
+    <div class="top"><a href="#header">Top</a></div>
 
-    <h2>식별자란?</h2>
-    <div>
-        <p>
-            프로그래머가 변수, 함수 또는 클래스를 정의하기 위해 만든 이름을 식별자라고합니다. 식별자는 이러한 엔티티를 고유하게 식별하는 데 사용됩니다. 코드를 쉽게 읽을 수 있도록 식별자에 의미있는
-            이름을 지정하는 것이 중요합니다. 또한 다른 프로그래머가 프로그램의 내용을 식별하는 데 도움이됩니다.<br><br>
-            식별자를 만들 때 특정 규칙이 있습니다. 식별자는 알파벳 문자, 숫자 및 밑줄 만 사용할 수 있습니다. 숫자로 식별자를 시작하지 않는 것이 좋습니다. int number = 4와 같은 문장이있을
-            때; 숫자는 식별자입니다. 프로그래머는 '숫자'라는 이름을 사용하여 해당 변수의 값을 인쇄 할 수 있습니다. 대부분의 프로그래밍 언어는 대소 문자 구분을 지원합니다. 따라서 변수
-            명‘area’는‘AREA’와 다릅니다.<br><br>
-            두 숫자의 합을 계산하는 함수의 경우 이름은 calculate_sum ()이 될 수 있습니다. 다른 유효한 식별자는 employee_salary, student_id 및 number입니다.
-            클래스를 만들 때 프로그래머는 속성과 메서드를 설명하는 의미 식별자를 사용할 수 있습니다. 예 : class Student, class Employee, class Rectangle 등.
-            마찬가지로 프로그래머는 프로그램에 따라 식별자를 만들 수 있습니다.<br><br>
-        </p>
+    <header id="header">
+        <h1><a href="index.html"></a>Javascript</h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
 
-        <hr>
+            </ul>
+        </nav>
+    </header>
 
-        <h2>키워드란?</h2>
-        <p>
-            키워드는 특정 작업을 위해 프로그래밍 언어로 제공됩니다. 특별한 의미가 있습니다. 키워드는 식별자로 사용할 수 없습니다. 키워드는 예약어. 프로그램에 int number = 2와 같은
-            명령문이있을 때; 이는 숫자가 값 2를 포함하는 변수임을 의미합니다. int는 키워드입니다. 메모리 위치가 정수 값을 저장할 수 있음을 컴파일러에 알립니다. 부동 영역으로 명령문이있는 경우
-            float는 키워드이고 area는 식별자입니다. 영역 변수는 부동 소수점 값을 보유 할 수 있습니다.<br><br>
-            프로그래밍에는 일련의 명령문을 반복하는 상황이 있습니다. for 루프와 while 루프는 반복 작업에 사용됩니다. 결정을 위해 if / else를 사용할 수 있습니다. 논리가 참이면 if 블록
-            내의 문이 실행됩니다. 그렇지 않으면 else 블록 내의 명령문이 실행됩니다. 다음은 여러 프로그래밍 언어에 공통적 인 키워드의 몇 가지 예입니다. 키워드는 프로그램 변수 또는 기타 사용자 정의
-            프로그램 요소의 이름으로 사용할 수 없습니다.<br><br>
-        </p>
-    </div>
+    <main id="main">
+        <div class="doc">
 
-    <hr>
+            {
+            function addNum(x, y) {
 
-    <div>
-        <table border="1">
-            <h2>비교</h2>
-            <tr>
-                <td align="center">비교근거</td>
-                <td align="center">키워드</td>
-                <td align="center">식별자</td>
-            </tr>
-            <tr>
-                <td align="center">기본</td>
-                <td align="center">키워드는 언어의 예약어입니다.</td>
-                <td align="center">식별자는 변수, 함수 및 레이블의 사용자 정의 이름입니다.</td>
-            </tr>
-            <tr>
-                <td align="center">용도</td>
-                <td align="center">엔티티의 종류/ 종류를 지정</td>
-                <td align="center">특정 개체의 이름을 식별</td>
-            </tr>
-            <tr>
-                <td align="center">체제</td>
-                <td align="center">편지만 고려</td>
-                <td align="center">글자, 밑줄, 숫자를 고려</td>
-            </tr>
-            <tr>
-                <td align="center">케이스</td>
-                <td align="center">소문자만 사용</td>
-                <td align="center">대문자와 소문자는 모두 허용</td>
-            </tr>
-            <tr>
-                <td align="center">상징</td>
-                <td align="center">특수 기호가 없으면 구두점이 사용됨</td>
-                <td align="center">구두점 또는 '밑줄'을 제외한 특수 기호는 사용되지 않음</td>
-            </tr>
-            <tr>
-                <td align="center">분류</td>
-                <td align="center">더 이상 분류되지 않음</td>
-                <td align="center">'외부이름'과 '내부이름'으로 구분</td>
-            </tr>
-        </table>
-    </div>
+            return x + y;
+
+            }
+            
+                document.write(addNum(2, 3));}
+        </div>
+    </main>
 </body>
 
 </html>

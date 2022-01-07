@@ -1,67 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reference02</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/prism.css">
-    <script src="../assets/js/prism.js"></script>
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
 
 </head>
 
 <body>
-    <h1>변수란?</h1>
 
-    <p>변수는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이트럴 담을 수 있는 그릇이라고 할 수 있죠.
-        변수에는 데이터가 오직 한 개만 저장됩니다. 그러다 보니 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.
-        변수에 저장할 수 있는 데이터의 종류로는 문자형(String), 숫자형(Number), 논리형(Boolean) 그리고 빈(Null) 데이터가 있습니다.</p>
+    <div class="top"><a href="#header">Top</a></div>
 
-    <hr>
+    <header id="header">
+        <h1><a href="index.html"></a>Javascript</h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li class="active"><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
 
-    <h2>변수 선언</h2>
-    <p>변수를 선언할 때는 다음 기본형과 같이 var 키워드를 변수명 앞에 붙입니다. 변수명에는 한글을 사용할 수 없으며, 영문과 숫자 그리고 일부 특수문자(_,$)만 포함 할 수 있습니다.
-        변수명은 의미에 맞게 만드는 것이 좋습니다. 가령, 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름지으면 되겠죠.
-        이때 변수명은 단어와 단어의 조합으로 지었고, 두 번째 단어의 첫 글자는 대문자로 표기했습니다. 이미 마치 낙타의 등과 같다고 해서 낙타(camel)표기법이라 부릅니다.
-        <div class="sample">
-            <div clas="code">
-                <pre class="inline-numbers"><code class="language-js">var 변수명; 또는 var 변수명=값;
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>변수란</h2>
+            <p>
+            변수는 변하는 데이터(값)를 저장할 수 있는 메모리 공간입니다. 데이트럴 담을 수 있는 그릇이라고 할 수 있죠.
+            변수에는 데이터가 오직 한 개만 저장됩니다. 그러다 보니 새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워지게 됩니다.
+            </p>
+
+            <h2>변수 선언 방법</h2>
+            <p>변수를 선언할 때는 var 또는 let 키워드를 변수명 앞에 붙인다. 변수명은 한글X/ 영어/숫자/일부특수기호(_,$)를 사용하여 데이터 저장공간을 선언할 수있습니다.
+                <div>
+<pre class="inline-numbers"><code class="language-js">var 변수명;
+let 변수명=값;
 </code></pre>
-            </div>
+                </div>
+
+
+                <h2>변수명</h2>
+                <p>
+                    자바스크립트에는 의미를 가진 단어들이 있기 때문에 사용자가 임의로 사용할 수없는 단어가 있습니다.
+                </p>
+                <div class="line">
+                    키워드 : 자바스크립트에서 사용하는 단어<br>
+                    식별자 : 사용자가 임의로 사용하는 단어
+                </div>
+
+                <h3>식별자를 만드는 규칙</h3>
+                <ul>
+                    <li>사용자가 사용할 수 있는 문자 : 알파벳(a~z, A~Z), 숫자(0~9), 밑줄(_), 달러기호($)</li>
+                    <li>첫 글자는 숫자를 사용할 수 없습니다.</li>
+                    <li>공백을 사용 할 수 없습니다. : 밑줄(_) 사용가능 하이픈(-) 사용불가</li>
+                    <li>특수기호를 사용할 수 없습니다. : 달러기호($)는 사용가능합니다.</li>
+                    <li>키워드를 사용할 수 없습니다.</li>
+                </ul>
+
+                <h3>단어를 조합할 때 규칙</h3>
+                <ul>
+                    <li>언더스코어 노테이션(code_name) : 중간에 '_'을 사용합니다.</li>
+                    <li>캐멜 노테이션 (codeName) : 두번째 단어의 첫 글자를 대문자로 사용합니다.</li>
+                    <li>파스칼 노테이션 (CodeName): 모든 단어의 첫글자를 대문자로 사용합니다.</li>
+                </ul>
         </div>
-
-        <br><br>
-
-        <p>변수를 선언하면 변수명으로 데이터를 저장할 수 있는 공간이 생성됩니다. 다음은 box라는 이름을 가진 변수에 100이라는 값을 대입한 예제입니다.
-            초기에는 값이 등록되지 않은 상태(undefined)입니다. box에 100을 대입하면 다음 그림과 같이 변수에 100이 저장됩니다.</p>
-        <div class="sample">
-            <div clas="code">
-                <pre class="inline-numbers"><code class="language-js">var box;
-box=100;
-</code></pre>
-            </div>
-        </div>
-
-        <br><br>
-
-        변수에는 하나의 값만 넣을 수 있습니다. 만약 변수에 box에 값을 두 번 넣으면 어떻게 달라지게 될까요?
-        다음과 같이 변수 box에 새로운 데이터 30이 저장되면 기존에 저장되어 있던 데이터 100은 삭제되고 새로운 데이터 30이 저장됩니다.
-        <div class="sample">
-            <div clas="code">
-                <pre class="inline-numbers"><code class="language-js">05: &lt;script&gt; <br>
-06:     var box;<br>
-07:     box = 100;<br>
-08:     box = 30;<br>
-09:     document.write(box);&nbsp;&nbsp; //30 <br>
-10: &lt;/script&gt; <br>
-</code></pre>
-            </div>
-        </div>
-
-    </p>
+    </main>
 </body>
 
 </html>

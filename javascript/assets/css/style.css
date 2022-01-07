@@ -50,9 +50,33 @@ a {
     color: #000;
 }
 
+/*top*/
+.top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    background: #000;
+    border-radius: 50%;
+}
+
+.top a {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    display: block;
+}
+
 /* header */
 #header {
-    padding: 30px;
+    padding: 40px;
+    border-bottom: 1px dashed #cdcdcd;
 }
 
 #header h1 {
@@ -85,7 +109,7 @@ a {
 
     #header h1 {
         margin-bottom: 15px;
-        font-size: 24px;
+        font-size: 28px;
     }
 
     #header nav ul li a {
@@ -126,13 +150,45 @@ a {
     }
 }
 
+/* list */
+.note {
+    padding: 40px 0;
+    border-bottom: 1px dotted #cdcdcd;
+}
+
+.note a {
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 7px 15px 7px 15px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.note a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .note {
+        padding: 20px 0;
+    }
+
+    .not a {
+        font-size: 14px;
+    }
+}
+
 /* script */
 .script {
     padding: 40px 0;
 }
+
 .script .sample {
     margin-bottom: 40px;
 }
+
 .script .sample h3 {
     background: #F2F2F2;
     font-size: 16px;
@@ -141,6 +197,7 @@ a {
     border: 1px solid #E6E6E6;
     font-weight: 500;
 }
+
 .script .sample .code pre {
     margin: 0 !important;
     border-radius: 0 0 5px 5px;
@@ -156,6 +213,53 @@ a {
     }
 
     .script .sample h3 {
-        font-size: 14px;padding: 10px 15px 8px 10px;
+        font-size: 14px;
+        padding: 10px 15px 8px 15px;
     }
+
+    .script .sample .code pre {
+        font-size: 14px;
+    }
+}
+
+.doc{
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 500px;
+}
+.doc h2{
+    font-weight: 500;
+    margin:  40px 0 5px ;
+}
+.doc h3 {
+    font-weight: 500;
+    margin: 20px 0 5px;
+    text-decoration: underline;
+}
+.doc li {
+    list-style: circle;
+    margin-left: 10px;
+}
+.doc p{
+    margin: 5px;
+}
+.doc .line{
+    border: 1px solid #cdcdcd;
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+}
+
+.doc .code{
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+    background: #f4f8fa;
+    padding-left: 10px;
+}
+
+.doc strong {
+    background: #dff4ff;
+    font-weight: normal;
+    border-radius: 20px;
+    padding: 2px 5px 0px 5px;
+    display: inline-block;
 }

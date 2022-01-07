@@ -1,201 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reference03</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/prism.css">
-    <script src="../assets/js/prism.js"></script>
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
 
 </head>
 
 <body>
-    <h1>변수를 저장할 수 있는 자료형</h1>
-    <p>변수에 저장할 수 있는 자료형(Data type)으로는 문자형(String), 숫자형(Number), 논리형(Boolean) 그리고 빈 데이터(Undefined)가 있습니다.
-        앞으로는 OO형 또는 OO형 데이터라고 부르겠습니다.
-    </p>
 
-    <hr>
+    <div class="top"><a href="#header">Top</a></div>
 
-    <h2>문자형</h2>
-    <p>문자형(String) 데이터는 다음과 같이 문자는 숫자를 큰따옴표("")또는 작은따옴표('')로 감싸고 있습니다.
-        또한 문자형 데이터에 HTML 태그를 포함하여 출력하면 태그로 인식합니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var 변수="사용할 문자나 숫자";
+    <header id="header">
+        <h1><a href="index.html"></a>Javascript</h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li class="active"><a href="reference03.html">자료형</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>데이터 타입(자료형)</h2>
+            <p>
+                변수에는 여러가지 유형이 들어갈 수 있습니다. 프로그램 언어에 있어 가장 기본적인 요소이며,
+                데이터 타입이라고 합니다. 데이터 타입에는 숫자, 문자열, 논리값, 특수값, 심벌, 객체, 배열
+                함수 등을 표현할 수 있습니다.
+            </p>
+
+            <h3>숫자(Number)</h3>
+            <p>
+                숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다. 만약 "100"과 같이 큰따옴표가 숫자를 감싸고 있다면 숫자가 아닌 문자형 데이터입니다.
+                이 경우에는 Number("100")를 이용하면 문자형 데이터를 숫자형으로 바꿀 수 있습니다.
+            </p>
+<pre class="inline-numbers"><code class="language-js">var 변수=숫자; 또는 Number("문자형 숫자");
+
+var s = 100;
+var t = Number("500")   //"500" -> 500   
 </code></pre>
-        </div>
-    </div>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var s ="javascript";
+
+            <h3>문자열(String)</h3>
+            <p>
+                문자형(String) 데이터는 다음과 같이 문자는 숫자를 큰따옴표("")또는 작은따옴표('')로 감싸고 있습니다.
+                또한 문자형 데이터에 HTML 태그를 포함하여 출력하면 태그로 인식합니다.
+            </p>
+<pre class="inline-numbers"><code class="language-js">var 변수="사용할 문자나 숫자";    
+
+var s ="javascript";
 var num ="100";
 var tag = "string"
 </code></pre>
-        </div>
-    </div>
 
-    <hr>
+            <h3>논리값(Boolean)</h3>
+            <p>
+                논리형(Boolean) 데이터는 true(참) 또는 false(거짓)가 있습니다. 이 데이터는 주로 2개의 데이터를 비교할 때 나오는 결과입니다.
+                예를 들어 '100보다 10이 크다'는 잘못된 비교이므로 false라는 결과를 반환하게 됩니다. 논리형 데이터의 기본형은 다음과 같습니다.
+            </p>
+<pre class="inline-numbers"><code class="language-js">var 변수=true of false; 또는 Boolean(데이터);
 
-    <h2>숫자형</h2>
-    <p>숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다. 만약 "100"과 같이 큰따옴표가 숫자를 감싸고 있다면 숫자가 아닌 문자형 데이터입니다.
-        이 경우에는 Number("100")를 이용하면 문자형 데이터를 숫자형으로 바꿀 수 있습니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var 변수=숫자; 또는 Number("문자형 숫자");
-</code></pre>
-        </div>
-    </div>
-
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var s = 100;
-var t = Number("500")   //"500" -> 500
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-
-    <h2>논리형</h2>
-    <p>논리형(Boolean) 데이터는 true(참) 또는 false(거짓)가 있습니다. 이 데이터는 주로 2개의 데이터를 비교할 때 나오는 결과입니다.
-        예를 들어 '100보다 10이 크다'는 잘못된 비교이므로 false라는 결과를 반환하게 됩니다. 논리형 데이터의 기본형은 다음과 같습니다.
-        <div class="sample">
-            <div clas="code">
-                <pre class="inline-numbers"><code class="language-js">var 변수=true of false; 또는 Boolean(데이터);
-</code></pre>
-            </div>
-        </div>
-
-        <div class="sample">
-            <div clas="code">
-                <pre class="inline-numbers"><code class="language-js"> var s = true;              //true
 var t = 10>=100;          //false
 var k = Boolean("hello");   //true
 </code></pre>
-            </div>
-        </div>
 
-        Boolean()매서드에 데이터를 입력하면 논리형 데이터인 true 또는 false를 반환합니다. Boolean()매서드는 숫자0과 Null, Undefined, 빈 문자("")를 제외한 모든 데이터에
+Boolean()매서드에 데이터를 입력하면 논리형 데이터인 true 또는 false를 반환합니다. Boolean()매서드는 숫자0과 Null, Undefined, 빈 문자("")를 제외한 모든 데이터에
         대해 true를 반환합니다.
         다음과 같이 Boolean() 매서드에 숫자 0을 입력하면 false라는 값을 반환합니다. 그리고 Boolean() 매서드에 "홍길동"을 입력하면 true를 반환합니다.
-        <div class="sample">
-            <div clas="code">
-                <pre class="inline-numbers"><code class="language-js">var m = Boolean(0);        //false
+
+<pre class="inline-numbers"><code class="language-js">var m = Boolean(0);        //false
 var k = Boolean("홍길동");  //true
 </code></pre>
-            </div>
-        </div>
 
-        다음은 논리형 값, 비교연산자, Boolean 메서드를 사용해 변수에 논리형 데이터를 저장한 후 문서에 출력하는 예제와 결과 화면입니다.
-    </p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">06:  &lt;script&gt;
-07:     var a = true;
-08:     var b = false;
-09:     var c = 10>5;         //true 
-10:     var d = Boolean(null); //false
-11:      
-12:     document.write(a,"&lt;br&gt;");
-13:     document.write(b, "&lt;br&gt;");
-14:     document.write(c,"&lt;br&gt;");
-15:     document.write(d, "&lt;br&gt;");
-16:  &lt;script&gt;
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-
-    <h2>null & undefined 데이터</h2>
-    <p>undefined는 다음과 같이 변수 S에 값이 등록되기 전의 기본값이고, null은 변수에 저장된 값이 null인 경우를 가리킵니다.
-        null은 변수에 저장된 데이터를 비우고자 할때 사용하는 값입니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var s;            //undefined
-var t = hello;
+            <h3>특수값(Null)</h3>
+            <p>
+                null은 변수를 선언하고 빈 값을 할당 했을 때을 카리킵니다.
+                또는 변수값을 초기화 할 때 사용합니다.
+            </p>
+<pre class="inline-numbers"><code class="language-js">var t = "hello";
 t=null;
 </code></pre>
-        </div>
-    </div>
+            <h3>특수값(Undefined)</h3>
+            <p>undefineds는 변수를 선언하고 값을 정하지 않았을 때를 가리킵니다.</p>
+<pre class="inline-numbers"><code class="language-js">var s;            //undefined
+</code></pre>
+            <h3>심벌(Symbol)</h3>
+            <p>유일하고 변경 불가능한 기본값이다.
+            프로그램에서 이름(변수명)의 충돌 없이 사용하기 위해 활용한다.
+            주로 객체 속성의 식별자로 사용된다.</p>
 
-    <hr>
+<pre class="inline-numbers"><code class="language-js">const sym  = Symbol();    // 심볼 생성
+console.log(sym);   // Symbol()
+console.log(typeof sym);    // sysmbol
+</code></pre>
 
-    <h2>typeof</h2>
-    <p>typof는 지정한 데이터 또는 변수에 저장된 잘형을 알고 싶을 때 사용합니다. 기본형은 다음과 같습니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">typof 변수 또는 데이터;
+            <h3>객체(Object)</h3>
+            <p>
+            클래스에서 정의한 것을 토대로 메모리(실제 저장공간)에 할당된 것으로 
+            프로그램에서 사용되는 데이터 또는 식별자에 의해 참조되는 공간을 의미하며, 
+            변수, 자료 구조, 함수 또는 메소드가 될 수 있다.
+            </p>
+
+<pre class="inline-numbers"><code class="language-js">{
+    const obj = {};
+    obj.a = 100;
+    obj.b = 200;
+    obj.c = "javascript";    
+
+    document.write(obj.a);  // 100
+    document.write(obj.b);  // 200
+    document.write(obj.c);  // javascript
+}
+</code></pre>
+
+            <h3>함수(Function)</h3>
+            <p>
+                하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 의미합니다.
+                이러한 함수는 필요할 때마다 호출하여 해당 작업을 반복해서 수행할 수 있습니다.
+            </p>
+
+ <pre class="inline-numbers"><code class="language-js">function addNum(x, y) {
+    return x + y;
+}
+document.write(addNum(2, 3));   //5
 </code></pre>
         </div>
-    </div>
-
-    다음은 typof를 이용하여 변수에 저장된 자료형을 알아내는 예제입니다.
-
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">07: var num = 100; 
-08: var str = "자바스크립트"
-09:
-10: document.write(typof num,"&br&");     //Number 
-11: document.write(typof str);          //string 
-12: &script&
-</code></pre>
-        </div>
-    </div>
-
-    <hr>
-
-    <h2>변수 선언시 주의 사항</h2>
-    <p>다음은 변수를 선언할 때 주의해야할 사항입니다.</p>
-    <p>1. 변수명 첫 글자로는 $, _(언더바), 영문자만 올 수 있습니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var 1num=10; (x)
-var $num=10; (o)
-</code></pre>
-        </div>
-    </div>
-
-    <br>
-
-    <p>2. 변수명 첫 글자 다음은 영문자, 숫자, $, _(언더바)만 포함 할 수있습니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var 100num=10; (x)
-var num100=10; (o)
-</code></pre>
-        </div>
-    </div>
-
-    <br>
-
-    <p>3. 변수명으로는 예약어(documnet, location, window 등)를 사용할 수 없습니다.
-        예약어란 이미 자바스크립트에서 사용 중인 단어를 말합니다.
-    </p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var document=10; (x)
-var num=10; (o)
-</code></pre>
-        </div>
-    </div>
-
-    <br>
-
-    <p>4. 변수명을 사용할 때는 대.소문자를 구분해야합니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">var num=10; documnet.write(Num); (x)
-var num=10; document.write(num);(o)
-</code></pre>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>

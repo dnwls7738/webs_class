@@ -6,40 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Reference</title>
+    <title>자바스크립트</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/prism.css">
-    <script src="../assets/js/prism.js"></script>
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+
 </head>
 
 <body>
-    <h1>자바스크립트 기초문법</h1>
 
-    <hr>
+    <div class="top"><a href="#header">Top</a></div>
 
-    <h2>자바스크립트 선언문</h2>
-    <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다.
-        &lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트
-        영역이라고 부릅니다.
-    </p>
-    <div class="sample">
-        <div class="code">
-            <pre class="inline-numbers"><code class="language-js">&lt;script&gt;
+    <header id="header">
+        <h1><a href="index.html"></a>Javascript</h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h1>자바스크립트 기초문법</h1>
+
+            <br>
+
+            <h2>자바스크립트 선언문</h2>
+            <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다.
+                &lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트
+                영역이라고 부릅니다.
+            </p>
+
+            <div>
+<pre class="inline-numbers"><code class="language-js">&lt;script&gt;
     자바스크립트코드;
 &lt;/script&gt;
 </code></pre>
-        </div>
-    </div>
-    <p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있습니다. 우리도
-        &lt;head&gt; 태그 영역에 선언 하겠습니다. <br><br>
-        다음은 선언문을 작성하는 예제입니다. 비주얼 스튜디오 코드를 실행한 후 [파일 - 열기 - statement_test.html]을 선택해 실습 파일을 엽니다. 그런 다음 예제를 보면서 문서를 작성해
-        보세요</p>
+            </div>
 
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">
-01: &lt;!DOCTYPE html&gt;
+            <p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 됩니다.
+                <br><br>다음은 선언문을 작성하는 예제입니다.</p>
+
+            
+                <div clas="code">
+<pre class="inline-numbers"><code class="language-js">01: &lt;!DOCTYPE html&gt;
 02: &lt;html lang="ko"&gt;
 03: &lt;head&gt;
 04:    &lt;meta charset="UTF-8"&gt;
@@ -52,72 +69,66 @@
 11: &lt;/body&gt;
 12: &lt;/html&gt;
 </code></pre>
-        </div>
-    </div>
-    <p>7행 document는 문서 객체이며 문서 출력 메서드인 write()를 이용하여 데이터를 문서에 출력할때 사용합니다.
-        작성한 문서를 저장한후 ctrl + Alt + O를 눌러 실행하면 오른쪽과 같은 결과 화면이 나타납니다.</p>
+                </div>
+            
 
-    <hr>
 
-    <h2>자바스크립트 주석 처리</h2>
-    <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다.
-        이때 한 줄 주석일 경우에는"//한 줄 글 설명글" 작성하고, 여러줄 주석일 경우에는 /*여러 줄 설명글*/로 작성하면 됩니다.</p>
 
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">//한 줄 설명글인 경우
+            <h2>자바스크립트 주석 처리</h2>
+            <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다.
+                이때 한 줄 주석일 경우에는"//한 줄 글 설명글" 작성하고, 여러줄 주석일 경우에는 /*여러 줄 설명글*/로 작성하면 됩니다.</p>
+
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">//한 줄 설명글인 경우
 /*
 설명글이 여러 줄인 경우
 이렇게 처리합니다. 
 */
 &lt;!--HTML 소스의 설명글은 이렇게 처리합니다.--&gt;
 </code></pre>
-        </div>
-    </div>
-    코드를 작성할 때 이렇게 설명글을 달아 놓으면 시간이 흘러도 잊어버리지 않겠죠?
+                </div>
+            </div>
+            코드를 작성할 때 이렇게 설명글을 달아 놓으면 시간이 흘러도 잊어버리지 않겠죠?
 
-    <hr>
-
-    <h2>내부 스크립트 외부로 분리하기</h2>
-    <p>
-        앞의 예제 [statement_c.html]에서 HTML 내부에 작성된 자바스크립트는 마지막에는 외부로 분리하는 작업을 해야 합니다.
-        그렇게 하면 자바스크립트 소스 찾기도 쉬울 뿐만 아니라 누군가가 소스를 손상시킬 염려도 없습니다.
-        즉 외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다.
-        다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.
-    </p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">&lt;script src="JS 파일 경로"&gt;&lt;/script&gt;
+            <h2>내부 스크립트 외부로 분리하기</h2>
+            <p>
+                앞의 예제 [statement_c.html]에서 HTML 내부에 작성된 자바스크립트는 마지막에는 외부로 분리하는 작업을 해야 합니다.
+                그렇게 하면 자바스크립트 소스 찾기도 쉬울 뿐만 아니라 누군가가 소스를 손상시킬 염려도 없습니다.
+                즉 외부로 분리하는 주된 목적은 프로젝트 관리를 원활하게 하기 위함입니다.
+                다음은 외부 자바스크립트 연동 코드로 파일을 연결하는 기본형입니다.
+            </p>
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">&lt;script src="JS 파일 경로"&gt;&lt;/script&gt;
 </code></pre>
-        </div>
-    </div>
-    <p>
-        내부스크립트를 외부로 분리하려면 따로 파일을 만들어서 저장해야합니다. 
-        즉, HTML 파일과 JS(자바스크립트)파일을 분리하여 HTML 내에서 JS(자바스크립트)파일을 연동하면 됩니다.
-    </p>
+                </div>
+            </div>
+            <p>
+                내부스크립트를 외부로 분리하려면 따로 파일을 만들어서 저장해야합니다.
+                즉, HTML 파일과 JS(자바스크립트)파일을 분리하여 HTML 내에서 JS(자바스크립트)파일을 연동하면 됩니다.
+            </p>
 
-    <br><br>
 
-    <h3>내부 스크립트 분리하기</h3>
-    <p>
-        1. JS파일을 만들어 보겠습니다. 먼저 비줠 스튜디오 코드에서 [파일 - 새 파일 - 보통문서]를 선택하거나 단축기 ctrl + N을 눌러 빈문서를 엽니다.
-        그런다음 다음과 같이 코드를 작성하고 문서를 저장합니다.
-    </p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">01: document.write("환영합니다.");
+            <h3>내부 스크립트 분리하기</h3>
+            <p>
+                1. js파일을 만들어 보겠습니다. 먼저 비주얼 스튜디오 코드에서 [파일 - 새 파일 - 보통문서]를 선택하거나 단축기 ctrl + N을 눌러 빈문서를 엽니다.
+                그런다음 다음과 같이 코드를 작성하고 문서를 저장합니다.
+            </p>
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">01: document.write("환영합니다.");
 </code></pre>
-        </div>
-    </div>
-    <p>
-        2. [inport_test.html]파일을 열어 앞에서 작성한 [example.js]를 연동해 보겠습니다.  다음과 같이 코드를 작성합니다.
-        만약 연동이 잘 되지 않으면 src 값에 파일의 전체 경로를 넣어보세요
-    </p>
+                </div>
+            </div>
+            <p>
+                2. 파일을 열어 앞에서 작성한 js파일을 연동합니다. 다음과 같이 코드를 작성합니다.
+                만약 연동이 잘 되지 않으면 src 값에 js파일의 전체 경로를 넣어보세요
+            </p>
 
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">
-01: &lt;!DOCTYPE html&gt;
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">01: &lt;!DOCTYPE html&gt;
 02: &lt;html lang="ko"&gt;
 03: &lt;head&gt;
 04:    &lt;meta charset="UTF-8"&gt;
@@ -128,73 +139,69 @@
 09: &lt;/body&gt;
 10: &lt;/html&gt;
 </code></pre>
-        </div>
-    </div>
-    <p>
-        내부 스크립트가 분리되었습니다. 이렇게 분리하면 소스를 분석할 때 찾기 쉬울뿐 아니라 다른 개발자가 잘못하여 소스를 손상시킬 일도 없겠죠.
-    </p>
+                </div>
+            </div>
+            <p>
+                내부 스크립트가 분리되었습니다. 이렇게 분리하면 소스를 분석할 때 찾기 쉬울뿐 아니라 다른 개발자가 잘못하여 소스를 손상시킬 일도 없겠죠.
+            </p>
 
-    <hr>
+            <h2>코드 입력 시 주의 사항</h2>
+            <p>
+                다음은 자바스크립트를 작성할 떄 주의해야 할 몇가지 사항입니다.
+            </p>
 
-    <h2>코드 입력 시 주의 사항</h2>
-    <p>다음은 자바스크립트를 작성할 떄 주의해야 할 몇가지 사항입니다.
-     지금은 읽어도 이해가 안될수 있습니다. 일단 가볍게 읽고 넘어가세요</p>
-     
-     <br><br>
+            <p>1. 자바스크립트는 대.소문자를 구분하여 작성합니다.</p>
 
-     <p>1. 자바스크립트는 대.소문자를 구분하여 작성합니다.</p>
-
-     <div class="sample">
-        <div clas="code">
-<pre class="inline-numbers"><code class="language-js">날짜 객체 생성: New date(); (X)
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">날짜 객체 생성: New date(); (X)
 날짜 객체 생성: new date(); (O)
 </code></pre>
-        </div>
-    </div>
+                </div>
+            </div>
 
-    <br><br>
+            <br>
 
-    <p>2. 코드 한 줄을 작성한 후에는 세미콜론(;)을 쓰는 것이 좋습니다.
-        세미콜론을 쓰지 않으면 다음 예제처럼 한줄에 2개의 코드를 작성할 경우 오류가 발생합니다.
-    </p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">document.write("hi") document.write("bye") (X)
+            <p>2. 코드 한 줄을 작성한 후에는 세미콜론(;)을 쓰는 것이 좋습니다.
+                세미콜론을 쓰지 않으면 다음 예제처럼 한줄에 2개의 코드를 작성할 경우 오류가 발생합니다.
+            </p>
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">document.write("hi") document.write("bye") (X)
 document.write("hi"); documnet.wirte("bye"); (O)
 </code></pre>
-        </div>
-    </div>
+                </div>
+            </div>
+            <br>
 
-    <br><br>
-
-    <p>3. 하지만 코드를 작성할 때는 한 줄에 한 문장만 작성하는 것이 가독성을 위해 좋습니다.</p>
-
-    <br><br>
-
-    <p>4. 문자형 데이터를 작성할 때는 큰따옴표("")와 작은따옴표('')의 겹칩 오류를 주위해야 합니다.</p>
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">큰따옴표 겹침 오류
+            <p>3. 하지만 코드를 작성할 때는 한 줄에 한 문장만 작성하는 것이 가독성을 위해 좋습니다.</p>
+<br>
+            <p>4. 문자형 데이터를 작성할 때는 큰따옴표("")와 작은따옴표('')의 겹칩 오류를 주위해야 합니다.</p>
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">큰따옴표 겹침 오류
 documnet.write("책에"자바스크립트는 대소문자를 구분해야합니다."라고 나와 있다.");
 
 잘된 예
 documnet.write('책에"자바스크립트는 대소문자를 구분해야 합니다."라고 나와 있다.');
 document.write("책에\"자바스크립트는 대소문자를 구분해야 합니다.\"라고 나와있다");
 </code></pre>
-        </div>
-    </div>
+                </div>
+            </div>
 
-    <br><br>
+            <br>
 
-    <p>5. 코드를 작성 할 때 중괄호{} 또는 소괄호()의 짝이 맞아야 합니다.</p>
+            <p>5. 코드를 작성 할 때 중괄호{} 또는 소괄호()의 짝이 맞아야 합니다.</p>
 
-    <div class="sample">
-        <div clas="code">
-            <pre class="inline-numbers"><code class="language-js">document.write("welcome!"; (X)
+            <div class="sample">
+                <div clas="code">
+                    <pre class="inline-numbers"><code class="language-js">document.write("welcome!"; (X)
 document.write("welcome!"); (O)
 </code></pre>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
