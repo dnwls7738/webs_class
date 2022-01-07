@@ -113,7 +113,7 @@ a {
 
 @media (max-width: 800px) {
     #main {
-        padding 20px;
+        padding: 20px;
     }
 
     .list {
