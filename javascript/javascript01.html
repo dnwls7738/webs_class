@@ -85,8 +85,6 @@
             </div>
         </div>
 
-        <hr>
-
         <div class="script">
             <div id="smaple2" class="sample">
                 <h3>02. 변수 : 데이터 저장 + 데이터 변경</h3>
@@ -109,8 +107,6 @@
                 </div>
             </div>
         </div>    
-
-        <hr>
 
         <div class="script">
             <div id="smaple2" class="sample">
@@ -135,18 +131,30 @@
             </div>
         </div>
 
-        <hr>
-
         <div class="script">
             <div id="smaple2" class="sample">
                 <h3>04. 변수의 종류 : 지역변수 + 전역변수</h3>
                 <div class="code">
 <pre class="inline-numbers"><code class="language-js">{
-    let x = 100;
-    let y = 200;
-    let z = "javascript";
+    document.write("<br>***04. 변수 : 변수의 종류***<br>");
 
-    document.write("***04. 변수 : 변수의 종류***");
+    let x = 100;    //전역변수
+    let y = 200;    //전역변수
+
+    function func(){
+        let x = 100;    //지역변수
+        let z = "javascript";
+        x = 200;    //지역변수 100 -> 200
+        y = 300;    //전역변수 200 -> 300
+
+        document.write("함수 안");
+        document.write(x);
+        document.write(y);
+        document.write(z);
+    }
+    func();
+
+    document.write("함수 밖");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -155,8 +163,6 @@
                 </div>
             </div>
         </div>
-
-        <hr>
 
         <div class="script">
             <div id="sample5" class="sample">
@@ -181,8 +187,6 @@
             </div>
         </div>
 
-        <hr>
-
         <div class="script">
             <div id="sample6" class="sample">
                 <h3>06. 배열 : 여러개의 데이터를 저장 : 표현방법1</h3>
@@ -203,8 +207,6 @@
             </div>
         </div>
 
-        <hr>
-
         <div class="script">
             <div id="sample7" class="sample">
                 <h3>07. 배열 : 여러개의 데이터를 저장 : 표현방법2</h3>
@@ -221,8 +223,6 @@
                 </div>
             </div>
         </div>
-        
-        <hr>
 
         <div class="script">
             <div id="sample8" class="sample">
@@ -243,8 +243,6 @@
                 </div>
             </div>
         </div>
-        
-        <hr>
 
         <div class="script">
             <div id="sample9" class="sample">
@@ -262,8 +260,6 @@
                 </div>
             </div>
         </div>
-        
-        <hr>
 
         <div class="script">
             <div id="sample10" class="sample">
@@ -284,8 +280,6 @@
                 </div>
             </div>
         </div>
-        
-        <hr>
 
         <div class="script">
             <div id="sample11" class="sample">
@@ -306,8 +300,6 @@
                 </div>
             </div>
         </div>
-        
-        <hr>
 
         <div class="script">
             <div id="sample12" class="sample">
@@ -328,8 +320,6 @@
                 </div>
             </div>
         </div>
-        
-        <hr>
 
         <div class="script">
             <div id="sample13" class="sample">
@@ -347,8 +337,6 @@
                 </div>
             </div>
         </div>
-        
-        <hr>
 
         <div class="script">
             <div id="sample13" class="sample">
@@ -368,8 +356,6 @@
                 </div>
             </div>
         </div>
-
-        <hr>
 
         <div class="script">
             <div id="sample13" class="sample">
@@ -396,8 +382,6 @@
             </div>
         </div>
 
-        <hr>
-
         <div class="script">
             <div id="sample13" class="sample">
                 <h3>16. 객체 : 데이터를 저장(키와 값) : 표현방법7 : 객체 속의 변수</h3>
@@ -418,8 +402,6 @@
                 </div>
             </div>
         </div>
-
-        <hr>
 
         <div class="script">
             <div id="sample13" class="sample">
@@ -459,9 +441,8 @@
         <!-- //script-->
 
     
-        <!-- script -->
-        <script>
         
+        <script>
         //01. 변수 : 데이터 저장소
         {
             var name = "천우진";
@@ -718,6 +699,7 @@
             obj.g();
         }
         </script>
+        <!--//script-->
     </main>
 </body>
 
