@@ -263,6 +263,12 @@ a {
     padding: 2px 5px 0px 5px;
     display: inline-block;
 }
+
+.doc table tr td {
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
 @media (max-width: 800px) {
     #main {
         padding: 20px;
