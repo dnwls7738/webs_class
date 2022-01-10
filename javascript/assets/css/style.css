@@ -55,11 +55,6 @@ a {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    height: 60px;
-    width: 60px;
-    text-align: center;
-    background: #000;
-    border-radius: 50%;
 }
 
 .top a {
@@ -161,9 +156,9 @@ a {
     background: #000;
     color: #fff;
     border-radius: 20px;
-    padding: 7px 15px 7px 15px;
+    padding: 7px 15px 5px 15px;
     display: inline-block;
-    margin: 5px;
+    margin-bottom: 5px;
 }
 
 .note a:hover {
@@ -186,7 +181,7 @@ a {
 }
 
 .script .sample {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .script .sample h3 {
@@ -221,24 +216,23 @@ a {
         font-size: 14px;
     }
 }
-
+/* doc*/
 .doc{
     font-size: 18px;
     line-height: 1.8;
-    padding-bottom: 500px;
+    padding-bottom: 300px;
 }
 .doc h2{
     font-weight: 500;
-    margin:  40px 0 5px ;
+    margin:  40px 0 5px 5px;
 }
 .doc h3 {
     font-weight: 500;
-    margin: 20px 0 5px;
-    text-decoration: underline;
+    margin: 20px 0 5px 5px;
 }
 .doc li {
-    list-style: circle;
-    margin-left: 10px;
+    list-style: disc;
+    margin-left: 20px;
 }
 .doc p{
     margin: 5px;
@@ -251,9 +245,9 @@ a {
 
 .doc .code{
     border: 1px solid #cdcdcd;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #f4f8fa;
-    padding-left: 10px;
+    padding: 20px 20px 15px 20px;
 }
 
 .doc strong {
@@ -269,40 +263,28 @@ a {
     text-align: center;
     border-collapse: collapse;
 }
-@media (max-width: 800px) {
-    #main {
-        padding: 20px;
-    }
-
-    .doc {
-        font-size: 14px;
-    }
-    .doc h2{
-        font-size: 18px;
-    }
-}
 
 /* result */
 .result h4 {
     background: #f2f2f2;
+    margin-top: 10px;
     padding: 10px;
     font-weight: normal;
-    margin-top: 10px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 0;
     font-size: 16px;
 }
 .result div {
     background: #272822;
     padding: 20px;
     color: #fff;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 5px;
     font-size: 16px;
     line-height: 1.4;
 }
 @media (max-width: 800px) {
     .result h4 {
         font-size: 14px;
-        padding: 15px;
+        padding: 10px 15px;
     }
     .result div {
         font-size: 14px;
