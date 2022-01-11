@@ -242,12 +242,14 @@ a {
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
 }
-
 .doc .code{
     border: 1px solid #cdcdcd;
     border-radius: 5px;
     background: #f4f8fa;
     padding: 20px 20px 15px 20px;
+    overflow-x: scroll;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .doc strong {
@@ -257,11 +259,40 @@ a {
     padding: 2px 5px 0px 5px;
     display: inline-block;
 }
-
-.doc table tr td {
-    border: 1px solid black;
-    text-align: center;
+.doc .table {
+    overflow-x: auto;
+}
+.doc .table table {
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    min-width: 800px;
     border-collapse: collapse;
+    text-align: center;
+}
+
+.doc .table table th {
+    border-bottom: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    background-color: #f5f5f5;
+    padding: 5px;
+}
+
+.doc .table table td {
+    border-bottom: 1px solid #cdcdcd;
+    border-right: 1px solid #cdcdcd;
+    padding: 5px;
+}
+
+@media (max-width: 800px){
+    .doc {
+        font-size: 14px;
+    }
+    .doc h2 {
+        font-size: 18px;
+    }
+    .doc .line {
+        padding: 10px 15px;
+    }
 }
 
 /* result */
@@ -290,4 +321,51 @@ a {
         font-size: 14px;
         padding: 15px;
     }
+}
+
+/* javascript*/
+.javascript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    border: 8px solid #0243f1;
+    box-sizing: border-box;
+    border-radius: 20px;
+    position: relative;
+}
+.javascript::before {
+    content: '';
+    width: 100%;
+    height: calc(100vh - 16px);
+    border: 8px solid #50B5F9;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -1;
+    border-radius: 13px;
+}
+.javascript h1 {
+    font-size: 8vw;
+    color: #0243f1;
+}
+.javascript .menu {
+    text-align: center;
+}
+.javascript .menu li  {
+    display: inline;
+}
+.javascript .menu li a {
+    border: 1px  dashed #0243f1;
+    color: #0243f1;
+    border-radius: 50px;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.javascript .menu li a:hover {
+    background: #0243f1;
+    color: #fff;
 }
