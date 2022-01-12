@@ -211,7 +211,6 @@ body {
     border-radius: 10px;
     background: #dedede;
     
-    
 }
 
 .doc ul li {
@@ -267,8 +266,5 @@ body {
 
     .doc h3 {
         font-size: 20px;
-    }
-    .doc .code {
-        font-size: 10px;
     }
 }
