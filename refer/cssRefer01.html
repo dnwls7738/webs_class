@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>천우진</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>기초 문법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li class="active"><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">Css 단위</a></li>
+                <li><a href="cssRefer04.html">Css 색상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>CSS란?</h3>
+                <p>Cascading Style Sheets 는 documents가 사용자에게 어떻게 보여질까를 기술하는 언어입니다.
+                    HTML이 정보를 표현한다면 CSS는 HTML문서를 시작적으로 이쁘게 꾸며주는 역할을 합니다.</p>
+
+                <h3>CSS 주석 표시</h3>
+                <div class="code">
+                    <pre><code>/* CSS 주석 */
+</code></pre>
+                </div>
+
+                <h3>CSS 선언 방법</h3>
+                <h4>내부 스타일</h4>
+                <p>HTML 파일 안에 별도 영역으로 스타일 정의하고 일반적으로 &lt;head&gt;...&lt;/head&gt; 안에 style을 사용합니다.</p>
+                <ul>
+                    <li>HTML 문서 하나가 고유한 CSS 내용을 가진다고 생각될 때 사용</li>
+                    <li>&lt;style&gt; 태그를 사용하여 지정</li>
+                    <li>HTML 페이지 안에 위치하므로 영향을 주는 범위는 페이지 안의 전체 태그</li>
+                    <li>다른 HTML 페이지에서 똑같은 내용으로 사용하고 싶다면 복사해서 사용</li>
+                </ul>
+                <div class="code">
+<pre><code>&lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;Inline Style&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+    p {color:#ff0a00; font-size:30px; }
+    &lt;!-- 글자색을 #ff0a00 으로 지정 글자크기를 30px로 지정 --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;이 문장은 내부 스타일이 적용되었습니다.&gt;&lt;/p&gt;
+    &lt;p&gt;모든 p에 적용됩니다.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+                </div>
+
+                <h4>외부 스타일</h4>
+                <p>스타일 내용을 별도의 페이지로 만들어서 사용, 여러번 복사해야 하는 내부 스타일 시트의 단점 보완한 스타일입니다.</p>
+                <ul>
+                    <li>하나의 스타일로 여러 개의 HTML 페이지에 적용하여 사용하고자 할 때 편리</li>
+                    <li>하나의 스타일 페이지만 바꾸면 연결된 전체 HTML 페이지가 바뀌므로 유지, 보수에 편리</li>
+                    <li>각각의 HTML 페이지 문서는 &lt;head&gt;..&lt;/head&gt; 안에 &lt;link&gt;태그를 사용하여 스타일 페이지와 연결</li>
+                    <li>스타일 시트 파일의 확장자는 .css</li>
+                </ul>
+                
+                <div class="code">
+<pre><code>main.html
+
+&lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;main&lt;/title&gt;
+    &lt;link rel="stylesheet" type="text/css" href="style.css" &gt;
+    &lt;!-- 링크로 스타일 시트 연결 --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+            &lt;h1&gt;외부 스타일 시트가 적용된 문장.&lt;/h1&gt;
+    &lt;h2&gt;메인 페이지&lt;/h2&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+
+
+    style.css
+
+h1 { color:#ff0a00;                 : 글자색  #ff0a00
+     border:3px solid blue;     : 3px 두께의 파란색 선 테두리 
+     width:600px;                      : 테두리 넓이 600px
+     padding:10px; }                 : 테두리와 글자 사이 간격 10px
+h2 { color:green; }                 : 글자색 그린 
+</code></pre>
+                </div>
+
+                <h4>인라인 스타일</h4>
+                <p>한 줄짜리 짤막한 스타일, 태그 안에 직접 지정하여 사용. HTML과 섞어서 사용합니다.</p>
+                <ul>
+                    <li>태그에 직접 스타일을 지정할 때 용이</li>
+                    <li>HTML과 섞여 있으므로 인라인 스타일을 많이 작성할 경우 나중에 어느 곳에 있는지 알아내기 어려우므로, 가급적사용을 자제하는 것이 좋다.</li>
+                </ul>
+
+                <div class="code">
+<pre><code>&lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;Inline Style&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+            &lt;!-- 글자색을 #ff0a00 으로 지정 --&gt;
+    &lt;p style='color:#ff0a00'&gt;이 문장은 인라인 스타일이 적용되었습니다.&lt;/p&gt;
+    &lt;p&gt;이 문장은 일반 문장입니다.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
+                </div>
+            </div>
+            <!-- //refer -->
+
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>
