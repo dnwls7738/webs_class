@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 시맨틱 태그</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
+    <link rel="icon" href="../assets/face/html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>천우진</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="html.html">HTML <em>시맨틱 태그</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmlRefer01.html">기초 문법</a></li>
+                <li><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li class="active"><a href="htmlRefer03.html">시맨틱 태그</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>시맨틱 태그</h3>
+                <p>
+                    시맨틱 태그란 그 이름 자체만으로 브라우저나 길 잃은 사람들, 지구상의 원주민, 개발자, 수정자들에게 의미를 전달 할 수 있는 태그다.
+                    태그 이름만 들어도 어림짐작할 수 있는게 큰 장점이다.
+                </p>
+
+                <h3>시맨틱 태그 종류</h3>
+                <div class="table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>&lt;section&gt;</th>
+                                <td>&lt;section&gt; 태그는 주제별 그룹의 콘텐츠 섹션을 나타낼때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;header&gt;</th>
+                                <td>&lt;header&gt; 태그는 머리말 영역으로 문서 또는 섹션의 헤더를 나타낼때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;nav&gt;</th>
+                                <td>&lt;nav&gt; 태그는 주로 메뉴를 나타낼때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;main&gt;</th>
+                                <td>&lt;main&gt; 태그는 문서의 주요 컨텐츠를 나타낼때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;article&gt;</th>
+                                <td>&lt;article&gt; 태그는 문서 본문 중 독립된 컨텐츠를 나타낼때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;aside&gt;</th>
+                                <td>&lt;aside&gt; 태그는 사이드바라고 불리며 광고영역등을 나타낼때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;footer&gt;</th>
+                                <td>&lt;footer&gt; 태그는 문서의 바닥글, 섹션의 꼬리말을 나타낼때 사용합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+                
+                <h3>HTML5에 없어진 태그</h3>
+                <div class="table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>&lt;basefont&gt;</th>
+                                <td>&lt;basefont&gt; 태그는 해당 문서의 모든 텍스트를 위한 기본 색상, 크기, 글꼴 집합(font-family) 등을 정의할 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;big&gt;</th>
+                                <td>&lt;big&gt; 태그는 글자 크기가 큰 텍스트를 정의할 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;center&gt;</th>
+                                <td>&lt;center&gt; 태그는 가운데로 정렬되는 텍스트를 정의할 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;font&gt;</th>
+                                <td>&lt;font&gt; 태그는 텍스트의 폰트(font), 색상 그리고 크기를 정의할 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;frame&gt;</th>
+                                <td>&lt;frame&gt; 태그는 &lt;frameset&gt; 요소에 포함되는 하나의 프레임(frame)을 정의할 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;frameset&gt;</th>
+                                <td>&lt;frameset&gt; 태그는 요소에 포함된 각각의 &lt;frame&gt; 요소는 테두리(border)나 스크롤, 크기 재조정 가능 여부 등 서로 다른 속성값을 가질 수 있습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;noframes&gt;</th>
+                                <td>&lt;noframes&gt; 태그는 프레임(frame) 기능을 사용하지 않도록 설정했거나, 프레임 기능을 지원하지 않는 브라우저를 위한 별도의 콘텐츠를 정의할 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;strike&gt;</th>
+                                <td>&lt;strike&gt; 태그는 텍스트 한가운데 라인을 추가할 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;tt&gt;</th>
+                                <td>&lt;tt&gt; 태그는 태그는 텔레타이프 텍스트(teletype text)를 나타낼 때 사용합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;tt&gt;</th>
+                                <td>&lt;tt&gt; 태그는 태그는 텔레타이프 텍스트(teletype text)를 나타낼 때 사용합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>HTML5에 의미가 변경된 태그</h3>
+                <div class="table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>태그</th>
+                                <th>변경 전</th>
+                                <th>변경 후</th>
+                            </tr>
+                            <tr>
+                                <th>&lt;a&gt;</th>
+                                <td>href 속성은 필수</td>
+                                <td>
+                                    href 속성은 필수가 아님
+                                    href 속성이 없는 a 요소는 플레이스 홀더로 어떠한 이유로 하이퍼링크를 붙이지 않은 텍스트로 이용할 수 있음
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;cite&gt;</th>
+                                <td>인용문의 작성자나 제목을 나타냄</td>
+                                <td>
+                                    인용문의 제목만 나타냄
+                                    작성자난 인용문에는 사용할 수 없음
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;address&gt;</th>
+                                <td>문서에 대한 연락처를 나타냄</td>
+                                <td>
+                                    article 요소 안에 있는 경우는 article의 문서에 대한 연락처를 나타냄
+                                    body 요소 안에 있는 경우는 문서에 대한 연락처를 나타냄
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;hr&gt;</th>
+                                <td>가로 괘선을 나타냄</td>
+                                <td>
+                                    단락 단위에서 의미가 바뀌는 부분을 나타냄
+                                    일반적으로는 가로 괘선이 표시됨
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;dl&gt;</th>
+                                <td>정의 리스트(Defintion List)를 나타냄</td>
+                                <td>
+                                    기술리스트(Definition List)를 나타냄
+                                    정의를 나타내려면 dfn 태그를 함께 사용해야 함
+                                    dt 태그는 용어를, dd태그는 그 설명을 나타냄
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;b&gt;</th>
+                                <td>굵은 글꼴을 나타냄</td>
+                                <td>
+                                    키워드나 제품명 등 다른 것과 구별하고 싶은 곳을 나타냄
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;i&gt;</th>
+                                <td>문자열을 이탤릭체로 나타냄</td>
+                                <td>
+                                    마음의 소리나 다른 나라의 언어 등 본문과는 다른 부분을 나타냄
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;s&gt;</th>
+                                <td>취소선이 그어진 문자열을 나타냄</td>
+                                <td>
+                                    정확하지 않았던 내용(관련이 없어진 내용)을 나타냄. 보통은 취소선이 그어진 문자열이 표시됨
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;u&gt;</th>
+                                <td>밑줄이 그어진 문자열을 나타냄</td>
+                                <td>
+                                    고유 명사나 스펠링 미스 등 문장 중에 다른 부분과 명확히 구별하기 어려운곳을 나타냄
+                                    보통은 밑줄이 있는 문자열이 표시됨
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;small&gt;</th>
+                                <td>문자를 작게 만듦</td>
+                                <td>
+                                    세목이나 주석을 나타냄
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+        </div>
+
+        
+        <!-- //refer -->
+
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+</html>

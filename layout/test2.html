@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout02</title>
+    <title>test2</title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
         body{
-            background-color: #FFF3E0;
+            background-color: #EAF5EA;
         }
-
         #wrap{
             width: 1200px;
             margin: 0 auto;
@@ -26,27 +24,47 @@
         }
         #nav{
             width: 1200px;
+            display: flex;
+        }
+        #nav .menu1{
+            width: 400px;
+            height: 100px;
+            background-color: #AFD5AB;
+        }
+        #nav .menu2{
+            width: 400px;
+            height: 100px;
+            background-color: #82BE7B;
+        }
+        #nav .menu3{
+            width: 400px;
             height: 100px;
             background-color: #AFD5AB;
         }
         #main{
             width: 1200px;
-        }
-        #main .contents{
-            width: 1200px;
             display: flex;
         }
-        #main .contents .article1{
+        #main .left{
             width: 300px;
             height: 800px;
             background-color: #91C58A;
         }
-        #main .contents .article2{
-            width: 600px;
+        #main .contents{
             height: 800px;
-            background-color: #7BB973;
+            background-color: #7BB972;
         }
-        #main .contents .article3{
+        #main .contents .content1{
+            width: 600px;
+            height: 400px;
+            background-color: #7BB972;
+        }
+        #main .contents .content2{
+            width: 600px;
+            height: 400px;
+            background-color: #5B9D51;
+        }
+        #main .right{
             width: 300px;
             height: 800px;
             background-color: #67AD5B;
@@ -54,24 +72,27 @@
         #footer{
             width: 1200px;
             height: 100px;
-            background-color: #5D9E51; 
+            background-color: #5D9E52;
         }
     </style>
 </head>
-
 <body>
     <div id="wrap">
         <header id="header"></header>
-        <nav id="nav"></nav>
+        <nav id="nav">
+            <section class="menu1"></section>
+            <section class="menu2"></section>
+            <section class="menu3"></section>
+        </nav>
         <main id="main">
+            <aside class="left"></aside>
             <section class="contents">
-                <section class="article1"></section>
-                <section class="article2"></section>
-                <section class="article3"></section>
+                <section class="content1"></section>
+                <section class="content2"></section>
             </section>
+            <aside class="right"></aside>
         </main>
         <footer id="footer"></footer>
     </div>
 </body>
-
 </html>

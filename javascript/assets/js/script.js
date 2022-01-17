@@ -60,6 +60,14 @@ document.querySelector(".result15t h4").addEventListener("click", function(){
    document.querySelector(".result15").style.display = "block";
 });
 
+document.querySelector(".result16t h4").addEventListener("click", function(){
+   document.querySelector(".result16").style.display = "block";
+});
+
+document.querySelector(".result17t h4").addEventListener("click", function(){
+   document.querySelector(".result17").style.display = "block";
+});
+
 //for(let i=1; i<=15; i++){
 //    document.querySelector(".result"+i+"t h4").addEventListener("click", function(){
 //        document.querySelector(".result"+i).style.display = "block";
