@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>자바스크립트</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+
+    <div class="top"><a href="#header">Top</a></div>
+
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
+                <li class="active"><a href="reference07.html">함수</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>함수</h2>
+            <p>
+                데이터를 저장할 때 변수를 선언하여 저장했습니다.
+                변수에는 데이터만 저장 할 수 있고 코드는 저장 할 수 없습니다. 
+                하지만 함수를 사용하면 코드를 메모리에 저장했다가 필요할 때마다 호출하여 사용할 수 있습니다.
+            </p>
+
+            <h3>선언적 함수</h3>
+            <p>함수에서는 function 키워드를 사용해서 변수를 선언합니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        function 함수이름 () {
+            // 실행코드 작성
+        }
+        함수이름();
+    &lt;/script&gt;
+}</code></pre>
+
+            다음예제는 선언적 함수를 선언한 다음  호출하여 코드를 실행합니다.
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        var conunt = 0;
+        
+        function myfnc(){
+            count++;
+            document.write("hello"+ count,"&lt;br&gt;")
+        }
+        mtfnc();
+    &lt;/script&gt;
+}</code></pre>
+            <h3>익명 함수</h3>
+            <p>
+                익명함수는 말그대로 이름이 없는 함수입니다. 
+                따라서 익명함수를 선언하고 사용하기 위해서는 변수에 넣어서 사용하여야 합니다.
+            </p>
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        function () {
+            자바스크립트 코드;
+        };
+    &lt;/script&gt;
+}</code></pre>    
+           <p>익명함수는 위와 같은 형태로 만들어 준다음 아래와 같이 변수에 넣어서 변수 이름을 호출 해주면 됩니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        var func = function () {
+            자바스크립트 코드;
+        }
+        func();
+    &lt;/script&gt;
+}</code></pre>
+            <p>다음예제는 익명 함수를 선언한 다음 호출하여 코드를 실행합니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        var theFnc = function () {
+            count++;
+            document.write("bye"+count,"&lt;br&gt;");
+        }
+        func();
+    &lt;/script&gt;
+}</code></pre>
+            <h3>매개변수 함수</h3>
+            <p>
+                매개변수가 있는 함수 정의문은 함수를 호출할 때 값을 전달 할 수 없었습니다. 
+                하지만 매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다. 
+            </p>
+            <p>다음은 함수를 호출할 때 값을 전달하는 기본형입니다.</p>
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        function함수명(매개변수1, 매개변수2, .....데이터n){
+            자바스크립트 코드,
+        }
+        함수명(데이터1, 데이터2....데이터n)
+    &lt;/script&gt;
+}</code></pre>
+            <p>
+                다음은 함수를 호출했을 때 이름과 사는 지역의 데이터를 함수 정의문의 매개변수 name과 area에 각각전달하여
+                함수 안에 있는 실행문이 매개변수에 저장된 데이터를 불러오는 예제입니다.
+            </p>
+<pre class="line-numbers"><code class="language-js">{
+    &lt;script&gt;
+        fuction myFnc(name, area) {
+            document.write("안녕하세요" + name + "입니다.","&lt;br&gt;");
+            document.write("사는 곳은" + area + "입니다.", "&lt;br&gt;&lt;br&gt;")
+        }
+        myFnc("홍당무","서울");
+    &lt;/script&gt;
+}</code></pre>
+            <h3>리턴값 함수</h3>
+            <p>뭄법, 설명, 코딩1,2</p>
+
+
+        
+        </div>   
+
+    </main>
+</body>
+
+</html>

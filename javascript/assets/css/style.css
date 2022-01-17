@@ -35,6 +35,16 @@
 }
 
 /* reset */
+:root {
+    font-size: 16px;
+}
+
+@media (max-width: 800px){
+    :root{
+        font-size: 14px;
+    }
+    
+}
 * {
     margin: 0;
     padding: 0;
@@ -90,6 +100,16 @@ a {
     border-radius: 30px;
     display: inline-block;
     margin-bottom: 10px;
+}
+
+#header nav ul:nth-child(2) li a {
+    font-size: 14px;
+    padding: 8px 20px 6px 20px;
+}
+
+#header nav ul:nth-child(3) li a {
+    font-size: 14px;
+    padding: 8px 20px 6px 20px;
 }
 
 #header nav ul li.active a {
@@ -299,18 +319,19 @@ a {
 .result h4 {
     background: #f2f2f2;
     margin-top: 10px;
-    padding: 10px;
+    padding: 10px 20px;
     font-weight: normal;
-    border-radius: 5px 0;
+    border-radius: 5px 5px 0 0;
     font-size: 16px;
 }
-.result div {
+.result > div {
     background: #272822;
     padding: 20px;
     color: #fff;
-    border-radius: 0 5px;
+    border-radius: 0 0 5px 5px;
     font-size: 16px;
     line-height: 1.4;
+    display: none;
 }
 @media (max-width: 800px) {
     .result h4 {
@@ -376,6 +397,32 @@ a {
         padding: 10px 0;
     }
 }
+
+/* test */
+.test {
+    max-width: 1000px;
+    width: 100%;
+    margin: 100px auto;
+}
+.test h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.test h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5em;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-top: 3em;
+}
+.test p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.test .code {
+    margin-top: 1em;
+} 
 
 /* 간격설정 */
 .mt0 {margin-top: 0px !important;}
