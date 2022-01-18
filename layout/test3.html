@@ -1,70 +1,61 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout5</title>
+    <title>tes3</title>
     <style>
         *{
             margin: 0;
             padding: 0;
         }
-        #warp {
-            width: 100%;
+        #wrap{
+            width:100%;
         }
-        #header {
-            width: 100%;
+        #header{
             height: 100px;
-            background-color: #EFEBE9;
+            background-color: #D5CCC8;
         }
-        #nav {
-            width: 100%;
+        #nav{
             height: 100px;
-            background-color: #BCAAA4;
+            background-color: #9D8980;
         }
-        #contents {
-            width: 100%;
+        #contents{
             height: 780px;
-            background-color: #8D6E63;
+            background-color: #886F64;
+            
         }
-        #footer {
-            width: 100%;
+        #footer{
             height: 100px;
-            background-color: #4E342E;
+            background-color: #4A352F;
         }
-        .container {
+        .container{
             width: 1200px;
-            margin: 0 auto;
             height: inherit;
-            background-color: rgba(0,0,0,0.3);
+            background-color: rgb(0,0,0,0.3);
+            margin: 0 auto;
         }
-
-        #contents .container {
+        #contents .conatiner{
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
         }
-        #contents .container .aside{
-            width: 400px;
-            height: 780px;
-            background-color: #795548;
-        }
-        #contents .container .articel1{
+        .container .article1{
             width: 800px;
             height: 390px;
-            background-color: #6D4C41;
+            background-color: #684E43;
         }
-        #contents .container .articel2{
+        .container .article2{
             width: 800px;
             height: 390px;
-            background-color: #5D4037;
+            background-color: #594138;
         }
 
     </style>
 </head>
 <body>
-    <div id="warp">
+    <div class="wrap">
         <header id="header">
             <div class="container"></div>
         </header>
@@ -73,9 +64,8 @@
         </nav>
         <section id="contents">
             <div class="container">
-                <aside class="aside"></aside>
-                <article class="articel1"></article>
-                <article class="articel2"></article>
+                <article class="article1"></article>
+                <article class="article2"></article>
             </div>
         </section>
         <footer id="footer">
