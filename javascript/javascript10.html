@@ -262,7 +262,7 @@ document.querySelectorAll("#sample2 .view > div").forEach(function(el){
         document.querySelector("#sample3 .btn2").addEventListener("click", function(){
             document.querySelectorAll("#sample3 .view > div").forEach(function(el){
                 if (el.classList.contains("selected")){
-                    el.classList.toggle("blue");
+                    el.classList.add("blue");
                 }
             });
         });
