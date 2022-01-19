@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
 
-    <!-- script -->
-    <script src="assets/js/prism.js"></script>
-
 </head>
 
 <body>
@@ -594,210 +591,207 @@
             </div>
         </div>
         <!-- //script-->
-
+    </main>
         <!-- script -->
+        <script src="assets/js/prism.js"></script>
         <script src="assets/js/script.js"></script>
     
-        <script>
-        //01. 변수 : 데이터 저장소
-        // {
-        //     var x = 100; //변수 x에 숫자 100을 저장
-        //     var y = 200; //변수 y에 숫자 200을 저장
-        //     var z = "javascript"; //변수 z에 문자 javascript를 저장
-        // }
+    <script>
+    //01. 변수 : 데이터 저장소
+    // {
+    //     var x = 100; //변수 x에 숫자 100을 저장
+    //     var y = 200; //변수 y에 숫자 200을 저장
+    //     var z = "javascript"; //변수 z에 문자 javascript를 저장
+    // }
 
-        //02. 변수 : 데이터 저장 + 데이터 변경
-        // {
-        //     let x = 100;
-        //     let y = 200;
-        //     let z = "javascript";
+    //02. 변수 : 데이터 저장 + 데이터 변경
+    // {
+    //     let x = 100;
+    //     let y = 200;
+    //     let z = "javascript";
 
-        //     x = 300;
-        //     y = 400;
-        //     z = "jquery";
+    //     x = 300;
+    //     y = 400;
+    //     z = "jquery";
 
-        //     document.querySelector(".result02").innerHTML = x +"<br>"+ y + "<br>" + z;
-        // }
+    //     document.querySelector(".result02").innerHTML = x +"<br>"+ y + "<br>" + z;
+    // }
 
-        // //03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
-        // {
-        //     let x = 100;
-        //     let y = 200;
-        //     let z = "javascript";
+    // //03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
+    // {
+    //     let x = 100;
+    //     let y = 200;
+    //     let z = "javascript";
 
-        //     x += 300;     // x = x + 300;
-        //     y -= 400;     // y = y - 400;
-        //     z += "jquery";
+    //     x += 300;     // x = x + 300;
+    //     y -= 400;     // y = y - 400;
+    //     z += "jquery";
 
-        //     document.querySelector(".result03").innerHTML = x +"<br>"+ y + "<br>" + z;
-        // }
+    //     document.querySelector(".result03").innerHTML = x +"<br>"+ y + "<br>" + z;
+    // }
 
-        // //04. 변수 : 변수의 종류 : 지역변수 + 전역변수
-        // {
+    // //04. 변수 : 변수의 종류 : 지역변수 + 전역변수
+    // {
 
-        //     let x = 100;    //전역변수
-        //     let y = 200;    //전역변수
+    //     let x = 100;    //전역변수
+    //     let y = 200;    //전역변수
 
-        //     function func(){
-        //         let x = 100;    //지역변수
-        //         let z = "javascript";
-        //         x = 200;    //지역변수 100 -> 200
-        //         y = 300;    //전역변수 200 -> 300
+    //     function func(){
+    //         let x = 100;    //지역변수
+    //         let z = "javascript";
+    //         x = 200;    //지역변수 100 -> 200
+    //         y = 300;    //전역변수 200 -> 300
 
-        //     }
-        //     func();
-            
-        //     document.querySelector(".result04").innerHTML = "함수안" + "<br>" + 200 +"<br>"+ 300 + "<br>" + "javascript" + "<br>" + "함수밖" +"<br>"+ 100 +"<br>"+ 300 + "<br>" + undefined;
-        // }
-
-        // //05. 상수 : 데이터 저장소 : 데이터 변경(X)
-        // {
-        //     const x = 100;
-        //     const y = 200;
-        //     const z = "javascript";
-
-        //     // x = 300;
-        //     // y = 400;
-        //     // z = "jquery";
-
-        //     document.querySelector(".result05").innerHTML = x +"<br>"+ y + "<br>" + z;
-
-        // }
-
-        // //06. 배열 : 여러개의 데이터를 저장 : 표현방법1
-        // //식벽자 & 키워드(참고)
-        // //식별자를 만드는 규칙
-        // //단어 조합 규칙
-        // {
-        //     const arr = new Array();
-        //     arr[0] = 100;
-        //     arr[1] = 200;
-        //     arr[2] = "javascript";
-
-        //     document.querySelector(".result06").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
-        // }
-        // //07. 배열 : 여러개의 데이터를 저장 : 표현방법2
-        // {
-        //     const arr = new Array(100, 200, "javascript")
-
-        //     document.querySelector(".result07").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
-        // }
-
-        // //08. 배열 : 여러개의 데이터를 저장 : 표현방법3
-        // {
-        //     const arr = [];
-        //     arr[0] = 100;
-        //     arr[1] = 200;
-        //     arr[2] = "javascript";
-
-        //     document.querySelector(".result08").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
-        // }
-        // //09. 배열 : 여러개의 데이터를 저장 : 표현방법4
-        // {
-        //     const arr = [100, 200, "javascript"];
-
-        //     document.querySelector(".result09").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
-        // }
-        // //10. 객체 : 데이터를 저장(키와 값) : 표현방법1 : 배열의 방법도  동일하게 적용
-        // {
-        //     const obj = new Object();
-
-        //     obj[0] = 100;
-        //     obj[1] = 200;
-        //     obj[2] = "javascript";
-
-        //     document.querySelector(".result10").innerHTML = obj[0] +"<br>"+ obj[1] + "<br>" + obj[2];
-
-        // }
-        // //11. 객체 : 데이터를 저장(키와 값) : 표현방법2
-        // {
-        //     const obj = new Object();
-        //     obj.a = 100;
-        //     obj.b = 200;
-        //     obj.c = "javascript";
-
-        //     document.querySelector(".result11").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
-
-        // }
-        // //12. 객체 : 데이터를 저장(키와 값) : 표현방법3
-        // {
-        //     const obj = {};
-        //     obj.a = 100;
-        //     obj.b = 200;
-        //     obj.c = "javascript";
-
-        //     document.querySelector(".result12").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
-        // }
-        // //13. 객체 : 데이터를 저장(키와 값) : 표현방법4
-        // {
-        //     const obj = {
-        //         a: 100,
-        //         b: 200,
-        //         c: "javascript"
-        //     };
-
-        //     document.querySelector(".result13").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
-
-        // }
-        // //14. 객체 : 데이터를 저장(키와 값) : 표현방법5 : 배열 속의 객체
-        // {
-        //     const obj = [
-        //         {a: 100, b: 200},
-        //         {c: "javascript"}
-        //     ];
-        //     document.querySelector(".result14").innerHTML = obj[0].a +"<br>"+ obj[0].b + "<br>" + obj[1].c;
-        // }
-
-        // //15. 객체 : 데이터를 저장(키와 값) : 표현방법6 : 객체 속의 배열
-        // {
-        //     const obj = {
-        //         a: 100,
-        //         b: [200,300],
-        //         c: {x: 400, y: 500,},
-        //         d: "javascript"
-        //     }
-
-        //     document.querySelector(".result15").innerHTML = obj.a +"<br>" + obj.b[0] + "<br>" + obj.b[1] +"<br>" + obj.c.x + "<br>" + obj.c.y + "<br>"+ obj.d;
-        //     ;
-
-        // }
-
-        // //16. 객체 : 데이터를 저장(키와 값) : 표현방법7 : 객체 속의 변수
-        // {
-        //     const a = 100;
-        //     const b = 200;
-        //     const c = "javascript";
-
-        //     const obj = {a, b, c}
-
-        //     document.querySelector(".result16").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
-        // }
-
-        // //17. 객체 : 데이터를 저장(키와 값) : 표현방법8 : 객체 속의 함수
-        // {
-        //     const obj = {
-        //         a: 100,
-        //         b: [200, 300],
-        //         c: {x:400, y:500},
-        //         d: "javascript",
-        //         e: function(){
-        //             document.write("javascript가 실행되었습니다.","<br>");
-        //         },
-        //         f: function(){
-        //             document.write(obj.d + "가 실행되었습니다.","<br>");
-        //         },
-        //         g: function(){
-        //             document.write(this.d + "가 실행되었습니다.","<br>");
-        //         }
-        //     }   
-        //     document.querySelector(".result17").innerHTML = obj.a +"<br>"+  obj.b + "<br>" + obj.b[0] + "<br>" + obj.b[1] +"<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + "javascript가 실행되었습니다."+"<br>"+ obj.d + "가 실행되었습니다."+"<br>" + obj.d + "가 실행되었습니다." + "<br>";
-            
-        // }
+    //     }
+    //     func();
         
+    //     document.querySelector(".result04").innerHTML = "함수안" + "<br>" + 200 +"<br>"+ 300 + "<br>" + "javascript" + "<br>" + "함수밖" +"<br>"+ 100 +"<br>"+ 300 + "<br>" + undefined;
+    // }
+
+    // //05. 상수 : 데이터 저장소 : 데이터 변경(X)
+    // {
+    //     const x = 100;
+    //     const y = 200;
+    //     const z = "javascript";
+
+    //     // x = 300;
+    //     // y = 400;
+    //     // z = "jquery";
+
+    //     document.querySelector(".result05").innerHTML = x +"<br>"+ y + "<br>" + z;
+
+    // }
+
+    // //06. 배열 : 여러개의 데이터를 저장 : 표현방법1
+    // //식벽자 & 키워드(참고)
+    // //식별자를 만드는 규칙
+    // //단어 조합 규칙
+    // {
+    //     const arr = new Array();
+    //     arr[0] = 100;
+    //     arr[1] = 200;
+    //     arr[2] = "javascript";
+
+    //     document.querySelector(".result06").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
+    // }
+    // //07. 배열 : 여러개의 데이터를 저장 : 표현방법2
+    // {
+    //     const arr = new Array(100, 200, "javascript")
+
+    //     document.querySelector(".result07").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
+    // }
+
+    // //08. 배열 : 여러개의 데이터를 저장 : 표현방법3
+    // {
+    //     const arr = [];
+    //     arr[0] = 100;
+    //     arr[1] = 200;
+    //     arr[2] = "javascript";
+
+    //     document.querySelector(".result08").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
+    // }
+    // //09. 배열 : 여러개의 데이터를 저장 : 표현방법4
+    // {
+    //     const arr = [100, 200, "javascript"];
+
+    //     document.querySelector(".result09").innerHTML = arr[0] +"<br>"+ arr[1] + "<br>" + arr[2];
+    // }
+    // //10. 객체 : 데이터를 저장(키와 값) : 표현방법1 : 배열의 방법도  동일하게 적용
+    // {
+    //     const obj = new Object();
+
+    //     obj[0] = 100;
+    //     obj[1] = 200;
+    //     obj[2] = "javascript";
+
+    //     document.querySelector(".result10").innerHTML = obj[0] +"<br>"+ obj[1] + "<br>" + obj[2];
+
+    // }
+    // //11. 객체 : 데이터를 저장(키와 값) : 표현방법2
+    // {
+    //     const obj = new Object();
+    //     obj.a = 100;
+    //     obj.b = 200;
+    //     obj.c = "javascript";
+
+    //     document.querySelector(".result11").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
+
+    // }
+    // //12. 객체 : 데이터를 저장(키와 값) : 표현방법3
+    // {
+    //     const obj = {};
+    //     obj.a = 100;
+    //     obj.b = 200;
+    //     obj.c = "javascript";
+
+    //     document.querySelector(".result12").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
+    // }
+    // //13. 객체 : 데이터를 저장(키와 값) : 표현방법4
+    // {
+    //     const obj = {
+    //         a: 100,
+    //         b: 200,
+    //         c: "javascript"
+    //     };
+
+    //     document.querySelector(".result13").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
+
+    // }
+    // //14. 객체 : 데이터를 저장(키와 값) : 표현방법5 : 배열 속의 객체
+    // {
+    //     const obj = [
+    //         {a: 100, b: 200},
+    //         {c: "javascript"}
+    //     ];
+    //     document.querySelector(".result14").innerHTML = obj[0].a +"<br>"+ obj[0].b + "<br>" + obj[1].c;
+    // }
+
+    // //15. 객체 : 데이터를 저장(키와 값) : 표현방법6 : 객체 속의 배열
+    // {
+    //     const obj = {
+    //         a: 100,
+    //         b: [200,300],
+    //         c: {x: 400, y: 500,},
+    //         d: "javascript"
+    //     }
+
+    //     document.querySelector(".result15").innerHTML = obj.a +"<br>" + obj.b[0] + "<br>" + obj.b[1] +"<br>" + obj.c.x + "<br>" + obj.c.y + "<br>"+ obj.d;
+    //     ;
+
+    // }
+
+    // //16. 객체 : 데이터를 저장(키와 값) : 표현방법7 : 객체 속의 변수
+    // {
+    //     const a = 100;
+    //     const b = 200;
+    //     const c = "javascript";
+
+    //     const obj = {a, b, c}
+
+    //     document.querySelector(".result16").innerHTML = obj.a +"<br>"+ obj.b + "<br>" + obj.c;
+    // }
+
+    // //17. 객체 : 데이터를 저장(키와 값) : 표현방법8 : 객체 속의 함수
+    // {
+    //     const obj = {
+    //         a: 100,
+    //         b: [200, 300],
+    //         c: {x:400, y:500},
+    //         d: "javascript",
+    //         e: function(){
+    //             document.write("javascript가 실행되었습니다.","<br>");
+    //         },
+    //         f: function(){
+    //             document.write(obj.d + "가 실행되었습니다.","<br>");
+    //         },
+    //         g: function(){
+    //             document.write(this.d + "가 실행되었습니다.","<br>");
+    //         }
+    //     }   
+    //     document.querySelector(".result17").innerHTML = obj.a +"<br>"+  obj.b + "<br>" + obj.b[0] + "<br>" + obj.b[1] +"<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + "javascript가 실행되었습니다."+"<br>"+ obj.d + "가 실행되었습니다."+"<br>" + obj.d + "가 실행되었습니다." + "<br>";
         
-        </script>
-        <!--//script-->
-    </main>
+    // }
+    </script>
+    <!--//script-->
 </body>
-
 </html>
