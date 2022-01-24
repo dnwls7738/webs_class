@@ -1,0 +1,11 @@
+/* 전체 레이아웃 */
+#wrap {}
+
+/* 헤더 */
+#header {
+    background-color: #ccc;
+}
+#header .logo{}
+#header .menu{}
+#header .member{}
+

@@ -1,0 +1,45 @@
+/* 여백 초기화 */
+body, div, dl, dt, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend, textarea, 
+p, blockquote, th, td, input, select, button,
+figure, figcaption {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 폰트 초기화 */
+body, button, input, select, table, textarea {
+    color: #222;
+    font-family: NexonLv1Gothic, AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
+}
+
+/* 폰트 셋팅 */
+.NexonLv1 {font-family: 'NexonLv1Gothic';}
+.NexonLv1-300{font-family: 'NexonLv1Gothic'; font-weight: 300;}
+.NexonLv1-400{font-family: 'NexonLv1Gothic'; font-weight: 400;}
+.NexonLv1-700{font-family: 'NexonLv1Gothic'; font-weight: 700;}
+.NexonLv2 {font-family: 'NexonLv2Gothic';}
+.NexonLv2-300{font-family: 'NexonLv2Gothic'; font-weight: 300;}
+.NexonLv2-400{font-family: 'NexonLv2Gothic'; font-weight: 400;}
+.NexonLv2-500{font-family: 'NexonLv2Gothic'; font-weight: 500;}
+.NexonLv2-700{font-family: 'NexonLv2Gothic'; font-weight: 700;}
+.Gmarket {font-family: 'GmarketSans';}
+.Gmarket-300{font-family: 'GmarketSans'; font-weight: 300;}
+.Gmarket-500{font-family: 'GmarketSans'; font-weight: 500;}
+.Gmarket-700{font-family: 'GmarketSans'; font-weight: 700;}
+
+/* 간격 세팅 */
+.mt0 {margin-top: 0 !important;}
+.mt10 {margin-top: 10 !important;}
+.mt20 {margin-top: 20 !important;}
+.mt30 {margin-top: 30 !important;}
+.mt40 {margin-top: 40 !important;}
+.mt50 {margin-top: 50 !important;}
+
+.mb0 {margin-bottom: 0 !important;}
+.mb10 {margin-bottom: 10 !important;}
+.mb20 {margin-bottom: 20 !important;}
+.mb30 {margin-bottom: 30 !important;}
+.mb40 {margin-bottom: 40 !important;}
+.mb50 {margin-bottom: 50 !important;}
