@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>천우진</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>기초 문법</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">Css 단위</a></li>
+                <li><a href="cssRefer04.html">Css 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li class="active"><a href="cssRefer06.html">float 깨짐 현상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>float 깨짐 현상</h3>
+                <p>
+                    CSS3에서 float:left로 레이아웃을 잡게 되었을 때, 영역 깨짐(즉, Height 값이 사라져 0이 되는 현상) 이 발생을 합니다.
+                    <br>이 에러를 잡기 위한 방법 5가지입니다.
+                </p>
+                <h4>깨지는 영역에 똑같이 Float: left를 사용</h4>
+                <p>
+                    위 방법을 사용하게 되면 모든 박스에 float: left를 사용해야 하며 구조가 복잡해 지면 어디에 float: left를 넣어야 할지 알기가 어려워 지므로 추천하지 않습니다.
+                </p>
+                <h4>깨지는 영역에 Clear: both를 사용</h4>
+                <p>
+                    위치를 잡을 수 있으나 구조가 복잡할 때는 어떤 영역이 깨졌는지 찾기가 어렵기에 추천하지 않습니다.
+                </p>
+                <h4>Float을 사용한 상위 박스에게 Overflow: hidden을 사용</h4>
+                <p>
+                    2단 메뉴 사용 시에는 사용 할 수 없어 추천하지 않습니다.
+                </p>
+                <h4>부모요소에 Display:inline-block을 사용</h4>
+                <p>
+                    이를 사용하면 박스의 성질 자체가 달라지기 때문에 이전에 작성한 태그의 결과물이 달라 질 수 있어 추천 하지 않습니다.
+                </p>
+                <h4>clearfix를 만들어 class로 사용 <strong>추천</strong></h4>
+                <p>
+                    이를 사용해서 특별한 문제점이 발생되지 않아 제일 많이 사용하는 방법입니다.
+                    아래와 같이 clearfix를 만들어 클래스로 사용하면 됩니다.
+                </p>
+                <div class="code">
+<pre><code>.clearfix::before, 
+.clearfix::after 
+{content: ''; display: block; clear: both;}
+</code></pre>
+                </div>
+
+            </div>
+            <!-- //refer -->
+
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>
