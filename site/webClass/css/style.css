@@ -1,13 +1,13 @@
 /* 전체 레이아웃 */
 
 /* 
-    헤더 레이아웃 : float 
+    헤더01 float 사용 
     float으로 인한 영역 깨짐 현상 발생(height값을 인식 못함)
     1. clear: both; 설정
     2. 부모 영역한테 overflow: hidden; 설정
     3. 가상의 영역(clearfix) 속성을 설정
 */
-
+/* 
 #header {
     padding: 10px;
     border: 1px solid #eee;
@@ -50,3 +50,13 @@
     border-radius: 50px;
     padding: 9px 22px;
 }
+ */
+
+ /* 헤더 02 flex를 사용*/
+ #header{
+     border-bottom: 1px solid #eee;
+     display: grid;
+ }
+ #header .logo {}
+ #header .menu {}
+ #header .member {}

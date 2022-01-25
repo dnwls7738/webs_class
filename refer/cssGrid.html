@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>천우진</strong>
+    </header>
+
+    <main id="contents">
+        <h2>CSS <em>레퍼런스 북</em></h2>
+
+        <div class="menu">
+            <ul>
+                <li class="active"><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">Block/Inline</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssRefer06.html">float 깨짐 현상</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="title">
+                <ul>
+                    <li><a href="css.html">Alphabet</a></li>
+                    <li><a href="cssSelector.html">Selector</a></li>
+                    <li><a href="cssFlex.html">Flex</a></li>
+                    <li class="active"><a href="cssGrid.html">Grid</a></li>
+                    <li><a href="cssTransform.html">Transform</a></li>
+                    <li><a href="cssAnimation.html">Animation</a></li>
+                </ul>
+            </div>
+
+            <div class="table">
+                <colgroup>
+                    <col style="width: 30%" />
+                    <col style="width: 70%" />
+                </colgroup>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>grid</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>grid-area</th>
+                            <td> grid-row-start, grid-column-start, grid-row-end 및 grid-column-end 값을 한번에 설정하는 약식 재산입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-auto-columns</th>
+                            <td>암시적으로 생성된 그리드 열 트랙 또는 트랙 패턴의 크기를 지정 합니다</td>
+                        </tr>
+                        <tr>
+                            <th>grid-auto-flow</th>
+                            <td>자동 배치 알고리즘이 작동하는 방식을 제어하여 자동 배치 항목이 그리드로 흐르는 방식을 정확히 지정합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-auto-rows</th>
+                            <td>암시적으로 생성된 그리드 행 트랙 또는 트랙 패턴의 크기를 지정 합니다 .</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column</th>
+                            <td>그리드 배치에 선, 범위 또는 아무것도 제공하지 않음(자동)을 통해 그리드 항목의 크기와 위치 를 지정하고 그리드 영역 의 인라인 시작 및 인라인 끝
+                                가장자리를 지정합니다 .</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column-end</th>
+                            <td>그리드 배치에 선, 범위 또는 아무것도 제공하지 않음(자동)으로써 그리드 열 내에서 그리드 항목의 끝 위치를 지정하여 그리드 영역 의 블록 끝 가장자리를
+                                지정합니다 .</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column-gap</th>
+                            <td>요소의 열 사이 의 간격 크기를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-column-start</th>
+                            <td>그리드 배치에 선, 범위 또는 아무것도 제공하지 않음(자동)으로 그리드 열 내에서 그리드 항목의 시작 위치를 지정합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-gap</th>
+                            <td>행과 열 사이의 간격( 거터 )을 설정 합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row</th>
+                            <td>그리드 배치에 선, 범위 또는 아무것도 제공하지 않음(자동)으로 그리드 항목의 크기와 위치를 지정하고 그리드 영역 의 인라인 시작 및 인라인 끝 가장자리를
+                                지정합니다 .</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row-end</th>
+                            <td>그리드 배치에 선, 범위 또는 아무 것도 제공하지 않음(자동)으로써 그리드 행 내에서 그리드 항목의 끝 위치를 지정하여 그리드 영역 의 인라인 끝 가장자리를
+                                지정합니다 .</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row-gap</th>
+                            <td>요소의 그리드 행 사이 의 간격 크기를 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-row-start</th>
+                            <td>그리드 배치에 선, 범위 또는 아무것도 제공하지 않음(자동)으로 그리드 열 내에서 그리드 항목의 시작 위치를 지정합니다. </td>
+                        </tr>
+                        <tr>
+                            <th>grid-template</th>
+                            <td>그리드 열 , 행 및 영역 을 정의하기 위한 약식 속성 입니다 .</td>
+                        </tr>
+                        <tr>
+                            <th>grid-template-areas</th>
+                            <td>명명된 격자 영역 을 지정하고 격자에 셀을 설정하고 이름을 할당합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>grid-template-columns</th>
+                            <td> 행 이름을 정의하고 그리드 열의 크기 조정 기능을 추적합니다 .</td>
+                        </tr>
+                        <tr>
+                            <th>grid-template-rows</th>
+                            <td>행 이름을 정의하고 그리드 행의 크기 조정 기능을 추적합니다 .</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- //refer -->
+
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</body>
+
+</html>
