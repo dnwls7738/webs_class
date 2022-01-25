@@ -7,7 +7,7 @@ https://dnwls7738.github.io/webs_class/
 https://dnwls7738.github.io/webs_class/javascript/index.html
 
 ## HTML 레퍼런스
-https://dnwls7738.github.io/webs_class/html/index.html
+https://dnwls7738.github.io/webs_class/refer/index.html
 
 ## CSS
-https://dnwls7738.github.io/webs_class/CSS/index.html
+https://dnwls7738.github.io/webs_class/refer/index.html
