@@ -42,6 +42,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        img {
+            width: 100%;
+        }
 
         body {
             background: #ffdbe5;
@@ -72,6 +75,7 @@
             top: 40%;
             transform: translate(-50%, -50%);
             text-align: center;
+            z-index: 30;
         }
 
         .text h1 {
@@ -132,25 +136,27 @@
         }
 
         .ship {
-            width: 300px;
+            width: 200px;
             position: absolute;
             left: 0;
             bottom: 10vh;
-            z-index: 15;
+            z-index: 18;
             animation-name: move;
-            animation-duration: 100s;
+            animation-duration: 80s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
         @keyframes move {
-            0% {left: 0;}
-            100% {left: 100%;}
+            0% {left: -10%;}
+            100% {left: 110%;}
         }
         .Human {
-            width: 300px;
+            width: 150px;
             position: absolute;
             left: 50%;
             bottom: 0;
             transform: translateX(-50%);
-            z-index: 20;
+            z-index: 50;
         }
 
         .duck1 {
@@ -158,7 +164,12 @@
             position: absolute;
             right: 10vw;
             bottom: 20vh;
-            z-index: 15;
+            z-index: 17;
+            animation: move4 100s infinite linear;
+        }
+        @keyframes move4 {
+            0% {right: -5%;}
+            100% {right: 100%;}
         }
 
         .duck2 {
@@ -166,7 +177,12 @@
             position: absolute;
             right: 8vw;
             bottom: 20vh;
-            z-index: 15;
+            z-index: 17;
+            animation: move5 100s infinite linear;
+        }
+        @keyframes move5 {
+            0% {right: -8%;}
+            100% {right: 100%;}
         }
 
         .balloon {
@@ -174,6 +190,12 @@
             position: absolute;
             left: 20vw;
             top: 10vw;
+            animation: move3 5s infinite linear;
+        }
+        @keyframes move3 {
+            0% {top: 10vw;}
+            50% {top: 12vw;}
+            100% {top: 10vw;}
         }
 
         .cloud1 {
@@ -188,6 +210,12 @@
             position: absolute;
             left: 40vw;
             top: 10vh;
+            animation: move2 200s infinite linear;
+        }
+        @keyframes move2 {
+            0% {left: 40vw;}
+            50% {left: 70vw;}
+            100% {left: 40vw;}
         }
 
         .cloud3 {
@@ -195,6 +223,12 @@
             position: absolute;
             right: 10vw;
             top: 15vh;
+            transform: rotateY(180deg);
+            animation: move1 100s infinite linear;
+        }
+        @keyframes move1 {
+            0% {right: -10vw;}
+            100% {right: 110vw;}
         }
     </style>
 </head>
