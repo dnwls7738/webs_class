@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST7</title>
+    <style>
+        /* 여백 초기화 */
+        body,
+        div,
+        dl,
+        dt,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td,
+        input,
+        select,
+        button,
+        article,
+        aside,
+        details,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        figure,
+        figcaption {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 시맨틱 태그 초기화 */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        /* 폰트 초기화 */
+        body,
+        button,
+        input,
+        select,
+        table,
+        textarea {
+            color: #222;
+            font-family: NexonLv1Gothic, AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
+        }
+
+        /* 링크 초기화 */
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        /* 목록 초기화 */
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        /* 스타일 초기화 */
+        em {
+            font-style: normal;
+        }
+
+        /* 폰트 셋팅 */
+        .NexonLv1 {
+            font-family: 'NexonLv1Gothic';
+        }
+
+        .NexonLv1-300 {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+        }
+
+        .NexonLv1-400 {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        .NexonLv1-700 {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+        }
+
+        .NexonLv2 {
+            font-family: 'NexonLv2Gothic';
+        }
+
+        .NexonLv2-300 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 300;
+        }
+
+        .NexonLv2-400 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 400;
+        }
+
+        .NexonLv2-500 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 500;
+        }
+
+        .NexonLv2-700 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 700;
+        }
+
+        .Gmarket {
+            font-family: 'GmarketSans';
+        }
+
+        .Gmarket-300 {
+            font-family: 'GmarketSans';
+            font-weight: 300;
+        }
+
+        .Gmarket-500 {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+        }
+
+        .Gmarket-700 {
+            font-family: 'GmarketSans';
+            font-weight: 700;
+        }
+
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #header {
+            height: 109px;
+            background-color: #C2F6C1;
+        }
+
+        #header .nav {
+            margin: 0 auto;
+            width: 1200px;
+            height: 109px;
+            background-color: #6ECC6C;
+        }
+
+        #banner {
+            height: 893px;
+            background-color: #F89292;
+        }
+
+        #banner .banner1 {
+            margin: 0 auto;
+            height: 893px;
+            width: 1200px;
+            background-color: #AD7B7B;
+        }
+
+        #contents {
+            overflow: hidden;
+        }
+
+        #contents .cont1 {
+            background-color: #B99E9E;
+        }
+
+        #contents .cont1 .cont1_1 {
+            margin: 0 auto;
+            height: 640px;
+            width: 1200px;
+            background-color: #9EA9B9;
+        }
+
+        #contents .cont2 {
+            height: 3250px;
+            background-color: #9D7777;
+        }
+
+        #contents .cont2 .cont2_1 {
+            margin: 0 auto;
+            width: 1200px;
+            height: 3250px;
+            background-color: #6A3434;
+        }
+
+        #contents .cont3 {
+            margin: 0 auto;
+            height: 1076px;
+
+        }
+
+        #contents .cont3 .test {
+            margin: 0 auto;
+            width: 1200px;
+            height: 1076px;
+        }
+
+        #contents .cont3 h3 {
+            font-weight: 700;
+            font-size: 50px;
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+
+        #contents .cont3 .test .cont3_1 {
+            float: left;
+            height: 463px;
+            width: 386px;
+            background-size: 100%;
+        }
+
+        #contents .cont3 .test .cont3_1 img {
+            margin-bottom: 25px;
+            float: left;
+            height: 463px;
+            width: 386px;
+            background-size: 100%;
+
+        }
+
+        #contents .cont3 .test .cont3_1 .p1 {
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        #contents .cont3 .test .cont3_1 .p2 {
+            margin-top: 20px;
+        }
+
+        #contents .cont3 .test .cont3_2 {
+            margin-left: 20px;
+            float: left;
+            height: 463px;
+            width: 386px;
+            background-size: 100%;
+        }
+
+        #contents .cont3 .test .cont3_2 .p1 {
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        #contents .cont3 .test .cont3_2 .p2 {
+            margin-top: 20px;
+        }
+
+        #contents .cont3 .test .cont3_2 img {
+            margin-bottom: 25px;
+            float: left;
+            height: 463px;
+            width: 386px;
+            background-color: #222;
+
+        }
+
+        #contents .cont3 .test .cont3_3 {
+            margin-left: 20px;
+            float: left;
+            height: 463px;
+            width: 386px;
+            background-size: 100%;
+        }
+
+        #contents .cont3 .test .cont3_3 .p1 {
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        #contents .cont3 .test .cont3_3 .p2 {
+            margin-top: 20px;
+        }
+
+        #contents .cont3 .test .cont3_3 img {
+            margin-bottom: 25px;
+            float: left;
+            height: 463px;
+            width: 386px;
+            background-color: #333;
+
+        }
+
+        #footer {
+            height: 399px;
+            background-color: #B99E9E;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav class="nav"></nav>
+        </header>
+        <section id="banner">
+            <div class="banner1"></div>
+        </section>
+        <section id="contents">
+            <articel class="cont1">
+                <div class="cont1_1"></div>
+            </article>
+            <article class="cont2">
+                <div class="cont2_1"></div>
+            </article>
+            <article class="cont3">
+                <div class="test">
+                    <h3 class=".ir_so">FIND opportunities</h3>
+                    <div class="cont3_1">
+                        <img src="../assets/img/image04.jpg" alt="지문">
+                        <p class="p1">Fintech</p>
+                        <p class="p2">payment</p>
+                    </div>
+                    <div class="cont3_2">
+                        <img src="../assets/img/image05.jpg" alt="노트북">
+                        <p class="p1">Digital Marketing</p>
+                        <p class="p2">IMS</p>
+                    </div>
+                    <div class="cont3_3">
+                        <img src="../assets/img/image06.jpg" alt="키보드">
+                        <p class="p1">Platform</p>
+                        <p class="p2">Commerce, Magazine</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
