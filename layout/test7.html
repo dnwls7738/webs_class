@@ -155,7 +155,8 @@
             font-family: 'GmarketSans';
             font-weight: 700;
         }
-
+       
+        /* ir 효과 */
         .ir_pm {
             display: block;
             overflow: hidden;
@@ -180,6 +181,28 @@
             height: 0;
             line-height: 0;
             text-indent: -9999px;
+        }
+
+        /* 스킵 */
+        #skip {
+            position: relative;
+            z-index: 10000;
+        }
+
+        #skip a {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            left: -400px;
+            top: 5px;
+            padding: 20px 40px;
+            display: inline-block;
+            transition: left 0.3s ease-in;
+        }
+
+        #skip a:active,
+        #skip a:focus {
+            left: 5px;
         }
 
 
@@ -380,40 +403,47 @@
 </head>
 
 <body>
+
+    <div id="skip">
+        <a href="#contents">컨텐츠 바로가기</a>
+    </div>
+
     <div id="wrap">
         <header id="header">
             <nav class="nav"></nav>
         </header>
         <section id="banner">
+            <h2 class="ir_so">배너 영역</h2>
             <div class="banner1"></div>
         </section>
         <section id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
             <articel class="cont1">
                 <div class="cont1_1"></div>
-            </article>
-            <article class="cont2">
-                <div class="cont2_1"></div>
-            </article>
-            <article class="cont3">
-                <div class="test">
-                    <h3 class=".ir_so">FIND opportunities</h3>
-                    <div class="cont3_1">
-                        <img src="../assets/img/image04.jpg" alt="지문">
-                        <p class="p1">Fintech</p>
-                        <p class="p2">payment</p>
+                </article>
+                <article class="cont2">
+                    <div class="cont2_1"></div>
+                </article>
+                <article class="cont3">
+                    <div class="test">
+                        <h3>FIND opportunities</h3>
+                        <div class="cont3_1">
+                            <img src="../assets/img/image04.jpg" alt="지문">
+                            <p class="p1">Fintech</p>
+                            <p class="p2">payment</p>
+                        </div>
+                        <div class="cont3_2">
+                            <img src="../assets/img/image05.jpg" alt="노트북">
+                            <p class="p1">Digital Marketing</p>
+                            <p class="p2">IMS</p>
+                        </div>
+                        <div class="cont3_3">
+                            <img src="../assets/img/image06.jpg" alt="키보드">
+                            <p class="p1">Platform</p>
+                            <p class="p2">Commerce, Magazine</p>
+                        </div>
                     </div>
-                    <div class="cont3_2">
-                        <img src="../assets/img/image05.jpg" alt="노트북">
-                        <p class="p1">Digital Marketing</p>
-                        <p class="p2">IMS</p>
-                    </div>
-                    <div class="cont3_3">
-                        <img src="../assets/img/image06.jpg" alt="키보드">
-                        <p class="p1">Platform</p>
-                        <p class="p2">Commerce, Magazine</p>
-                    </div>
-                </div>
-            </article>
+                </article>
         </section>
         <footer id="footer"></footer>
     </div>
