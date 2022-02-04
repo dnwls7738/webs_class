@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test8</title>
+    <style>
+        /* 여백 초기화 */
+        body,
+        div,
+        dl,
+        dt,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td,
+        input,
+        select,
+        button,
+        article,
+        aside,
+        details,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section,
+        figure,
+        figcaption {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 시맨틱 태그 초기화 */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        /* 폰트 초기화 */
+        body,
+        button,
+        input,
+        select,
+        table,
+        textarea {
+            color: #222;
+            font-family: NexonLv1Gothic, AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
+        }
+
+        /* 링크 초기화 */
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        /* 목록 초기화 */
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        /* 스타일 초기화 */
+        em {
+            font-style: normal;
+        }
+
+        /* 폰트 셋팅 */
+        .NexonLv1 {
+            font-family: 'NexonLv1Gothic';
+        }
+
+        .NexonLv1-300 {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+        }
+
+        .NexonLv1-400 {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        .NexonLv1-700 {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+        }
+
+        .NexonLv2 {
+            font-family: 'NexonLv2Gothic';
+        }
+
+        .NexonLv2-300 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 300;
+        }
+
+        .NexonLv2-400 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 400;
+        }
+
+        .NexonLv2-500 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 500;
+        }
+
+        .NexonLv2-700 {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 700;
+        }
+
+        .Gmarket {
+            font-family: 'GmarketSans';
+        }
+
+        .Gmarket-300 {
+            font-family: 'GmarketSans';
+            font-weight: 300;
+        }
+
+        .Gmarket-500 {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+        }
+
+        .Gmarket-700 {
+            font-family: 'GmarketSans';
+            font-weight: 700;
+        }
+
+        /* ir 효과 */
+        .ir_pm {
+            display: block;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        .ir_wa {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+
+        /* 스킵 */
+        #skip {
+            position: relative;
+            z-index: 10000;
+        }
+
+        #skip a {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            left: -400px;
+            top: 5px;
+            padding: 20px 40px;
+            display: inline-block;
+            transition: left 0.3s ease-in;
+        }
+
+        #skip a:active,
+        #skip a:focus {
+            left: 5px;
+        }
+
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        /* //기본 세팅 */
+
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 115px;
+            overflow: hidden;
+        }
+
+        #header .logo {
+            font-weight: 700;
+            font-size: 50px;
+            display: inline-block;
+            margin-top: 15px;
+            margin-left: 15px;
+            padding: 15px 18px;
+            float: left;
+
+        }
+
+        #header .menu {
+            text-align: center;
+        }
+
+        #header .menu ul {
+            display: inline-block;
+            text-align: right;
+            margin-top: 30px;
+            margin-right: 30px;
+            float: right;
+        }
+
+        #header .menu ul li {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 20px;
+            padding: 15px 15px;
+        }
+
+        #banner {
+            width: 100%;
+            height: 495px;
+        }
+
+        #banner .banner1 {
+            width: 1200px;
+            height: 495px;
+            margin: 0 auto;
+        }
+
+        #banner .banner1 p {
+            font-weight: 700;
+            font-size: 50px;
+            padding-top: 266px;
+        }
+
+        #contents {
+            width: 100%;
+            height: 2140px;
+        }
+
+        #contents .cont1 {
+            height: 840px;
+        }
+
+        #contents .cont1 .cont1_1 {
+            width: 1200px;
+            height: 840px;
+            margin: 0 auto;
+        }
+
+        #contents .cont1 .cont1_1 .cont1_1_1 {
+            width: 590px;
+            height: 835px;
+            float: left;
+            border-top: 1px solid #000;
+            margin-right: 20px;
+        }
+
+        #contents .cont1 .cont1_1 .cont1_1_1 p,
+        #contents .cont1 .cont1_1 .cont1_1_2 p {
+            font-weight: 700;
+            margin-top: 80px;
+            font-size: 30px;
+            position: relative;
+        }
+
+        #contents .cont1 .cont1_1 .cont1_1_1 img {
+            margin: -14px 0 0 0;
+            width: 590px;
+            height: 590px;
+        }
+
+        #contents .cont1 .cont1_1 .cont1_1_2 {
+            width: 590px;
+            height: 835px;
+            float: left;
+            border-top: 1px solid #000;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        #contents .cont1 .cont1_1 .cont1_1_2 img {
+            margin: -14px 0 0 0;
+            width: 590px;
+            height: 590px;
+        }
+
+        #contents .cont2 {
+            height: 1300px;
+        }
+
+        #contents .cont2 .cont2_1 {
+            width: 1200px;
+            height: 1300px;
+            margin: 0 auto;
+        }
+
+        #contents .cont2 .cont2_1 .cont2_1_1 {
+            width: 590px;
+            height: 835px;
+            float: left;
+            border-top: 1px solid #000;
+            margin-right: 20px;
+        }
+
+        #contents .cont2 .cont2_1 .cont2_1_1 p,
+        #contents .cont2 .cont2_1 .cont2_1_2 p {
+            font-weight: 700;
+            margin-top: 80px;
+            font-size: 30px;
+            position: relative;
+        }
+
+        #contents .cont2 .cont2_1 .cont2_1_1 img {
+            margin: -14px 0 0 0;
+            width: 590px;
+            height: 590px;
+        }
+
+        #contents .cont2 .cont2_1 .cont2_1_2 {
+            width: 590px;
+            height: 835px;
+            float: left;
+            border-top: 1px solid #000;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        #contents .cont2 .cont2_1 .cont2_1_2 img {
+            margin: -14px 0 0 0;
+            width: 590px;
+            height: 590px;
+        }
+
+
+        #footer {
+            width: 100%;
+            height: 390px;
+            background-color: #906EF2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">INFORM</div>
+            <nav class="menu">
+                <h2 class="ir_so">메인 메뉴</h2>
+                <ul>
+                    <li>SERVICE</li>
+                    <li>WORK</li>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+                </ul>
+            </nav>
+        </header>
+        <section id="banner">
+            <h2 class="ir_so">배너 영역</h2>
+            <div class="banner1">
+                <p>
+                    We reserch new opportunities<br>
+                    that inspire success.
+                </p>
+            </div>
+        </section>
+        <section id="contents">
+            <h2 class="ir_so">콘텐츠 영역</h2>
+            <article class="cont1">
+                <div class="cont1_1">
+                    <div class="cont1_1_1">
+                        <p>
+                            스마트한 카라이프<br>
+                            한국 타이어
+                        </p>
+                        <img src="../site/webClass/img/img_text_bg1-min.jpg" alt="">
+                    </div>
+                    <div class="cont1_1_2">
+                        <p>
+                            한섬 프리미엄 스타일<br>
+                            모바일 룩북
+                        </p>
+                        <img src="../site/webClass/img/img_text_bg2-min.jpg" alt="">
+                    </div>
+                </div>
+            </article>
+            <article class="cont2">
+                <div class="cont2_1">
+                    <div class="cont2_1_1">
+                        <p>
+                            나는 대만족 입니다.<br>
+                            대만관광청 홈페이지 리뉴얼
+                        </p>
+                        <img src="../site/webClass/img/img_text_bg3-min.jpg" alt="">
+                    </div>
+                    <div class="cont2_1_2">
+                        <p>
+                            세련된 감각의 까사미아<br>
+                            라이프스타일 매거진
+                        </p>
+                        <img src="../site/webClass/img/img_text_bg4-min.jpg" alt="">
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+
+</html>
