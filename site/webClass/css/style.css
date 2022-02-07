@@ -325,13 +325,8 @@
 
 /* 이미지유형1(img_type01) */
 .img_type01 {
-    width: 1200px;
-    margin: 0 auto;
     padding: 150px 0;
-    height: 500px;
-    margin-bottom: 500px;
 }
-
 .img_type01 h3 {
     font-size: 50px;
     line-height: 1;
@@ -343,66 +338,62 @@
     color: #777;
     vertical-align: -4px;
 }
-
 .img_type01 .img-wrap {
     display: flex;
     justify-content: space-between;
 }
-
 .img_type01 .img-wrap .left {
     width: 590px;
     height: 360px;
-    background:url(../img/dog.png);
-    height: 360px;
+    background: url(/site/webClass/img/dog.png);
     position: relative;
-    
+    overflow: hidden;
 }
 .img_type01 .img-wrap .right {
     width: 590px;
     height: 360px;
-    background:url(../img/cat.png);
+    background: url(/site/webClass/img/cat.png);
     position: relative;
+    overflow: hidden;
 }
-
-.img_type01 .img-wrap .left-cont {
+.img_type01 .img-wrap .left .left-cont {
     position: absolute;
-    left: 20px;
+    left:35px;
+    bottom: -100px;
+    transition: bottom 0.33s cubic-bezier(0.07,0.71,0.26,0.99);
+}
+.img_type01 .img-wrap .left:hover .left-cont {
     bottom: 20px;
 }
 
+.img_type01 .img-wrap .right .right-cont {
+    position: absolute;
+    left: 35px;
+    bottom: -80px;
+    transition: bottom 0.33s cubic-bezier(0.07,0.71,0.26,0.99);
+}
+
+.img_type01 .img-wrap .right:hover .right-cont {
+    bottom: 20px;
+    width: 428px;
+    background: rgba(88, 160, 128, 0.8);
+}
 .img_type01 .img-wrap h4 {
     font-size: 30px;
     color: #fff;
     font-weight: 500;
+    margin-bottom: 10px;
 }
-
-.img_type01 .img-wrap .left-cont p {
+.img_type01 .img-wrap p {
     font-size: 14px;
     color: #fff;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
-
 .img_type01 .img-wrap .left-cont a {
-    background: #9a481d;
+    background: #9A481D;
     padding: 10px 20px;
-    color: #fff;
+    color : #fff;
     display: inline-block;
-}
-
-.img_type01 .img-wrap .right-cont {
-    padding: 10px 15px 15px 15px;
-    width: 428px;
-    height: 143px;
-    background: rgba(88, 160, 128, 0.8);
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-}
-
-.img_type01 .img-wrap .right-cont p {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #fff;
 }
 
 .img_type01 .img-wrap .right-cont a {
@@ -410,7 +401,95 @@
     border-bottom: 1px solid #fff;
 }
 
-
-
 /* 이미지유형2(img_type02) */
-.img_type02{}
+.img_type02 {
+    padding: 150px 0;
+    background: #F5F5F5;
+}
+.img_type02 h3 {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.img_type02 h3 em {
+    font-size: 20px;
+    color: #777;
+    vertical-align: -4px;
+}
+.img_type02 .img-wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+.img_type02 .img-wrap li {
+    width: 387px;
+    height: 387px;
+    background-size: 100%;
+    position: relative;
+    perspective: 800px;
+}
+.img_type02 .img-wrap li::after {
+    content: '';
+    display: block;
+    background: #fff;
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: rotateX(-90deg);
+}
+.img_type02 .img-wrap li:hover::after {
+    opacity: 0.8;
+    transform: rotateX(0deg);
+}
+.img_type02 .img-wrap li span {
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 36px);
+    color: #000;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.img_type02 .img-wrap li span em {
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s;
+}
+.img_type02 .img-wrap li span a {
+    display: block;
+    background: #000;
+    border-radius: 40px;
+    font-weight: 300;
+    margin-top: 5px;
+    padding: 7px 10px 5px 10px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.img_type02 .img-wrap li:hover span {
+    top: 50%;
+}
+.img_type02 .img-wrap li:hover span em {
+    color: #000;
+}
+.img_type02 .img-wrap li:hover span a {
+    opacity: 1;
+}
+
+.img_type02 .img-wrap li:nth-child(1){
+    background-image: url(../img/seoul@2x.jpg);
+}
+.img_type02 .img-wrap li:nth-child(2){
+    background-image: url(../img/tokyo@2x.jpg);
+}
+.img_type02 .img-wrap li:nth-child(3){
+    background-image: url(../img/beijing@2x.jpg);
+}

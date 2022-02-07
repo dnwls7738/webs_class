@@ -18,14 +18,14 @@
         <h1><a href="index.html">Javascript</a></h1>
         <nav>
             <ul>
-                <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
             <ul>
                 <li><a href="javascript05.html">문자열 객체</a></li>
-                <li class="active"><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
                 <li><a href="javascript07.html">수학 객체</a></li>
                 <li><a href="javascript08.html">숫자 객체</a></li>
                 <li><a href="javascript09.html">브라우저 객체</a></li>
@@ -34,6 +34,14 @@
             </ul>
             <ul>
                 <li><a href="practice.html">데이터 연습하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="sample_menu.html">메뉴 이펙트</a><li>
+                <li><a href="sample_serch.html">검색 이펙트</a><li>
+                <li><a href="sample_mouse.html">마우스 이펙트</a></li>
+                <li><a href="sample_parallax.html">패랠랙스 이펙트</a></li>
+                <li><a href="sample_slide.html">슬라이드 이펙트</a></li>
+                <li><a href="sample_game.html">게임 이펙트</a></li>
             </ul>
         </nav>
     </header>
@@ -1456,29 +1464,36 @@
             
             // 300, 400
             const result = arrBox.slice(2,4);
-            console.log(result);;
+            console.log(result);
+
+            const result2 = arrBox.splice(2,2);
+            console.log(result2);
 
             // 100, 300, 500, 700
 
             // 700
-            const result2 = arrBox.find(el => el === 700);
-            console.log(result2);
-
-            const result3 = arrBox.filter(el => el === 700);
+            const result3 = arrBox.find(el => el === 700);
             console.log(result3);
+
+            const result4 = arrBox.filter(el => el === 700);
+            console.log(result4);
              
             arrBox2 = ['j', 'b', 'c', 'd', 'e'];
             // j
-            const result4 = arrBox2.filter(el => el === 'j');
-            console.log(result4);
+            const result5 = arrBox2.filter(el => el === 'j');
+            console.log(result5);
 
             const result6 = arrBox2.find(el => el === 'j');
             console.log(result6);
+
             // jc
 
             // jbcd
-            const result5 = arrBox2.slice(0,4);
-            console.log(result5);;
+            const result7 = arrBox2.slice(0,4);
+            console.log(result7);;
+
+            const result8 = arrBox2.splice(0,4);
+            console.log(result8);;
         }
 
             // 레이아웃영상
