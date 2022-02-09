@@ -45,6 +45,7 @@
     <div id="skip">
         <a href="#contents">컨텐츠 바로가기</a>
     </div>
+    <!-- //skip -->
 
     <div id="wrap">
         <header id="header">
@@ -69,17 +70,17 @@
         </header>
         <!-- //header -->
 
-        <section id="banner">
-            <h2 class="ir_so">배너 영역</h2>
-            <div class="img_type">
-                <!-- <img src="../webClass/img/bg01.jpg" alt="메인 배너"> -->
-            </div>
-        </section>
-        <!-- //banner -->
+        <main id="contents">
+            <section id="banner">
+                <h2 class="ir_so">배너 영역</h2>
+                <div class="img_type">
+                    <!-- <img src="../webClass/img/bg01.jpg" alt="메인 배너"> -->
+                </div>
+            </section>
+            <!-- //banner -->
 
-        <section id="contents">
             <h2 class="ir_so">컨텐츠 영역</h2>
-            <article class="imgText_type01 container">
+            <section class="imgText_type01 container">
                 <div class="text">
                     <h3 class="text_title">이미지&텍스트</h3>
                     <p class="text_desc">
@@ -105,9 +106,10 @@
                 </div>
                 <div class="img1"></div>
                 <div class="img2"></div>
-            </article>
+            </section>
+            <!-- imgText_type01  -->
 
-            <article class="imgText_type02">
+            <section class="imgText_type02">
                 <div class="left"></div>
                 <div class="right">
                     <span class="sub">베스트 여행지 01</span>
@@ -120,9 +122,10 @@
                     </p>
                     <a href="#" class="view">자세히 보기</a>
                 </div>
-            </article>
+            </section>
+            <!-- imgText_type02 -->
 
-            <article class="img_type01 container">
+            <section class="img_type01 container">
                 <h3>동물공감 인터뷰 <em>이미지 유형01</em></h3>
                 <div class="img-wrap">
                     <div class="left">
@@ -146,9 +149,21 @@
                         </div>
                     </div>
                 </div>
-            </article>
+            </section>
+            <!-- img_type01 -->
 
-            <article class="img_type02">
+            <section class="banner_type01">
+                <h3>부르즈 할리파 (Burj Khalifa)</h3>
+                <p>
+                    젊은 층을 대상으로 한 서비스이기에 여러 가지 새로운 시도를 할 수 있었고, 차별화된 <br>
+                    브랜딩으로 주목을 받았던 프로젝트입니다.<br>
+                    차별화된 브랜딩으로 주목을 받았던 프로젝트입니다.
+                </p>
+                <a href="#">배너 유형01</a>
+            </section>
+            <!-- //banner_type01 -->
+
+            <section class="img_type02">
                 <div class="container">
                     <h3>동아시아의 수도 <em>이미지 유형02</em></h3>
                     <div class="img-wrap">
@@ -175,14 +190,88 @@
                         </ul>
                     </div>
                 </div>
+            </section>
+            <!-- //img_type02 -->
+        </main>
+        <!-- //main -->
 
-            </article>
+        <footer id="footer" class="footer_type01">
+            <div class="container">
+                <h2 class="ir_so">푸터 바로가기 메뉴</h2>
+                <div class="footer-menu">
+                    <div>
+                        <h3>레이아웃 영역</h3>
+                        <ul>
+                            <li><a href="#">레이아웃 유형01</a></li>
+                            <li><a href="#">레이아웃 유형02</a></li>
+                            <li><a href="#">레이아웃 유형03</a></li>
+                            <li><a href="#">레이아웃 유형04</a></li>
+                            <li><a href="#">레이아웃 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>메뉴 영역</h3>
+                        <ul>
+                            <li><a href="#">메뉴 유형01</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>메인 영역</h3>
+                        <ul>
+                            <li><a href="#">이미지 유형01</a></li>
+                            <li><a href="#">동영상 유형02</a></li>
+                            <li><a href="#">슬라이드 유형03</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>컨텐츠 영역</h3>
+                        <ul>
+                            <li><a href="#">텍스트 유형01</a></li>
+                            <li><a href="#">이미지 유형02</a></li>
+                            <li><a href="#">이미지/텍스트03</a></li>
+                            <li><a href="#">카드 유형04</a></li>
+                            <li><a href="#">배너 유형05</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>푸터 영역</h3>
+                        <ul>
+                            <li><a href="#">컨텍트 유형01</a></li>
+                            <li><a href="#">푸터 유형02</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>사이트</h3>
+                        <ul>
+                            <li><a>웹표준 사이트</a></li>
+                            <li><a>반응형 사이트</a></li>
+                            <li><a>패럴랙스 사이트</a></li>
+                            <li><a>포트폴리오 사이트</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <address>
+                    &copy; 2022 woojin. All rights reserved.
+                    <div class="footer-sns">
+                        <ul>
+                            <li><a href="#" class="ir_pm">페이스북</a></li>
+                            <li><a href="#" class="ir_pm">인스타그램</a></li>
+                            <li><a href="#" class="ir_pm">카카오톡</a></li>
+                            <li><a href="#" class="ir_pm">블로그</a></li>
+                        </ul>
+                    </div>
+                </address>
+                
+            </div>
+        </footer>
+        <!-- //footer -->
     </div>
-    <!-- <div class="img_text_type itType02"></div>
-            <div class="img_text_type itType03"></div> -->
-    </section>
-    <!-- //contents -->
-    </div>
+    <!-- //wrap -->
+
+   
+
+
+
 </body>
 
 </html>

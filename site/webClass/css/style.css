@@ -10,7 +10,6 @@
     margin: 0 auto;
 }
 
-
 /* 
     헤더01 float 사용 
     float으로 인한 영역 깨짐 현상 발생(height값을 인식 못함)
@@ -404,7 +403,6 @@
 /* 이미지유형2(img_type02) */
 .img_type02 {
     padding: 150px 0;
-    background: #F5F5F5;
 }
 .img_type02 h3 {
     font-size: 50px;
@@ -473,7 +471,6 @@
     opacity: 0;
     transition: all 0.3s;
 }
-
 .img_type02 .img-wrap li:hover span {
     top: 50%;
 }
@@ -492,4 +489,101 @@
 }
 .img_type02 .img-wrap li:nth-child(3){
     background-image: url(../img/beijing@2x.jpg);
+}
+
+/* 배너유형01(banner_type01) */
+.banner_type01 {
+    background: url(../img/projects.jpg) center center no-repeat;
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+}
+.banner_type01 h3 {
+    font-family: 'GmarketSans';
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 65px;
+}
+.banner_type01 p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 65px;
+}
+.banner_type01 a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+/* footer */
+#footer{
+    padding: 150px 0;
+    background-color: #F5F5F5;
+    font-family: GmarketSans;
+}
+#footer .container .footer-menu{
+    justify-content: space-between;
+    display: flex;
+}
+#footer .container .footer-menu h3{
+    font-size: 20px;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+#footer .container .footer-menu li a{
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+    position: relative;
+    color: #000;
+    transition: all 0.3s;
+}
+
+#footer .container .footer-menu li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    transform:  scaleX(0);
+    transition: all 0.3s ease;
+}
+#footer .container .footer-menu li a:hover{
+    color: #000;
+}
+#footer .container .footer-menu li a:hover::before{
+    transform:  scaleX(1);
+    color: #000;
+}
+#footer .container address {
+    margin-top: 70px;
+    border-top: 1px solid #000;
+    text-align: center;
+    padding-top: 50px;
+}
+.footer-sns{
+    margin-top: 10px;
+}
+.footer-sns ul{
+    display: flex;
+    justify-content: center;
+}
+.footer-sns a{
+    width: 30px;
+    height: 30px;
+    margin: 4px 6px;
+    display: inline-block;
+    background-image: url(../img/bg-svg.svg);
+}
+.footer-sns li:nth-child(2) a {
+    background-position: -50px 0;
+}
+.footer-sns li:nth-child(3) a {
+    background-position: -100px 0;
+}
+.footer-sns li:nth-child(4) a {
+    background-position: -150px 0;
 }
