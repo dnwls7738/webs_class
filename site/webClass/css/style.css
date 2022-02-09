@@ -344,14 +344,14 @@
 .img_type01 .img-wrap .left {
     width: 590px;
     height: 360px;
-    background: url(/site/webClass/img/dog.png);
+    background: url(../img/dog.png);
     position: relative;
     overflow: hidden;
 }
 .img_type01 .img-wrap .right {
     width: 590px;
     height: 360px;
-    background: url(/site/webClass/img/cat.png);
+    background: url(../img/cat.png);
     position: relative;
     overflow: hidden;
 }
