@@ -18,12 +18,14 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
             font-display: swap;
         }
+
         @font-face {
             font-family: 'TmonMonsori';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -34,17 +36,21 @@
             word-break: break-all;
             color: #223547;
         }
+
         a {
             text-decoration: none;
             color: #223547;
         }
+
         .number {
             margin: 10px;
         }
+
         .number li {
             list-style: none;
             display: inline;
         }
+
         .number li a {
             border: 1px solid #223547;
             width: 30px;
@@ -55,10 +61,12 @@
             line-height: 30px;
             transition: all 0.3s;
         }
+
         .number li.active a {
             background: #223547;
             color: #fff;
         }
+
         .board {
             margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
@@ -68,24 +76,30 @@
             text-align: center;
             border-radius: 10px;
         }
+
         .board .sub {
             font-size: 20px;
         }
+
         .board .sub a {
             font-size: 20px;
             border-bottom: 1px solid #223547;
         }
+
         .board h1 a {
             font-family: 'TmonMonsori';
             font-size: 80px;
             margin-bottom: 2vw;
         }
+
         .board .search {
             margin-bottom: 3vw;
         }
+
         .board .search label {
             display: none;
         }
+
         .board .search input {
             font-size: 24px;
             border: 2px solid #223547;
@@ -93,17 +107,21 @@
             border-radius: 40px;
             width: 50%;
         }
+
         .board .count {
             text-align: right;
             color: #777;
         }
+
         .board .count em {
             font-style: normal;
             color: #223557;
         }
+
         .board .list {
             text-align: left;
         }
+
         .board .list li {
             background-color: #bdd6e6;
             margin: 5px 0;
@@ -112,34 +130,42 @@
             list-style: none;
             transition: all 0.3s;
         }
+
         .board .list li:hover {
             background-color: #a5c3d5;
             cursor: grabbing;
         }
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             .board {
                 margin: 2vw 2vw 2vw 2vw;
                 width: 96vw;
                 padding: 4vw 2vw;
             }
+
             .board .sub {
                 font-size: 14px;
             }
+
             .board .sub a {
                 font-size: 14px;
             }
+
             .board h1 a {
                 font-size: 40px;
             }
+
             .board .search input {
                 font-size: 16px;
                 padding: 5px 20px;
                 width: 100%;
             }
+
             .board .list li {
                 font-size: 14px;
             }
         }
+
         /* option */
         .board .search span {
             border: 1px solid #223547;
@@ -149,18 +175,20 @@
             margin: 3px;
             transition: all 0.2s;
         }
+
         .board .search span:hover {
             background: #223547;
             color: #fff;
             cursor: pointer;
-        } 
+        }
+
         .board .list li {
             display: none;
         }
-        .board .list li.show{
+
+        .board .list li.show {
             display: block;
         }
-
     </style>
 </head>
 
@@ -175,7 +203,7 @@
                 <li><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
                 <li><a href="searchEffect07.html">7</a></li>
-                <li><a href="searchEffect08.html">8</a></li>    
+                <li><a href="searchEffect08.html">8</a></li>
             </ul>
         </div>
         <div class="board">
@@ -637,42 +665,46 @@
         </div>
     </div>
     <script>
-        const searchBox = document.querySelectorAll(".search span"); //알파벳 버튼들
-        const cssList = document.querySelectorAll(".list ul li"); //CSS속성 리스트
-        const cssCount = document.querySelector(".count em") //속성 갯수
-    
-        //알파벳을 클릭하면 클릭한 데이터 값을 가져와야 한다.
-        //searchBox.addEventListener is not a function
-        // searchBox.addEventListener("click", function(){
-        //     alert("ddd");
-        // });
-        cssList.forEach((li, index) => {
-            li.classList.add("show"); //모든 데이터 보이기
-            cssCount.innerText = index + 1; //갯수 보이기
-        })
-        searchBox.forEach(el => { //searchBox가 여러개의 데이터가 들어있어서 forEach() 써준다.
-            el.addEventListener("click", () => { //버튼(span태그) 클릭할 때의 이벤트 설정.
-                const searchWord = el.innerText; //searchWord에 el(span)의 text를 저장한다. 알파벳 첫글자
-                //console.log(searchWord);
-    
-                cssList.forEach(el => { //버튼 클릭했을 때 cssList(속성의 리스트)
-                    //console.log(el);
-                    const cssName = el.dataset.name; //CSS 속성 값만 cssName에 저장
-                    const cssType = el.dataset.type; //CSS 유형 값
-                    //console.log(cssName);
-                    //console.log(cssType);
-    
-                    console.log(cssType);
-    
-                    //알파벳 첫글자(a) == CSS 속성의 첫글자(a)
-                    if(searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssType.charAt(0)){ //searWord의 첫글자와 cssName의 첫글자를 비교 //searchWord(클릭한 속성명)와 cssType(dataset으로 불러온 속성 타입)이 같은지 비교
-                        el.classList.add("show"); //같으면 el(li)에 class="show" 추가
-                    } else {
-                        el.classList.remove("show"); //다르면 el(li)에 class="show" 제거
-                    }
-                });
+{
+    const searchBox = document.querySelectorAll(".search span"); //알파벳 버튼들
+    const cssList = document.querySelectorAll(".list ul li"); //CSS속성 리스트
+    const cssCount = document.querySelector(".count em") //속성 갯수
+
+    //알파벳을 클릭하면 클릭한 데이터 값을 가져와야 한다.
+    //searchBox.addEventListener is not a function
+    // searchBox.addEventListener("click", function(){
+    //     alert("ddd");
+    // });
+    cssList.forEach((li, index) => {
+        li.classList.add("show"); //모든 데이터 보이기
+        cssCount.innerText = index + 1; //갯수 보이기
+    })
+    searchBox.forEach(el => { //searchBox가 여러개의 데이터가 들어있어서 forEach() 써준다.
+        el.addEventListener("click", () => { //버튼(span태그) 클릭할 때의 이벤트 설정.
+            const searchWord = el.innerText; //searchWord에 el(span)의 text를 저장한다. 알파벳 첫글자
+            //console.log(searchWord);
+
+            cssList.forEach(el => { //버튼 클릭했을 때 cssList(속성의 리스트)
+                //console.log(el);
+                const cssName = el.dataset.name; //CSS 속성 값만 cssName에 저장
+                const cssType = el.dataset.type; //CSS 유형 값
+                //console.log(cssName);
+                //console.log(cssType);
+
+                console.log(cssType);
+
+                //알파벳 첫글자(a) == CSS 속성의 첫글자(a)
+                if (searchWord.charAt(0) === cssName.charAt(0) || //searWord의 첫글자와 cssName의 첫글자를 비교
+                    searchWord.charAt(0) === cssType.charAt(0)) {  //searchWord(클릭한 속성명)와 cssType(dataset으로 불러온 속성 타입)이 같은지 비교
+                    
+                    el.classList.add("show"); //같으면 el(li)에 class="show" 추가
+                } else {
+                    el.classList.remove("show"); //다르면 el(li)에 class="show" 제거
+                }
             });
         });
+    });
+}
     </script>
 </body>
 
