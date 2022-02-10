@@ -185,6 +185,23 @@
             color: #fff;
             cursor: pointer;
         }
+
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+
+        .board .list li span {
+            position: absolute;
+            right: 5px; top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+
+        .board .list li span::before{
+            content: 'view : ';
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -205,12 +222,13 @@
     <div class="board">
         <span class="sub"><a href="../javascript06.html#sample11">filter()</a>를 이용하여 조회수 검색하기</span>
         <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
+       
         <!-- 검색영역 -->
         <div class="search">
-            <span>조회수 10개 이상</span>
-            <span>조회수 20개 이상</span>
-            <span>조회수 30개 이상</span>
-            <span>조회수 40개 이상</span>
+            <span data-view="10">조회수 10개 이상</span>
+            <span data-view="20">조회수 20개 이상</span>
+            <span data-view="30">조회수 30개 이상</span>
+            <span data-view="40">조회수 40개 이상</span>
         </div>
 
         <!-- 전체 목록 갯수 -->
@@ -1216,16 +1234,34 @@
         }
     ];
 
-    const searchBox = document.querySelectorAll(".search span"); //알파벳 버튼들
+    const searchBox = document.querySelectorAll(".search span"); // 버튼들
     const cssList = document.querySelector(".list ul"); //속성 리스트
     const cssCount = document.querySelector(".count em"); //속성 갯수
+    let listHTML = "";
 
-    searchBox.forEach(span => {
-        span.addEventListener("click", () => {
-            onClickButton();
+    // 목록 보여주기
+    function updataList(list){
+        let listHTML = "";
+        for(const data of list){
+            listHTML += `<li>${data.name} : ${data.desc} : <span>${data.view}</span></li>`;
+        }
+        cssList.innerHTML = listHTML;
+    }
+    updataList(cssProperty);
+
+    // 버튼 클릭하기
+    searchBox.forEach(span =>{
+        span.addEventListener("click", () =>{
+            const target = span.dataset.view; //버튼 타겟 설정
+            const filterList = cssProperty.filter(data => data.view >=target); //타겟 값 설정
+             
+            updataList(filterList);
         })
-    });
+    })
+    
 
+
+    
     //for문
     // for(let i = 0; i < cssProperty.length; i++){
     //     console.log(cssProperty[i].view);
@@ -1241,31 +1277,6 @@
     // //for of
     // for(let data of cssProperty){
     //     console.log(data.view);
-
-    //버튼을 클릭했을 때
-    function onClickButton() {
-
-    }
-
-    // CSS 리스트 출력하기
-    function upDateList() {
-        let list = "";
-
-        // for(let i=0; i<cssProperty.length; i++){
-        //     list += "<li>"+ cssProperty[i].view +"</li>";
-        // }
-
-        // cssProperty.forEach(li=>{
-        //     list += "<li>"+ li.view +"</li>";
-        // })
-
-        for (let data of cssProperty) {
-            // list += "<li>"+ data.view +"</li>";
-            list += `<li>${data.name} : ${data.desc} <span>${data.view}<span/></li>`;
-        }
-        cssList.innerHTML = list;
-    }
-    upDateList();
 </script>
 
 </html>
