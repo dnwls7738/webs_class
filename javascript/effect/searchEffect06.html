@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
     <!-- 파비콘 -->
-   <link rel="shortcut icon" href="../../assets/ico/icc06.png">
-   <link rel="apple-touch-icon-precomposed" href="../../assets/ico/icc06.png">
-   <link rel="icon" href="../../assets/ico/icc06.png" sizes="128x128">
-  
-   <title>Search Effect</title>
+    <link rel="shortcut icon" href="../../assets/ico/icc06.png">
+    <link rel="apple-touch-icon-precomposed" href="../../assets/ico/icc06.png">
+    <link rel="icon" href="../../assets/ico/icc06.png" sizes="128x128">
+
+    <title>Search Effect</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -23,12 +24,14 @@
                 url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
             font-display: swap;
         }
+
         @font-face {
             font-family: 'TmonMonsori';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -39,17 +42,21 @@
             word-break: break-all;
             color: #223547;
         }
+
         a {
             text-decoration: none;
             color: #223547;
         }
+
         .number {
             margin: 10px;
         }
+
         .number li {
             list-style: none;
             display: inline;
         }
+
         .number li a {
             border: 1px solid #223547;
             width: 30px;
@@ -60,37 +67,55 @@
             line-height: 30px;
             transition: all 0.3s;
         }
+
         .number li.active a {
             background: #223547;
             color: #fff;
         }
+
         .board {
             margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
-            background: #f1f3f6;
+            background: #F1F3F6;
             border: 2px solid #223547;
             padding: 3vw;
             text-align: center;
             border-radius: 10px;
         }
+
         .board .sub {
             font-size: 20px;
         }
+
         .board .sub a {
             font-size: 20px;
             border-bottom: 1px solid #223547;
         }
+
         .board h1 a {
             font-family: 'TmonMonsori';
             font-size: 80px;
-            margin-bottom: 2vw;
+            margin-bottom: 1vw;
         }
+
         .board .search {
             margin-bottom: 3vw;
         }
+
+        .board .count {
+            text-align: right;
+            color: #777;
+        }
+
+        .border .count em {
+            font-style: normal;
+            color: #223547;
+        }
+
         .board .search label {
             display: none;
         }
+
         .board .search input {
             font-size: 24px;
             border: 2px solid #223547;
@@ -98,80 +123,95 @@
             border-radius: 40px;
             width: 50%;
         }
-        .board .count {
-            text-align: right;
-            color: #777;
-        }
-        .board .count em {
-            font-style: normal;
-            color: #223557;
-        }
+
         .board .list {
             text-align: left;
         }
+
         .board .list li {
-            background-color: #bdd6e6;
+            background-color: #BDD6E6;
             margin: 5px 0;
-            padding: 5px 10px;
+            padding: 7px 10px;
             border-radius: 4px;
             list-style: none;
             transition: all 0.3s;
         }
-        .board .list li:hover {
-            background-color: #a5c3d5;
-            cursor: grabbing;
+
+        .board .list li.hide {
+            display: none;
         }
-        @media (max-width: 800px){
+
+        .board .list li:hover {
+            background-color: #A5C3D5;
+            cursor: grabbing
+        }
+
+        @media (max-width: 800px) {
             .board {
                 margin: 2vw 2vw 2vw 2vw;
                 width: 96vw;
                 padding: 4vw 2vw;
             }
+
             .board .sub {
                 font-size: 14px;
             }
+
             .board .sub a {
                 font-size: 14px;
             }
-            .board h1 a {
+
+            .board h1 {
                 font-size: 40px;
             }
+
             .board .search input {
                 font-size: 16px;
                 padding: 5px 20px;
                 width: 100%;
             }
+
             .board .list li {
                 font-size: 14px;
             }
         }
+
         /* option */
-        .board .desc {
-            background: #a5c3d5;
-            font-size: 18px;
-            margin: 5px 0;
-            border-radius: 4px;
-            padding: 10px 15px;
-        }   
-        .board .list {
-            background: #a5c3d5;
-            padding: 15px 10px;
-            border-radius: 4px;
-        }     
-        .board .list span {
+        .board .search span {
             border: 1px solid #223547;
-            border-radius: 20px;
-            padding: 5px 20px;
-            margin: 3px;
+            border-radius: 30px;
+            padding: 5px 30px;
             display: inline-block;
-            transition: all 0.3s;
+            transition: all 0.2s;
+            margin: 3px;
         }
-        .board .list span:hover {
+
+        .board .search span:hover {
             background: #223547;
             color: #fff;
+            cursor: pointer;
+        }
+
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+
+        .board .list li span {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+
+        .board .list li span::before {
+            content: 'view : ';
+            text-transform: uppercase;
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <div class="number">
@@ -184,31 +224,246 @@
                 <li class="active"><a href="searchEffect06.html">6</a></li>
                 <li><a href="searchEffect07.html">7</a></li>
                 <li><a href="searchEffect08.html">8</a></li>
-            </ul>       
+            </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample11"> find( )</a> 를 이용하여 속성을 검색하면 설명 보여주기 </span>
+            <span class="sub"><a href="../javascript06.html#sample5"> sort( ), reverse()</a> 를 이용하여 정렬하기 </span>
             <h1><a href="searchEffect.html"> CSS 속성 검색하기</a></h1>
-          
+
             <!-- 검색 영역 -->
             <div class="search">
-                <label for="search-box">검색하기</label>
-                <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!">
+                <span class="btn1">반대로</span>
+                <span class="btn2">오름차순</span>
+                <span class="btn3">내림차순</span>
+                <span class="btn4">알파벳순(a~z)</span>
+                <span class="btn5">알파벳순(z~a)</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
-            <div class="count">전체 목록 갯수 : 0 개</div>
+            <div class="count"></div>
 
             <!-- CSS 설명 영역 -->
             <div class="desc">아래의 속성을 검색하면 설명이 나옵니다 !</div>
 
             <!-- CSS 속성 리스트 -->
-            <div class="list"></div>
+            <div class="list">
+                <ul></ul>
+            </div>
         </div>
     </div>
 
     <!-- script -->
     <script>
+        const cssProperty = [{
+                num: 1,
+                name: "all",
+                desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."
+            },
+            {
+                num: 2,
+                name: "animation",
+                desc: "animation 속성은 애니메이션 속성을 설정하는데 사용할 수 있는 약식 속성입니다."
+            },
+            {
+                num: 3,
+                name: "animation-delay",
+                desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정하는 속성입니다."
+            },
+            {
+                num: 4,
+                name: "animation-direction",
+                desc: "animation-direction 속성은 애니메이션이 시작되는 방향을 설정하는 속성입니다."
+            },
+            {
+                num: 5,
+                name: "animation-duration",
+                desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정하는 속성입니다."
+            },
+            {
+                num: 6,
+                name: "animation-fill-mode",
+                desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정하는 속성입니다."
+            },
+            {
+                num: 7,
+                name: "animation-iteration-count",
+                desc: "animation-iteration-count 속성은 애니메이션의 반복 횟수를 설정하는 속성입니다."
+            },
+            {
+                num: 8,
+                name: "animation-name",
+                desc: "animation-name 속성은 애니메이션의 키프레임 이름을 설정하는 속성입니다."
+            },
+            {
+                num: 9,
+                name: "animation-play-state",
+                desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정하는 속성입니다."
+            },
+            {
+                num: 10,
+                name: "appearance",
+                desc: "appearance 속성은 기본 양식 컨트롤이 렌더링되는 방식을 제어합니다."
+            },
+            {
+                num: 11,
+                name: "backdrop-filter",
+                desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."
+            },
+            {
+                num: 12,
+                name: "backdrop-visibility",
+                desc: "backdrop-visibility 속성은 요소 뒷면 표시 여부를 설정합니다."
+            },
+            {
+                num: 13,
+                name: "background",
+                desc: "background 속성은 백그라운드 속성을 일괄적으로 설정합니다."
+            },
+            {
+                num: 14,
+                name: "background-attachment",
+                desc: "background-attachment 속성은 배경 이미지의 고정 여부를 설정합니다"
+            },
+            {
+                num: 15,
+                name: "background-blend-mode",
+                desc: "background-blend-mode 속성은 배경을 혼합했을 떄의 상태를 설정합니다."
+            },
+            {
+                num: 16,
+                name: "background-clip",
+                desc: "background-clip 속성은 백그라운 이미지의 위치 기준점을 설정합니다."
+            },
+            {
+                num: 17,
+                name: "background-color",
+                desc: "background-color 속성은 태그의 백그라운드 색을 지정하는 설정합니다."
+            },
+            {
+                num: 18,
+                name: "background-imag",
+                desc: "background-image 속성은 백그라운드 이미지 및 배경 속성을 설정합니다."
+            },
+            {
+                num: 19,
+                name: "background-origin",
+                desc: "background-origin 속성은 백그라운드 이미지의 위치 기준점을 설정합니다."
+            },
+            {
+                num: 20,
+                name: "background-position",
+                desc: "background-position 속성은 백그라운드 이미지의 위치 영역을 설정합니다."
+            },
+            {
+                num: 21,
+                name: "background-repeat",
+                desc: "background-repeat 속성은 백그라운드 이미지의 반복 여부를 설정합니다."
+            },
+            {
+                num: 22,
+                name: "background-size",
+                desc: "background-size 속성은 백그라운드 이미지의 사이즈를 설정합니다."
+            },
+            {
+                num: 23,
+                name: "border",
+                desc: "border 속성은 테두리 속성을 일괄적으로 설정합니다."
+            },
+            {
+                num: 24,
+                name: "border-bottom",
+                desc: "border-bottom 속성은 테두리 아래쪽 속성을 일괄적으로 설정합니다."
+            },
+            {
+                num: 25,
+                name: "border-bottom-color",
+                desc: "border-bottom-color 속성은 테두리 아래쪽 색 속성을 설정합니다."
+            }
+        ];
+        const searchBox = document.querySelectorAll(".search span") //버튼
+        const cssList = document.querySelector(".list ul") //속성 리스트
+        const cssCount = document.querySelector('.count')
+
+        // 데이터 출력
+        const updateList = function () {
+            let listHTML = '';
+
+            cssProperty.forEach((data, index) => {
+                listHTML += `<li>${data.num}. ${data.name} : ${data.desc}</li>`;
+                cssCount.innerHTML = `<span>전체 목록 갯수 :  ${data.num}</span>`;
+            });
+            cssList.innerHTML = listHTML;
+        }
+        updateList();
+
+        //반대정렬
+        function reverse(){
+            cssProperty.reverse()
+            updateList();
+        }
+
+        // 오름차순
+        function sortAscending(){
+            cssProperty.sort((a,b)=>{
+                return a.num - b.num
+            });
+            updateList();
+        }
+
+        // 내림차순
+        function sortDescending(){
+            cssProperty.sort((a,b)=>{
+                return b.num - a.num
+            });
+            updateList();
+        }
+
+        // 알파벳 정렬(a~z)
+        function sortAlphabet(){
+            cssProperty.sort((a,b)=>{
+                let x = a.name;
+                let y = b.name;
+                return x.localeCompare(y)
+            })
+            updateList();
+        }
+
+        // 알파벳 정렬(z~a)
+        function sortAlphabetZ(){
+            cssProperty.sort((a,b)=>{
+                let x = a.name;
+                let y = b.name;
+                return y.localeCompare(x)
+            })
+            updateList();
+        }
+
+        // 반대로 버튼 클릭시
+        document.querySelector(".btn1").addEventListener("click", () => {
+            reverse();
+        })
+
+        // 오름차순 버튼 클릭시
+        document.querySelector(".btn2").addEventListener("click", () => {
+            sortAscending();
+        })
+
+        // 내림차순 버튼 클릭시
+        document.querySelector(".btn3").addEventListener("click", () => {
+            sortDescending();
+        })
+
+        // 알파벳순(a~z) 버튼 클릭시
+        document.querySelector(".btn4").addEventListener("click", () => {
+            sortAlphabet();
+        })
+
+        // 알파벳순(z~a) 버튼 클릭시
+        document.querySelector(".btn5").addEventListener("click", () => {
+            sortAlphabetZ();
+        })
+        
     </script>
 </body>
+
 </html>
