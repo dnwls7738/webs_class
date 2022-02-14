@@ -738,3 +738,65 @@
 .footer-sns li:nth-child(4) a {
     background-position: -150px 0;
 }
+
+/* 회원가입, 로그인*/
+.join_type{
+    padding: 200px 0;
+}
+.member_form {
+    max-width: 665px;
+    height: 800px;
+    border: 1px solid #dedede;
+    background: #fff;
+    margin: 0 auto;
+    padding: 50px;
+}
+.member_form h3 {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.member_form .list li {
+    font-size: 14px;
+    line-height: 1.6;
+    padding-left: 10px;
+    position: relative;
+}
+.member_form .list li::before{
+    content: '';
+    background: #000;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+.member_form h4 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+.member_form .list_2 {
+    position: relative;
+    background: #f5f5f5;
+    margin-top: 15px;
+    padding: 20px;
+}
+.member_form .list_2 li {
+    font-size: 14px;
+    line-height: 1.6;
+    padding-left: 10px;
+    position: relative;
+}
+.member_form .list_2 li::before {
+    content: '';
+    background: #000;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
