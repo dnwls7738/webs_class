@@ -2,17 +2,17 @@
 https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript */
 code[class*=language-],
 pre[class*=language-] {
-    color: rgb(96, 70, 241);
+    color: rgb(70, 192, 241);
     background: 0 0;
     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family:NexonLv1Gothic, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 1em;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
-    line-height: 1.5;
+    line-height: 1.6;
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
@@ -31,7 +31,7 @@ pre[class*=language-] {
 
 :not(pre)>code[class*=language-],
 pre[class*=language-] {
-    background: #272822
+    background: rgba(62, 42, 27);
 }
 
 :not(pre)>code[class*=language-] {
@@ -44,7 +44,7 @@ pre[class*=language-] {
 .token.comment,
 .token.doctype,
 .token.prolog {
-    color: #2df33e
+    color: #42f52a
 }
 
 .token.punctuation {
@@ -65,7 +65,7 @@ pre[class*=language-] {
 
 .token.boolean,
 .token.number {
-    color: #ae81ff
+    color: #443da1
 }
 
 .token.attr-name,
@@ -74,7 +74,7 @@ pre[class*=language-] {
 .token.inserted,
 .token.selector,
 .token.string {
-    color: #a6e22e
+    color: #ee4646
 }
 
 .language-css .token.string,
@@ -90,7 +90,7 @@ pre[class*=language-] {
 .token.attr-value,
 .token.class-name,
 .token.function {
-    color: #e6db74
+    color: #f5de12
 }
 
 .token.keyword {
