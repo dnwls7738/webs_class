@@ -233,15 +233,6 @@
                 <span>v</span>
                 <span>w</span>
                 <span>z</span>
-                <br>
-                <span>기타</span>
-                <span>애니메이션</span>
-                <span>효과</span>
-                <span>테이블</span>
-                <span>속성</span>
-                <span>글씨</span>
-                <span>위치</span>
-                <span>박스</span>
             </div>
 
             <div class="count">
@@ -687,14 +678,14 @@
             cssList.forEach(el => { //버튼 클릭했을 때 cssList(속성의 리스트)
                 //console.log(el);
                 const cssName = el.dataset.name; //CSS 속성 값만 cssName에 저장
+                const cssType = el.dataset.type;    //CSS 유형 값
                 //console.log(cssName);
                 //console.log(cssType);
 
                 console.log(cssType);
 
                 //알파벳 첫글자(a) == CSS 속성의 첫글자(a)
-                if (searchWord.charAt(0) === cssName.charAt(0) || //searWord의 첫글자와 cssName의 첫글자를 비교
-                    searchWord.charAt(0) === cssType.charAt(0)) {  //searchWord(클릭한 속성명)와 cssType(dataset으로 불러온 속성 타입)이 같은지 비교
+                if (searchWord.charAt(0) === cssName.charAt(0)) {//searWord의 첫글자와 cssName의 첫글자를 비교
                     
                     el.classList.add("show"); //같으면 el(li)에 class="show" 추가
                 } else {
