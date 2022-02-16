@@ -1144,7 +1144,7 @@ progress {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    width: 41.66667%; }
+    width: 60% }
   .col-lg-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
@@ -9033,7 +9033,7 @@ html, body {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 17px;
   color: #7a7a7a;
   line-height: 1.6; }
 
