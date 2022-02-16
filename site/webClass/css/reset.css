@@ -94,6 +94,9 @@ li {
 em, address {
     font-style: normal;
 }
+img, fieldset, button{
+    border: 0;
+}
 
 /* 스킵메뉴 */
 #skip {

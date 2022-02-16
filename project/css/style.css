@@ -8632,11 +8632,9 @@ textarea.form-control-lg {
   position: relative; }
 
 .logo {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 700;
   top: 6px;
-  position: relative; }
+  position: relative; 
+  left: 42%}
   .logo:hover {
     color: #fff; }
 
