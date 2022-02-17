@@ -43,6 +43,10 @@ body.img04{
 body.img05{
     background-image: url(../img/img5-min.jpg);
 }
+body.img06{
+    background-image: url(../img/img6-min.jpg);
+}
+
 
 body::before {
     content: '';
