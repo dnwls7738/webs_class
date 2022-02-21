@@ -735,19 +735,19 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
         }
 
         #footer {
+            display: flex;
+            justify-content: space-between;
             margin-top: 300px;
             background-color: #fff;
-            height: 1000px;
         }
 
         #footer .article1 {
             width: 690px;
             margin-top: 100px;
+            margin-left: 90px;
         }
-
-        #footer .article1 img {
-            display: inline-block;
-            width: 100px;
+        #footer .article2 {
+            margin-top: 100px;
         }
 
         #footer .article1 .text {
@@ -768,40 +768,44 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             line-height: 1.2;
         }
 
-        #footer .article1 .text3 {
+        #footer .article1 .text3 p{
             text-align: right;
             margin-top: 50px;
             text-decoration: underline;
             font-weight: 600;
             height: 200px;
+            padding-top: 18px;
+        }
+        #footer .article1 .text3 .img1 {
+            position: absolute;
+            left: 550px;
         }
 
-
-        #footer .img {
-            height: 500px;
-            width: 690px;
-            background-image: url(../layout/img/image\ 269.jpg);
-            background-repeat: no-repeat;
+        #footer .article2 .img2 {
+            display: flex;
         }
-
-        #footer .footer2 {
+        .footer2 {
             display: flex;
             justify-content: space-between;
             margin: 52px 90px 100px 90px;
         }
-        #footer .footer2 .log_text{
+        .footer2 .log_text{
             margin-top: -5px;
             margin-left: 45px;
             display: inline-block;
             font-size: 25px;
+            padding: 20px;
         }
-        #footer .footer2 .menu li {
+        .footer2 .menu li {
             font-weight: 600;
             display: inline-block;
             padding: 20px 30px;
             font-size: 17px;
         }
-        #footer .footer2 .member {}
+        .footer2 .member li {
+            display: inline-block;
+            padding: 20px;
+        }
     </style>
 </head>
 
@@ -1024,10 +1028,16 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
                     Signup to receive updates about new products
                 </p>
                 <div class="text3">
-                    <p><img src="../layout/img/Group 4216.jpg" alt="">watch intro video</p>
+                    <img class="img1" src="../layout/img/Group 4216.jpg" alt="">
+                    <p>watch intro video</p>
+
                 </div>
-                <img src="../layout/img/Product_Image_05-removebg-preview (1).png" alt="">
             </div>
+            <div class="article2">
+                <img class="img2" src="../layout/img/Product_Image_05-removebg-preview (1).png" alt="" >
+            </div>
+        </div>
+
             <div class="footer2">
                 <div class="logo">
                     <span class="log_img ir_so">로고 이미지</span><span class="log_text">MISTRIUM</span>
@@ -1043,13 +1053,13 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
                 </div>
                 <div class="member">
                     <ul>
-                        <li><span class="ir_so">돋보기</span></li>
-                        <li><span class="ir_so">장바구니</span></li>
-                        <li><span class="ir_so">사람</span></li>
+                        <li><span >돋보기</span></li>
+                        <li><span >장바구니</span></li>
+                        <li><span >사람</span></li>
                     </ul>
                 </div>
             </div>
-        </div>
+        
 
     </div>
     </div>
