@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NexonLv1Gothic';
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+li {
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    vertical-align: top; /* 이미지 여백 제거*/
+}
+
+body {
+    color: #000;
+}
+
+
+.window {
+    min-width: 660px;
+    min-height: 520px;
+    background-color: #c7c7c7;
+    padding: 4px;
+    border-left: 2px solid #FCFCFC;
+    border-top: 2px solid #FCFCFC;
+    border-right: 2px solid #2A2A2A;
+    border-bottom: 2px solid #2A2A2A;
+}
+
+/* info */
+.title {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.title h1 {
+    font-size: 30px;
+    border-bottom: 1px dashed #fff;
+    margin-bottom: 11px;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+.title p {
+    font-size: 16px;
+}
+
+.list {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.list li {
+    display: inline-block;
+}
+
+.list li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px dashed #fff;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.list li a:hover,
+.list li.active a {
+    background: #fff;
+    color: #000;
+}
+
+.source {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+/* .source button {
+    border: 1px solid #fff;
+    background: transparent;
+    font-family: 'NexonLv1Gothic';
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    cursor: pointer;
+} */
+
+.source button:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* modal */
+#modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+#modal.show {
+    animation: foldOut 1s ease forwards;
+}
+#modal.show.hide {
+    animation: foldIn 1s 0.5s ease backwards;
+}
+@keyframes foldOut {
+    0% {transform: scaleX(0) scaleY(0.005)}
+    50% { transform: scaleX(1) scaleY(0.005)}
+    100% { transform: scaleX(1) scaleY(1)}
+}
+@keyframes foldIn {
+    0% {transform: scaleX(1) scaleY(1)}
+    50% { transform: scaleX(1) scaleY(0.005)}
+    100% { transform: scaleX(0) scaleY(0.005)}
+}
+
+.modal_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    transform: scale(0)
+}
+
+#modal.show .modal_wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal.show.hide .modal_wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+
+@keyframes zoomOut {
+    0% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes zoomIn {
+    0% {transform: scale(1)}
+    100% {transform: scale(0)}
+}
+
+.modal_close {
+    margin-top: 10px;
+}
+
+.modal_cont {
+    opacity: 1;
+    position: relative;
+}
+
+.code_view {
+    width: 60vw;
+    height: 60vh;
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* .code_view::-webkit-scrollbar {
+    width: 3px;
+}
+.code_view::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+.code_view::-webkit-scrollbar-track {
+    background-color: rgba(62, 42, 27, 0.8);
+}
+.code_view::-webkit-scrollbar-corner{
+    background-color: #000;
+} */
+
+
+.menu-bar span.active {
+    color: rgb(255, 255, 255);
+    background: #5a5a5a;
+    font-weight: 600;
+}
+.active {
+    color: #000;
+    background: #bec8ee;
+    font-weight: 600;
+}
+
+
+.view_cont {
+    background-color: rgba(62, 42, 27);
+    height: 100%;
+    padding-top: 1px;
+}
+
+.view_cont>div {
+    display: none;
+}
+
+.view_cont>div:first-child {
+    display: block;
+}
+
+
+
+/* 윈도우 */
+.source_btn {
+    border: 6px ridge #c5c5c5;
+    font-size: 25px;
+    padding: 7px 20px;
+    background: #cacaca;
+}
+
+.source_btn:hover {
+    background: #aaaaaa;
+    cursor: pointer;
+}
+
+
+.window {
+    min-width: 360px;
+    min-height: 500px;
+    background-color: #c7c7c7;
+    padding: 4px;
+    border-left: 2px solid #FCFCFC;
+    border-top: 2px solid #FCFCFC;
+    border-right: 2px solid #2A2A2A;
+    border-bottom: 2px solid #2A2A2A;
+}
+
+.title-bar {
+    background-color: #000080;
+    padding: 4px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.title-bar>.minimize,
+.title-bar>.maximize,
+.title-bar>.close {
+    width: 26px;
+    height: 22px;
+    background-color: #c7c7c7;
+    margin-left: 4px;
+    border-left: 2px solid #FCFCFC;
+    border-top: 2px solid #FCFCFC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.title-bar>.minimize:hover,
+.title-bar>.maximize:hover,
+.title-bar>.close:hover {
+    background-color: #bababa;
+    border-left: 2px solid #2A2A2A;
+    border-top: 2px solid #2A2A2A;
+    border-right: 2px solid #FCFCFC;
+    border-bottom: 2px solid #FCFCFC;
+}
+
+.title-bar>.minimize {
+    align-items: flex-end;
+}
+
+.title-bar>.minimize>.symbol {
+    width: 60%;
+    height: 3px;
+    background-color: #000000;
+    margin-bottom: 2px;
+}
+
+.title-bar>.maximize>.symbol {
+    width: 70%;
+    height: 80%;
+    border: 2px solid #000000;
+    border-top-width: 4px;
+}
+
+.title-bar>.close>.symbol {
+    width: 70%;
+    height: 3px;
+    background-color: #000000;
+    transform: rotate(45deg);
+}
+
+.title-bar>.close>.symbol::after {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    transform: rotate(90deg);
+}
+
+.menu-bar>span {
+    padding: 8px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-bar>span::first-letter {
+    text-decoration: underline;
+}
+
+.menu-bar>span:hover {
+    background-color: #bababa;
+}
+
+.content-container {
+    border-left: 2px solid #2A2A2A;
+    border-top: 2px solid #2A2A2A;
+    border-right: 2px solid #FCFCFC;
+    border-bottom: 2px solid #FCFCFC;
+}
+
+.content-container>.content {
+    display: flex;
+    height: 400px;
+}
+
+.content-container>.content>.main,
+.content-container>.content>.scroll-left {
+    height: 100%;
+}
+.menu-bar > span.active {
+    background: #a1a1a1;
+}
+.main {
+width: 80vh;
+height: 60vh;
+background: #fff;
+border: 1px solid #f2f2f2;
+border-radius: 5px;
+overflow: scroll;
+overflow-x: hidden;
+}

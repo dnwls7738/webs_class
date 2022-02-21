@@ -165,7 +165,7 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
         }
 
         /* 폰트 셋팅 */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 
         /* 간격 세팅 */
@@ -221,6 +221,7 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
         #wrap {
             font-family: 'Poppins', sans-serif;
             margin: 0 auto;
+            background-color: #FBFAF8;
         }
 
         #wrap #nav {
@@ -257,8 +258,6 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
 
         }
 
-        #wrap #nav .member {}
-
         #wrap #nav .member li {
             margin-top: 15px;
             display: inline-block;
@@ -290,9 +289,8 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             background-position: right;
         }
 
-        #contents .contents1 .text {}
-
         #contents .contents1 .text h3 {
+            line-height: 1;
             width: 1127px;
             margin-left: 90px;
             font-size: 80px;
@@ -403,7 +401,8 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
         }
 
         #contents .contents4 {
-            margin: 190px;
+            margin: 0 auto;
+            width: 1200px;
             margin-top: 173px;
             height: 1200px;
         }
@@ -451,23 +450,24 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             padding: 100px 50px;
             color: #a9a7a6;
         }
+
         #contents .contents4 .article3 .product1 {
             display: flex;
             justify-content: space-between;
         }
 
         #contents .contents4 .article3 .product1 .prod1 {
-            width: 450px;
-            height: 360px;
+            width: 310px;
+            height: 305px;
             background-color: #fff4e8;
             position: relative;
         }
-        #contents .contents4 .article3 .product1 img{
-            width: 100%;
-            margin-right: 70px;
+
+        #contents .contents4 .article3 .prod1 img {
+            width: 162%;
             position: absolute;
-            height: 400px;
-            margin-top: -15px;
+            height: 435px;
+            right: -103px;
         }
 
         #contents .contents4 .article3 .product1 .prod1 .Add {
@@ -479,10 +479,11 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             margin-left: 10%;
             position: absolute;
             top: -20px;
-            left: 120px;
+            left: 50px;
             background-image: url(../layout/img/bg-svg.svg);
             background-position: 103px -93px;
         }
+
         #contents .contents4 .article3 .product1 .prod1 .Add .text1 {
             color: #fff;
             position: absolute;
@@ -490,12 +491,45 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             top: 10px;
             right: 40px;
         }
+
+        #contents .contents4 .article3 .product1 .prod1 .text {
+            margin-top: 30px;
+            margin-left: 50px;
+            width: 200px;
+            height: 30px;
+        }
+
+        #contents .contents4 .article3 .product1 .prod1 .text .name1 {
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        #contents .contents4 .article3 .product1 .prod1 .text .price1 {
+            padding-right: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        #contents .contents4 .article3 .product1 .prod1 .text .price2 {
+            font-size: 15px;
+            text-decoration: line-through;
+        }
+
         #contents .contents4 .article3 .product1 .prod2 {
-            width: 450px;
-            height: 360px;
+            width: 310px;
+            height: 305px;
             background-color: #fff4e8;
             position: relative;
         }
+
+        #contents .contents4 .article3 .prod2 img {
+            width: 129%;
+            position: absolute;
+            height: 350px;
+            right: -47px;
+            margin-top: 39px;
+        }
+
         #contents .contents4 .article3 .product1 .prod2 .Add2 {
             border-radius: 40px;
             width: 137px;
@@ -505,10 +539,11 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             margin-left: 10%;
             position: absolute;
             top: -20px;
-            left: 120px;
+            left: 50px;
             background-image: url(../layout/img/bg-svg.svg);
             background-position: 103px -93px;
         }
+
         #contents .contents4 .article3 .product1 .prod2 .Add2 .text2 {
             color: #fff;
             position: absolute;
@@ -516,12 +551,37 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             top: 10px;
             right: 40px;
         }
+
+        #contents .contents4 .article3 .product1 .prod2 .text {
+            margin-top: 30px;
+            margin-left: 50px;
+            width: 200px;
+            height: 30px;
+        }
+
+        #contents .contents4 .article3 .product1 .prod2 .text .name1 {
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        #contents .contents4 .article3 .product1 .prod2 .text .price1 {
+            padding-right: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+
+        #contents .contents4 .article3 .product1 .prod2 .text .price2 {
+            font-size: 15px;
+            text-decoration: line-through;
+        }
+
         #contents .contents4 .article3 .product1 .prod3 {
-            width: 450px;
-            height: 360px;
+            width: 310px;
+            height: 305px;
             background-color: #fff4e8;
             position: relative;
         }
+
         #contents .contents4 .article3 .product1 .prod3 .Add {
             border-radius: 40px;
             width: 137px;
@@ -535,6 +595,7 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             background-image: url(../layout/img/bg-svg.svg);
             background-position: 103px -93px;
         }
+
         #contents .contents4 .article3 .product1 .prod3 .Add .text1 {
             color: #fff;
             position: absolute;
@@ -543,12 +604,19 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             right: 40px;
         }
 
-        #contents .contents4 .article3 .product2 .prod1{
-            width: 450px;
+        #contents .contents4 .article3 .product2 {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 150px;
+        }
+
+        #contents .contents4 .article3 .product2 .prod1 {
+            width: 310px;
             height: 400px;
             background-color: #fff4e8;
             position: relative;
         }
+
         #contents .contents4 .article3 .product2 .prod1 .Add {
             border-radius: 40px;
             width: 137px;
@@ -562,6 +630,7 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             background-image: url(../layout/img/bg-svg.svg);
             background-position: 103px -93px;
         }
+
         #contents .contents4 .article3 .product2 .prod1 .Add .text1 {
             color: #fff;
             position: absolute;
@@ -569,12 +638,14 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             top: 10px;
             right: 40px;
         }
-        #contents .contents4 .article3 .product2 .prod2{
-            width: 450px;
+
+        #contents .contents4 .article3 .product2 .prod2 {
+            width: 310px;
             height: 400px;
             background-color: #fff4e8;
             position: relative;
         }
+
         #contents .contents4 .article3 .product2 .prod2 .Add {
             border-radius: 40px;
             width: 137px;
@@ -588,6 +659,7 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             background-image: url(../layout/img/bg-svg.svg);
             background-position: 103px -93px;
         }
+
         #contents .contents4 .article3 .product2 .prod2 .Add .text1 {
             color: #fff;
             position: absolute;
@@ -595,12 +667,14 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             top: 10px;
             right: 40px;
         }
-        #contents .contents4 .article3 .product2 .prod3{
-            width: 450px;
+
+        #contents .contents4 .article3 .product2 .prod3 {
+            width: 310px;
             height: 400px;
             background-color: #fff4e8;
             position: relative;
         }
+
         #contents .contents4 .article3 .product2 .prod3 .Add {
             border-radius: 40px;
             width: 137px;
@@ -614,6 +688,7 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             background-image: url(../layout/img/bg-svg.svg);
             background-position: 103px -93px;
         }
+
         #contents .contents4 .article3 .product2 .prod3 .Add .text1 {
             color: #fff;
             position: absolute;
@@ -622,224 +697,111 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             right: 40px;
         }
 
-        #contents .contents4 .article3 .product1 .prod1 .text {
-            padding-top: 40px;
-            padding-left: 50px;
-        }
-
-        #contents .contents4 .article3 .product1 .prod1 .text .name1 {
-            display: block;
-            font-size: 30px;
-            padding-bottom: 30px;
-            font-weight: 800;
-        }
-
-        #contents .contents4 .article3 .product1 .prod1 .text .price1 {
-            font-size: 20px;
-            margin-right: 40px;
-            display: inline-block;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product1 .prod1 .text .price2 {
-            color: #a9a7a6;
-            font-size: 15px;
-            text-decoration: line-through;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product1 .prod2 .text {
-            padding-top: 40px;
-            padding-left: 50px;
-        }
-
-        #contents .contents4 .article3 .product1 .prod2 .text .name1 {
-            display: block;
-            font-size: 30px;
-            padding-bottom: 30px;
-            font-weight: 800;
-        }
-
-        #contents .contents4 .article3 .product1 .prod2 .text .price1 {
-            font-size: 20px;
-            margin-right: 40px;
-            display: inline-block;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product1 .prod2 .text .price2 {
-            color: #a9a7a6;
-            font-size: 15px;
-            text-decoration: line-through;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product1 .prod3 {
-            width: 450px;
-            height: 360px;
-            background-color: #fff4e8;
-        }
-
-        #contents .contents4 .article3 .product1 .prod3 .text {
-            padding-top: 40px;
-            padding-left: 50px;
-        }
-
-        #contents .contents4 .article3 .product1 .prod3 .text .name1 {
-            display: block;
-            font-size: 30px;
-            padding-bottom: 30px;
-            font-weight: 800;
-        }
-
-        #contents .contents4 .article3 .product1 .prod3 .text .price1 {
-            font-size: 20px;
-            margin-right: 40px;
-            display: inline-block;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product1 .prod3 .text .price2 {
-            color: #a9a7a6;
-            font-size: 15px;
-            text-decoration: line-through;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product2 {
-            margin-top: 190px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #contents .contents4 .article3 .product2 .prod1 {
-            width: 450px;
-            height: 360px;
-            background-color: #fff4e8;
-        }
-
-        #contents .contents4 .article3 .product2 .prod1 .text {
-            padding-top: 40px;
-            padding-left: 50px;
-        }
-
-        #contents .contents4 .article3 .product2 .prod1 .text .name1 {
-            display: block;
-            font-size: 30px;
-            padding-bottom: 30px;
-            font-weight: 800;
-        }
-
-        #contents .contents4 .article3 .product2 .prod1 .text .price1 {
-            font-size: 20px;
-            margin-right: 40px;
-            display: inline-block;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product2 .prod1 .text .price2 {
-            color: #a9a7a6;
-            font-size: 15px;
-            text-decoration: line-through;
-            font-weight: 700;
-        }
-        #contents .contents4 .article3 .product2 .prod1 img {
-            width: 350px;
-            margin-left: 50px;
-        }
-
-        #contents .contents4 .article3 .product2 .prod2 {
-            width: 450px;
-            height: 360px;
-            background-color: #fff4e8;
-        }
-
-        #contents .contents4 .article3 .product2 .prod2 .text {
-            padding-top: 40px;
-            padding-left: 50px;
-        }
-
-        #contents .contents4 .article3 .product2 .prod2 .text .name1 {
-            display: block;
-            font-size: 30px;
-            padding-bottom: 30px;
-            font-weight: 800;
-        }
-
-        #contents .contents4 .article3 .product2 .prod2 .text .price1 {
-            font-size: 20px;
-            margin-right: 40px;
-            display: inline-block;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product2 .prod2 .text .price2 {
-            color: #a9a7a6;
-            font-size: 15px;
-            text-decoration: line-through;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product2 .prod3 {
-            width: 450px;
-            height: 360px;
-            background-color: #fff4e8;
-        }
-
-        #contents .contents4 .article3 .product2 .prod3 .text {
-            padding-top: 40px;
-            padding-left: 50px;
-        }
-
-        #contents .contents4 .article3 .product2 .prod3 .text .name1 {
-            display: block;
-            font-size: 30px;
-            padding-bottom: 30px;
-            font-weight: 800;
-        }
-
-        #contents .contents4 .article3 .product2 .prod3 .text .price1 {
-            font-size: 20px;
-            margin-right: 40px;
-            display: inline-block;
-            font-weight: 700;
-        }
-
-        #contents .contents4 .article3 .product2 .prod3 .text .price2 {
-            color: #a9a7a6;
-            font-size: 15px;
-            text-decoration: line-through;
-            font-weight: 700;
-        }
-        #contents .contents4 .article3 .product2 .prod3 img {
-            width: 300px;
-            margin-left: 80px;
-        }
-
         #contents .contents5 {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            padding-top: 300px;
+            margin: 0 auto;
+            width: 1200px;
         }
 
         #contents .contents5 .article1 {
-            display: inline-block;
-            width: 830px;
-            height: 650px;
-            background-color: #72696a;
+            width: 550px;
+            background-color: #F8F7F5;
+            background-image: url(../layout/img/man.png);
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         #contents .contents5 .article2 {
-            margin-left: 60px;
-            width: 830px;
-            display: inline-block;
+            width: 550px;
             height: 650px;
-            background-color: #777;
+        }
+
+        #contents .contents5 .article2 .text {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1;
+            width: 550px;
+            font-size: 60px;
+            margin-top: 100px;
+            font-weight: 900;
+        }
+
+        #contents .contents5 .article2 .text2 {
+            margin-top: 50px;
+            width: 410px;
+            height: 140px;
+            font-weight: 400;
         }
 
         #footer {
-            background-color: #000;
-            height: 500px;
+            margin-top: 300px;
+            background-color: #fff;
+            height: 1000px;
         }
+
+        #footer .article1 {
+            width: 690px;
+            margin-top: 100px;
+        }
+
+        #footer .article1 img {
+            display: inline-block;
+            width: 100px;
+        }
+
+        #footer .article1 .text {
+            border: 1px solid #FE8432;
+            font-size: 15px;
+            width: 200px;
+            background: #fff;
+            border-radius: 15px;
+            text-align: center;
+            padding: 3px;
+            color: #FE8432;
+            margin-bottom: 30px;
+        }
+
+        #footer .article1 .text2 {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        #footer .article1 .text3 {
+            text-align: right;
+            margin-top: 50px;
+            text-decoration: underline;
+            font-weight: 600;
+            height: 200px;
+        }
+
+
+        #footer .img {
+            height: 500px;
+            width: 690px;
+            background-image: url(../layout/img/image\ 269.jpg);
+            background-repeat: no-repeat;
+        }
+
+        #footer .footer2 {
+            display: flex;
+            justify-content: space-between;
+            margin: 52px 90px 100px 90px;
+        }
+        #footer .footer2 .log_text{
+            margin-top: -5px;
+            margin-left: 45px;
+            display: inline-block;
+            font-size: 25px;
+        }
+        #footer .footer2 .menu li {
+            font-weight: 600;
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 17px;
+        }
+        #footer .footer2 .member {}
     </style>
 </head>
 
@@ -1038,11 +1000,58 @@ ir_so : 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제�
             </section>
 
             <section class="contents5">
-                <div class="article1">1</div>
-                <div class="article2">2</div>
+                <div class="article1"></div>
+                <div class="article2">
+                    <p class="text">
+                        Let's see what our
+                        customer's say
+                    </p>
+                    <p class="text2">
+                        Dwelling and speedily ignorant any steepest. Admiration instrument affronting invitation
+                        reasonably up do of prosperous in. Shy saw declared age debating ecstatic man. Call in so want
+                        pure rank am dear were. Remarkably to continuing in surrounded diminution on.
+                    </p>
+                </div>
             </section>
         </main>
-        <div id="footer">1</div>
+
+        <div id="footer">
+            <div class="article1">
+                <p class="text">
+                    Mistrium Interiror
+                </p>
+                <p class="text2">
+                    Signup to receive updates about new products
+                </p>
+                <div class="text3">
+                    <p><img src="../layout/img/Group 4216.jpg" alt="">watch intro video</p>
+                </div>
+                <img src="../layout/img/Product_Image_05-removebg-preview (1).png" alt="">
+            </div>
+            <div class="footer2">
+                <div class="logo">
+                    <span class="log_img ir_so">로고 이미지</span><span class="log_text">MISTRIUM</span>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>home</li>
+                        <li>about us</li>
+                        <li>products</li>
+                        <li>faqs</li>
+                        <li>contact us</li>
+                    </ul>
+                </div>
+                <div class="member">
+                    <ul>
+                        <li><span class="ir_so">돋보기</span></li>
+                        <li><span class="ir_so">장바구니</span></li>
+                        <li><span class="ir_so">사람</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
     </div>
 </body>
 
