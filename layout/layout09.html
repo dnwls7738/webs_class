@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,22 @@
     <title>Document</title>
 
     <style>
-         *{
+        * {
             margin: 0;
         }
+
         #warp {
             width: 100%;
         }
-        #header{
+
+        #header {
             display: flex;
             justify-content: center;
             width: 100%;
             height: 100px;
             background-color: #e0f2f1;
         }
+
         #banner {
             display: flex;
             justify-content: center;
@@ -27,13 +31,15 @@
             height: 300px;
             background-color: #80cbc4;
         }
-        #contents{
+
+        #contents {
             display: flex;
             justify-content: center;
             width: 100%;
             height: 580px;
             background-color: #26a69a;
         }
+
         #footer {
             display: flex;
             justify-content: center;
@@ -41,67 +47,89 @@
             height: 100px;
             background-color: #00897b;
         }
+
         .header-container {
             width: 1200px;
             height: 100px;
             background-color: #b2dfdb;
 
         }
-        .banner-container{
+
+        .banner-container {
             width: 1200px;
             height: 300px;
             background-color: #4db6ac;
         }
+
         .contets-container {
             width: 600px;
             height: 580px;
             background-color: #009688;
         }
+
         .contets-container2 {
             width: 600px;
             height: 580px;
             background-color: #0f6d64;
         }
+
         .footer-container {
             width: 1200px;
             height: 100px;
             background-color: #00796b;
         }
-        @media (max-width:1220px){
-            #wrap {
+
+        @media (max-width:1220px) {
+
+            .header-container, .banner-container, .footer-container {
                 width: 96%;
             }
+            .contets-container, .contets-container2 {
+                width: 48%;
+            }
         }
-        @media (max-width:768px){
-            #wrap {
+
+        @media (max-width:768px) {
+            .header-container,
+            .banner-container,
+            .footer-container {
                 width: 100%;
             }
             #contents {
                 flex-direction: column;
             }
+
             .contets-container {
                 width: 100%;
             }
+
             .contets-container2 {
                 width: 100%;
             }
         }
-        @media (max-width:600px){
-            #wrap {
+
+        @media (max-width:600px) {
+            .header-container,
+            .banner-container,
+            .footer-container {
                 width: 100%;
             }
+
             #contents {
                 flex-direction: column;
             }
+
             .contets-container {
                 width: 100%;
             }
+
             .contets-container2 {
                 width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <div id="warp">
         <header id="header">
@@ -119,4 +147,5 @@
         </footer>
     </div>
 </body>
+
 </html>
