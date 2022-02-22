@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         *{
+            margin: 0;
+        }
+        #warp {
+            width: 100%;
+        }
+        #header{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+            background-color: #e0f2f1;
+        }
+        #banner {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 300px;
+            background-color: #80cbc4;
+        }
+        #contents{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 580px;
+            background-color: #26a69a;
+        }
+        #footer {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+            background-color: #00897b;
+        }
+        .header-container {
+            width: 1200px;
+            height: 100px;
+            background-color: #b2dfdb;
+
+        }
+        .banner-container{
+            width: 1200px;
+            height: 300px;
+            background-color: #4db6ac;
+        }
+        .contets-container {
+            width: 600px;
+            height: 580px;
+            background-color: #009688;
+        }
+        .contets-container2 {
+            width: 600px;
+            height: 580px;
+            background-color: #0f6d64;
+        }
+        .footer-container {
+            width: 1200px;
+            height: 100px;
+            background-color: #00796b;
+        }
+        @media (max-width:1220px){
+            #wrap {
+                width: 96%;
+            }
+        }
+        @media (max-width:768px){
+            #wrap {
+                width: 100%;
+            }
+            #contents {
+                flex-direction: column;
+            }
+            .contets-container {
+                width: 100%;
+            }
+            .contets-container2 {
+                width: 100%;
+            }
+        }
+        @media (max-width:600px){
+            #wrap {
+                width: 100%;
+            }
+            #contents {
+                flex-direction: column;
+            }
+            .contets-container {
+                width: 100%;
+            }
+            .contets-container2 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <header id="header">
+            <div class="header-container"></div>
+        </header>
+        <article id="banner">
+            <div class="banner-container"></div>
+        </article>
+        <section id="contents">
+            <div class="contets-container"></div>
+            <div class="contets-container2"></div>
+        </section>
+        <footer id="footer">
+            <div class="footer-container"></div>
+        </footer>
+    </div>
+</body>
+</html>

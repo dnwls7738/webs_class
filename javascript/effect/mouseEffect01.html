@@ -329,15 +329,23 @@
         // })
 
         //for
-        for(let i = 0; i<mouseWrap.length; i++){
-            mouseWrap[i].addEventListener("mouseover", ()=>{
-            document.querySelector(".cursor").classList.add("style" + (i+1));
-        });
-        mouseWrap[i].addEventListener("mouseout", ()=>{
-            document.querySelector(".cursor").classList.remove("style" + (i+1));
-        })
-        }
+        // for(let i = 0; i<mouseWrap.length; i++){
+        //     mouseWrap[i].addEventListener("mouseover", ()=>{
+        //     document.querySelector(".cursor").classList.add("style" + (i+1));
+        // });
+        // mouseWrap[i].addEventListener("mouseout", ()=>{
+        //     document.querySelector(".cursor").classList.remove("style" + (i+1));
+        // })
+        // }
         //forEach
+        mouseWrap.forEach(e=>{
+           e.addEventListener("mouseover", ()=>{
+                document.querySelector(".cursor").classList.add("style" + (i+1));
+            });
+            e.addEventListener("mouseout", ()=>{
+                document.querySelector(".cursor").classList.remove("style" + (i+1));
+            })
+        })
 
     </script>
 </body>
