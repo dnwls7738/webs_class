@@ -318,12 +318,13 @@ sliderBtnNext.addEventListener("click", () =>{
         const sliderBtnPrev = sliderBtn.querySelector(".prev")           // 왼쪽 버튼
         const sliderBtnNext = sliderBtn.querySelector(".next")           // 오른쪽 버튼
 
-        let currentIndex = 0;                 
-        let sliderCount = slider.length;   
-        let sliderWidth = sliderImg.offsetWidth
+        let currentIndex = 0;                 // 첫번째 이미지
+        let sliderCount = slider.length;   // 이미지 갯수
+        let sliderWidth = sliderImg.offsetWidth  //이미지 세로값
 
         function gotoSlider(num){
-            sliderInner.style.transition = "all 400ms";
+            sliderInner.style.transition = "all 400ms";  //이미지 효과
+            // 가로축으로 -이미지세로값 * num px 만큼 이동
             sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
             currentIndex = num;
         }

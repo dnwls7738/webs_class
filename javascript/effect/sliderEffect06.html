@@ -400,60 +400,61 @@ document.querySelectorAll(".slider__dot .dot").forEach((dot, index) =>{    // �
         modal();
         tabMenu();
 
-        const sliderWrap = document.querySelector(".slider__wrap");
-        const sliderImg = document.querySelector(".slider__img"); // 이미지 보이는 영역
-        const sliderInner = document.querySelector(".slider__inner"); // 이미지 움직이는 영역
-        const slider = document.querySelectorAll(".slider"); // 5개의 이미지
-        const sliderBtn = document.querySelector(".slider__btn") // 버튼
-        const sliderBtnPrev = sliderBtn.querySelector(".prev") // 왼쪽 버튼
-        const sliderBtnNext = sliderBtn.querySelector(".next") // 오른쪽 버튼
-        const sliderDot = document.querySelector(".slider__dot")  //닷 버튼
-        
+const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img"); // 이미지 보이는 영역
+const sliderInner = document.querySelector(".slider__inner"); // 이미지 움직이는 영역
+const slider = document.querySelectorAll(".slider"); // 5개의 이미지
+const sliderBtn = document.querySelector(".slider__btn") // 버튼
+const sliderBtnPrev = sliderBtn.querySelector(".prev") // 왼쪽 버튼
+const sliderBtnNext = sliderBtn.querySelector(".next") // 오른쪽 버튼
+const sliderDot = document.querySelector(".slider__dot")  //닷 버튼
 
-        let currentIndex = 0;
-        let sliderCount = slider.length;
-        let sliderWidth = sliderImg.offsetWidth
-        let dotIndex = "";
-        let dotActive;
 
-        function init() {
-            slider.forEach(() => dotIndex += "<a href='#' class='dot'></a>")  // 이미지 갯수만큼 <a></a> 만들기
-            sliderDot.innerHTML = dotIndex;                                           // 화면에 표시
-            sliderDot.firstElementChild.classList.add("active");   // 첫번째 닷 버튼 한테 활성화 표시(active)
+let currentIndex = 0;               // 첫번째 이미지
+let sliderCount = slider.length;  // 이미지 갯수
+let sliderWidth = sliderImg.offsetWidth     //이미지 가로값
+let dotIndex = "";          //dot 버튼
+let dotActive;              // dotAcvtive 변수
+
+function init() {
+    slider.forEach(() => dotIndex += "<a href='#' class='dot'></a>")  // 이미지 갯수만큼 <a></a> 만들기
+    sliderDot.innerHTML = dotIndex;                                           // 화면에 표시
+    sliderDot.firstElementChild.classList.add("active");   // 첫번째 닷 버튼 한테 활성화 표시(active)
+}
+init();
+
+function gotoSlider(num) {
+    sliderInner.style.transition = "all 400ms";         //이미지 효과
+    //가로축으로 -이미지가로값 * num px 만큼 이동
+    sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)";
+    currentIndex = num;
+
+    
+    dotActive = document.querySelectorAll(".slider__dot .dot");   //닷버튼들 저장
+    
+    dotActive.forEach(el => {
+        el.classList.remove("active");    //닷 버튼들에 active 삭제
+    })
+    dotActive[num].classList.add("active");  //닷 버튼들에 active 추가
+}
+
+document.querySelectorAll(".slider__btn a").forEach((btn, index) => {
+    btn.addEventListener("click", () => {                                            //버튼 클릭시
+        let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;  //prev버튼 첫번째이미지 이전이미지시 마지막이미지로
+        let nextIndex = (currentIndex + 1) % sliderCount;                     //next버튼 마지막이미지 다음이미지시 첫번째이미지로
+
+        if (btn.classList.contains("prev")) {           // 버튼에 prev가 있다면
+            gotoSlider(prevIndex);                     // prev버튼 동작
+        } else {                                            // 버튼에 prev가 없다면
+            gotoSlider(nextIndex);                    // next버튼 동작
         }
-        init();
-
-        function gotoSlider(num) {
-            sliderInner.style.transition = "all 400ms";
-            sliderInner.style.transform = "translateX(" + -sliderWidth * num + "px)";
-            currentIndex = num;
-
-            
-            dotActive = document.querySelectorAll(".slider__dot .dot");   //닷버튼들 저장
-            
-            dotActive.forEach(el => {
-                el.classList.remove("active");    //닷 버튼들에 active 삭제
-            })
-            dotActive[num].classList.add("active");  //닷 버튼들에 active 추가
-        }
-
-        document.querySelectorAll(".slider__btn a").forEach((btn, index) => {
-            btn.addEventListener("click", () => {                                            //버튼 클릭시
-                let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;  //prev버튼 첫번째이미지 이전이미지시 마지막이미지로
-                let nextIndex = (currentIndex + 1) % sliderCount;                     //next버튼 마지막이미지 다음이미지시 첫번째이미지로
-
-                if (btn.classList.contains("prev")) {           // 버튼에 prev가 있다면
-                    gotoSlider(prevIndex);                     // prev버튼 동작
-                } else {                                            // 버튼에 prev가 없다면
-                    gotoSlider(nextIndex);                    // next버튼 동작
-                }
-            })
-        })
-        document.querySelectorAll(".slider__dot .dot").forEach((dot, index) =>{    // 닷 버튼 클릭시
-            dot.addEventListener("click", ()=>{     
-                gotoSlider(index);       // gotoSlider에 매개변수 index 저장
-            })
-        })
+    })
+})
+document.querySelectorAll(".slider__dot .dot").forEach((dot, index) =>{    // 닷 버튼 클릭시
+    dot.addEventListener("click", ()=>{     
+        gotoSlider(index);       // gotoSlider에 매개변수 index 저장
+    })
+})
     </script>
 </body>
 
