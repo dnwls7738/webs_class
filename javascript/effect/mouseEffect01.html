@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+    <link rel="stylesheet" href="css/nexon.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        body::before{
+            background: rgba(62, 42, 27, 0.8);;
+        }
+        .cursor {}
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+        .mouse__wrap p:last-child{
+            font-size: 3vw;
+            font-weight: 400;
+        }
+        .mouse__wrap p span {
+            border-bottom: 0.15vw dashed #fff;
+        }
+    </style>
+</head>
+<body class="img01">
+    <!-- main -->
+    <main>
+        <section id="mouseTpye01">
+            <div class="cursor"></div>
+            <div class="mouse__wrap">
+                <p><span>Every</span> cloud <span>has</span> a silver <span>lining</span></p>
+                <p><span>하늘이</span> 무너져도 <span>솟아날</span> 구멍은 <span>있다</span></p>
+
+            </div>
+        </section>
+    </main>
+    <!-- // main -->
+    
+
+     <!-- info -->
+     <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript mouse Effect01</a></h1>
+            <p>마우스 이펙트 - 따라다니기</p>
+        </div>
+
+        <div class="list">
+            <ul>
+                <li class="active"><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+
+        <div class="source">
+            <button class="source_btn">소스보기</button>
+            <div id="modal">
+                <div class="modal_wrap">
+                    <div class="modal_cont">
+                        <div class="code_view">
+                            <div class="view_header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view_title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view_cont">
+                                <div>
+                                    <pre class="line-numbers"><code class="language-js"> &lt;main&gt;
+    &lt;section&gt;
+        &lt;div class="slider__wrap"&gt;
+             &lt;div class="slider__img"&gt;
+                 &lt;div class="slider"&gt;&lt;img src="img/img1-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                 &lt;div class="slider"&gt;&lt;img src="img/img2-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                 &lt;div class="slider"&gt;&lt;img src="img/img3-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                 &lt;div class="slider"&gt;&lt;img src="img/img4-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                 &lt;div class="slider"&gt;&lt;img src="img/img5-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+     &lt;/section&gt;
+ &lt;/main&gt;
+</code></pre>
+                                </div>
+                                <div>
+                                    <pre class="line-numbers"><code class="language-js"> /* slider */
+    .slider__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .slider__img {
+        position: relative;
+        width: 800px;
+        height: 480px;
+    }
+    .slider {
+        position: absolute;
+        left: '0';
+        top: '0';
+    }
+    .slider::before {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background: rbga('0','0','0','0.4');
+        color: #fff;
+        padding: 5px 10px 3px;
+    }
+    .slider:nth-child('1')::before{content: '이미지1';}
+    .slider:nth-child('2')::before{content: '이미지2';}
+    .slider:nth-child('3')::before{content: '이미지3';}
+    .slider:nth-child('4')::before{content: '이미지4';}
+    .slider:nth-child('5')::before{content: '이미지5';}
+    .slider:nth-child('1') {z-index: '5';}
+    .slider:nth-child('2') {z-index: '4';}
+    .slider:nth-child('3') {z-index: '3';}
+    .slider:nth-child('4') {z-index: '2';}
+    .slider:nth-child('5') {z-index: '1';}
+</code></pre>
+                                </div>
+                                <div>
+                                    <pre class="line-numbers"><code class="language-js"> // slider01
+    const sliderWrap = document.querySelector(".slider__wrap");
+    const sliderImg = document.querySelector(".slider__img");
+    const slider = document.querySelectorAll(".slider");
+
+    let currentIndex = '0'; //현재 보이는 이미지
+    let sliderCount = slider.length; //이미지 갯수
+
+    setInterval (()=> {
+        let nextIndex = (currentIndex+'1') % '5';   //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0
+    
+        slider[currentIndex].style.opacity = "0";   //첫 번째 이미지를 안보이게
+        slider[nextIndex].style.opacity = "1";   //두 번째 이미지를 보이게
+
+        //각 슬라이더마다 효과 주기
+        slider.forEach(slider => {
+            slider.style.transition = "all 0.3s";
+        })
+
+        currentIndex = nextIndex; //nextIndex를 currentIndex를 대입
+
+    }, '2000');
+</code></pre>
+                                </div>
+                                <div>
+                                    <pre class="line-numbers"><code class="language-js">
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal_close">닫기</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="attr">
+            <ul>
+                <li>clientX : <span class="clientX">0</span>px</li>
+                <li>clientY : <span class="clientY">0</span>px</li>
+                <li>offsetX : <span class="offsetX">0</span>px</li>
+                <li>offsetY : <span class="offsetY">0</span>px</li>
+                <li>pageX : <span class="pageX">0</span>px</li>
+                <li>pageY : <span class="pageY">0</span>px</li>
+                <li>screenX : <span class="screenX">0</span>px</li>
+                <li>screenY : <span class="screenY">0</span>px</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="../effect/js/prism.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        modal();
+        tabMenu();
+
+        //출력용
+        window.addEventListener("mousemove",()=>{
+            document.querySelector(".clientX").innerText = event.clientX;
+            document.querySelector(".clientY").innerText = event.clientY;
+            document.querySelector(".offsetX").innerText = event.offsetX;
+            document.querySelector(".offsetY").innerText = event.offsetY;
+            document.querySelector(".pageX").innerText = event.pageX;
+            document.querySelector(".pageY").innerText = event.pageY;
+            document.querySelector(".screenX").innerText = event.screenX;
+            document.querySelector(".screenY").innerText = event.screenY;
+        })
+    </script>
+</body>
+</html>
