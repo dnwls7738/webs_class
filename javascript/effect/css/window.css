@@ -84,13 +84,13 @@ body {
 
 .source {
     position: absolute;
+    position: bottom;
     right: 20px;
-    bottom: 20px;
 }
 
 .source button {
-    border: 1px solid #000;
-    background: transparent;
+    border: 6px ridge #c5c5c5;
+    background: #cacaca;
     font-family: 'NexonLv1Gothic';
     color: #000;
     font-size: 16px;
@@ -101,8 +101,8 @@ body {
 }
 
 .source button:hover {
-    background: #000;
-    color: #fff;
+    background: #aaaaaa;
+    cursor: pointer;
 }
 
 
@@ -233,10 +233,10 @@ body {
     top: -53px;
 } */
 
-.source_btn:hover {
+/* .source_btn:hover {
     background: #aaaaaa;
     cursor: pointer;
-}
+} */
 
 
 .window {
