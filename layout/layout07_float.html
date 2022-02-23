@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>레이아웃07 : float</title>
 
     <style>
         * {
@@ -27,95 +27,85 @@
             height: 100px;
             background-color: #AFD5AB;
         }
-        #main {
-            display: flex;
-        }
-        #side {
+        #aside {
             width: 20%;
-            height: 600px;
+            height: 780px;
             background-color: #91C58A;
+            float: left;
         }
         #contents {
             width: 60%;
-            height: 600px;
+            height: 780px;
             background-color: #7BB973;
+            float: left;
         }
-        #side2 {
+        #aside2 {
             width: 20%;
-            height: 600px;
+            height: 780px;
             background-color: #67AD5B;
-
+            float: left;
         }
         #footer {
             width: 100%;
             height: 100px;
             background-color: #5D9E51;
+            clear: both;
         }
-
-        /* media */
-        @media (max-width:1220px){
+        @media (max-width: 1300px) {
             #wrap {
                 width: 96%;
             }
-            #main {
-                flex-wrap: wrap;
-            }
-            #side {
-                width: 30%;
-                height: 300px;
-            }
-            #contents {
-                width: 70%;
-                height: 300px;
-            }
-            #side2 {
-                width: 100%;
-                height: 150px;
-            }
         }
-        @media (max-width:768px){
+
+        @media (max-width: 768px) {
             #wrap {
                 width: 100%;
             }
-            #main {
-                flex-wrap: wrap;
-            }
-            #side {
+
+            #aside {
                 width: 30%;
-                height: 500px;
+                height: 630px;
+                background-color: #91C58A;
             }
+
             #contents {
                 width: 70%;
-                height: 500px;
+                height: 630px;
+                background-color: #7BB973;
             }
-            #side2 {
-                width: 100%;
-                height: 100px;
-            }
-        }
-        @media (max-width:600px){
-            #side {
+
+            #aside2 {
                 width: 100%;
                 height: 150px;
+                background-color: #67AD5B;
             }
-            #contents {
-                width: 100%;
-                height: 300px;
-            }
+        }
+
+        @media (max-width: 480px){
+           #aside {
+               width: 100%;
+               height: 200px;
+           }
+           #contents {
+               width: 100%;
+               height: 430px;
+           }
+           #aside2 {
+               width: 100%;
+               height: 150px;
+           }
         }
     </style>
 </head>
 
 <body>
     <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav"></nav>
-        <main id="main">
-            <aside id="side"></aside>
-            <section id="contents"></section>
-            <aside id="side2"></aside>
-        </main>
-        <footer id="footer"></footer>
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="contents"></div>
+        <div id="aside2"></div>
+        <div id="footer"></div>
     </div>
 </body>
 </html>

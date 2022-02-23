@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+    <link rel="stylesheet" href="css/nexon.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        body::before{
+            background: rgba(62, 42, 27, 0.8);;
+        }
+
+        /* mouse__warp */
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+        .mouse__wrap p:last-child{
+            font-size: 3vw;
+            font-weight: 400;
+        }
+        .mouse__wrap p span {
+            border-bottom: 0.15vw dashed rgb(236, 197, 19);
+            color: orange;
+        }
+
+        /* cursor */
+        .cursor {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
+            border-radius: 50%;
+            background-image: url(img/img3-min.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            border: 5px solid #fff;
+        }
+
+    </style>
+</head>
+
+<body class="img03">
+    <!-- main -->
+    <main>
+        <section id="mouseTpye01">
+            <div class="cursor"></div>
+            <div class="mouse__wrap">
+                <p>It is kind of <span>fun</span> to do the <span>impossible</span></p>
+                <p><span>불가능</span>한 것을 하는 것은 좀 <span>재미</span>있다.</p>
+            </div>
+        </section>
+    </main>
+    <!-- // main -->
+    
+
+     <!-- info -->
+     <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript mouse Effect03</a></h1>
+            <p>마우스 이펙트 - 조명효과</p>
+        </div>
+
+        <div class="list">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li class="active"><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+                <li><a href="mouseEffect08.html">8</a></li>
+            </ul>
+        </div>
+
+        <div class="source">
+            <button class="source_btn">소스보기</button>
+            <div id="modal">
+                <div class="modal_wrap">
+                    <div class="modal_cont">
+                        <div class="code_view">
+                            <div class="view_header" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="view_title">
+                                <ul>
+                                    <li class="active"><a href="#">HTML</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">JavaScript</a></li>
+                                </ul>
+                            </div>
+                            <div class="view_cont">
+                                <div>
+<pre class="line-numbers"><code class="language-js">&lt;main>
+    &lt;section id="mouseTpye01">
+        &lt;div class="cursor">&lt;/div>
+        &lt;div class="mouse__wrap">
+            &lt;p>It is kind of &lt;span>fun&lt;/span> to do the &lt;span>impossible&lt;/span>&lt;/p>
+            &lt;p>&lt;span>불가능&lt;/span>한 것을 하는 것은 좀 &lt;span>재미&lt;/span>있다.&lt;/p>
+        &lt;/div>
+    &lt;/section>
+&lt;/main>
+
+
+
+
+
+
+
+
+</code></pre>
+                                </div>
+                                <div>
+<pre class="line-numbers"><code class="language-js">body::before{
+    background: rgba(62, 42, 27, 0.8);;
+}
+
+/* mouse__warp */
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.mouse__wrap p {
+    font-size: 2.5vw;
+    line-height: 2;
+    font-weight: 300;
+}
+.mouse__wrap p:last-child{
+    font-size: 3vw;
+    font-weight: 400;
+}
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed rgb(236, 197, 19);
+    color: orange;
+}
+
+/* cursor */
+.cursor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: url(img/img3-min.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border: 5px solid #fff;
+}
+</code></pre>
+                                </div>
+                                <div>
+<pre class="line-numbers"><code class="language-js">    const cursor = document.querySelector(".cursor");
+    // const circle1 = document.querySelector(".cursor").clientWidth;   //190 : border값이 빠진 상태
+    // const circle2 = document.querySelector(".cursor").offsetWidth;  //200 : border값 포함 상태
+    const circle3 = document.querySelector(".cursor").getBoundingClientRect();  //bottom: 200, height: 200, left: 0, right: 200, top: 0, width: 200, x: 0, y: 0
+
+    function follow(e){
+
+        //gsap
+        gsap.to(cursor, {duration : .3, left : e.pageX - circle3.width/2, top : e.pageY - circle3.height/2});
+    
+        //출력용
+        document.querySelector(".pageX").innerHTML = e.pageX;
+        document.querySelector(".pageY").innerHTML = e.pageY;
+    }
+    window.addEventListener("mousemove", follow)
+
+    
+</code></pre>
+                                </div>
+                                <div>
+                                    <pre class="line-numbers"><code class="language-js">
+
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal_close">닫기</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="attr">
+            <ul>
+                <li>pageX : <span class="pageX">0</span>px</li>
+                <li>pageY : <span class="pageY">0</span>px</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- //info -->
+
+    <!-- script -->
+    <script src="../effect/js/prism.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/gsap.min.js"></script>
+
+    <script>
+        modal();
+        tabMenu();
+
+        const cursor = document.querySelector(".cursor");
+        // const circle1 = document.querySelector(".cursor").clientWidth;   //190 : border값이 빠진 상태
+        // const circle2 = document.querySelector(".cursor").offsetWidth;  //200 : border값 포함 상태
+        const circle3 = document.querySelector(".cursor").getBoundingClientRect();  //bottom: 200, height: 200, left: 0, right: 200, top: 0, width: 200, x: 0, y: 0
+
+        function follow(e){
+
+            //gsap
+            gsap.to(cursor, {duration : .3, left : e.pageX - circle3.width/2, top : e.pageY - circle3.height/2});
+      
+            //출력용
+            document.querySelector(".pageX").innerHTML = e.pageX;
+            document.querySelector(".pageY").innerHTML = e.pageY;
+        }
+        window.addEventListener("mousemove", follow)
+
+            
+
+
+ 
+    </script>
+</body>
+</html>
