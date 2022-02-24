@@ -586,6 +586,15 @@ img {
     font-size: 0.8em;
     vertical-align: 2px;
 }
+button {
+    border: 1px solid #cdcdcd;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:active {
+    background: rgb(207,207,207);
+}
 
 /* 간격설정 */
 .mt0 {margin-top: 0px !important;}
