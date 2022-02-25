@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요리보고 조리보고 요복조복</title>
+    <!-- CSS style -->
+    <link rel="stylesheet" href="../site/webClass/css/reset.css">
+    <link rel="stylesheet" href="../site/webClass/css/fonts.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+    <style>
+        #wrap {
+            width: 100%;
+            background-color: #E9E5BD;
+            height: 20000px;
+        }
+        .container {
+            width: 1240px;
+            margin: 0 auto;
+        }
+
+        #header {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            min-width: 1240px;
+            white-space: nowrap;
+        }
+
+        #header .nav {
+            text-align: center;
+        }
+
+        #header .nav li {
+            display: inline;
+        }
+
+        #header .nav li a {
+            padding: 20px 30px;
+            display: inline-block;
+            display: inline-block;
+            position: relative;
+            transition: background- 0.4s;
+        }
+        #header .nav li a:hover {
+            background: #f5f5f5 ;
+            border-radius: 10px;
+            border-bottom: 1px solid #000;
+            text-decoration: underline;
+        }
+
+        #contents {}
+        #contents #banner {
+            background: url(../project/img/꿀3.png) center no-repeat;
+            background-size: cover;
+            height: 1080px;
+            background-color: #E9E5BD;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        #contents #banner .logo .img{
+            align-content: center;
+        }
+        #contents #banner h4 {
+            width: 1240px;
+            height: 270px;
+            text-align: center;
+            align-content: center;
+            font-size: 80px;
+            color: #987C28;
+            margin-top: 40px;
+        }
+        #contents #banner h4 .style {
+            text-shadow:-3px 0px 0px #000,3px 0px 0px #000,0px -3px 0px #000,0px 3px 0px #000;
+            color: #FD6F22;
+        }
+
+        /* pick  */
+        #contents .pick {
+            height: 900px;
+            background-color: #E9E5BD;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+        #contents .pick h2 {
+            font-size: 50px;
+            background: url(img/Line.svg)no-repeat;
+        }
+        #contents .pick .text {
+            float: left;
+            width: 550px;
+            height: 513px;
+            margin-right: 40px;
+        }
+        #contents .pick .text .text_desc{
+            font-family: 'NexonLv1Gothic';
+            line-height: 1.6;
+            font-size: 27px;
+            margin-top: 130px;
+            margin-bottom: 60px;
+        }
+        #contents .pick .text .text_more {
+            font-size: 20px;
+            color: #D64109;
+        }
+
+        #contents .pick .img1 {
+            float: right;
+            background-image: url(img/편의점.png);
+            background-position: center;
+            width: 650px;
+            height: 513px;
+        }
+
+        /* user */
+        #contents .user {
+            height: 900px;
+            background-color: #E9E5BD;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+        #contents .user h2 {
+            text-align: right;
+            font-size: 50px;
+        }
+        #contents .user .img1 {
+            float: left;
+            background-image: url(img/사용자조사.png);
+            background-position: center;
+            width: 580px;
+            height: 513px;
+            border-radius: 20px;
+        }
+        #contents .user .text {
+            float: right;
+            width: 510px;
+            height: 513px;
+            margin-left: 40px;
+        }
+        #contents .user .text .text_desc {
+            font-family: 'NexonLv1Gothic';
+            line-height: 1.6;
+            font-size: 27px;
+            margin-top: 130px;
+            margin-bottom: 60px;
+            margin-left: 30px;
+        }
+
+        /* swiper */
+        .swiper {
+            width: 100%;
+            height: 900px;
+        }
+        .swiper-slide.s1{
+            background: url(../site/webClass/img/bg01.jpg) no-repeat center / cover;
+        }
+        .swiper-slide.s2{
+            background: url(../site/webClass/img/bg01.jpg) no-repeat center / cover;
+
+        }
+        .swiper-slide.s3{
+            background: url(../site/webClass/img/bg01.jpg) no-repeat center / cover;
+
+        }
+        .swiper-slide .desc {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 100px 0;
+            color: #fff;
+        }
+        .swiper-slide .desc span {
+            font-size: 18px;
+        }
+        .swiper-slide .desc h4 {
+            font-size: 110px;
+            font-weight: 300;
+            margin-left: -8px;
+        }
+        .swiper-slide .desc p {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: 100px;
+        }
+        .swiper-slide .desc .btn a{
+            font-size: 16px;
+            padding: 11px 50px;
+            display: inline-block;
+        }
+        .swiper-slide .desc .btn .white{
+            background: #Fff;
+            color: #000;
+        }
+        .swiper-slide .desc .btn .black{
+            background: #000;
+            color: #fff;
+        }
+
+        .swiper-button-prev {
+            width: 27px;
+            height: 56px;
+            background: url(../site/webClass/img/bg-svg.svg);
+            background-position: 0 -50px;
+        }
+
+        .swiper-button-prev::after{
+            font-size: 0 !important;
+        }
+
+        .swiper-button-next{
+            width: 27px;
+            height: 56px;
+            background: url(../site/webClass/img/bg-svg.svg);
+            background-position: -23px -50px;
+        }
+
+        .swiper-button-next::after{
+            font-size: 0 !important;
+        }
+
+        .swiper-pagination-bullet{
+            width: 14px !important;
+            height: 14px !important;
+            background: #fff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">선정이유</a></li>
+                    <li><a href="#">사용자 조사</a></li>
+                    <li> <a href="#">페르소나</a></li>
+                    <li><a href="#">경영전략</a></li>
+                    <li><a href="#">방향성</a></li>
+                    <li><a href="#">활동</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <main id="contents">
+            <section id="banner">
+                <div class="logo">
+                    <img src="../project/img/로고.png" alt="">
+                </div>
+                <h4>요리보고 조리보고 자취생을 위한 초간단 <span class="style">꿀팁</span> 레시피</h4>
+            </section>
+            <!-- //banner -->
+            <section class="pick container">
+                <h2>선정이유</h2>            
+                <div class="text">
+                    <div class="text_desc">
+                        요리는 어렵고 재료를 사기 위해 장보는 것은
+                        귀찮은 자취생들이 자주 먹는 편의점 음식을<br>
+                        더욱 더 맛있게 먹을 수 있도록<br>
+                        레시피들을 모아서 어디서나 제공하기 위해서
+                        선정하게 되었습니다.
+                    </div>
+                    <div class="text_more">
+                        그냥 먹기 심심한 편의점 음식들을<br>
+                        어떻게 요리하고 조리해야 맛이 있을까요?
+                    </div>
+                </div>
+                <div class="img1"></div>
+            </section>
+            <!-- //pick -->
+            <section class="user container">
+                <h2>사용자 조사</h2>
+                <div class="img1"></div>
+                <div class="text">
+                    <div class="text_desc">
+                        전 연령층을 대상으로 편의점 및 편의점<br>
+                        음식에 대한 설문을 실시 했습니다.<br>
+                        과연 편의점을 얼마나 자주 방문하고<br>
+                        편의점 음식을 자주 사 먹는지 알 수 있는<br>
+                        설문 조사입니다.
+                    </div>
+                </div>
+            </section>
+            <!-- //user -->
+            <section class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide s1">
+                            <div class="desc">
+                                <span>DEVELOPER</span>
+                                <h4>NEW FRONTEND</h4>
+                                <p>
+                                    당신이 만들어갈 새로운 이야기<br>
+                                    당신도 할 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <a href="#" class="white">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide s2">
+                            <div class="desc">
+                                <span>DEVELOPER</span>
+                                <h4>NEW FRONTEND</h4>
+                                <p>
+                                    당신이 만들어갈 새로운 이야기<br>
+                                    당신도 할 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <a href="#" class="white">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide s3">
+                            <div class="desc">
+                                <span>DEVELOPER</span>
+                                <h4>NEW FRONTEND</h4>
+                                <p>
+                                    당신이 만들어갈 새로운 이야기<br>
+                                    당신도 할 수 있습니다.
+                                </p>
+                                <div class="btn">
+                                    <a href="#" class="white">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+            <!-- //slider -->
+            <section class="persona"></section>
+            <!-- //persona -->
+            <section class="direct"></section>
+            <!-- //direct -->
+            <section class="direct2"></section>
+            <!-- //direct2 -->
+            <section class="diagram"></section>
+            <!-- //diagram -->
+            <section class="diagram2"></section>
+            <!-- //diagram2 -->
+            <section class="diagram3"></section>
+            <!-- //diagram3 -->
+        </main>
+        <!-- //main -->
+
+        <footer id="footer"></footer>
+        <!-- //footer -->
+
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: false,
+        effect: 'coverflow',
+        cubeEffect: {
+            shadow: false,
+        },
+        // autoplay: {
+        //     delay: 3000,
+        // },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+</body>
+
+
+
+</html>
