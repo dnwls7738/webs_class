@@ -281,15 +281,10 @@
 
 .row {
   --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) / -2);
-  margin-left: calc(var(--bs-gutter-x) / -2);
+  align-content: center;
+  justify-content: center;
 }
 
 .col-md-4 {
@@ -499,20 +494,12 @@
 
 .ms-auto {
   margin-left: auto !important;
+  margin-top: auto !important;
 }
-
-
-
-
 
 .text-center {
   text-align: center !important;
 }
-
-
-
-
-
 
 .section {
   padding: 7rem 0;
@@ -523,14 +510,11 @@
   font-weight: bold;
   text-transform: uppercase;
 }
-
-@media (max-width: 767.98px) {
-  .section {
-    padding: 2rem 0;
-  }
+.col-lg-3 p {
+  width: 480px;
+  font-size: 27px;
+  margin-top: auto !important;
 }
-
-
 .sec-3 .heading {
   margin-bottom: 60px;
   position: relative;
@@ -747,7 +731,6 @@
 .testimonial-slide-center-wrap .tns-nav button.tns-nav-active:before {
   background-color: #fc5404;
 }
-
 
 #testimonial-nav {
   position: absolute;
