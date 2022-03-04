@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/site/webClass/css/reset.css">
+    <link rel="stylesheet" href="/site/webClass/css/fonts.css">
+
+    <style>
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .imgText {
+            padding: 150px 0;
+            overflow: hidden;
+        }
+
+        .imgText .text {
+            float: left;
+            width: 330px;
+            height: 530px;
+            margin-right: 60px;
+            margin-top: 20px;
+        }
+
+        .imgText .text_sub {
+            font-family: GmarketSans;
+            font-weight: 500;
+            text-decoration: underline;
+            color: #777777;
+        }
+
+        .imgText .text .text_title {
+            font-family: GmarketSans;
+            font-size: 50px;
+            font-weight: 300;
+            margin: 15px 0px 30px -4px;
+            width: 303px;
+        }
+
+        .imgText .text .text_desc {
+            font-family: GmarketSans;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #67778A;
+            margin-bottom: 30px;
+        }
+
+        .imgText .text .text_more {
+            padding: 10px;
+            text-align: center;
+            font-family: GmarketSans;
+            font-size: 18px;
+            font-weight: 300;
+            border: 1px solid #000;
+            width: 220px;
+            height: 47px;
+            background-color: #000;
+        }
+
+        .imgText .text .text_more a {
+            color: #fff;
+        }
+
+        .imgText .img1 {
+            float: left;
+            width: 386.6px;
+            height: 530px;
+            margin-right: 20px;
+            background-color: #ccc;
+            background-image: url(img/site01.jpg);
+            background-size: 100%;
+            margin-top: 72px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .img1 .img1_text {
+            position: absolute;
+            font-family: GmarketSans;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 300;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 50px;
+            width: 175px;
+            height: 43px;
+            text-align: center;
+            padding: 8px;
+            margin-top: 470px;
+            margin-left: 20px;
+        }
+
+        .imgText .img2 {
+            float: left;
+            width: 386.6px;
+            height: 530px;
+            background-color: #ccc;
+            background-image: url(img/site02.jpg);
+            background-size: 100%;
+            border-radius: 10px;
+        }
+
+        .img2 .img2_text {
+            position: absolute;
+            font-family: GmarketSans;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 300;
+            border: 1px solid #000;
+            background-color: #000;
+            border-radius: 50px;
+            width: 175px;
+            height: 43px;
+            text-align: center;
+            padding: 8px;
+            margin-top: 470px;
+            margin-left: 20px;
+        }
+
+        @media (max-width:600px) {
+            .container {
+                width: 600px;
+                height: 2000px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .imgText .text {
+                height: 408px;
+                margin-right: 0;
+                margin-top: 0;
+            }
+
+            .imgText .img1 {
+                margin-top: 0;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="imgText container">
+        <div class="text">
+            <p class="text_sub">이미지 텍스트 유형01</p>
+            <h3 class="text_title">웹스토리보이 사이트</h3>
+            <p class="text_desc">
+                웹디자이너, 웹 퍼블리셔, 프론트앤드 개발<br>
+                자를 위한 강의 사이트 입니다.<br>
+                Gmarket Sans Light 22px 150%<br>
+                #67778A
+            </p>
+
+            <div class="text_more">
+                <a href="#">
+                    <span>더 많은 유형 살펴보기</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="img1">
+            <p class="img1_text">레퍼런스 사이트</p>
+        </div>
+        <div class="img2">
+            <p class="img2_text">튜토리얼 사이트</p>
+        </div>
+    </section>
+    <!-- imgText_type01  -->
+</body>
+
+</html>
