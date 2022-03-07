@@ -67,9 +67,9 @@
                 <li><a href="#smaple10">16. 배열 메서드 : includes() : 배열 요소 검색 : 반환(불린)</li>
                 <li><a href="#smaple11">17. 배열 메서드 : find() : 배열 요소 검색 : 반환(요소)</li>
                 <li><a href="#smaple11">18. 배열 메서드 : findIndex() : 배열 첫 요소 검색 : 반환(숫자)</li>
-                <li><a href="#smaple11">19. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색 : 반환(배열)</li>
-                <li><a href="#smaple12">20. 배열 메서드 : map() : 배열 요소 추출하여 새로운 배열로 만듦 : 반환(배열)</li>
-                <li><a href="#smaple1">21. 배열 메서드 : Array.from() : 배열로 변환 : 반환(배열)</li>
+                <li><a href="#smaple12">19. 배열 메서드 : filter() : 조건에 만족하는 배열 요소 검색 : 반환(배열)</li>
+                <li><a href="#smaple13">20. 배열 메서드 : map() : 배열 요소 추출하여 새로운 배열로 만듦 : 반환(배열)</li>
+                <li><a href="#smaple14">21. 배열 메서드 : Array.from() : 배열로 변환 : 반환(배열)</li>
             </ul>
         </div>
         <!-- //list -->
@@ -922,6 +922,63 @@
                 </div>
             </div>
             <!-- //sample13 -->
+
+            <div id="smaple14" class="sample">
+                <h3>14. 배열 메서드 : Array.from() : 배열로 변환 : 반환(배열)</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%">
+                            <col style="width: 32%">
+                            <col style="width: 30%">
+                            <col style="width: 34%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample14_N1"></td>
+                                <td class="sample14_Q1"></td>
+                                <td class="sample14_M1"></td>
+                                <td class="sample14_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample14_N2"></td>
+                                <td class="sample14_Q2"></td>
+                                <td class="sample14_M2"></td>
+                                <td class="sample14_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample14_N3"></td>
+                                <td class="sample14_Q3"></td>
+                                <td class="sample14_M3"></td>
+                                <td class="sample14_R3"></td>
+                            </tr>
+                    </table>
+                </div>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    const arrNum = [100, 200, 300, 400, 500];
+    const result = arrNum.map(el => el);
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const result2 = arrNum2.map(el => el + 'j');
+
+    const arrNum3 = [100, 200, 300, 400, 500];
+    const result3 = arrNum3.map(el => el + '100');
+
+    const arrNum4 = [{a: 100}, {a: 200}, {a: 300}];
+    const result4 = arrNum4.map(el => el.a);
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample14 -->
         </div>
         <!-- //script -->
     </main>
@@ -1411,6 +1468,7 @@
 
 
         }
+
         // {13}
         // map() : 배열 요소 추출하여 새로운 배열로 만듦 : 반환(배열)
         // 배열.map(콜백함수)
@@ -1446,6 +1504,33 @@
             document.querySelector(".sample13_Q4").innerHTML = "[{a:100}, {a:200}, {a:300}]";
             document.querySelector(".sample13_M4").innerHTML = "map(el => el.a)";
             document.querySelector(".sample13_R4").innerHTML = result4;
+        }
+
+        // 14.배열 메서드 : Array.from() : 배열로 변환 : 반환(배열)
+        {
+            const text = "javascript";
+            const result = Array.from(text);
+
+            document.querySelector(".sample14_N1").innerHTML = 1;
+            document.querySelector(".sample14_Q1").innerHTML = "javascript";
+            document.querySelector(".sample14_M1").innerHTML = "Array.from()";
+            document.querySelector(".sample14_R1").innerHTML = result;
+
+            const text2 = "javascript";
+            const result2 = Array.from(text2, el => el + 10);
+
+            document.querySelector(".sample14_N2").innerHTML = 2;
+            document.querySelector(".sample14_Q2").innerHTML = "javascript";
+            document.querySelector(".sample14_M2").innerHTML = "Array.from(text2, el = el + 10);";
+            document.querySelector(".sample14_R2").innerHTML = result2;
+
+            const text3 = "javascript";
+            const result3 = [...text3].map(el => el);
+
+            document.querySelector(".sample14_N3").innerHTML = 3;
+            document.querySelector(".sample14_Q3").innerHTML = "javascript";
+            document.querySelector(".sample14_M3").innerHTML = "[...text3].map(el => el)";
+            document.querySelector(".sample14_R3").innerHTML = result3;
         }
 
         // 숙제 정답 두개씩
@@ -1494,6 +1579,10 @@
 
             //const result12 = arrBox2.splice(0,4);
             //document.write(result12);;
+        }
+
+        {
+            (num==100)?document.wrtie("true"):document.write("false");
         }
     </script>
 </body>
