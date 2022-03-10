@@ -409,7 +409,7 @@
 
         
         function hasScroll(){
-            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop
+            let scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
 
             if(scrollTop < lastScroll){
                 document.querySelector("#parallax__nav").classList.add("show")

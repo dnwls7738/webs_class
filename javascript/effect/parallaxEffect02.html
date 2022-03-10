@@ -397,7 +397,7 @@
         })
 
         window.addEventListener("scroll", () => {
-            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop
+            let scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
 
             document.querySelector(".scrollTop span").innerText =Math.round(scrollTop);
 
