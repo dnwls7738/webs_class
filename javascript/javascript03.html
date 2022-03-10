@@ -353,7 +353,7 @@
         <!-- //sample12 -->
 
         <div class="script">
-            <div id="smaple12" class="sample">
+            <div id="smaple13" class="sample">
                 <h3>13. 내부 함수</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -370,6 +370,116 @@
                 </div>    
             </div>
         </div>
+        <!-- //sample13 -->
+
+        <div class="script">
+            <div id="smaple14" class="sample">
+                <h3>14. 즉시 실행 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        document.write("함수가 실행되었습니다.")
+    }
+    func();
+
+    (function(){
+        document.write("함수가 실행되었습니다.")
+    }());
+
+        (()=>{
+            document.write("함수가 실행되었습니다.")
+        })();
+    }  
+
+     15. 파라미터 함수
+    {
+        function func(str="함수가 실행되었습니다."){
+            document.write(str);
+        }
+        func();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample14 -->
+
+        <div class="script">
+            <div id="smaple15" class="sample">
+                <h3>15. 파라미터 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample15 -->
+
+        <div class="script">
+            <div id="smaple16" class="sample">
+                <h3>16. 아규먼트 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(a, b){
+        document.write(arguments[0]);
+        document.write(arguments[1]);
+    }
+    func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample16 -->
+
+        <div class="script">
+            <div id="smaple17" class="sample">
+                <h3>17. 재귀 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        document.write("함수가 실행되었습니다.")
+        func();
+    }
+    func();
+
+    function func(num){
+        if(num &lt;= 1){
+            documnet.write("함수가 실행되었습니다.")
+        }else{
+            document.write("함수가 실행되었습니다.")
+            func(num-1);
+        }
+    }
+    func(5);
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        함수가 실행되었습니다.
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample17 -->
 
         <!-- //script -->
     </main>
@@ -520,13 +630,33 @@
 
         // 16. 아규먼트 함수
         // {
-        //     function func(a, b){
-        //         document.write(arguments[0]);
-        //         document.write(arguments[1]);
-        //     }
-        //     func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
+            function func(a, b){
+                document.write(arguments[0]);
+                document.write(arguments[1]);
+            }
+            func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
         // }
-        // 17.
+
+        // 17. 재귀 함수 : 자기 스스로를 호출 반복
+            {
+                // function func(){
+                //     document.write("함수가 실행되었습니다.")
+                //     func();
+                // }
+                // func();
+
+                // function func(num){
+                //     if(num<=1){
+                //         documnet.write("함수가 실행되었습니다.")
+                //     }else{
+                //         document.write("함수가 실행되었습니다.")
+                //         func(num-1);
+                //     }
+                // }
+                // func(5);
+            }
+
+        // 18. 콜백 함수 : 스스로를 호출 후 다음 함수 실행
     </script>
 </body>
 </html>
