@@ -323,8 +323,8 @@
             <li><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
             <li><a href="parallaxEffect05.html">5</a></li>
-            <li class="active"><a href="parallaxEffect06.html">6</a></li>
-            <li><a href="parallaxEffect07.html">7</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li class="active"><a href="parallaxEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //parallax__title -->
@@ -353,7 +353,7 @@
                 <figure class="content__item__imgWrap reveal">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal">높은 목표를 세우고, 스스로 채찍질 한다.</p>
+                <p class="content__item__desc reveal"><span>높은 목표를 세우고, 스스로 채찍질 한다.</span></p>
             </section>
             <section id="section2" class="content__item">
                 <span class="content__item__num">02</span>
@@ -361,7 +361,7 @@
                 <figure class="content__item__imgWrap reveal reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-RTL">당신은 지체할 수도 있지만 시간은 그러하지 않다.</p>
+                <p class="content__item__desc reveal reveal-RTL"><span>당신은 지체할 수도 있지만 시간은 그러하지 않다.</span></p>
             </section>
             <section id="section3" class="content__item">
                 <span class="content__item__num">03</span>
@@ -369,7 +369,7 @@
                 <figure class="content__item__imgWrap reveal reveal-TTB">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-TTB">다른 사람들을 평가한다면 그들을 사랑할 시간이 없다.</p>
+                <p class="content__item__desc reveal reveal-TTB"><span>다른 사람들을 평가한다면 그들을 사랑할 시간이 없다.</span></p>
             </section>
             <section id="section4" class="content__item">
                 <span class="content__item__num">04</span>
@@ -377,7 +377,7 @@
                 <figure class="content__item__imgWrap reveal reveal-BTT">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-BTT">미래에 대해 생각하는 법이 없다. 어차피 곧 닥치니깐.</p>
+                <p class="content__item__desc reveal reveal-BTT"><span>미래에 대해 생각하는 법이 없다. 어차피 곧 닥치니깐.</span></p>
             </section>
             <section id="section5" class="content__item">
                 <span class="content__item__num">05</span>
@@ -385,7 +385,7 @@
                 <figure class="content__item__imgWrap reveal reveal-two">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-two">완벽이 아닌 성공을 목표로 하라, 틀릴 권리를 결코 포기하지 마라.</p>
+                <p class="content__item__desc reveal reveal-two"><span>완벽이 아닌 성공을 목표로 하라, 틀릴 권리를 결코 포기하지 마라.</span></p>
             </section>
             <section id="section6" class="content__item">
                 <span class="content__item__num">06</span>
@@ -393,7 +393,7 @@
                 <figure class="content__item__imgWrap reveal reveal-two reveal-RTL">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-two reveal-RTL">늘 행복하고 지혜로운 사람이 되려면 자주 변해야 한다.</p>
+                <p class="content__item__desc reveal reveal-two reveal-RTL"><span>늘 행복하고 지혜로운 사람이 되려면 자주 변해야 한다.</span></p>
             </section>
             <section id="section7" class="content__item">
                 <span class="content__item__num">07</span>
@@ -401,15 +401,15 @@
                 <figure class="content__item__imgWrap reveal reveal-two reveal-BTT">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc reveal reveal-two" data-delay="500">1%의 가능성 그것이 나의 길이다.</p>
+                <p class="content__item__desc reveal reveal-two reveal-BTT" data-delay="500"><span>1%의 가능성 그것이 나의 길이다.</span></p>
             </section>
             <section id="section8" class="content__item">
                 <span class="content__item__num">08</span>
                 <h2 class="content__item__title">Section8</h2>
-                <figure class="content__item__imgWrap">
+                <figure class="content__item__imgWrap reveal reveal-two reveal-TTB">
                     <div class="content__item__img"></div>
                 </figure>
-                <p class="content__item__desc">카르페디엠, 이순간에 충실하라</p>
+                <p class="content__item__desc reveal reveal-two reveal-TTB"><span>카르페디엠, 이순간에 충실하라.</span></p>
             </section>
             <!-- //section9 -->
             <section id="section9" class="content__item">
@@ -439,15 +439,6 @@
         //만약에 reveal 클래스가 있는데
         //글씨를 span으로 감싸주고
         //글씨를 다시 넣어줌
-        document.querySelectorAll(".content__item__desc").forEach(desc=>{
-            let splitText = desc.innerText;
-            let splitWrap = splitText.push("</span>");
-                splitWrap = splitText.unshift("<span aria-hidden='true'>");
-                splitWrap = "<span aria-hidden='true'>"+splitWrap+"</span >";
-                desc.innerHTML = splitWrap;
-                desc.setAttribute("aria-label", splitText);
-        });
-
         function scroll(){
             let scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
             
