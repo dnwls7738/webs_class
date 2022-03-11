@@ -80,6 +80,7 @@
         }
         .section2__img1 {
             width: 50vw;
+            transform: translate(-50%, -50%) scale(1);
         }
     </style>
 </head>
@@ -136,14 +137,18 @@
                 data-10000="width: 100%; height: 100vh; border-radius:0%"
             ></div>
             <div class="seciton2__text1 fixed"
-                data-9500="transform: translate(-50%, -50%)  scale(0.8);"
-                data-10500="transform: translate(-50%, -50%) scale(1);"
+            data-9500 = "transform: translate(-50%, -50%) scale(0); top: 50%"
+            data-10500 = "transform: translate(-50%, -50%) scale(1); top: 50%"
+            data-11500 = "transform: translate(-50%, -50%) scale(1); top: 50%"
+            data-12000 = "transform: translate(-50%, -50%) scale(1); top: 20%"
             >
                 제가 만든 사이트입니다.
             </div>
-            <div class="section2__img1 fixed">
-                <img src="img/MacbookPro.png" alt="이미지"
-                >
+            <div class="section2__img1 fixed"
+                data-11500 = "transform: translate(-50%, -50%) scale(1); top: 140%;"
+                data-12500 = "transform: translate(-50%, -50%) scale(1); top: 70%;"
+            >
+                <img src="img/MacbookPro.png" alt="이미지">
             </div>
         </section>        
         <!-- section2 -->
