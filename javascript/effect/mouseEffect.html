@@ -30,7 +30,7 @@
         html {
             width: 100%;
             height: 100vh;
-            background: linear-gradient(to bottom, #e81111 0%, #b5c900 100%);
+            background: linear-gradient(to bottom, #e811a0 0%, #001ec9 100%);
             overflow: hidden;
         }
 
@@ -44,9 +44,10 @@
             font-weight: normal;
             transform: translate(-50%, -50%);
             letter-spacing: 2vw;
-            background: -webkit-linear-gradient(#b5c900, #e81111);
+            background: -webkit-linear-gradient(#e811a0, #001ec9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            white-space: nowrap;
         }
 
         .pages {
@@ -78,7 +79,7 @@
         }
         .pages li a:hover {
             box-shadow: 0 -100px 0 #fff inset;
-            color: #e81111;
+            color: #001ec9;
             opacity: 1;
         }
     </style>
@@ -88,16 +89,15 @@
 <body>
     <div id="canvas"></div>
 
-    <h1>Slider Effect</h1>
+    <h1>Mouse Effect</h1>
 
     <div class="pages">
         <ul>
-            <li><a href="../effect/sliderEffect01.html">01</a></li>
-            <li><a href="../effect/sliderhEffect02.html">02</a></li>
-            <li><a href="../effect/sliderEffect03.html">03</a></li>
-            <li><a href="../effect/sliderEffect04.html">04</a></li>
-            <li><a href="../effect/sliderEffect05.html">05</a></li>
-            <li><a href="../effect/sliderEffect06.html">06</a></li>
+            <li><a href="../effect/mouseEffect01.html">01</a></li>
+            <li><a href="../effect/mousehEffect02.html">02</a></li>
+            <li><a href="../effect/mouseEffect03.html">03</a></li>
+            <li><a href="../effect/mouseEffect04.html">04</a></li>
+            <li><a href="../effect/mouseEffect05.html">05</a></li>
 
         </ul>
     </div>
@@ -174,9 +174,9 @@
         const lights = [];
         lights[0] = new THREE.DirectionalLight(0xeffffff, 1);
         lights[0].position.set(1, 0, 0);
-        lights[1] = new THREE.DirectionalLight(0xb5c900, 1);
+        lights[1] = new THREE.DirectionalLight(0xe811a0, 1);
         lights[1].position.set(0.75, 1, 0.5);
-        lights[2] = new THREE.DirectionalLight(0xe81222, 1);
+        lights[2] = new THREE.DirectionalLight(0x001ec9, 1);
         lights[2].position.set(-0.75, -1, 0.5);
         scene.add(lights[0]);
         scene.add(lights[1]);
