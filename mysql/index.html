@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,6 +47,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <a class="sr-only" href="#content">Skip to main content</a>
     <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
@@ -93,22 +95,22 @@
                 </div>
                 <!-- //box -->
 
-                  <!-- box -->
-                  <div class="bs-docs-section">
+                <!-- box -->
+                <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">MySQL 설치</h2>
                     <h3>MAMP 설치</h3>
-                    <img src="img/img01.PNG" alt="">
+                    <img src="img/image (1).png" alt="">
                 </div>
                 <!-- //box -->
 
-                   <!-- box -->
-                   <div class="bs-docs-section">
+                <!-- box -->
+                <div class="bs-docs-section">
                     <h2 id="intro3" class="page-header">MySQL 실행</h2>
                     <div class="bs-callout bs-callout-info">
-                        윈도우 : MAMP/bin/mysql/bin  <br> c:(원화표시)
+                        윈도우 : MAMP/bin/mysql/bin <br> c:(원화표시)
                         로그인 : mysql -uroot -proot
                     </div>
-<pre class="language-js"><code>C:\MAMP\bin\mysql\bin>mysql -uroot -proot
+                    <pre class="language-js"><code>C:\MAMP\bin\mysql\bin>mysql -uroot -proot
 mysql: [Warning] Using a password on the command line interface can be insecure.
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 4
@@ -126,7 +128,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
                         맥 : Applications/mamp/Libary/bin <br>
                         로그인 : sudo ./mysql -uroot -p
                     </div>
-<pre class="language-js"><code>MacBook-Air ~ % cd /Applications/MAMP/Library/bin
+                    <pre class="language-js"><code>MacBook-Air ~ % cd /Applications/MAMP/Library/bin
 MacBook-Air bin % sudo ./mysql -uroot -p
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 186
@@ -139,17 +141,8 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 </code></pre>
                 </div>
                 <!-- //box -->
-
-                 <!-- box -->
-                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">MySQL 설치</h2>
-                    <h3>MAMP 설치</h3>
-                    <img src="img/img01.PNG" alt="">
-                </div>
-                <!-- //box -->
-
-                   <!-- box -->
-                   <div class="bs-docs-section">
+                <!-- box -->
+                <div class="bs-docs-section">
                     <h2 id="intro4" class="page-header">데이터베이스</h2>
                     <h3 id=intro4-1 class="page-header">데이터베이스 만들기</h3>
                     <div class="bs-callout bs-callout-info">
@@ -179,7 +172,7 @@ mysql>
                     <h3 id=intro4-3 class="page-header">데이터베이스 사용</h3>
                     <div class="bs-callout bs-callout-info">
                         use 데이터베이스 이름;
-                    </div>             
+                    </div>
                     <h3 id=intro4-4 class="page-header">데이터베이스 삭제</h3>
                     <div class="bs-callout bs-callout-info">
                         drop database 데이터베이스 이름
@@ -187,14 +180,14 @@ mysql>
 <pre class="language-js"><code>mysql> drop database sample01;
 Query OK, 0 rows affected (0.00 sec)
 </code></pre>
-                        
-                    </div>
+
+                </div>
                 <!-- //box -->
 
                 <!-- box -->
                 <div class="bs-docs-section">
                     <h2 id="intro5" class="page-header">테이블</h2>
-                    <h3 id=intro5-1 class="page-header">테이블 만들기</h3> 
+                    <h3 id=intro5-1 class="page-header">테이블 만들기</h3>
                     <div class="bs-callout bs-callout-info">
                         create table 테이블 이름;
                     </div>
@@ -208,7 +201,7 @@ Query OK, 0 rows affected (0.00 sec)
     PRIMARY KEY (myMemberID)
 )charset=utf8 comment "회원 정보 테이블";
 </code></pre>
-                    <h3 id=intro5-2 class="page-header">테이블 전체 보기</h3> 
+                    <h3 id=intro5-2 class="page-header">테이블 전체 보기</h3>
                     <div class="bs-callout bs-callout-info">
                         show tables;
                     </div>
@@ -220,7 +213,7 @@ Query OK, 0 rows affected (0.00 sec)
 +--------------------+
 1 row in set (0.00 sec)
 </code></pre>
-                    <h3 id=intro5-3 class="page-header">테이블 보기</h3> 
+                    <h3 id=intro5-3 class="page-header">테이블 보기</h3>
                     <div class="bs-callout bs-callout-info">
                         desc 테이블 이름;
                     </div>
@@ -237,27 +230,27 @@ Query OK, 0 rows affected (0.00 sec)
 +------------+------------------+------+-----+---------+----------------+
 6 rows in set (0.00 sec)
 </code></pre>
-                    <h3 id=intro5-4 class="page-header">테이블 삭제</h3> 
+                    <h3 id=intro5-4 class="page-header">테이블 삭제</h3>
                     <div class="bs-callout bs-callout-info">
                         drop table 삭제할 테이블 이름;
                     </div>
 <pre class="language-js"><code>mysql> drop table mymember2;
 Query OK, 0 rows affected (0.00 sec)
 </code></pre>
-                    </div>
+                </div>
                 <!-- //box -->
 
                 <!-- box -->
                 <div class="bs-docs-section">
                     <h2 id="intro6" class="page-header">테이블 수정</h2>
-                    <h3 id=intro6-1 class="page-header">필드 추가하기</h3> 
+                    <h3 id=intro6-1 class="page-header">필드 추가하기</h3>
                     <div class="bs-callout bs-callout-info">
                         ALTER TABLE 테이블명 ADD 추가할 필드명 AFTER 필드명 위치;
                     </div>
 <pre class="language-js"><code> ALTER TABLE myMember ADD youGender enum('m','w','x') 
 default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
 </code></pre>
-<pre class="language-js"><code>mysql> desc myMember;
+                    <pre class="language-js"><code>mysql> desc myMember;
 +------------+-------------------+------+-----+---------+----------------+
 | Field      | Type              | Null | Key | Default | Extra          |
 +------------+-------------------+------+-----+---------+----------------+
@@ -271,14 +264,13 @@ default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
 +------------+-------------------+------+-----+---------+----------------+
 7 rows in set (0.00 sec)  
 </code></pre>
-                    <h3 id=intro5-2 class="page-header">필드 수정하기</h3> 
+                    <h3 id=intro5-2 class="page-header">필드 수정하기</h3>
                     <div class="bs-callout bs-callout-info">
                         ALTER TABLE 테이블명 MODIFY 수정할 필드명
                     </div>
-<pre class="language-js"><code> ALTER TABLE mymember  MODIFY  youName int(20);
-  
+<pre class="language-js"><code>ALTER TABLE mymember  MODIFY  youName int(20);
 </code></pre>
-<pre class="language-js"><code>mysql> desc mymember;
+                    <pre class="language-js"><code>mysql> desc mymember;
 +------------+------------------+------+-----+---------+----------------+
 | Field      | Type             | Null | Key | Default | Extra          |
 +------------+------------------+------+-----+---------+----------------+
@@ -287,14 +279,14 @@ default 'x' comment "남성은 m, 여성은 w" AFTER youBirth;
 +------------+------------------+------+-----+---------+----------------+
 2 rows in set (0.00 sec)
 </code></pre>
-                    <h3 id=intro5-3 class="page-header">필드 삭제하기</h3> 
+                    <h3 id=intro5-3 class="page-header">필드 삭제하기</h3>
                     <div class="bs-callout bs-callout-info">
                         ALTER TABLE 테이블명 DROP 삭제할 필드명
                     </div>
 <pre class="language-js"><code>
    
 </code></pre>
-                    </div>
+                </div>
                 <!-- //box -->
 
                 <!-- box -->
@@ -373,7 +365,7 @@ Query OK, 1 row affected (0.00 sec)
                             <ul class="nav bs-sidenav">
                                 <li><a href="intro4-1">데이터베이스 만들기</a></li>
                                 <li><a href="intro4-2">데이터베이스 보기</a></li>
-                                <li><a href="intro4-3">데이터베이스 사용</a></li>               
+                                <li><a href="intro4-3">데이터베이스 사용</a></li>
                                 <li><a href="intro4-4">데이터베이스 삭제</a></li>
                             </ul>
                         </li>
@@ -428,4 +420,5 @@ Query OK, 1 row affected (0.00 sec)
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
 </body>
+
 </html>
