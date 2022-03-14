@@ -14,7 +14,7 @@
             font-weight: 300;
         }
         body {
-            height: 20000px;
+            height: 40000px;
         }
         .scrollTop {
             position: fixed;
@@ -79,14 +79,53 @@
             white-space: nowrap;
         }
         .section2__img1 {
-            width: 50vw;
-            transform: translate(-50%, -50%) scale(1);
+            width: 55vw;
+            top: 80%;
+        }
+        .section2__img2 {
+            width: 55vw;
+            top: 80%;
+        }
+        .section2__img3 {
+            width: 55vw;
+            top: 80%;
+        }
+        .section2__img4 {
+            width: 55vw;
+            top: 80%;
         }
         .section2__img1__site {
             position: absolute;
             left: 50%; top: 1.4vw;
             transform: translate(-50%);
-            width: 38.5vw;
+            width: 42.5vw;
+            height: calc(100% - 7.4vw);
+            border-radius: 0.5vw 0.5vw 0 0;
+            overflow: hidden;
+        }
+        .section2__img2__site {
+            position: absolute;
+            left: 50%; top: 1.4vw;
+            transform: translate(-50%);
+            width: 42.5vw;
+            height: calc(100% - 7.4vw);
+            border-radius: 0.5vw 0.5vw 0 0;
+            overflow: hidden;
+        }
+        .section2__img3__site {
+            position: absolute;
+            left: 50%; top: 1.4vw;
+            transform: translate(-50%);
+            width: 42.5vw;
+            height: calc(100% - 7.4vw);
+            border-radius: 0.5vw 0.5vw 0 0;
+            overflow: hidden;
+        }
+        .section2__img4__site {
+            position: absolute;
+            left: 50%; top: 1.4vw;
+            transform: translate(-50%);
+            width: 42.5vw;
             height: calc(100% - 7.4vw);
             border-radius: 0.5vw 0.5vw 0 0;
             overflow: hidden;
@@ -94,6 +133,86 @@
         .section2__img1__site .move {
             position: absolute;
             top: 0%; left: 0;
+        }
+        .section2__img2__site .move1 {
+            position: absolute;
+            top: 0%; left: 0;
+        }
+        .section2__img3__site .move2 {
+            position: absolute;
+            top: 0%; left: 0;
+        }
+        .section2__img4__site .move3 {
+            position: absolute;
+            top: 0%; left: 0;
+        }
+        .section2__img4__site .text3 {
+            position: absolute;
+            font-size: 1vw;
+            left: 50%; top: 40%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        .section2__img3__site .text2 {
+            position: absolute;
+            font-size: 1vw;
+            left: 50%; top: 40%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        .section2__img2__site .text1 {
+            position: absolute;
+            font-size: 1vw;
+            left: 50%; top: 40%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        .section2__img1__site .text {
+            position: absolute;
+            font-size: 1vw;
+            left: 50%; top: 40%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        .text3 a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            display: inline-block;
+            border: 1px solid #000;
+            background: #000;
+            border-radius: 1vw;
+            transition: color 0.3s;
+        }
+        .text2 a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            display: inline-block;
+            border: 1px solid #000;
+            background: #000;
+            border-radius: 1vw;
+            transition: color 0.3s;
+        }
+        .text1 a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            display: inline-block;
+            border: 1px solid #000;
+            background: #000;
+            border-radius: 1vw;
+            transition: color 0.3s;
+        }
+        .text a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            display: inline-block;
+            border: 1px solid #000;
+            background: #000;
+            border-radius: 1vw;
+            transition: color 0.3s;
         }
     </style>
 </head>
@@ -148,27 +267,90 @@
             <div class="section2__bg fixed"
                 data-9000="width: 0%; height: 0vh; border-radius: 500px"
                 data-10000="width: 100%; height: 100vh; border-radius:0%"
+                data-27000 = "width: 100%; height: 100vh; border-radius:0%"
+                data-28000 = "width: 0%; height: 0vh; border-radius: 500px"
             ></div>
             <div class="seciton2__text1 fixed"
             data-9500 = "transform: translate(-50%, -50%) scale(0); top: 50%"
             data-10500 = "transform: translate(-50%, -50%) scale(1); top: 50%"
             data-11500 = "transform: translate(-50%, -50%) scale(1); top: 50%"
             data-12000 = "transform: translate(-50%, -50%) scale(1); top: 20%"
+            data-25500 = "transform: translate(-50%, -50%) scale(1); top: 20%"
+            data-26500 = "transform: translate(-50%, -50%) scale(1); top: 50%"
+            data-28000 = "display: block"
+            data-28001 = "display: none"
             >
                 제가 만든 사이트입니다.
             </div>
             <div class="section2__img1 fixed"
                 data-11500 = "transform: translate(-50%, -50%) scale(1); top: 140%;"
-                data-12500 = "transform: translate(-50%, -50%) scale(1); top: 70%;"
-            >
-                <img src="img/MacbookPro.png" alt="이미지">
+                data-12500 = "transform: translate(-50%, -50%) scale(1); top: 65%;"
+                data-14000 = "transform: translate(-50%, -50%) scale(1); left: 50%;"
+                data-15000 = "transform: translate(-50%, -50%) scale(1); left: -50%;"
+            ><img src="img/MacbookPro.png" alt="이미지">
                 <div class="section2__img1__site">
                     <div class="move"
                         data-12500 = "top: 0%;"
-                        data-13500 = "top: -330%;"
+                        data-13500 = "top: -320%;"
                     ><img src="img/site.png" alt="사이트01"></div>
+                    <div class="text"
+                        data-13501 = "opacity :0; top: 40%;"
+                        data-14000 = "opacity :1; top: 50%;"
+                    ><a href="#">자세히 보기</a></div>
                 </div>
             </div>
+
+            <div class="section2__img2 fixed"
+                data-15000 = "transform: translate(-50%, -50%) scale(1); top: 65%; left: 150%;"
+                data-16000 = "transform: translate(-50%, -50%) scale(1); top: 65%; left: 50%;"
+                data-17500 = "transform: translate(-50%, -50%) scale(1); top: 65%; left: 50%;"
+                data-18500 = "transform: translate(-50%, -50%) scale(1); top: 65%; left: -50%;"
+            ><img src="img/MacbookPro.png" alt="이미지">
+                <div class="section2__img2__site">
+                    <div class="move1"
+                        data-16000 = "top: 0%;"
+                        data-17000 = "top: -320%;"
+                    ><img src="img/site.png" alt="사이트02"></div>
+                    <div class="text1"
+                        data-17001 = "opacity :0; top: 40%;"
+                        data-17500 = "opacity :1; top: 50%;"
+                    ><a href="#">자세히 보기</a></div>
+                </div>
+
+                <div class="section2__img3 fixed"
+                    data-18500 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 300%;"
+                    data-19500 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 230%;"
+                    data-21000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 230%;"
+                    data-22000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: -50%;"
+                ><img src="img/MacbookPro.png" alt="이미지">
+                    <div class="section2__img3__site">
+                        <div class="move2"
+                            data-19500 = "top: 0%;"
+                            data-20500 = "top: -320%;"
+                        ><img src="img/site.png" alt="사이트03"></div>
+                        <div class="text2"
+                        data-20501 = "opacity :0; top: 40%;"
+                        data-21000 = "opacity :1; top: 50%;"
+                    ><a href="#">자세히 보기</a></div>
+                    </div>
+
+                <div class="section2__img4 fixed"
+                    data-22000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 450%;"
+                    data-23000 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 330%;"
+                    data-24500 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: 330%;"
+                    data-25500 = "transform: translate(-50%, -50%) scale(1); top: 50%; left: -50%;"
+                ><img src="img/MacbookPro.png" alt="이미지">
+                <div class="section2__img4__site">
+                    <div class="move3"
+                        data-23000 = "top: 0%;"
+                        data-24000 = "top: -320%;"
+                    ><img src="img/site.png" alt="사이트04"></div>
+                    <div class="text3"
+                        data-24001 = "opacity :0; top: 40%;"
+                        data-24500 = "opacity :1; top: 50%;"
+                    ><a href="#">자세히 보기</a></div>
+                </div>
+
         </section>        
         <!-- section2 -->
 
