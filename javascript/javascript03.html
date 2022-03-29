@@ -481,6 +481,32 @@
         </div>
         <!-- //sample17 -->
 
+        <div class="script">
+            <div id="smaple18" class="sample">
+                <h3>18. 콜백 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(){
+        document.write("함수가 실행되었습니다.2")
+    }
+    function callback(str){
+        document.write("함수가 실행되었습니다.1");
+        str();
+    }
+    callback(func);
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        함수가 실행되었습니다.1<br>
+                        함수가 실행되었습니다.2
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample18 -->
+
         <!-- //script -->
     </main>
     
@@ -654,14 +680,14 @@
             // func(5);
         }
         // 콜백 함수 : 다른 함수에 인수로 넘겨지는 함수
-        // function func(){
-        //     document.write("함수가 실행되었습니다.2")
-        // }
-        // function callback(str){
-        //     document.write("함수가 실행되었습니다.1");
-        //     str();
-        // }
-        // callback(func);
+        function func(){
+            document.write("함수가 실행되었습니다.2")
+        }
+        function callback(str){
+            document.write("함수가 실행되었습니다.1");
+            str();
+        }
+        callback(func);
 
         // 콜백 함수 : 반복문
         // function func() {
@@ -816,80 +842,80 @@
         // }
 
         // 함수 유형 : 객체 리터럴 함수
-        {
-            function func(num, name, job){
-                this.num = num;
-                this.name = name;
-                this.job = job;
-            }
+        // {
+        //     function func(num, name, job){
+        //         this.num = num;
+        //         this.name = name;
+        //         this.job = job;
+        //     }
 
-            func.prototype = {
-                result1 : function(){
-                    document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
-                },
-                result2 : function(){
-                    document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
-                }
-            }
+        //     func.prototype = {
+        //         result1 : function(){
+        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        //         },
+        //         result2 : function(){
+        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        //         }
+        //     }
             
-            // 인스턴스 생성
-            const info1 = new func("1", "웹쓰", "웹퍼블리셔");
-            const info2 = new func("2", "웹스토리보이", "포론트엔드개발자");
+        //     // 인스턴스 생성
+        //     const info1 = new func("1", "웹쓰", "웹퍼블리셔");
+        //     const info2 = new func("2", "웹스토리보이", "포론트엔드개발자");
 
-            info1.result1();
-            info2.result2();
-        }
+        //     info1.result1();
+        //     info2.result2();
+        // }
 
         //클래스 : 함수의 집합체
-        {
-            class study {
-                constructor(num, name, job){
-                    this.num = num;
-                    this.name = name;
-                    this.job = job;
-                }
-                result(){
-                    document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
-                };
-            }
-            // 인스턴스 생성
-            const info1 = new study("1", "웹쓰", "웹퍼블리셔");
-            const info2 = new study("2", "웹스토리보이", "포론트엔드개발자");
+        // {
+        //     class study {
+        //         constructor(num, name, job){
+        //             this.num = num;
+        //             this.name = name;
+        //             this.job = job;
+        //         }
+        //         result(){
+        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        //         };
+        //     }
+        //     // 인스턴스 생성
+        //     const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+        //     const info2 = new study("2", "웹스토리보이", "포론트엔드개발자");
 
-            info1.result();
-            info2.result();
-        }
+        //     info1.result();
+        //     info2.result();
+        // }
 
         // 클래스 상속
-        {
-            class study {
-                constructor(num, name, job){
-                    this.num = num;
-                    this.name = name;
-                    this.job = job;
-                }
-                result(){
-                    document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
-                };
-            }
+        // {
+        //     class study {
+        //         constructor(num, name, job){
+        //             this.num = num;
+        //             this.name = name;
+        //             this.job = job;
+        //         }
+        //         result(){
+        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        //         };
+        //     }
 
-            class study2 extends study {
-                constructor(num, name, job, age){
-                    super(num, name, job);
-                    this.age = age;
-                }
-                result2(){
-                    document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "이며 나이는" + this.age + "살 입니다.");
-                };
-            }
-            // 인스턴스 생성
-            const info1 = new study("1", "웹쓰", "웹퍼블리셔");
-            const info2 = new study2("2", "웹스토리보이", "포론트엔드개발자", 100);
+        //     class study2 extends study {
+        //         constructor(num, name, job, age){
+        //             super(num, name, job);
+        //             this.age = age;
+        //         }
+        //         result2(){
+        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "이며 나이는" + this.age + "살 입니다.");
+        //         };
+        //     }
+        //     // 인스턴스 생성
+        //     const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+        //     const info2 = new study2("2", "웹스토리보이", "포론트엔드개발자", 100);
 
-            info1.result();
-            info2.result();
-            info2.result2();
-        }
+        //     info1.result();
+        //     info2.result();
+        //     info2.result2();
+        // }
 
     </script>
 </body>
