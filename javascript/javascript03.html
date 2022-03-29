@@ -494,18 +494,246 @@
         str();
     }
     callback(func);
+
+    // 콜백 함수 : 반복문
+    function func() {
+        document.write("함수가 실행되었습니다.");
+    }
+
+    function callback(num){
+        for(let i=1; i&lt;=5; i++){
+            num(i);
+        }
+    }
+    callback(func);
+
+    // 콜백 함수 : 동기/비동기
+        function funcA(){
+            console.log("funcA가 실행되었습니다.");
+        }
+        function funcB(){
+            console.log("funcB가 실행되었습니다.");
+        }
+        funcA();
+        funcB();
+
+        function funcC() {
+            setTimeout(() => {
+                console.log("C")
+            }, 1000)
+        }
+        function funcD() {
+            console.log("D")
+        }
+        funcC();
+        funcD();
+
+        function funcE(callback){
+            setTimeout(()=>{
+                console.log("E");
+                callback();
+            }, 1000)
+        }
+        function funcF() {
+            console.log("F");
+        }
+        funcE(function(){
+            funcF();
+        });
 }</code></pre>
                 </div>
                 <div class="result">
                     <h4>결과보기</h4> 
                     <div>
                         함수가 실행되었습니다.1<br>
-                        함수가 실행되었습니다.2
+                        함수가 실행되었습니다.2<br><br>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.<br>
+                        함수가 실행되었습니다.<br><br>
+                        funcA가 실행되었습니다.<br>
+                        funcB가 실행되었습니다.<br>
+                        D<br>
+                        C<br>
+                        E<br>
+                        F<br>
                     </div>
                 </div>    
             </div>
         </div>
         <!-- //sample18 -->
+
+        <div class="script">
+            <div id="smaple19" class="sample">
+                <h3>19. 객체 생성자 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+
+        this.result = function(){
+            document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        }
+    }
+    // 인스턴스 생성
+    const info1 = new func("1", "웹쓰", "웹퍼블리셔");
+    const info2 = new func("2", "웹스토리보이", "포론트엔드개발자");
+
+    info1.result();
+    info2.result();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        1.내이름은웹쓰이며, 직업은웹퍼블리셔입니다.<br>
+                        2.내이름은웹스토리보이이며, 직업은포론트엔드개발자입니다.
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample19 -->
+
+        <div class="script">
+            <div id="smaple20" class="sample">
+                <h3>20. 프로토타입 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+
+    func.prototype.result = function(){
+        document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+    }
+
+    // 인스턴스 생성
+    const info1 = new func("1", "웹쓰", "웹퍼블리셔");
+    const info2 = new func("2", "웹스토리보이", "포론트엔드개발자");
+
+    info1.result();
+    info2.result();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        1.내이름은웹쓰이며, 직업은웹퍼블리셔입니다.<br>
+                        2.내이름은웹스토리보이이며, 직업은포론트엔드개발자입니다.
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample20 -->
+
+        <div class="script">
+            <div id="smaple21" class="sample">
+                <h3>21. 객체 리터럴 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    function func(num, name, job){
+        this.num = num;
+        this.name = name;
+        this.job = job;
+    }
+
+    func.prototype = {
+        result1 : function(){
+            document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        },
+        result2 : function(){
+            document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        }
+    }
+    
+    // 인스턴스 생성
+    const info1 = new func("1", "웹쓰", "웹퍼블리셔");
+    const info2 = new func("2", "웹스토리보이", "포론트엔드개발자");
+
+    info1.result1();
+    info2.result2();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        1.내이름은웹쓰이며, 직업은웹퍼블리셔입니다.<br>
+                        2.내이름은웹스토리보이이며, 직업은포론트엔드개발자입니다.
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample21 -->
+
+        <div class="script">
+            <div id="smaple22" class="sample">
+                <h3>21. 클래스 함수</h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    class study {
+        constructor(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+        }
+        result(){
+            document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        };
+    }
+    const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+    const info2 = new study("2", "웹스토리보이", "포론트엔드개발자");
+
+    info1.result();
+    info2.result();
+
+
+    // 클래스 상속
+    class study {
+        constructor(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+        }
+        result(){
+            document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+        };
+    }
+
+    class study2 extends study {
+        constructor(num, name, job, age){
+            super(num, name, job);
+            this.age = age;
+        }
+        result2(){
+            document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "이며 나이는" + this.age + "살 입니다.");
+        };
+    }
+    const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+    const info2 = new study2("2", "웹스토리보이", "포론트엔드개발자", 100);
+
+    info1.result();
+    info2.result();
+    info2.result2();
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4> 
+                    <div>
+                        1.내이름은웹쓰이며, 직업은웹퍼블리셔입니다.<br>
+                        2.내이름은웹스토리보이이며, 직업은포론트엔드개발자입니다.<br><br>
+                        1.내이름은웹쓰이며, 직업은웹퍼블리셔입니다.<br>
+                        2.내이름은웹스토리보이이며, 직업은포론트엔드개발자입니다.<br>
+                        2.내이름은웹스토리보이이며, 직업은포론트엔드개발자이며 나이는100살 입니다.<br>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <!-- //sample21 -->
 
         <!-- //script -->
     </main>
@@ -680,14 +908,14 @@
             // func(5);
         }
         // 콜백 함수 : 다른 함수에 인수로 넘겨지는 함수
-        function func(){
-            document.write("함수가 실행되었습니다.2")
-        }
-        function callback(str){
-            document.write("함수가 실행되었습니다.1");
-            str();
-        }
-        callback(func);
+        // function func(){
+        //     document.write("함수가 실행되었습니다.2")
+        // }
+        // function callback(str){
+        //     document.write("함수가 실행되었습니다.1");
+        //     str();
+        // }
+        // callback(func);
 
         // 콜백 함수 : 반복문
         // function func() {
@@ -703,10 +931,10 @@
 
         // 콜백 함수 : 동기/비동기
         // function funcA(){
-        //     document.write("funcA가 실행되었습니다.");
+        //     console.log("funcA가 실행되었습니다.");
         // }
         // function funcB(){
-        //     document.write("funcB가 실행되었습니다.");
+        //     console.log("funcB가 실행되었습니다.");
         // }
         // funcA();
         // funcB();
@@ -822,7 +1050,6 @@
 
         // 함수 유형 : 프로토타입 함수
         // {
-        //     {
         //     function func(num, name, job){
         //         this.num = num;
         //         this.name = name;
@@ -843,27 +1070,27 @@
 
         // 함수 유형 : 객체 리터럴 함수
         // {
-        //     function func(num, name, job){
-        //         this.num = num;
-        //         this.name = name;
-        //         this.job = job;
-        //     }
+            // function func(num, name, job){
+            //     this.num = num;
+            //     this.name = name;
+            //     this.job = job;
+            // }
 
-        //     func.prototype = {
-        //         result1 : function(){
-        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
-        //         },
-        //         result2 : function(){
-        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
-        //         }
-        //     }
+            // func.prototype = {
+            //     result1 : function(){
+            //         document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+            //     },
+            //     result2 : function(){
+            //         document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+            //     }
+            // }
             
-        //     // 인스턴스 생성
-        //     const info1 = new func("1", "웹쓰", "웹퍼블리셔");
-        //     const info2 = new func("2", "웹스토리보이", "포론트엔드개발자");
+            // // 인스턴스 생성
+            // const info1 = new func("1", "웹쓰", "웹퍼블리셔");
+            // const info2 = new func("2", "웹스토리보이", "포론트엔드개발자");
 
-        //     info1.result1();
-        //     info2.result2();
+            // info1.result1();
+            // info2.result2();
         // }
 
         //클래스 : 함수의 집합체
@@ -887,35 +1114,35 @@
         // }
 
         // 클래스 상속
-        // {
-        //     class study {
-        //         constructor(num, name, job){
-        //             this.num = num;
-        //             this.name = name;
-        //             this.job = job;
-        //         }
-        //         result(){
-        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
-        //         };
-        //     }
+        {
+            class study {
+                constructor(num, name, job){
+                    this.num = num;
+                    this.name = name;
+                    this.job = job;
+                }
+                result(){
+                    document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "입니다.");
+                };
+            }
 
-        //     class study2 extends study {
-        //         constructor(num, name, job, age){
-        //             super(num, name, job);
-        //             this.age = age;
-        //         }
-        //         result2(){
-        //             document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "이며 나이는" + this.age + "살 입니다.");
-        //         };
-        //     }
-        //     // 인스턴스 생성
-        //     const info1 = new study("1", "웹쓰", "웹퍼블리셔");
-        //     const info2 = new study2("2", "웹스토리보이", "포론트엔드개발자", 100);
+            class study2 extends study {
+                constructor(num, name, job, age){
+                    super(num, name, job);
+                    this.age = age;
+                }
+                result2(){
+                    document.write(this.num+".내이름은"+ this.name + "이며, 직업은" + this.job + "이며 나이는" + this.age + "살 입니다.");
+                };
+            }
+            // 인스턴스 생성
+            const info1 = new study("1", "웹쓰", "웹퍼블리셔");
+            const info2 = new study2("2", "웹스토리보이", "포론트엔드개발자", 100);
 
-        //     info1.result();
-        //     info2.result();
-        //     info2.result2();
-        // }
+            info1.result();
+            info2.result();
+            info2.result2();
+        }
 
     </script>
 </body>
