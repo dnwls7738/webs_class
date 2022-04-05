@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,38 +9,47 @@
     <link rel="stylesheet" href="../site/webClass/css/fonts.css">
     <link rel="stylesheet" href="../site/webClass/css/reset.css">
     <style>
-        .best.black{
+        .best.black {
             color: #000;
         }
+
         .best {
             color: #9f9f9f;
         }
-        .review.black{
+
+        .review.black {
             color: #000;
         }
+
         .review {
             color: #9f9f9f;
         }
+
         .title {
-            font-size: 50px;
+            font-size: 30px;
             margin: 2em 0;
             cursor: pointer;
         }
+
         .title em {
             color: #9f9f9f;
         }
+
         #wrap {
-            height: 2000px;
+            margin: 0 auto;
+            width: 1000px;
         }
 
         /* header */
         #header {
-            width: 2000px;
+            width: 1000px;
+            height: 100px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             margin-top: 1em;
         }
+
         #header .menu {
             z-index: 100;
             position: relative;
@@ -49,7 +59,7 @@
         #header .menu li {
             position: relative;
             display: inline-block;
-            width: 220px;
+            width: 120px;
             text-align: center;
             list-style: none;
         }
@@ -61,7 +71,7 @@
             white-space: nowrap;
             text-decoration: none;
             color: #000;
-            font-size: 30px;
+            font-size: 15px;
         }
 
         #header .menu li a:hover {
@@ -87,9 +97,9 @@
         /* main */
         #contents {
             margin: 0 auto;
-            width: 2000px;
+            width: 1000px;
         }
-        
+
         /* slider */
         .slider__wrap {
             display: flex;
@@ -97,19 +107,22 @@
             justify-content: center;
         }
 
-        .slider__img {           /* 화면 보이는 영역 */
-            width: 2000px;
-            height: 800px;
+        .slider__img {
+            /* 화면 보이는 영역 */
+            width: 1000px;
             overflow: hidden;
         }
-        .slider__inner {        /* 이미지 움직이는 영역 */
+
+        .slider__inner {
+            /* 이미지 움직이는 영역 */
             display: flex;
-            width: 10000px;        /* 이미지 총길이*/
+            width: 4800px;
+            /* 이미지 총길이*/
             transform: translateX(0);
         }
 
         .slider {
-            width: 2000px;
+            width: 1000px;
             position: relative;
         }
 
@@ -128,54 +141,67 @@
             display: flex;
             justify-content: space-between;
         }
+
         #section1 .search {
-            width: 980px;
+            width: 480px;
             position: relative;
             background: #f2f2f2;
             padding: 3em;
         }
+
         #section1 .search h3 {
-            font-size: 38px;
-        }
-        #section1 .search p {
-            padding-top: 0.1em;
             font-size: 20px;
         }
+
+        #section1 .search p {
+            padding-top: 0.1em;
+            font-size: 12px;
+        }
+
         #section1 .search .link {
             margin-top: 2em;
         }
+
         #section1 .search .image {
             position: absolute;
             left: 75%;
             bottom: 18%;
         }
+
         #section1 .search a {
-            font-size: 28px;
+            font-size: 15px;
         }
+
         #section1 .delivery {
-            width: 980px;
+            width: 480px;
             position: relative;
             background: #f2f2f2;
             padding: 3em;
         }
+
         #section1 .delivery h3 {
-            font-size: 38px;
-            
+            font-size: 18px;
+
         }
+
         #section1 .delivery p {
             padding-top: 0.1em;
-            font-size: 20px;
+            font-size: 12px;
         }
+
         #section1 .delivery .link {
             margin-top: 2em;
         }
+
         #section1 .delivery .link em {
-            font-size: 22px;
+            font-size: 13px;
             color: #9f9f9f;
         }
+
         #section1 .delivery a {
-            font-size: 28px;
+            font-size: 15px;
         }
+
         #section1 .delivery .image {
             position: absolute;
             left: 75%;
@@ -188,32 +214,39 @@
             display: flex;
             justify-content: space-between;
         }
+
         #section2.hide {
             display: none;
         }
+
         #section2 .name {
             padding-top: 0.5em;
-            font-size: 30px;
+            font-size: 16px;
         }
+
         #section2 .price {
-            padding-top:  0.5em;
-            font-size: 30px;
+            padding-top: 0.5em;
+            font-size: 15px;
         }
+
         #section2 .price em {
-            font-size: 25px;
+            font-size: 12px;
             color: #9f9f9f;
         }
+
         #section2 .menu .image1 {
             position: absolute;
             left: 27%;
             bottom: 1%;
         }
-        #section2 .menu .image2{
+
+        #section2 .menu .image2 {
             position: absolute;
             left: 61%;
             bottom: 1%;
         }
-        #section2 .menu .image3{
+
+        #section2 .menu .image3 {
             position: absolute;
             left: 96%;
             bottom: 1%;
@@ -224,32 +257,39 @@
             display: flex;
             justify-content: space-between;
         }
-        #section2-1.hide{
+
+        #section2-1.hide {
             display: none;
         }
+
         #section2-1 .name {
             padding-top: 0.5em;
-            font-size: 30px;
+            font-size: 16px;
         }
+
         #section2-1 .price {
-            padding-top:  0.5em;
-            font-size: 30px;
+            padding-top: 0.5em;
+            font-size: 15px;
         }
+
         #section2-1 .price em {
-            font-size: 25px;
+            font-size: 12px;
             color: #9f9f9f;
         }
+
         #section2-1 .menu .image1 {
             position: absolute;
             left: 27%;
             bottom: 1%;
         }
-        #section2-1 .menu .image2{
+
+        #section2-1 .menu .image2 {
             position: absolute;
             left: 61%;
             bottom: 1%;
         }
-        #section2-1 .menu .image3{
+
+        #section2-1 .menu .image3 {
             position: absolute;
             left: 96%;
             bottom: 1%;
@@ -258,46 +298,81 @@
         /* footer */
         #footer {
             width: 100%;
-            height: 30em;
+            height: 15em;
             display: flex;
             justify-content: space-between;
             margin-top: 10em;
             background: #202020;
         }
+
         #footer img {
-            padding: 8em 0 0 25em;
+            width: 200px;
+            padding: 5em 0 0 28em;
         }
+
         #footer .use {
-            font-size: 25px;
             padding: 5em 20em 0 0;
+            font-size: 13px;
             color: #fff;
         }
+
         #footer .use span {
-            padding: 1.3em;
+            padding: 1em;
         }
+
         #footer .notice {
-            font-size: 21px;
+            font-size: 11px;
             color: #9f9f9f;
-            padding: 0 18em 0 0;
         }
+
         #footer .good {
-            padding: 5em 18em 0 0;
+            padding: 2em 30em 0 0;
         }
+
         #footer .good .notice {
             padding: 0.5em;
         }
+
         #footer .good .notice span {
-            padding: 1em 1em;
+            padding: 0.5em 0.5em;
         }
 
-        .layer_bg {display: none; position: fixed; left: 0; top: 0; z-index: 900;
-        width: 100%; height: 100%; background: rgba(0,0,0,0.8);}
-        .layer {display: none; position: absolute; left: 30px; top: 30px; z-index: 1000;
-        width: 500px; height: 500px; border: 3px solid #000; background: #fff;}
-        .layer h2 {padding: 20px; color: #000;}
-        .layer .close {position: absolute; bottom: 20px; right: 20px;}
+        .layer_bg {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 900;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .layer {
+            display: none;
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            z-index: 1000;
+            width: 500px;
+            height: 500px;
+            border: 3px solid #000;
+            background: #fff;
+        }
+
+        .layer h2 {
+            padding: 20px;
+            color: #000;
+        }
+
+        .layer .close {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <header id="header">
@@ -356,11 +431,11 @@
                 <div class="slider__wrap">
                     <div class="slider__img">
                         <div class="slider__inner">
-                            <div class="slider"><img src="img/banner.jpg" alt="이미지1"></div>
-                            <div class="slider"><img src="img/banner.jpg" alt="이미지2"></div>
-                            <div class="slider"><img src="img/banner.jpg" alt="이미지3"></div>
-                            <div class="slider"><img src="img/banner.jpg" alt="이미지4"></div>
-                            <div class="slider"><img src="img/banner.jpg" alt="이미지5"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지1" style="width: 1000px; height:400px;"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지2" style="width: 1000px; height:400px;"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지3" style="width: 1000px; height:400px;"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지4" style="width: 1000px; height:400px;"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지5" style="width: 1000px; height:400px;"></div>
                         </div>
                     </div>
                 </div>
@@ -371,20 +446,20 @@
                     <h3>우리집도 COOKIT 배송이 되나요?</h3>
                     <p>배송이 가능한지 알려드려요.</p>
                     <div class="link">
-                        <img src="img/mini.jpg" alt="이미지"><a href="#">배송지 검색</a>
+                        <img src="img/mini.jpg" alt="이미지" style="width: 20px; height:20px;"><a href="#">배송지 검색</a>
                     </div>
                     <div class="image">
-                        <img src="img/image1.jpg" alt="이미지">
+                        <img src="img/image1.jpg" alt="이미지" style="width: 100px; height:100px;">
                     </div>
                 </article>
                 <article class="delivery">
                     <h3>7월 30일(화)에 받을 수 있어요</h3>
                     <p>오전7시까지 주문하시면 다음날 배송됩니다.</p>
                     <div class="link">
-                        <img src="img/mini2.jpg" alt="이미지"> <a href="#">63:28:32 <em> 남은시간</em></a>
+                        <img src="img/mini2.jpg" alt="이미지" style="width: 20px; height:20px;"> <a href="#">63:28:32 <em> 남은시간</em></a>
                     </div>
                     <div class="image">
-                        <img src="img/image2.jpg" alt="이미지">
+                        <img src="img/image2.jpg" alt="이미지" style="width: 100px; height:100px;">
                     </div>
                 </article>
             </section>
@@ -394,72 +469,60 @@
             </div>
             <section id="section2">
                 <article class="menu">
-                    <img src="img/img1.jpg" alt="">
+                    <img src="img/img1.jpg" alt="" style="width: 320px; height:320px;">
                     <p class="name">평양식 어복쟁반</p>
                     <p class="price">33,800원 <em>/3인분</em></p>
                     <div class="image1">
-                        <img src="img/cart.jpg" alt="이미지">
+                        <img src="img/cart.jpg" alt="" style="width: 40px; height:40px;">
                     </div>
                 </article>
                 <article class="menu">
-                    <img src="img/img2.jpg" alt="">
+                    <img src="img/img2.jpg" alt="" style="width: 320px; height:320px;">
                     <p class="name">새우주꾸미삼겹살</p>
                     <p class="price">29,800원 <em>/3인분</em></p>
                     <div class="image2">
-                        <img src="img/cart.jpg" alt="이미지">
+                        <img src="img/cart.jpg" alt="" style="width: 40px; height:40px;">
                     </div>
                 </article>
                 <article class="menu">
-                    <img src="img/img3.jpg" alt="">
+                    <img src="img/img3.jpg" alt="" style="width: 320px; height:320px;">
                     <p class="name">방풍나물 아귀찜</p>
                     <p class="price">32,800원 <em>/3인분</em></p>
                     <div class="image3">
-                        <img src="img/cart.jpg" alt="이미지">
+                        <img src="img/cart.jpg" alt="" style="width: 40px; height:40px;">
                     </div>
                 </article>
             </section>
             <section id="section2-1" class="hide">
                 <article class="menu">
-                    <img src="img/img1.jpg" alt="">
+                    <img src="img/img1.jpg" alt="" style="width: 320px; height:320px;">
                     <p class="name">평양식 어복쟁반</p>
                     <p class="price">다시 구매욕구를 불러오네요</p>
                     <div class="image1">
-                        <img src="img/cart.jpg" alt="이미지">
+                        <img src="img/cart.jpg" alt="" style="width: 40px; height:40px;">
                     </div>
                 </article>
                 <article class="menu">
-                    <img src="img/img2.jpg" alt="">
+                    <img src="img/img2.jpg" alt="" style="width: 320px; height:320px;">
                     <p class="name">새우주꾸미삼겹살</p>
                     <p class="price">싸고 양도 많아요</p>
                     <div class="image2">
-                        <img src="img/cart.jpg" alt="이미지">
+                        <img src="img/cart.jpg" alt="" style="width: 40px; height:40px;">
                     </div>
                 </article>
                 <article class="menu">
-                    <img src="img/img3.jpg" alt="">
+                    <img src="img/img3.jpg" alt="" style="width: 320px; height:320px;">
                     <p class="name">방풍나물 아귀찜</p>
                     <p class="price">정말맛있습니다.</p>
                     <div class="image3">
-                        <img src="img/cart.jpg" alt="이미지">
+                        <img src="img/cart.jpg" alt="" style="width: 40px; height:40px;">
                     </div>
                 </article>
             </section>
-            
+
         </main>
         <!-- //main -->
-        <footer id="footer">
-            <div>
-                <img src="img/logo2.jpg" alt="로고이미지">
-            </div>
-            <div>
-                <p class="use"><span>이용약관</span> | <span>개인정보처리 방침</span> | <span>법적고지</span> | <span>사업자정보 확인</span></p>
-                <div class="good">
-                    <p class="notice"><span>씨제이제일제당(주)</span> | <span>대표자:신현재</span></p>
-                    <p class="notice"><span>주소:서울 중구 동호로330 CJ제일제당 센터 (우)04560</span> | <span>사업자등록번호:104-86-09535</span></p>
-                    <p class="notice"><span>통신판매업신고 중구 제 07767호</span> | <span>개인정보보호책임자:류화정</span></p>
-                </div>
-            </div>
-        </footer>
+        
         <!-- layer -->
         <div class="layer_bg"></div>
         <div class="layer">
@@ -467,60 +530,77 @@
             <a href="#" class="close">닫기</a>
         </div>
     </div>
+    <footer id="footer">
+        <div>
+            <img src="img/logo2.jpg" alt="로고이미지">
+        </div>
+        <div>
+            <p class="use"><span>이용약관</span> | <span>개인정보처리 방침</span> | <span>법적고지</span> | <span>사업자정보 확인</span>
+            </p>
+            <div class="good">
+                <p class="notice"><span>씨제이제일제당(주)</span> | <span>대표자:신현재</span></p>
+                <p class="notice"><span>주소:서울 중구 동호로330 CJ제일제당 센터 (우)04560</span> |
+                    <span>사업자등록번호:104-86-09535</span></p>
+                <p class="notice"><span>통신판매업신고 중구 제 07767호</span> | <span>개인정보보호책임자:류화정</span></p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
-    <script src="../script/jquery-1.12.4.min2.js"></script>
-    <script src="../script/script2.js"></script>
+<script src="../script/jquery-1.12.4.min2.js"></script>
+<script src="../script/script2.js"></script>
 
-    <script>
-        const sliderWrap = document.querySelector(".slider__wrap");
-        const sliderImg = document.querySelector(".slider__img");      
-        const sliderInner = document.querySelector(".slider__inner");  
-        const slider = document.querySelectorAll(".slider");            
+<script>
+    const sliderWrap = document.querySelector(".slider__wrap");
+    const sliderImg = document.querySelector(".slider__img");
+    const sliderInner = document.querySelector(".slider__inner");
+    const slider = document.querySelectorAll(".slider");
 
-        let currentIndex = 0;                 
-        let sliderCount = slider.length;   
-        let sliderWidth = sliderImg.offsetWidth   
-        let sliderClone = sliderInner.firstElementChild.cloneNode(true);   
-        sliderInner.appendChild(sliderClone);   
+    let currentIndex = 0;
+    let sliderCount = slider.length;
+    let sliderWidth = sliderImg.offsetWidth
+    let sliderClone = sliderInner.firstElementChild.cloneNode(true);
+    sliderInner.appendChild(sliderClone);
 
-        console.log(sliderWidth);
-        function sliderEffect(){
-            currentIndex++;
-            sliderInner.style.transition = "all 0.3s";
-            sliderInner.style.transform = "translateX(-"+sliderWidth * currentIndex +"px)";
+    console.log(sliderWidth);
 
-            if(currentIndex == sliderCount){
-                setTimeout(()=> {
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = "translateX(0px)";
-                }, 300)
-                currentIndex = 0
-            }
+    function sliderEffect() {
+        currentIndex++;
+        sliderInner.style.transition = "all 0.3s";
+        sliderInner.style.transform = "translateX(-" + sliderWidth * currentIndex + "px)";
+
+        if (currentIndex == sliderCount) {
+            setTimeout(() => {
+                sliderInner.style.transition = "0s";
+                sliderInner.style.transform = "translateX(0px)";
+            }, 300)
+            currentIndex = 0
         }
-        setInterval(sliderEffect, 3000);
+    }
+    setInterval(sliderEffect, 3000);
 
-        $('.delivery').click(function(){
-            $('.layer').slideDown(300);
-            $('.layer_bg').show();
-        });
-        $('.layer .close').click(function(){
-            $('.layer').slideUp(300);
-            $('.layer_bg').hide();
-        })
+    $('.delivery').click(function () {
+        $('.layer').slideDown(300);
+        $('.layer_bg').show();
+    });
+    $('.layer .close').click(function () {
+        $('.layer').slideUp(300);
+        $('.layer_bg').hide();
+    })
 
-        $(".best").click(function(){
-            $("#section2").removeClass("hide");
-            $(".best").addClass("black");
-            $(".review").removeClass("black");
-            $("#section2-1").addClass("hide");
-        })
-        $(".review").click(function(){
-            $("#section2").addClass("hide");
-            $(".best").removeClass("black");
-            $(".review").addClass("black");
-            $("#section2-1").removeClass("hide");
-        })
-    </script>
+    $(".best").click(function () {
+        $("#section2").removeClass("hide");
+        $(".best").addClass("black");
+        $(".review").removeClass("black");
+        $("#section2-1").addClass("hide");
+    })
+    $(".review").click(function () {
+        $("#section2").addClass("hide");
+        $(".best").removeClass("black");
+        $(".review").addClass("black");
+        $("#section2-1").removeClass("hide");
+    })
+</script>
+
 </html>
