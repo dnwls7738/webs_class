@@ -414,7 +414,10 @@
                 <h3>15. 파라미터 함수</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
+    function func(str="함수가 실행되었습니다."){
+        document.write(str);
+    }
+    func();
 }</code></pre>
                 </div>
                 <div class="result">
@@ -486,6 +489,7 @@
                 <h3>18. 콜백 함수</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    // 콜백 함수
     function func(){
         document.write("함수가 실행되었습니다.2")
     }

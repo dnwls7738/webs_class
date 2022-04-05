@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../site/webClass/css/fonts.css">
+    <link rel="stylesheet" href="../site/webClass/css/reset.css">
+    <style>
+        .title {
+            font-size: 50px;
+            margin: 2em 0;
+        }
+        .title em {
+            color: #9f9f9f;
+        }
+        #wrap {
+            height: 2000px;
+        }
+
+        /* header */
+        #header {
+            width: 2000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+        }
+        #header .menu {
+            z-index: 100;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #header .menu li {
+            position: relative;
+            display: inline-block;
+            width: 220px;
+            text-align: center;
+            list-style: none;
+        }
+
+        #header .menu li a {
+            display: block;
+            padding: 20px 15px;
+            background: #ccc;
+            white-space: nowrap;
+            text-decoration: none;
+            color: #000;
+            font-size: 30px;
+        }
+
+        #header .menu li a:hover {
+            background: #ddd;
+        }
+
+        #header .menu li ul.submenu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 60px;
+            background: #ddd;
+        }
+
+        #header .menu li ul.submenu li a {
+            padding: 10px;
+        }
+
+        #header .menu li ul.submenu li a:hover {
+            background: #999;
+        }
+
+        /* main */
+        #contents {
+            margin: 0 auto;
+            width: 2000px;
+        }
+        
+        /* slider */
+        .slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider__img {           /* 화면 보이는 영역 */
+            width: 2000px;
+            height: 800px;
+            overflow: hidden;
+        }
+        .slider__inner {        /* 이미지 움직이는 영역 */
+            display: flex;
+            width: 10000px;        /* 이미지 총길이*/
+            transform: translateX(0);
+        }
+
+        .slider {
+            width: 2000px;
+            position: relative;
+        }
+
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+        }
+
+        /* section1 */
+        #section1 {
+            margin-top: 3em;
+            display: flex;
+            justify-content: space-between;
+        }
+        #section1 .search {
+            width: 980px;
+            position: relative;
+            background: #f2f2f2;
+            padding: 3em;
+        }
+        #section1 .search h3 {
+            font-size: 38px;
+        }
+        #section1 .search p {
+            padding-top: 0.1em;
+            font-size: 20px;
+        }
+        #section1 .search .link {
+            margin-top: 2em;
+        }
+        #section1 .search .image {
+            position: absolute;
+            left: 75%;
+            bottom: 18%;
+        }
+        #section1 .search a {
+            font-size: 28px;
+        }
+        #section1 .delivery {
+            width: 980px;
+            position: relative;
+            background: #f2f2f2;
+            padding: 3em;
+        }
+        #section1 .delivery h3 {
+            font-size: 38px;
+            
+        }
+        #section1 .delivery p {
+            padding-top: 0.1em;
+            font-size: 20px;
+        }
+        #section1 .delivery .link {
+            margin-top: 2em;
+        }
+        #section1 .delivery .link em {
+            font-size: 22px;
+            color: #9f9f9f;
+        }
+        #section1 .delivery a {
+            font-size: 28px;
+        }
+        #section1 .delivery .image {
+            position: absolute;
+            left: 75%;
+            bottom: 18%;
+        }
+
+        /* section2 */
+        #section2 {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        #section2 .name {
+            padding-top: 0.5em;
+            font-size: 30px;
+        }
+        #section2 .price {
+            padding-top:  0.5em;
+            font-size: 30px;
+        }
+        #section2 .price em {
+            font-size: 25px;
+            color: #9f9f9f;
+        }
+        #section2 .menu1 .image {
+            position: absolute;
+            left: 27%;
+            bottom: 1%;
+        }
+        #section2 .menu2 .image{
+            position: absolute;
+            left: 61%;
+            bottom: 1%;
+        }
+        #section2 .menu3 .image{
+            position: absolute;
+            left: 96%;
+            bottom: 1%;
+        }
+
+        /* footer */
+        #footer {
+            width: 100%;
+            height: 30em;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10em;
+            background: #202020;
+        }
+        #footer img {
+            padding: 8em 0 0 25em;
+        }
+        #footer .use {
+            font-size: 25px;
+            padding: 5em 20em 0 0;
+            color: #fff;
+        }
+        #footer .use span {
+            padding: 1.3em;
+        }
+        #footer .notice {
+            font-size: 21px;
+            color: #9f9f9f;
+            padding: 0 18em 0 0;
+        }
+        #footer .good {
+            padding: 5em 18em 0 0;
+        }
+        #footer .good .notice {
+            padding: 0.5em;
+        }
+        #footer .good .notice span {
+            padding: 1em 1em;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="로고 이미지">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">COOKIT소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COOKIT메뉴</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MY쿡킷</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <main id="contents">
+            <section id="sliderType03">
+                <div class="slider__wrap">
+                    <div class="slider__img">
+                        <div class="slider__inner">
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지1"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지2"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지3"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지4"></div>
+                            <div class="slider"><img src="img/banner.jpg" alt="이미지5"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section1">
+                <article class="search">
+                    <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                    <p>배송이 가능한지 알려드려요.</p>
+                    <div class="link">
+                        <img src="img/mini.jpg" alt="이미지"><a href="#">배송지 검색</a>
+                    </div>
+                    <div class="image">
+                        <img src="img/image1.jpg" alt="이미지">
+                    </div>
+                </article>
+                <article class="delivery">
+                    <h3>7월 30일(화)에 받을 수 있어요</h3>
+                    <p>오전7시까지 주문하시면 다음날 배송됩니다.</p>
+                    <div class="link">
+                        <img src="img/mini2.jpg" alt="이미지"> <a href="#">63:28:32 <em> 남은시간</em></a>
+                    </div>
+                    <div class="image">
+                        <img src="img/image2.jpg" alt="이미지">
+                    </div>
+                </article>
+            </section>
+
+            <div class="title">
+                <h3><span class="best">실시간 베스트</span> | <em class="review hide">생생한 리뷰</em></h3>
+            </div>
+            <section id="section2">
+                <article class="menu1" class="active">
+                    <img src="img/img1.jpg" alt="">
+                    <p class="name">평양식 어복쟁반</p>
+                    <p class="price">33,800원 <em>/3인분</em></p>
+                    <div class="image">
+                        <img src="img/cart.jpg" alt="이미지">
+                    </div>
+                </article>
+                <article class="menu2">
+                    <img src="img/img2.jpg" alt="">
+                    <p class="name">새우주꾸미삼겹살</p>
+                    <p class="price">29,800원 <em>/3인분</em></p>
+                    <div class="image">
+                        <img src="img/cart.jpg" alt="이미지">
+                    </div>
+                </article>
+                <article class="menu3">
+                    <img src="img/img3.jpg" alt="">
+                    <p class="name">방풍나물 아귀찜</p>
+                    <p class="price">32,800원 <em>/3인분</em></p>
+                    <div class="image">
+                        <img src="img/cart.jpg" alt="이미지">
+                    </div>
+                </article>
+                
+            </section>
+            <div class="reviewBox">리뷰리뷰리뷰</div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <div>
+                <img src="img/logo2.jpg" alt="로고이미지">
+            </div>
+            <div>
+                <p class="use"><span>이용약관</span> | <span>개인정보처리 방침</span> | <span>법적고지</span> | <span>사업자정보 확인</span></p>
+                <div class="good">
+                    <p class="notice"><span>씨제이제일제당(주)</span> | <span>대표자:신현재</span></p>
+                    <p class="notice"><span>주소:서울 중구 동호로330 CJ제일제당 센터 (우)04560</span> | <span>사업자등록번호:104-86-09535</span></p>
+                    <p class="notice"><span>통신판매업신고 중구 제 07767호</span> | <span>개인정보보호책임자:류화정</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+    <script src="../script/jquery-1.12.4.min2.js"></script>
+    <script src="../script/script2.js"></script>
+
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = document.querySelector(".slider__img");      
+        const sliderInner = document.querySelector(".slider__inner");  
+        const slider = document.querySelectorAll(".slider");            
+
+        let currentIndex = 0;                 
+        let sliderCount = slider.length;   
+        let sliderWidth = sliderImg.offsetWidth   
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true);   
+        sliderInner.appendChild(sliderClone);   
+
+        console.log(sliderWidth);
+        function sliderEffect(){
+            currentIndex++;
+            sliderInner.style.transition = "all 0.3s";
+            sliderInner.style.transform = "translateX(-"+sliderWidth * currentIndex +"px)";
+
+            if(currentIndex == sliderCount){
+                setTimeout(()=> {
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = "translateX(0px)";
+                }, 300)
+                currentIndex = 0
+            }
+        }
+        setInterval(sliderEffect, 3000);
+    </script>
+</html>

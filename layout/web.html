@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #wrap {
+            height: 2000px;
+            width: 2000px;
+            margin: 0 auto;
+        }
+
+        #header {
+            height: 100px;
+        }
+
+        #header h1 {
+            float: left;
+            padding-top: 5px;
+        }
+
+        #header h1 img {
+            width: 130px;
+        }
+
+        #header .nav {
+            float: right;
+            z-index: 100;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #header .nav li {
+            position: relative;
+            float: left;
+            width: 220px;
+            text-align: center;
+            list-style: none;
+        }
+
+        #header .nav li a {
+            display: block;
+            padding: 20px 15px;
+            background: #ccc;
+            white-space: nowrap;
+            text-decoration: none;
+            color: #000;
+            font-size: 30px;
+        }
+
+        #header .nav li a:hover {
+            background: #ddd;
+        }
+
+        #header .nav li ul.submenu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 60px;
+            background: #ddd;
+        }
+
+        #header .nav li ul.submenu li a {
+            padding: 10px;
+        }
+
+        #header .nav li ul.submenu li a:hover {
+            background: #999;
+        }
+
+        .clearfix::before,
+        .clearfix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        #section1 {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        #section1 .article2 {
+            width: 980px;
+            height: 430px;
+            background-size: cover;
+        }
+
+        .notice {
+            position: relative;
+            padding: 30px;
+        }
+
+        .notice ul li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .notice ul li a {
+            font-size: 24px;
+            color: #999;
+            font-weight: bold;
+        }
+
+        .notice ul li.active a {
+            color: #000;
+        }
+
+        .notice ul li ul {
+            position: absolute;
+            left: 30px;
+            top: 70px;
+        }
+
+        .notice ul li ul li {
+            width: 95%;
+            padding: 5px 0;
+        }
+
+        .notice ul li ul li a {
+            float: left;
+            width: 60%;
+            font-size: 16px;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-weight: normal;
+        }
+
+        .notice ul li ul li span {
+            float: right;
+            width: 20%;
+        }
+
+        .notice .more {
+            position: absolute;
+            right: 30px;
+            top: 35px;
+        }
+
+        #section2 {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #section2 .article {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header" class="clearfix">
+            <h1><a href="#"><img src="img/Slice 1.jpg" alt="롯데월드"></a></h1>
+            <nav class="nav">
+                <ul class="clearfix">
+                    <li><a href="#">즐길거리</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요금/우대혜택</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">참여프로그램</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용가이드</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소통서비스</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                            <li><a href="#">subMenu</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <section id="banner">
+                <img src="img/Slice 2.jpg" alt="">
+            </section>
+
+            <section id="section1">
+                <article class="notice">
+                    <ul class="clearfix">
+                        <li class="active"><a href="#">롯데월드 소식</a>
+                            <ul>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">1. 첫번째 목록입니다. 첫번째 목록입니다. 첫번째 목록입니다.</a><span>2019.05.03</span></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">뉴스&middot;공지</a>
+                            <ul>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                                <li><a href="#">2. 두번째 목록입니다. 두번째 목록입니다. 두번째 목록입니다.</a><span>2019.05.03</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#" class="more">더보기 +</a>
+                </article>
+                <article class="article2">
+                    <img src="img/Slice 3.jpg" alt="이벤트이미지">
+                </article>
+            </section>
+
+            <h3>특별한 경험</h3>
+            <section id="section2">
+                <article class="article">
+                    <img src="img/Slice 4.png" alt="">
+                    <p>연간 회원 안내</p>
+                </article>
+                <article class="article">
+                    <img src="img/Slice 5.jpg" alt="">
+                    <p>프리미엄투어</p>
+                </article>
+                <article class="article">
+                    <img src="img/Slice 6.jpg" alt="">
+                    <p>공연참여 프로그램</p>
+                </article>
+                <article class="article">
+                    <img src="img/Slice 7.jpg" alt="">
+                    <p>단체프로그램</p>
+                </article>
+            </section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../script/jquery-1.12.4.min.js"></script>
+    <script src="../script/script.js"></script>
+</body>
+
+</html>
