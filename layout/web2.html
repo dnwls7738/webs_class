@@ -8,9 +8,22 @@
     <link rel="stylesheet" href="../site/webClass/css/fonts.css">
     <link rel="stylesheet" href="../site/webClass/css/reset.css">
     <style>
+        .best.black{
+            color: #000;
+        }
+        .best {
+            color: #9f9f9f;
+        }
+        .review.black{
+            color: #000;
+        }
+        .review {
+            color: #9f9f9f;
+        }
         .title {
             font-size: 50px;
             margin: 2em 0;
+            cursor: pointer;
         }
         .title em {
             color: #9f9f9f;
@@ -175,6 +188,9 @@
             display: flex;
             justify-content: space-between;
         }
+        #section2.hide {
+            display: none;
+        }
         #section2 .name {
             padding-top: 0.5em;
             font-size: 30px;
@@ -187,17 +203,53 @@
             font-size: 25px;
             color: #9f9f9f;
         }
-        #section2 .menu1 .image {
+        #section2 .menu .image1 {
             position: absolute;
             left: 27%;
             bottom: 1%;
         }
-        #section2 .menu2 .image{
+        #section2 .menu .image2{
             position: absolute;
             left: 61%;
             bottom: 1%;
         }
-        #section2 .menu3 .image{
+        #section2 .menu .image3{
+            position: absolute;
+            left: 96%;
+            bottom: 1%;
+        }
+
+        #section2-1 {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        #section2-1.hide{
+            display: none;
+        }
+        #section2-1 .name {
+            padding-top: 0.5em;
+            font-size: 30px;
+        }
+        #section2-1 .price {
+            padding-top:  0.5em;
+            font-size: 30px;
+        }
+        #section2-1 .price em {
+            font-size: 25px;
+            color: #9f9f9f;
+        }
+        #section2-1 .menu .image1 {
+            position: absolute;
+            left: 27%;
+            bottom: 1%;
+        }
+        #section2-1 .menu .image2{
+            position: absolute;
+            left: 61%;
+            bottom: 1%;
+        }
+        #section2-1 .menu .image3{
             position: absolute;
             left: 96%;
             bottom: 1%;
@@ -237,6 +289,13 @@
         #footer .good .notice span {
             padding: 1em 1em;
         }
+
+        .layer_bg {display: none; position: fixed; left: 0; top: 0; z-index: 900;
+        width: 100%; height: 100%; background: rgba(0,0,0,0.8);}
+        .layer {display: none; position: absolute; left: 30px; top: 30px; z-index: 1000;
+        width: 500px; height: 500px; border: 3px solid #000; background: #fff;}
+        .layer h2 {padding: 20px; color: #000;}
+        .layer .close {position: absolute; bottom: 20px; right: 20px;}
     </style>
 </head>
 <body>
@@ -331,36 +390,61 @@
             </section>
 
             <div class="title">
-                <h3><span class="best">실시간 베스트</span> | <em class="review hide">생생한 리뷰</em></h3>
+                <h3><span class="best black">실시간 베스트</span> | <em class="review">생생한 리뷰</em></h3>
             </div>
             <section id="section2">
-                <article class="menu1" class="active">
+                <article class="menu">
                     <img src="img/img1.jpg" alt="">
                     <p class="name">평양식 어복쟁반</p>
                     <p class="price">33,800원 <em>/3인분</em></p>
-                    <div class="image">
+                    <div class="image1">
                         <img src="img/cart.jpg" alt="이미지">
                     </div>
                 </article>
-                <article class="menu2">
+                <article class="menu">
                     <img src="img/img2.jpg" alt="">
                     <p class="name">새우주꾸미삼겹살</p>
                     <p class="price">29,800원 <em>/3인분</em></p>
-                    <div class="image">
+                    <div class="image2">
                         <img src="img/cart.jpg" alt="이미지">
                     </div>
                 </article>
-                <article class="menu3">
+                <article class="menu">
                     <img src="img/img3.jpg" alt="">
                     <p class="name">방풍나물 아귀찜</p>
                     <p class="price">32,800원 <em>/3인분</em></p>
-                    <div class="image">
+                    <div class="image3">
                         <img src="img/cart.jpg" alt="이미지">
                     </div>
                 </article>
-                
             </section>
-            <div class="reviewBox">리뷰리뷰리뷰</div>
+            <section id="section2-1" class="hide">
+                <article class="menu">
+                    <img src="img/img1.jpg" alt="">
+                    <p class="name">평양식 어복쟁반</p>
+                    <p class="price">다시 구매욕구를 불러오네요</p>
+                    <div class="image1">
+                        <img src="img/cart.jpg" alt="이미지">
+                    </div>
+                </article>
+                <article class="menu">
+                    <img src="img/img2.jpg" alt="">
+                    <p class="name">새우주꾸미삼겹살</p>
+                    <p class="price">싸고 양도 많아요</p>
+                    <div class="image2">
+                        <img src="img/cart.jpg" alt="이미지">
+                    </div>
+                </article>
+                <article class="menu">
+                    <img src="img/img3.jpg" alt="">
+                    <p class="name">방풍나물 아귀찜</p>
+                    <p class="price">정말맛있습니다.</p>
+                    <div class="image3">
+                        <img src="img/cart.jpg" alt="이미지">
+                    </div>
+                </article>
+            </section>
+            
         </main>
         <!-- //main -->
         <footer id="footer">
@@ -376,6 +460,12 @@
                 </div>
             </div>
         </footer>
+        <!-- layer -->
+        <div class="layer_bg"></div>
+        <div class="layer">
+            <h2>제목</h2>
+            <a href="#" class="close">닫기</a>
+        </div>
     </div>
 
 </body>
@@ -410,5 +500,27 @@
             }
         }
         setInterval(sliderEffect, 3000);
+
+        $('.delivery').click(function(){
+            $('.layer').slideDown(300);
+            $('.layer_bg').show();
+        });
+        $('.layer .close').click(function(){
+            $('.layer').slideUp(300);
+            $('.layer_bg').hide();
+        })
+
+        $(".best").click(function(){
+            $("#section2").removeClass("hide");
+            $(".best").addClass("black");
+            $(".review").removeClass("black");
+            $("#section2-1").addClass("hide");
+        })
+        $(".review").click(function(){
+            $("#section2").addClass("hide");
+            $(".best").removeClass("black");
+            $(".review").addClass("black");
+            $("#section2-1").removeClass("hide");
+        })
     </script>
 </html>
