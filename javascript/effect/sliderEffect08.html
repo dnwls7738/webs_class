@@ -377,14 +377,19 @@
             autoPlay();
         })
 
+        sliderInner.addEventListener("mouseleave", () => {
+            if(document.querySelector(".play").classList.contains("show")){
+                stopPlay();
+            } else {
+                autoPlay();
+            }
+        })
+
         // 플레이 버튼을 눌렀을 때
         document.querySelector(".play").addEventListener("click",()=>{
             document.querySelector(".play").classList.remove("show");
             document.querySelector(".stop").classList.add("show")
             autoPlay();
-            sliderInner.addEventListener("mouseleave", ()=>{
-                autoPlay();
-            })
         });
 
         // 정지 버튼을 눌렀을 때
@@ -392,9 +397,6 @@
             document.querySelector(".play").classList.add("show");
             document.querySelector(".stop").classList.remove("show")
             stopPlay();
-            sliderInner.addEventListener("mouseleave", ()=>{
-                stopPlay();
-            })
         });
 
     </script>
