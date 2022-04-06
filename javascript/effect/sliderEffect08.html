@@ -119,6 +119,53 @@
         .slider__dot a.dot.active {
             background: rgba(255, 255, 255, 0.9);
         }
+        .slider__dot .play {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: 9px;
+            margin: 3px;
+            text-indent: -9999px;
+            position: relative;
+            display: none;
+        }
+        .slider__dot .play.show {
+            display: inline-block;
+        }
+        .slider__dot .play::after {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            position: absolute;
+            left: 1px;
+            top: 0;
+        }
+        .slider__dot .stop {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: 9px;
+            margin: 3px;
+            text-indent: -9999px;
+            display: none;
+        }
+        .slider__dot .stop.show {
+            display: inline-block;
+        }
+        .slider__dot .stop::after {
+            content: "";
+            width:20px;
+            height:20px;
+            border-color:#fff;
+            border-style:double;
+            border-width:0 0 0 20px;
+            position: absolute;
+            left: 135px;
+            top: 3px;
+        }
     </style>
 </head>
 
@@ -157,8 +204,8 @@
     <!-- info -->
     <div class="info">
         <div class="title">
-            <h1><a href="sliderEffect.html">JavaScript slider Effect07</a></h1>
-            <p>이미지 슬라이드 - 무한, 닷 버튼 추가</p>
+            <h1><a href="sliderEffect.html">JavaScript slider Effect08</a></h1>
+            <p>이미지 슬라이드 - 무한, 버튼 추가, 닷 버튼 추가, 자동플레이, 시작버튼, 정지버튼</p>
         </div>
         <div class="list">
             <ul>
@@ -168,8 +215,8 @@
                 <li><a href="sliderEffect04.html">4</a></li>
                 <li><a href="sliderEffect05.html">5</a></li>
                 <li><a href="sliderEffect06.html">6</a></li>
-                <li class="active"><a href="sliderEffect07.html">7</a></li>
-                <li><a href="sliderEffect08.html">8</a></li>
+                <li><a href="sliderEffect07.html">7</a></li>
+                <li class="active"><a href="sliderEffect08.html">8</a></li>
             </ul>
         </div>
         <div class="source">
@@ -228,6 +275,7 @@
         modal();
         tabMenu();
 
+
         const sliderWrap = document.querySelector(".slider__wrap");
         const sliderImg = document.querySelector(".slider__img"); // 이미지 보이는 영역
         const sliderInner = document.querySelector(".slider__inner"); // 이미지 움직이는 영역
@@ -246,67 +294,68 @@
         let cloneLast = sliderLast.cloneNode(true);     // 마지막 이지미 복사
         let posInitial ="";
         let dotIndex = "";
+        let sliderTimer = "";
+        let interval = 3000;
 
 
         // 이미지 복사 (제이쿼리: appendTo/prependTo : append/prepend)
         sliderInner.appendChild(cloneFirst); 
         sliderInner.insertBefore(cloneLast, sliderFirst); 
         
-
-
         // 이미지 움직이기
-        function gotoslider(direction){
-
+        function gotoslider(index){
             sliderInner.classList.add("transition");
-            posInitial = sliderInner.offsetLeft;
-
-            // 오른쪽 버튼
-            if(direction == 1){
-                // left = -800px
-                sliderInner.style.left = (posInitial-sliderWidth) + "px";
-                currentIndex++;
-            }
-
-            // 왼쪽 버튼
-            if(direction == -1){
-                sliderInner.style.left = (posInitial+sliderWidth) + "px";
-                currentIndex--;
-            }
-            dotActive()
-
-        }
+            // 1 2 3 4 5
+            sliderInner.style.left = -sliderWidth * (index+1) + "px";
+            console.log(currentIndex);
+            currentIndex = index;
+            // 두번째 이미지 : left : -1600
+            // 세번째 이미지 : left : -2400
+            // 네번째 이미지 : left : -3200
+            // 다섯번째 이미지 : left : -4000
+        };
 
         //이미지 갯수만큼 dot을 추가
-        function dotInit(){                                 
+        function dotInit(){
             for(let i=0; i<sliderLength; i++){
                 dotIndex += "<a href='#' class='dot'></a>"
             }
+            dotIndex += "<a href='#' class='play'>play</a>"
+            dotIndex += "<a href='#' class='stop show'>stop</a>"
             sliderDot.innerHTML = dotIndex;
             sliderDot.firstElementChild.classList.add("active");
         }
+        dotInit();
 
-        // 닷 버튼 활성화
-        function dotActive(){
-            let dotAll = document.querySelectorAll(".slider__dot .dot");
-            dotAll.forEach(dot =>{              //전체 닷버튼 비활성화
-                dot.classList.remove("active");
-            });
 
-            //마지막 이미지 왔을 때
-            if(currentIndex == sliderLength){
-                dotAll[0].classList.add("active");
-            }else if(currentIndex == -1){
-                dotAll[sliderLength -1].classList.add("active")
-            }else {
-                // 현재보고 있는 이미지 닷 활성화 
-                dotAll[currentIndex].classList.add("active");
-            }
-        }
+        // 자동플레이
+        function autoPlay(){
+            sliderTimer = setInterval(()=>{
+                gotoslider(currentIndex + 1);
+            }, interval);
+        };
+        autoPlay();
+        
+        // 자동플레이 멈춤
+        function stopPlay(){
+            clearInterval(sliderTimer);
+        };
 
-        // 애니메이션 완료후
-        function checkIndex(){
-            sliderInner.classList.remove("transition")
+         // 왼쪽 버튼
+        sliderBtnPrev.addEventListener("click", ()=>{
+            let prevIndex = currentIndex - 1;
+            gotoslider(prevIndex);
+        });
 
+         // 오른쪽 버튼
+        sliderBtnNext.addEventListener("click", ()=>{
+            let prevIndex = currentIndex + 1;
+            gotoslider(prevIndex);
+        });
+
+        // 애니메이션 종료 후
+        sliderInner.addEventListener("transitionend", ()=>{
+            sliderInner.classList.remove("transition");
             // 이미지 시작 부분
             if(currentIndex == -1){
                 sliderInner.style.left = -(sliderLength * sliderWidth) + "px"
@@ -317,13 +366,37 @@
                 sliderInner.style.left = -(1 * sliderWidth) + "px"
                 currentIndex = 0;
             }
-        }
+        });
 
-        // 버튼 클릭하기
-        sliderBtnPrev.addEventListener("click",()=>{gotoslider(-1)});
-        sliderBtnNext.addEventListener("click",()=>{gotoslider(1)});
-        sliderInner.addEventListener("transitionend", checkIndex)
-        dotInit()
+        // 마우스가 이미지에 올라가면
+        sliderInner.addEventListener("mouseenter", ()=>{
+            stopPlay();
+        })
+        // 마우스가 이미지에서 떨어지면
+        sliderInner.addEventListener("mouseleave", ()=>{
+            autoPlay();
+        })
+
+        // 플레이 버튼을 눌렀을 때
+        document.querySelector(".play").addEventListener("click",()=>{
+            document.querySelector(".play").classList.remove("show");
+            document.querySelector(".stop").classList.add("show")
+            autoPlay();
+            sliderInner.addEventListener("mouseleave", ()=>{
+                autoPlay();
+            })
+        });
+
+        // 정지 버튼을 눌렀을 때
+        document.querySelector(".stop").addEventListener("click",()=>{
+            document.querySelector(".play").classList.add("show");
+            document.querySelector(".stop").classList.remove("show")
+            stopPlay();
+            sliderInner.addEventListener("mouseleave", ()=>{
+                stopPlay();
+            })
+        });
+
     </script>
 </body>
 
