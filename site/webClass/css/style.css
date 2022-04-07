@@ -267,11 +267,12 @@
     background: url(../img/bg01.jpg) no-repeat center / cover;
 }
 .swiper-slide.s2{
-    background: url(../img/bg01.jpg) no-repeat center / cover;
+    background: url(../img/bg02.jpg) no-repeat center / cover;
 }
 .swiper-slide.s3{
-    background: url(../img/bg01.jpg) no-repeat center / cover;
+    background: url(../img/bg03.jpg) no-repeat center / cover;
 }
+
 .swiper-slide .desc {
     margin: 0 auto;
     max-width: 1200px;
