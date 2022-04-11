@@ -184,14 +184,23 @@
 
         const typingText = document.querySelector(".typing__text p");
         const inputField = document.querySelector(".input__field");
-        const typingMistake = document.querySelector(".typing__info .mistake")
+        const typingMistake = document.querySelector(".typing__info .mistake span")
+        const typingTime = document.querySelector(".time span b") 
+        const typingWpm = document.querySelector(".wpm span") // 1분동안 친 단어
+        const typingCpm = document.querySelector(".cpm span") // 1분동안 친 글자
 
         let charIndex = 0;
         let mistakes = 0;
+        let timer;
+        let maxTime = 60;
+        let timeLeft = maxTime;
+        let isTyping = 0;
 
+        // 랜덤 문장 나오기
         function randomParagraph(){
-            // let randIndex = Math.floor(Math.random() * paragraphs.length);
-            paragraphs[0].split("").forEach(span => {
+            let randIndex = Math.floor(Math.random() * paragraphs.length);
+            typingText.innerHTML ="";
+            paragraphs[randIndex].split("").forEach(span => {
                 let spanTag = `<span>${span}</span>`;
                 typingText.innerHTML += spanTag;
             });
@@ -199,9 +208,16 @@
             typingText.addEventListener("click", ()=>inputField.focus());
         }
 
+        //타이핑 칠 때마다
         function initTyping(){
             const characters = typingText.querySelectorAll("span");
             let typedChar = inputField.value.split("")[charIndex];
+
+            if(charIndex < characters.length-1 && timeLeft > 0){
+                if(!isTyping){
+                timer = setInterval(initTimer, 1000);
+                isTyping = true;
+            }
 
             if(typedChar == null){
                 charIndex--;
@@ -218,9 +234,41 @@
                 }
                 charIndex++;
             }
+            
+        }
             characters.forEach(span => span.classList.remove("active"));
             characters[charIndex].classList.add("active");
             typingMistake.innerText = mistakes;
+
+            // wpm과 cpm
+            // 전체 글자 수 = charIndex
+            let wpm = Math.round((((charIndex - mistakes)/5) / (maxTime - timeLeft)) * 60);
+            wpm = wpm < 0 || !wpm || wpm == Infinity ? 0 : wpm;
+            typingWpm.innerText = wpm;
+            let cpm = Math.round((charIndex - mistakes)/(maxTime - timeLeft) * 60);
+            cpm = cpm < 0 || !cpm || cpm == Infinity ? 0 : cpm;
+            typingCpm.innerText = cpm
+        }
+
+        // 타이머
+        function initTimer(){
+            if(timeLeft > 0){
+                timeLeft--;
+                typingTime.innerText = timeLeft;
+            } else {
+                clearInterval(timer);
+            }
+        }
+
+        function resetGame(){
+            randomParagraph();
+            clearInterval(timer)
+            inputField.value ="";
+            timeLeft = maxTime;
+            isTyping = charIndex = mistakes = 0;
+            typingMistake.innerText = 0;
+            typingWpm.innerText = 0;
+            typingCpm.innerText = 0;
         }
         randomParagraph();
 
