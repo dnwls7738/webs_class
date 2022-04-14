@@ -389,14 +389,18 @@
     <script>
         const swiper = new Swiper('.swiper', {
             direction: 'horizontal',
-            loop: false,
+            loop: true,
             effect: 'card',
             cubeEffect: {
                 shadow: false,
             },
-            // autoplay: {
-            //     delay: 3000,
-            // },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            loopAdditionalSlides : 1,
+
 
             pagination: {
                 el: '.swiper-pagination',
@@ -407,6 +411,20 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+        });
+
+                // 플레이 버튼을 눌렀을 때
+                document.querySelector(".play").addEventListener("click",()=>{
+            document.querySelector(".play").classList.remove("show");
+            document.querySelector(".stop").classList.add("show")
+            autoPlay();
+        });
+
+        // 정지 버튼을 눌렀을 때
+        document.querySelector(".stop").addEventListener("click",()=>{
+            document.querySelector(".play").classList.add("show");
+            document.querySelector(".stop").classList.remove("show")
+            stopPlay();
         });
     </script>
 
