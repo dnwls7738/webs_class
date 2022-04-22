@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="./assets/css/bodystyle.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="cursor">
+            <img src="img/cursor.svg" alt="">
+        </div>
+
+        <header id="header">
+            <h1>Game Site</h1>
+            <div><span id="clock"></span></div>
+        </header>
+        <main class="img">
+            <div class="icon icon1">
+                <a href="#">
+                    <img src="img/guitar-light.svg" alt="">
+                    <span>Music</span>
+                </a>
+            </div>
+
+            <div class="icon icon2">
+                <a href="#">
+                    <img src="img/faxmachine-light.svg" alt="">
+                    <span>Momory</span>
+                </a>
+            </div>
+
+            <div class="icon icon3">
+                <a href="#">
+                    <img src="img/tigerface-light.svg" alt="">
+                    <span>Typing</span>
+                </a>
+            </div>
+
+            <div class="icon icon4">
+                <a href="#" class="link">
+                    <img src="img/personalcomputer-light.svg" alt="">
+                    <span class="site">React</span>
+                </a>
+            </div>
+
+            <div class="icon icon5">
+                <a href="#" class="link">
+                    <img src="img/personalcomputer-light.svg" alt="">
+                    <span class="site">PHP</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <div class="musicBox">
+        <iframe class="musicBoxIframe" src="musicPlayer/index.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="memoryBox">
+        <iframe class="memoryBoxIframe" src="index2.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="typing">
+        <iframe class="typingBoxIframe" src="typingGame/index.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="react">
+        <iframe class="reactBoxIframe" src="https://woojin-react.netlify.app/" frameborder="0"></iframe>
+    </div>
+
+    <div class="php">
+        <iframe class="phpBoxIframe" src="http://dnwls7738.dothome.co.kr/php/pages/main.php" frameborder="0"></iframe>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+
+        //아이콘 드래그 기능
+        $(".icon1").draggable();
+        $(".icon2").draggable();
+        $(".icon3").draggable();
+        $(".icon4").draggable();
+        $(".icon5").draggable();
+
+        $(".icon1").click(function(){
+            $(".musicBox").toggleClass("show")
+        })
+
+        $(".icon2").click(function(){
+            $(".memoryBox").toggleClass("show")
+        })
+
+        $(".icon3").click(function(){
+            $(".typing").toggleClass("show")
+        })
+
+        $(".icon4").click(function(){
+            $(".react").toggleClass("show")
+        })
+
+        $(".icon5").click(function(){
+            $(".php").toggleClass("show")
+        })
+
+          //마우스 움직이기
+          window.addEventListener("mousemove", (e)=>{
+
+            let x = e.clientX - 25 + "px";
+            let y = e.clientY - 25 + "px";
+            document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;   //cursor에 style.csstext로 left : x  top : y 설정
+          })
+
+
+          function printTime() {
+
+                var clock = document.getElementById("clock");            // 출력할 장소 선택
+                var now = new Date();                                                  // 현재시간
+                var nowTime = now.getFullYear() + "년" + (now.getMonth()+1) + "월" + now.getDate() + "일";
+
+                clock.innerHTML = nowTime;           // 현재시간을 출력
+
+                setTimeout("printTime()",1000);         // setTimeout(“실행할함수”,시간) 시간은1초의 경우 1000
+
+                }
+                window.onload = function() {                         // 페이지가 로딩되면 실행
+
+                printTime();
+
+                }
+
+       
+    </script>
+</body>
+</html>
