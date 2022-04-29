@@ -44,25 +44,13 @@
             </div>
 
             <div class="icon icon4">
-                <a href="#" class="link">
+                <a href="#">
                     <img src="img/personalcomputer-light.svg" alt="">
-                    <span class="site">React</span>
+                    <span>Tetris</span>
                 </a>
             </div>
 
-            <div class="icon icon5">
-                <a href="#" class="link">
-                    <img src="img/personalcomputer-light.svg" alt="">
-                    <span class="site">PHP</span>
-                </a>
-            </div>
 
-            <div class="icon icon6">
-                <a href="#" class="link">
-                    <img src="img/personalcomputer-light.svg" alt="">
-                    <span class="site">TETRIS</span>
-                </a>
-            </div>
         </main>
     </div>
 
@@ -78,16 +66,8 @@
         <iframe class="typingBoxIframe" src="typingGame/index.html" frameborder="0"></iframe>
     </div>
 
-    <div class="Tetris">
-        <iframe class="TetrisBoxIframe" src="tetrisGame/index.html" frameborder="0"></iframe>
-    </div>
-
-    <div class="react">
-        <iframe class="reactBoxIframe" src="https://woojin-react.netlify.app/" frameborder="0"></iframe>
-    </div>
-
-    <div class="php">
-        <iframe class="phpBoxIframe" src="http://dnwls7738.dothome.co.kr/php/pages/main.php" frameborder="0"></iframe>
+    <div class="tetris">
+        <iframe class="tetrisBoxIframe" src="tetrisGame/index.html" frameborder="0"></iframe>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -100,7 +80,6 @@
         $(".icon2").draggable();
         $(".icon3").draggable();
         $(".icon4").draggable();
-        $(".icon5").draggable();
 
         $(".icon1").click(function(){
             $(".musicBox").toggleClass("show")
@@ -115,11 +94,7 @@
         })
 
         $(".icon4").click(function(){
-            $(".react").toggleClass("show")
-        })
-
-        $(".icon5").click(function(){
-            $(".php").toggleClass("show")
+            $(".tetris").toggleClass("show")
         })
 
           //마우스 움직이기

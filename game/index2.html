@@ -125,7 +125,7 @@
             justify-content: space-around;
             align-content: space-around;
             width: 100%;
-            height: 100%;
+            height: 95%;
         }
 
         .cards li {
@@ -237,6 +237,21 @@
             border: 1px solid #007BFF;
             color: #007BFF
         }
+        .life {
+            border: 1px solid steelblue;
+            border-radius: 50px;
+            font-size: 1rem;
+            text-align: center;
+            width: 25%;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            background-color: steelblue;
+            color: #fff;
+        }
+        .score {
+            font-size: 2rem;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -251,7 +266,8 @@
         <div class="list">
             <ol>
                 <li>점수는 100점이 만점 입니다.</li>
-                <li>시간은 1분 입니다.</li>
+                <li>틀릴 수 있는 기회는 총 3번 입니다.</li>
+                <li>재미있는 게임 즐기세요.~</li>
             </ol>
         </div>
         <div class="buttons">
@@ -261,11 +277,10 @@
     </div>
 
     <!-- 카드 박스 -->
+
     <div class="card__wrap">
         <div class="card__inner">
-            <div class="time">
-                <span>Time Left : <span class="timer">60</span></span>
-            </div>
+            <div class="life">Life: <em>3</em></div>
             <ul class="cards">
                 <li>
                     <div class="view front">
@@ -402,12 +417,11 @@
 
     <!-- 결과 박스 -->
     <div class="result__box">
-        <div class="title">게임을 성공하였습니다.</div>
+        <div class="title">GAME OVER</div>
         <div class="score">
             <span>score : <span id='score'>0</span></span>
         </div>
         <div class="buttons">
-            <button class="stop">나가기</button>
             <button class="restart">다시 도전하기</button>
         </div>
     </div>
@@ -424,7 +438,7 @@
         const resultBoxRestart = resultBox.querySelector(".restart");
         const cardTime = document.querySelector(".time span.timer")
 
-
+        let life = 3; 
         let timer;
         let maxTime = 60;
         let timeLeft = maxTime;
@@ -454,6 +468,7 @@
                 infoBox.classList.remove("active");
                 shuffledCard();
                 scoreInit();
+                lifeInit();
             }, 1000)
         }
         // 게임 다시 시작 버튼
@@ -462,12 +477,13 @@
             cardWrap.classList.add("active");
             shuffledCard();
             scoreInit();
+            lifeInit();
         }
+
         //카드 클릭
         cards.forEach(card => {
             //card.classList.add("flip")
             card.addEventListener("click", flipCard);
-            timer = setInterval(initTimer, 1000);
         });
 
         function flipCard(e) {
@@ -484,7 +500,7 @@
                 matchCards(cardOneImg, cardTwoImg);
             }
         }
-        
+
         //카드 확인하기
         function matchCards(img1, img2) {
             if (img1 == img2) {
@@ -502,6 +518,7 @@
                 disableDeck = false;
                 soundMatch.play();
                 scorePlus();
+
             } else {
                 setTimeout(() => {
                     cardOne.classList.add("shake");
@@ -515,9 +532,22 @@
                 }, 1200);
                 soundNoMatch.play();
                 scoreMinus();
+                lifeMinus();
             }
+
+                gameover();
+            
         }
 
+        function gameover(){
+            if(life == 0){
+                setTimeout(()=>{
+                    cardWrap.classList.remove("active");
+                    resultBox.classList.add("active");
+                }, 1000)
+            }
+        }
+        
         function shuffledCard() {
             cardOne = cardTwo = "";
             disableDeck = false;
@@ -560,15 +590,17 @@
             score -= 5;
             $('#score').text(score);
         }
-        
-        // 타이머
-        function initTimer() {
-            if (timeLeft > 0) {
-                timeLeft--;
-                cardTime.innerText = timeLeft;
-            } else {
-                clearInterval(timer);
-            }
+
+        //라이프 감소
+        function lifeMinus(){
+            life-- ;
+            $('.life em').text(life);
+        }
+        //라이프 초기화
+        function lifeInit(){
+            life = 3;
+            openedCtn = 3;
+            $('.life em').text(life);
         }
     </script>
 </body>
