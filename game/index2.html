@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <title>memoryGame</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -195,6 +196,24 @@
             }
         }
 
+        .card__sound {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .card__sound button {
+            line-height: 40px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            color: #007BFF;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            border: 0;
+        }
+
         .result__box {
             width: 500px;
             background: #fff;
@@ -259,6 +278,11 @@
     <!-- 시작 버튼 -->
     <div class="start__btn active">
         <button>Start</button>
+    </div>
+    <div class="card__sound">
+        <button class="material-icons">volume_off</button>
+        <!-- <span class="material-icons">volume_up</span> -->
+        <audio id="song" src="./memoryCard/bgm/Jeremy_Black.mp3" loop="loop"></audio>
     </div>
     <!-- 규칙 박스 -->
     <div class="info__box">
@@ -437,6 +461,8 @@
         const infoBoxStart = infoBox.querySelector(".start");
         const resultBoxRestart = resultBox.querySelector(".restart");
         const cardTime = document.querySelector(".time span.timer")
+        const cardSong = document.querySelector("#song");
+        const cardSound = document.querySelector(".card__sound button");
 
         let life = 3; 
         let timer;
@@ -495,6 +521,7 @@
                 }
                 cardTwo = clickedCard;
                 disableDeck = true;
+
                 let cardOneImg = cardOne.querySelector(".back img").src;
                 let cardTwoImg = cardTwo.querySelector(".back img").src;
                 matchCards(cardOneImg, cardTwoImg);
@@ -534,9 +561,7 @@
                 scoreMinus();
                 lifeMinus();
             }
-
                 gameover();
-            
         }
 
         function gameover(){
@@ -549,10 +574,10 @@
         }
         
         function shuffledCard() {
+
             cardOne = cardTwo = "";
             disableDeck = false;
             matchedCard = 0;
-
 
             let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
             let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
@@ -573,6 +598,17 @@
                 imgTag.src = `img/img-${arr[index]}.png`;
             })
         }
+
+        cardSound.addEventListener("click", function(){
+            this.classList.toggle("is-playing");
+            if(this.classList.contains("is-playing")){
+                this.innerText = "volume_up";
+                cardSong.play();
+            } else {
+                this.innerText = "volume_off";
+                cardSong.pause();
+            }
+        })
 
         // 점수 초기화
         function scoreInit() {

@@ -175,13 +175,14 @@
             background-color: rgb(247, 243, 243);
         }
         .s {
-            color: #fff;
+            color: #000;
             border-radius: 10px;
             border: 1px solid #fff;
             width: 100px;
             height: 25px;
             text-align: center;
             margin-right: 10px;
+            background: #fff;
         }
 
         .Tmino {
@@ -261,7 +262,6 @@
             </ol>
         </div>
         <div class="buttons">
-            <button class="stop">그만하기</button>
             <button class="start">도전하기</button>
         </div>
     </div>
@@ -269,11 +269,10 @@
     <!-- 결과 박스 -->
     <div class="result__box">
         <div class="title">게임 오버</div>
-        <div class="score">
-            당신의 점수는 몇 00점입니다.
+        <div class="score">        
+            <div class="s"> score : <em>0</em></div>
         </div>
         <div class="buttons">
-            <button class="stop">그만하기</button>
             <button class="restart">다시 도전하기</button>
         </div>
     </div>
@@ -294,6 +293,7 @@
         const resultBoxRestart = resultBox.querySelector(".restart");
         const tetrisInner = document.querySelector(".tetris__inner > ul");
         const tetrisS = document.querySelector(".tetris__wrap .s em");
+        const tetrisSS = document.querySelector(".result__box .s em");
         const tetrisWrap = document.querySelector(".tetris__wrap");
         const cardSong = document.querySelector("#song");
         const cardSound = document.querySelector(".card__sound button");
@@ -336,12 +336,6 @@
             Imino: [
                 [
                     [0, 0],
-                    [1, 0],
-                    [2, 0],
-                    [3, 0]
-                ],
-                [
-                    [0, 0],
                     [0, 1],
                     [0, 2],
                     [0, 3]
@@ -358,6 +352,14 @@
                     [0, 2],
                     [0, 3]
                 ],
+                [
+                    [0, 0],
+                    [1, 0],
+                    [2, 0],
+                    [3, 0]
+                ],
+
+
             ],
             Omino: [
                 [
@@ -515,6 +517,7 @@
 
         // 게임 다시 시작 버튼
         resultBoxRestart.onclick = () => {
+            tetrisInner.innerHTML = "";
             resultBox.classList.remove("active");
             tetrisWrap.classList.add("active");
             gameScore = 0
@@ -580,7 +583,7 @@
                     if (moveType === "retry") {
                         clearInterval(gameInterval);
                         gameover();
-
+                        init()
                     }
 
                     setTimeout(() => {
@@ -620,7 +623,8 @@
                     child.remove();
                     tetrisLine();
                     gameScore++;
-                    tetrisS.innerText = gameScore
+                    tetrisS.innerText = gameScore;
+                    tetrisSS.innerText = gameScore;
                 }
             })
             generateNewBlock();
@@ -638,7 +642,7 @@
             const randomIndex = Math.floor(Math.random() * blockArray.length);
             movingItem.type = blockArray[randomIndex][0];
             movingItem.top = 0;
-            movingItem.left = 3;
+            movingItem.left = 5;
             movingItem.direction = 0;
             gameMovingItem = {...movingItem};
             renderBlocks();
@@ -712,7 +716,8 @@
                     break;
                 default:
                     break;
-            }9
+            }
+            event.preventDefault();
         })
     </script>
 </body>
