@@ -30,6 +30,8 @@
 
         #parallax__title {
             padding: 20px;
+            position: relative;
+            z-index: 1000;
         }
 
         #parallax__title h1 {
@@ -64,38 +66,6 @@
             background-color: #fff;
             color: #000;
         }
-
-        #parallax__nav {
-            position: fixed;
-            right: 20px;
-            top: 20px;
-            z-index: 1000;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 15px 20px;
-            border-radius: 50px;
-        }
-
-        #parallax__nav li {
-            list-style: none;
-            display: inline;
-        }
-
-        #parallax__nav li a {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
-            text-align: center;
-            line-height: 30px;
-
-        }
-
-        #parallax__nav li.active a {
-            background: #fff;
-            color: #000;
-            border-radius: 50%;
-        }
-
         #parallax__cont {
             max-width: 1600px;
             width: 98%;
@@ -136,9 +106,9 @@
         .content__item__imgWrap {
             width: 100%;
             padding-bottom: 56.25%;
-            background: #000;
             position: relative;
             overflow: hidden;
+            opacity: 0;
         }
         .content__item__img {
             position: absolute;
@@ -196,29 +166,14 @@
             margin-right: auto;
             margin-right: -4vw;
         }
-        .scrollTop {
+
+        #gradient {
             position: fixed;
-            left: 20px;
-            bottom: 20px;
-            z-index: 1000;
-            background: rgba(0,0,0,0.4);
-            color: #fff;
-            padding: 10px 30px;
-            border-radius: 50px;
-        }
-        .scrollInfo {
-            position: fixed;
-            left: 20px;
-            bottom: 70px;
-            z-index: 1000;
-            background: rgba(0,0,0,0.4);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 10px;
-        }
-        .scrollInfo li {
-            list-style: none;
-            line-height: 1.6;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(#30cfd0 0%, #330867 100%);
         }
     </style>
 </head>
@@ -226,39 +181,25 @@
 <body>
 
     <header id="parallax__title">
-        <h1><a href="parallaxEffect.html">JavaScript parallax Effect01</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 메뉴 이동</p>
+        <h1><a href="parallaxEffect.html">GSAP parallax Effect02</a></h1>
+        <p>패럴랙스 GSAP 효과 - 나타나기</p>
         <ul>
-            <li class="active"><a href="parallaxEffect01.html">1</a></li>
-            <li><a href="parallaxEffect02.html">2</a></li>
-            <li><a href="parallaxEffect03.html">3</a></li>
-            <li><a href="parallaxEffect04.html">4</a></li>
-            <li><a href="parallaxEffect05.html">5</a></li>
-            <li><a href="parallaxEffect06.html">6</a></li>
-            <li><a href="parallaxEffect07.html">7</a></li>
-            <li><a href="parallaxEffect08.html">8</a></li>
-            <li><a href="parallaxEffect09.html">9</a></li>
+            <li><a href="gsapEffect01.html">1</a></li>
+            <li class="active"><a href="gsapEffect02.html">2</a></li>
+            <li><a href="gsapEffect03.html">3</a></li>
+            <li><a href="gsapEffect04.html">4</a></li>
+            <li><a href="gsapEffect05.html">5</a></li>
+            <li><a href="gsapEffect06.html">6</a></li>
+            <li><a href="gsapEffect07.html">7</a></li>
+            <li><a href="gsapEffect08.html">8</a></li>
+            <li><a href="gsapEffect09.html">9</a></li>
         </ul>
     </header>
     <!-- //parallax__title -->
 
-    <nav id="parallax__nav">
-        <ul>
-            <li class="active"><a href="#section1">s1</a></li>
-            <li><a href="#section2">s2</a></li>
-            <li><a href="#section3">s3</a></li>
-            <li><a href="#section4">s4</a></li>
-            <li><a href="#section5">s5</a></li>
-            <li><a href="#section6">s6</a></li>
-            <li><a href="#section7">s7</a></li>
-            <li><a href="#section8">s8</a></li>
-            <li><a href="#section9">s9</a></li>
-        </ul>
-    </nav>
-    <!-- //parallax__nav -->
-
     <!-- main -->
     <main id="parallax__cont">
+        <div id="gradient"></div>
         <div id="contents">
             <section id="section1" class="content__item">
                 <span class="content__item__num">01</span>
@@ -338,131 +279,61 @@
     </main>
     <!-- //main -->
 
-    <!-- info -->
-    <div class="scrollTop">
-        scrollTop ; <span>0</span>px
-    </div>
-    <div class="scrollInfo">
-        <ul>
-            <li>#section1 offset() : <span class="offset1">0</span>px</li>
-            <li>#section2 offset() : <span class="offset2">0</span>px</li>
-            <li>#section3 offset() : <span class="offset3">0</span>px</li>
-            <li>#section4 offset() : <span class="offset4">0</span>px</li>
-            <li>#section5 offset() : <span class="offset5">0</span>px</li>
-            <li>#section6 offset() : <span class="offset6">0</span>px</li>
-            <li>#section7 offset() : <span class="offset7">0</span>px</li>
-            <li>#section8 offset() : <span class="offset8">0</span>px</li>
-            <li>#section9 offset() : <span class="offset9">0</span>px</li>
-        </ul>
-    </div>
-    <!-- //info -->
-
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script>
-        document.querySelectorAll("#parallax__nav li a").forEach(li => {
-            li.addEventListener("click", (e)=>{
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        })
+        gsap.utils.toArray(".content__item__imgWrap").forEach(elem => {
+            ScrollTrigger.create({
+                trigger: elem,
+                start: "top 50%%",
+                end: "bottom 50%",
+                markers: true,
+                onEnter: function(){
+                    gsap.fromTo(
+                        elem, {
+                            y: 200,
+                            autoAlpha: 0
+                        },{
+                            duration: 2, 
+                            y: 0, 
+                            autoAlpha: 1, 
+                            ease: "power4.auto", 
+                            overwrite: "auto"
+                        }
+                    )
 
-        window.addEventListener("scroll", () =>{
-            // let scrollTop = window.pageYOffset;
-            // let scrollTop = document.documentElement.scrollTop;
-            // let scrollTop = window.scrollY;
-
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-            // if(scrollTop > document.getElementById("section1").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(1)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section2").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(2)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section3").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(3)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section4").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(4)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section5").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(5)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section6").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(6)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section7").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(7)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section8").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(8)").classList.add("active")
-            // }  
-            // if(scrollTop > document.getElementById("section9").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(9)").classList.add("active")
-            // }
-            // for(let i=1; i<=9; i++){
-            //     if(scrollTop >= document.getElementById("section"+i).offsetTop - 2){
-            //         document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-            //             li.classList.remove("active");
-            //         })
-            //         document.querySelector("#parallax__nav ul li:nth-child("+i+")").classList.add("active")
-            //     }
-            // }
-
-            // forEach
-            document.querySelectorAll(".content__item").forEach((element, index) => {
-                if(scrollTop >= element.offsetTop - 2){
-                    document.querySelectorAll("#parallax__nav ul li").forEach( li => {
-                        li.classList.remove("active");
-                    })
-                    document.querySelector("#parallax__nav ul li:nth-child("+(index+1)+")").classList.add("active")
+                },
+                onLeave: function(){
+                    gsap.fromTo(
+                        elem, {
+                            autoAlpha: 1,
+                        },{
+                            overwrite: "auto"
+                        }
+                    )
+                },
+                onEnterBack: function(){
+                    elem, {
+                        y: -100,
+                        autoAlpha: 1
+                    },{
+                        duration: 2, y: 0, autoAlpha: 0, ease: "power4.out", overwrite: "auto"
+                    }
+                },
+                onLeaveBack: function(){
+                    gsap.fromTo(
+                        elem, {
+                            autoAlpha: 1,
+                        },{
+                            autoAlpha: 0,
+                            overwrite: "auto"
+                        }
+                    )
                 }
             })
-
-
-            
-            //info
-            document.querySelector(".scrollTop span").innerText = scrollTop;
-
-            document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop
-            document.querySelector(".offset2").innerText = document.getElementById("section2").offsetTop
-            document.querySelector(".offset3").innerText = document.getElementById("section3").offsetTop
-            document.querySelector(".offset4").innerText = document.getElementById("section4").offsetTop
-            document.querySelector(".offset5").innerText = document.getElementById("section5").offsetTop
-            document.querySelector(".offset6").innerText = document.getElementById("section6").offsetTop
-            document.querySelector(".offset7").innerText = document.getElementById("section7").offsetTop
-            document.querySelector(".offset8").innerText = document.getElementById("section8").offsetTop
-            document.querySelector(".offset9").innerText = document.getElementById("section9").offsetTop
         })
+        
     </script>
 </body>
 
