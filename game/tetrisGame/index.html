@@ -521,7 +521,7 @@
         tetrisInner.innerHTML = "";
         resultBox.classList.remove("active");
         tetrisWrap.classList.add("active");
-        gameScore = 0;
+        let gameScore = 0;
         init();
       };
 
@@ -671,7 +671,6 @@
         gameInterval = setInterval(() => {
           moveBlock("top", 1);
         }, 10);
-        event.preventDefault();
       }
 
       // 게임 오버
@@ -715,6 +714,7 @@
           default:
             break;
         }
+        event.preventDefault();
       });
     </script>
   </body>
