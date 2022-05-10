@@ -1,329 +1,330 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2022 woojin's portfolio</title>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-    <style>
-      @import url(//db.onlinewebfonts.com/c/99501fdab737541e9315ceaf9229370f?family=Monument+Extended);
-      @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
-      body {
-        width: 100%;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        text-decoration: none;
-        color: #ffff;
-      }
-      #wrap {
-        height: 100vh;
-        width: 100%;
-      }
-      #header {
-        border-bottom: 1px solid #ffff;
-        display: flex;
-        justify-content: space-between;
-        font-size: 1rem;
-        backdrop-filter: blur(50px);
-        position: fixed;
-        width: 100%;
-        padding: 10px 0;
-      }
-      #header div {
-        overflow-x: hidden;
-        padding: 10px;
-      }
-      #header div:nth-child(2) {
-        border: 1px solid #fff;
-        border-radius: 50px;
-        color: #fff;
-        position: relative;
-        overflow: hidden;
-        width: 30%;
-      }
-      #header div:nth-child(2) span {
-        padding: 0 10px;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2022 woojin's portfolio</title>
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+  <style>
+    @import url(//db.onlinewebfonts.com/c/99501fdab737541e9315ceaf9229370f?family=Monument+Extended);
+    @import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+    body {
+      width: 100%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffff;
+    }
+
+    #wrap {
+      height: 100vh;
+      width: 100%;
+    }
+
+    #header {
+      border-bottom: 1px solid #ffff;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      backdrop-filter: blur(50px);
+      position: fixed;
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    #header div {
+      overflow-x: hidden;
+      padding: 10px;
+    }
+
+    #header div:nth-child(2) {
+      border: 1px solid #fff;
+      border-radius: 50px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      width: 30%;
+    }
+
+    #header div:nth-child(2) span {
+      padding: 0 10px;
+      white-space: nowrap;
+      position: absolute;
+    }
+
+    #header a {
+      padding: 0 20px;
+      font-family: "abel";
+    }
+
+    #main {
+      background-image: url(./assets/img/bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+    }
+
+    #main div {
+      line-height: 1.03;
+      max-width: 100%;
+      margin: auto;
+      clear: both;
+    }
+
+    #main div p {
+      font-size: 7rem;
+      color: #fff;
+      font-family: "Monument Extended";
+      letter-spacing: -4px;
+    }
+
+    #main div p:nth-child(1) {
+      text-align: center;
+    }
+
+    #main div p:nth-child(2) {
+      text-align: center;
+      padding-right: 70vh;
+    }
+
+    #main div p:nth-child(3) {
+      padding-left: 30vh;
+      text-align: center;
+      clear: both;
+    }
+
+    #main div em {
+      font-style: normal;
+      font-size: 1rem;
+      color: #fff;
+      float: right;
+      font-family: "abel";
+    }
+
+    @media (max-width: 1700px) {
+      #main div p {
+        font-size: 6rem;
         white-space: nowrap;
-        position: absolute;
-      }
-      #header a {
-        padding: 0 20px;
-        font-family: "abel";
       }
 
-      #main {
-        background-image: url(./assets/img/bg.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        width: 100%;
-        display: flex;
-      }
-      #main div {
-        line-height: 1.03;
-        max-width: 100%;
-        margin: auto;
-        clear: both;
-      }
-      #main div p {
-        font-size: 7rem;
-        color: #fff;
-        font-family: "Monument Extended";
-        letter-spacing: -4px;
-      }
       #main div p:nth-child(1) {
         text-align: center;
       }
+
       #main div p:nth-child(2) {
         text-align: center;
-        padding-right: 70vh;
+        padding-right: 50vh;
       }
+
       #main div p:nth-child(3) {
-        padding-left: 30vh;
+        padding-left: 25vh;
         text-align: center;
         clear: both;
       }
-      #main div em {
-        font-style: normal;
-        font-size: 1rem;
-        color: #fff;
-        float: right;
-        font-family: "abel";
-      }
+    }
 
-      @media (max-width: 1700px) {
-        #main div p {
-          font-size: 6rem;
-          white-space: nowrap;
-        }
-        #main div p:nth-child(1) {
-          text-align: center;
-        }
-        #main div p:nth-child(2) {
-          text-align: center;
-          padding-right: 50vh;
-        }
-        #main div p:nth-child(3) {
-          padding-left: 25vh;
-          text-align: center;
-          clear: both;
-        }
-      }
-      @media (max-width: 1250px) {
-        #main div p {
-          white-space: nowrap;
-        }
-
-        #main div p:nth-child(1) {
-          text-align: center;
-        }
-        #main div p:nth-child(2) {
-          text-align: center;
-          padding-right: 0;
-        }
-        #main div p:nth-child(3) {
-          padding-left: 0;
-          text-align: center;
-          clear: both;
-        }
-      }
-      @media (max-width: 1070px) {
-        #main div p {
-          font-size: 5rem;
-        }
-        #main div {
-          letter-spacing: -2px;
-        }
-        #header div a {
-          display: none;
-        }
-        span {
-          font-size: 10px;
-        }
-      }
-      @media (max-width: 900px) {
-        #main div p {
-          font-size: 4rem;
-        }
-        #main div {
-          letter-spacing: -2px;
-        }
-        span {
-          font-size: 10px;
-        }
-      }
-      @media (max-width: 700px) {
-        #main div p {
-          font-size: 2.8rem;
-        }
-        #main div {
-          letter-spacing: -2px;
-        }
-        span {
-          font-size: 10px;
-        }
-      }
-
-      #footer {
-        bottom: 0px;
-        left: 0;
-        border-top: 1px solid #ffff;
-        font-size: 1rem;
-        backdrop-filter: blur(50px);
-        position: fixed;
-        width: 100%;
-        height: 41px;
-        overflow: hidden;
-        font-family: "abel";
-      }
-      #footer .roller {
-        display: flex;
-        position: absolute;
-        padding: 5px;
-      }
-      #footer div {
-        color: #fff;
-        font-size: 1.5rem;
+    @media (max-width: 1250px) {
+      #main div p {
         white-space: nowrap;
       }
-      #footer .roller .PORTFOLIO::before {
-        content: "";
 
-        left: -0px;
-        top: 45%;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: #c2ff04;
+      #main div p:nth-child(1) {
+        text-align: center;
       }
-      #footer .roller .PORTFOLIO::after {
-        content: "";
 
-        right: -0px;
-        top: 45%;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: #c2ff04;
+      #main div p:nth-child(2) {
+        text-align: center;
+        padding-right: 0;
       }
-      #footer .roller .PORTFOLIO {
-        color: #fff;
-        font-size: 1.5rem;
+
+      #main div p:nth-child(3) {
+        padding-left: 0;
+        text-align: center;
+        clear: both;
+      }
+    }
+
+    @media (max-width: 1070px) {
+      #main div p {
+        font-size: 5rem;
+      }
+
+      #main div {
+        letter-spacing: -2px;
         padding: 5px;
-        color: #c2ff04;
-
-        padding: 0 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="wrap">
-      <header id="header">
-        <div><a href="">INDEPENDENT</a><a href="">ABOUT</a></div>
-        <div>
-          <span class="roller0"
-            >INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
-            INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
-            INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
-            INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
-            INDEPENDENT FRONT-END</span
-          >
-        </div>
-        <div><a href="">WORK</a><a href="">CONTACT</a></div>
-      </header>
-      <main id="main">
-        <div>
-          <p>INDEPENDENT</p>
-          <p>FRONT-END</p>
-          <p>WEB DEVELOPER</p>
-          <em>2022 PORTFOLIO</em>
-        </div>
-      </main>
-      <footer id="footer">
-        <div class="roller">
-          <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-          <div class="PORTFOLIO">2022 PORTFOLIO</div>
-          <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-          <div class="PORTFOLIO">2022 PORTFOLIO</div>
-          <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-          <div class="PORTFOLIO">2022 PORTFOLIO</div>
-          <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-          <div class="PORTFOLIO">2022 PORTFOLIO</div>
-        </div>
-      </footer>
-    </div>
-
-    <script>
-      {
-        //롤링 배너 복제본 생성
-        let roller = document.querySelector(".roller");
-        roller.id = "roller1";
-
-        let clone = roller.cloneNode(true);
-        clone.id = "roller2";
-        document.querySelector("#footer").appendChild(clone); //부착
-
-        //원본, 복제본 배너 위치 지정
-        document.querySelector("#roller1").style.left = "0px";
-        document.querySelector("#roller2").style.left =
-          document.querySelector(".roller").offsetWidth + "px";
-
-        //클래스 할당
-        roller.classList.add("original");
-        clone.classList.add("clone");
-
-        //인터벌 메서드로 애니메이션 생성
-        let rollerWidth = document.querySelector(".roller").offsetWidth; //회전 배너 너비값
-        let betweenDistance = 1; //이동 크기 - 정수여야 함
-        originalID = window.setInterval(
-          betweenRollCallback,
-          parseInt(1920 / 100),
-          betweenDistance,
-          document.querySelector("#roller1")
-        );
-        cloneID = window.setInterval(
-          betweenRollCallback,
-          parseInt(1920 / 100),
-          betweenDistance,
-          document.querySelector("#roller2")
-        );
-
-        //인터벌 애니메이션 함수(공용)
-        function betweenRollCallback(d, roller) {
-          let left = parseInt(roller.style.left);
-          roller.style.left = left - d + "px"; //이동
-          //조건부 위치 리셋
-          if (rollerWidth + (left - d) <= 0) {
-            roller.style.left = rollerWidth + "px";
-          }
-        }
       }
 
+      #header div a {
+        display: none;
+      }
+
+      span {
+        font-size: 10px;
+      }
+
+      #header div:nth-child(2) span {
+        padding: 0px 10px;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 5px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      #main div p {
+        font-size: 4rem;
+      }
+
+      #main div {
+        letter-spacing: -2px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      #main div p {
+        font-size: 2.8rem;
+      }
+
+      #main div {
+        letter-spacing: -2px;
+      }
+
+      span {
+        font-size: 10px;
+      }
+    }
+
+    #footer {
+      bottom: 0px;
+      left: 0;
+      border-top: 1px solid #ffff;
+      font-size: 1rem;
+      backdrop-filter: blur(50px);
+      position: fixed;
+      width: 100%;
+      height: 41px;
+      overflow: hidden;
+      font-family: "abel";
+    }
+
+    #footer .roller {
+      display: flex;
+      position: absolute;
+      padding: 5px;
+    }
+
+    #footer div {
+      color: #fff;
+      font-size: 1.5rem;
+      white-space: nowrap;
+    }
+
+    #footer .roller .PORTFOLIO::before {
+      content: "";
+
+      left: -0px;
+      top: 45%;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #c2ff04;
+    }
+
+    #footer .roller .PORTFOLIO::after {
+      content: "";
+
+      right: -0px;
+      top: 45%;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #c2ff04;
+    }
+
+    #footer .roller .PORTFOLIO {
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 5px;
+      color: #c2ff04;
+
+      padding: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div><a href="">INDEPENDENT</a><a href="">ABOUT</a></div>
+      <div>
+        <span class="roller0">
+          INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
+          INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
+          INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
+          INDEPENDENT FRONT-END WEB DEVELOPER INDEPENDENT FRONT-END
+        </span>
+      </div>
+      <div><a href="">WORK</a><a href="">CONTACT</a></div>
+    </header>
+    <main id="main">
+      <div>
+        <p>INDEPENDENT</p>
+        <p>FRONT-END</p>
+        <p>WEB DEVELOPER</p>
+        <em>2022 PORTFOLIO</em>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="roller">
+        <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
+        <div class="PORTFOLIO">2022 PORTFOLIO</div>
+        <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
+        <div class="PORTFOLIO">2022 PORTFOLIO</div>
+        <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
+        <div class="PORTFOLIO">2022 PORTFOLIO</div>
+        <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
+        <div class="PORTFOLIO">2022 PORTFOLIO</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    {
       //롤링 배너 복제본 생성
-      let roller = document.querySelector(".roller0");
+      let roller = document.querySelector(".roller");
       roller.id = "roller1";
 
       let clone = roller.cloneNode(true);
       clone.id = "roller2";
-      document.querySelector("#header div:nth-child(2)").appendChild(clone); //부착
+      document.querySelector("#footer").appendChild(clone); //부착
 
       //원본, 복제본 배너 위치 지정
       document.querySelector("#roller1").style.left = "0px";
       document.querySelector("#roller2").style.left =
-        document.querySelector(".roller0").offsetWidth + "px";
+        document.querySelector(".roller").offsetWidth + "px";
 
       //클래스 할당
       roller.classList.add("original");
       clone.classList.add("clone");
 
       //인터벌 메서드로 애니메이션 생성
-      //회전 배너 너비값
+      let rollerWidth = document.querySelector(".roller").offsetWidth; //회전 배너 너비값
       let betweenDistance = 1; //이동 크기 - 정수여야 함
       originalID = window.setInterval(
         betweenRollCallback,
@@ -347,6 +348,51 @@
           roller.style.left = rollerWidth + "px";
         }
       }
-    </script>
-  </body>
+    }
+
+    //롤링 배너 복제본 생성
+    let roller = document.querySelector(".roller0");
+    roller.id = "roller1";
+
+    let clone = roller.cloneNode(true);
+    clone.id = "roller2";
+    document.querySelector("#header div:nth-child(2)").appendChild(clone); //부착
+
+    //원본, 복제본 배너 위치 지정
+    document.querySelector("#roller1").style.left = "0px";
+    document.querySelector("#roller2").style.left =
+      document.querySelector(".roller0").offsetWidth + "px";
+
+    //클래스 할당
+    roller.classList.add("original");
+    clone.classList.add("clone");
+
+    //인터벌 메서드로 애니메이션 생성
+    //회전 배너 너비값
+    let betweenDistance = 1; //이동 크기 - 정수여야 함
+    originalID = window.setInterval(
+      betweenRollCallback,
+      parseInt(1920 / 100),
+      betweenDistance,
+      document.querySelector("#roller1")
+    );
+    cloneID = window.setInterval(
+      betweenRollCallback,
+      parseInt(1920 / 100),
+      betweenDistance,
+      document.querySelector("#roller2")
+    );
+
+    //인터벌 애니메이션 함수(공용)
+    function betweenRollCallback(d, roller) {
+      let left = parseInt(roller.style.left);
+      roller.style.left = left - d + "px"; //이동
+      //조건부 위치 리셋
+      if (rollerWidth + (left - d) <= 0) {
+        roller.style.left = rollerWidth + "px";
+      }
+    }
+  </script>
+</body>
+
 </html>
