@@ -43,7 +43,7 @@ a {
     min-width: 25vw;
 }
 
-/* #header div:nth-child(2)::before {
+#header div:nth-child(2)::before {
   content: "";
   position: absolute;
   top: 0;
@@ -73,7 +73,7 @@ a {
     rgba(0, 0, 0, 0.75) 51%,
     rgb(0, 0, 0) 100%
   );
-} */
+}
 
 #header div:nth-child(2) span {
     padding: 0 10px;
@@ -248,6 +248,7 @@ a {
     left: 0;
     border-top: 1px solid #ffff;
     font-size: 1rem;
+    -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
     position: fixed;
     width: 100%;
@@ -268,9 +269,8 @@ a {
     white-space: nowrap;
 }
 
-#footer .roller .PORTFOLIO::before {
+/* #footer .roller .PORTFOLIO::before {
     content: "";
-
     left: -0px;
     top: 45%;
     width: 5px;
@@ -281,14 +281,13 @@ a {
 
 #footer .roller .PORTFOLIO::after {
     content: "";
-
     right: -0px;
     top: 45%;
     width: 5px;
     height: 5px;
     border-radius: 50%;
     background-color: #c2ff04;
-}
+} */
 
 #footer .roller .PORTFOLIO {
     color: #fff;
