@@ -1,388 +1,395 @@
 body {
-    width: 100%;
+  width: 100%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    text-decoration: none;
-    color: #ffff;
+  text-decoration: none;
+  color: #ffff;
 }
 
 #wrap {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 #header {
-    border-bottom: 1px solid #ffff;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-    backdrop-filter: blur(50px);
-    position: fixed;
-    width: 100%;
-    padding: 10px 0;
+  border-bottom: 1px solid #ffff;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
 }
 
 #header div {
-    overflow-x: hidden;
-    padding: 10px;
+  overflow-x: hidden;
+  padding: 10px;
 }
 
 #header div:nth-child(2) {
-    border: 1px solid #fff;
-    border-radius: 50px;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    min-width: 25vw;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  min-width: 25vw;
 }
 
 #header div:nth-child(2)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 51%, rgba(170, 0, 0, 0) 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 51%,
+    rgba(170, 0, 0, 0) 100%
+  );
 }
 
 #header div:nth-child(2)::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 100%;
-    z-index: 1;
-    background: linear-gradient(to right, rgba(170, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 51%, rgb(0, 0, 0) 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(170, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 51%,
+    rgb(0, 0, 0) 100%
+  );
 }
 
 #header div:nth-child(2) span {
-    padding: 0 10px;
-    white-space: nowrap;
-    position: absolute;
+  padding: 0 10px;
+  white-space: nowrap;
+  position: absolute;
 }
 
 #header a {
-    padding: 0 20px;
-    font-family: "abel";
+  padding: 0 20px;
+  font-family: "abel";
 }
 
 .menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    max-width: 0;
-    transition: 0.5s ease;
-    z-index: 1;
-    background-color: var(--dark_bg);
-    display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-width: 0;
+  transition: 0.5s ease;
+  z-index: 1;
+  display: none;
 }
 
 .menu ul {
-    text-align: center;
-    margin-top: 50px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .menu ul li {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .burger-icon {
-    cursor: pointer;
-    display: inline-block;
-    position: absolute;
-    z-index: 2;
-    padding: 8px 0;
-    top: 0px;
-    right: 10px;
-    user-select: none;
-    width: auto;
-    margin: 0;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  padding: 8px 0;
+  top: 0px;
+  right: 10px;
+  user-select: none;
+  width: auto;
+  margin: 0;
 }
 
 .burger-icon .burger-sticks {
-    background: #fff;
-    display: none;
-    height: 2px;
-    position: relative;
-    transition: background 0.2s ease-out;
-    width: 30px;
+  background: #fff;
+  display: none;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 30px;
 }
 
 .burger-icon .burger-sticks:before,
 .burger-icon .burger-sticks:after {
-    background: #fff;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    width: 100%;
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
 }
 
 .burger-icon .burger-sticks:before {
-    top: 8px;
+  top: 8px;
 }
 
 .burger-icon .burger-sticks:after {
-    top: -8px;
+  top: -8px;
 }
 
 .burger-check {
-    display: none;
+  display: none;
 }
 
-.burger-check:checked~.menu {
-    max-width: 300px;
+.burger-check:checked ~ .menu {
+  max-width: 300px;
 }
 
-.burger-check:checked~.burger-icon .burger-sticks {
-    background: transparent;
+.burger-check:checked ~ .burger-icon .burger-sticks {
+  background: transparent;
 }
 
-.burger-check:checked~.burger-icon .burger-sticks:before {
-    transform: rotate(-45deg);
+.burger-check:checked ~ .burger-icon .burger-sticks:before {
+  transform: rotate(-45deg);
 }
 
-.burger-check:checked~.burger-icon .burger-sticks:after {
-    transform: rotate(45deg);
+.burger-check:checked ~ .burger-icon .burger-sticks:after {
+  transform: rotate(45deg);
 }
 
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
-    top: 0;
+.burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked ~ .burger-icon:not(.steps) .burger-sticks:after {
+  top: 0;
 }
-
 
 #main {
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    display: flex;
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
 }
 
 #main .mainTitle {
-    line-height: 1.03;
-    max-width: 100%;
-    margin: auto;
-    clear: both;
+  line-height: 1.03;
+  max-width: 100%;
+  margin: auto;
+  clear: both;
 }
 
 #main .mainTitle p {
-    font-size: 7rem;
-    color: #fff;
-    font-family: "Syncopate";
-    letter-spacing: -4px;
+  font-size: 7rem;
+  color: #fff;
+  font-family: "Syncopate";
+  letter-spacing: -4px;
 }
 
 #main .mainTitle p:nth-child(1) {
-    text-align: center;
+  text-align: center;
 }
 
 #main .mainTitle p:nth-child(2) {
-    text-align: center;
-    padding-right: 70vh;
+  text-align: center;
+  padding-right: 70vh;
 }
 
 #main .mainTitle p:nth-child(3) {
-    padding-left: 30vh;
-    text-align: center;
-    clear: both;
+  padding-left: 30vh;
+  text-align: center;
+  clear: both;
 }
 
 #main .mainTitle {
-    clear: both;
+  clear: both;
 }
 
 #main .mainTitle em {
-    font-style: normal;
-    font-size: 1rem;
-    color: #fff;
-    float: right;
-    font-family: "abel";
-    margin-top: 10px;
-
+  font-style: normal;
+  font-size: 1rem;
+  color: #fff;
+  float: right;
+  font-family: "abel";
+  margin-top: 10px;
 }
 
 #main .mainTitle .images {
-    padding: 0 0 0 10px;
-    float: right;
+  padding: 0 0 0 10px;
+  float: right;
 }
 
 #footer {
-    bottom: 0px;
-    left: 0;
-    border-top: 1px solid #ffff;
-    font-size: 1rem;
-    backdrop-filter: blur(50px);
-    position: fixed;
-    width: 100%;
-    height: 41px;
-    overflow: hidden;
-    font-family: "abel";
+  bottom: 0px;
+  left: 0;
+  border-top: 1px solid #ffff;
+  font-size: 1rem;
+  backdrop-filter: blur(50px);
+  position: fixed;
+  width: 100%;
+  height: 41px;
+  overflow: hidden;
+  font-family: "abel";
 }
 
 #footer .roller {
-    display: flex;
-    position: absolute;
-    padding: 5px;
+  display: flex;
+  position: absolute;
+  padding: 5px;
 }
 
 #footer div {
-    color: #fff;
-    font-size: 1.5rem;
-    white-space: nowrap;
+  color: #fff;
+  font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 #footer .roller .PORTFOLIO::before {
-    content: "";
+  content: "";
 
-    left: -0px;
-    top: 45%;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #c2ff04;
+  left: -0px;
+  top: 45%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #c2ff04;
 }
 
 #footer .roller .PORTFOLIO::after {
-    content: "";
+  content: "";
 
-    right: -0px;
-    top: 45%;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #c2ff04;
+  right: -0px;
+  top: 45%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #c2ff04;
 }
 
 #footer .roller .PORTFOLIO {
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 5px;
-    color: #c2ff04;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 5px;
+  color: #c2ff04;
 
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 @media (max-width: 1700px) {
-    #main .mainTitle p {
-        font-size: 6rem;
-        white-space: nowrap;
-    }
+  #main .mainTitle p {
+    font-size: 6rem;
+    white-space: nowrap;
+  }
 
-    #main .mainTitle p:nth-child(1) {
-        text-align: center;
-    }
+  #main .mainTitle p:nth-child(1) {
+    text-align: center;
+  }
 
-    #main .mainTitle p:nth-child(2) {
-        text-align: center;
-        padding-right: 50vh;
-    }
+  #main .mainTitle p:nth-child(2) {
+    text-align: center;
+    padding-right: 50vh;
+  }
 
-    #main .mainTitle p:nth-child(3) {
-        padding-left: 25vh;
-        text-align: center;
-        clear: both;
-    }
+  #main .mainTitle p:nth-child(3) {
+    padding-left: 25vh;
+    text-align: center;
+    clear: both;
+  }
 }
 
 @media (max-width: 1260px) {
-    #main .mainTitle p {
-        white-space: nowrap;
-    }
+  #main .mainTitle p {
+    white-space: nowrap;
+  }
 
-    #main .mainTitle p:nth-child(1) {
-        text-align: center;
-    }
+  #main .mainTitle p:nth-child(1) {
+    text-align: center;
+  }
 
-    #main .mainTitle p:nth-child(2) {
-        text-align: center;
-        padding-right: 0;
-    }
+  #main .mainTitle p:nth-child(2) {
+    text-align: center;
+    padding-right: 0;
+  }
 
-    #main .mainTitle p:nth-child(3) {
-        padding-left: 0;
-        text-align: center;
-        clear: both;
-    }
+  #main .mainTitle p:nth-child(3) {
+    padding-left: 0;
+    text-align: center;
+    clear: both;
+  }
 }
 
 @media (max-width: 1070px) {
-    #main .mainTitle p {
-        font-size: 5rem;
-    }
+  #main .mainTitle p {
+    font-size: 5rem;
+  }
 
-    #main .mainTitle {
-        padding: 5px;
-    }
+  #main .mainTitle {
+    padding: 5px;
+  }
 
-    #header div .link {
-        display: none;
-    }
+  #header div .link {
+    display: none;
+  }
 
-    .roller0 {
-        font-size: 1rem;
-    }
+  .roller0 {
+    font-size: 1rem;
+  }
 
-    .menu {
-        display: block;
-    }
+  .menu {
+    display: block;
+  }
 
-    .burger-icon {
-        top: 20px;
-        right: 20px;
-    }
+  .burger-icon {
+    top: 20px;
+    right: 20px;
+  }
 
-    .burger-icon .burger-sticks {
-        display: block;
-    }
+  .burger-icon .burger-sticks {
+    display: block;
+  }
 
-    #header div:nth-child(2) {
-        padding: 20px;
-    }
+  #header div:nth-child(2) {
+    padding: 20px;
+  }
 
-    #header div:nth-child(2) span {
-        bottom: 0px;
-        padding: 10px;
-    }
+  #header div:nth-child(2) span {
+    bottom: 0px;
+    padding: 10px;
+  }
 }
 
 @media (max-width: 900px) {
-    #main .mainTitle p {
-        font-size: 4rem;
-    }
+  #main .mainTitle p {
+    font-size: 4rem;
+  }
 
-    #main .mainTitle {
-        letter-spacing: -2px;
-    }
-
+  #main .mainTitle {
+    letter-spacing: -2px;
+  }
 }
 
 @media (max-width: 700px) {
-    #main .mainTitle p {
-        font-size: 2rem;
-    }
+  #main .mainTitle p {
+    font-size: 2rem;
+  }
 
-    #main .mainTitle em {
-        margin-top: 0;
-        font-size: 0.9rem;
-        letter-spacing: -1px;
-    }
+  #main .mainTitle em {
+    margin-top: 0;
+    font-size: 0.9rem;
+    letter-spacing: -1px;
+  }
 
-    #main .mainTitle .images {
-        display: none;
-    }
+  #main .mainTitle .images {
+    display: none;
+  }
 }
