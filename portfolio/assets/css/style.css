@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    background: #000;
 }
 
 * {
@@ -44,35 +45,31 @@ a {
 }
 
 #header div:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 100%;
-  z-index: 1;
-  background: linear-gradient(
-    to right,
-    rgb(0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.75) 51%,
-    rgba(170, 0, 0, 0) 100%
-  );
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right,
+            rgb(0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.75) 51%,
+            rgba(170, 0, 0, 0) 100%);
 }
 
 #header div:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 100%;
-  z-index: 1;
-  background: linear-gradient(
-    to right,
-    rgba(170, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.75) 51%,
-    rgb(0, 0, 0) 100%
-  );
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(to right,
+            rgba(170, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.75) 51%,
+            rgb(0, 0, 0) 100%);
 }
 
 #header div:nth-child(2) span {
@@ -224,10 +221,6 @@ a {
     clear: both;
 }
 
-#main #section1 .mainTitle {
-    clear: both;
-}
-
 #main #section1 .mainTitle em {
     font-style: normal;
     font-size: 1rem;
@@ -241,6 +234,26 @@ a {
 #main #section1 .mainTitle .images {
     padding: 0 0 0 10px;
     float: right;
+}
+
+#main #section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main #section2 .mainTitle .text1 {
+    text-align: center;
+    font-family: "Syncopate";
+    font-size: 7rem;
+    color: #fff;
+}
+
+#main #section2 .mainTitle .text2 {
+    text-align: center;
+    font-family: "Tulpen One";
+    font-size: 7rem;
+    color: #fff;
 }
 
 #footer {
@@ -310,7 +323,6 @@ a {
 
     #main .mainTitle p:nth-child(2) {
         text-align: center;
-        padding-right: 50vh;
     }
 
     #main .mainTitle p:nth-child(3) {
@@ -379,6 +391,12 @@ a {
         bottom: 0px;
         padding: 10px;
     }
+    #main #section2 .mainTitle .text1{
+        font-size: 5rem;
+    }
+    #main #section2 .mainTitle .text2{
+        font-size: 5rem;
+    }
 }
 
 @media (max-width: 900px) {
@@ -388,6 +406,12 @@ a {
 
     #main #section1 .mainTitle {
         letter-spacing: -2px;
+    }
+    #main #section2 .mainTitle .text1{
+        font-size: 4rem;
+    }
+    #main #section2 .mainTitle .text2{
+        font-size: 4rem;
     }
 }
 
@@ -404,5 +428,11 @@ a {
 
     #main #section1 .mainTitle .images {
         display: none;
+    }
+    #main #section2 .mainTitle .text1{
+        font-size: 2rem;
+    }
+    #main #section2 .mainTitle .text2{
+        font-size: 2rem;
     }
 }
