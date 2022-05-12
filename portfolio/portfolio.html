@@ -260,24 +260,36 @@
         }, 10);
       }
 
-      if (scrollTop >= document.querySelector("#section3").offsetHeight) {
+      if (scrollTop >= document.querySelector("#section3").offsetHeight + 800) {
         setTimeout(() => {
           gsap.to(".imgTitle", {
             duration: 1.5,
             opacity: 1,
-            delay: 1,
+            delay: 1.5,
             ease: "sine.out"
           });
           gsap.to("h2", {
             duration: 1.5,
             opacity: 1,
-            delay: 1,
+            delay: 1.5,
             ease: "sine.out"
           });
           gsap.to("p", {
             duration: 1.5,
             opacity: 1,
-            delay: 1,
+            delay: 1.5,
+            ease: "sine.out"
+          });
+          gsap.to("img", {
+            duration: 1.5,
+            opacity: 1,
+            delay: 2.1,
+            ease: "sine.out"
+          });
+          gsap.to(".buttons", {
+            duration: 1.5,
+            opacity: 1,
+            delay: 2.5,
             ease: "sine.out"
           });
         }, 10);

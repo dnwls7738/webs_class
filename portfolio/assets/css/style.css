@@ -318,6 +318,7 @@ body {
     height: 500px;
     left: 50%;
     top: 40%;
+    opacity: 0;
 }
 
 #section3 h2 {
@@ -359,6 +360,7 @@ body {
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     transition: background-color 0.3s;
+    opacity: 0;
 }
 
 #section3 .button {
