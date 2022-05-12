@@ -281,9 +281,9 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-}
+} 
 
-#section3 .imgTitle {
+ #section3 .imgTitle {
     opacity: 0;
     display: inline-block;
     position: relative;
@@ -295,6 +295,7 @@ body {
     box-sizing: border-box;
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+   
 }
 
 #section3 .img {
@@ -302,13 +303,9 @@ body {
     filter: blur(10px) brightness(50%);
     position: absolute;
     top: 8px;
-    /* equal to border thickness */
     left: 8px;
-    /* equal to border thickness */
     width: 1084px;
-    /* container height - (border thickness * 2) */
     height: 514px;
-    /* container height - (border thickness * 2) */
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
 }
@@ -367,14 +364,10 @@ body {
 #section3 .button {
     position: absolute;
     top: 4px;
-    /* equal to border thickness */
     left: 4px;
-    /* equal to border thickness */
     right: -4px;
     width: 247px;
-    /* container height - (border thickness * 2) */
     height: 72px;
-    /* container height - (border thickness * 2) */
     background: #000;
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
@@ -384,8 +377,6 @@ body {
     justify-content: center;
     font-family: "Tulpen One";
     font-size: 3rem;
-    transition: color 0.3s;
-
 }
 
 #section3 .buttons:hover {
@@ -395,14 +386,16 @@ body {
     color: #C2FF04;
 }
 
-/* #main #section4 {
+
+
+#main #section4 {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-} */
+} 
 
-/* #section4 .imgTitle {
+ #section4 .imgTitle {
     opacity: 0;
     display: inline-block;
     position: relative;
@@ -414,12 +407,11 @@ body {
     box-sizing: border-box;
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
-   
+    opacity: 0;
 }
 
 #section4 .img {
     background-image: url(../img/Rectangle.png);
-    background-attachment: fixed;
     filter: blur(10px) brightness(50%);
     position: absolute;
     top: 8px;
@@ -484,14 +476,10 @@ body {
 #section4 .button {
     position: absolute;
     top: 4px;
-
     left: 4px;
-
     right: -4px;
     width: 247px;
-
     height: 72px;
-
     background: #000;
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
@@ -505,7 +493,10 @@ body {
 
 #section4 .buttons:hover {
     background: #C2FF04;
-} */
+}
+#section4 .button:hover {
+    color: #C2FF04;
+}
 
 #footer {
     bottom: -100%;
