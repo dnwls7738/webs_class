@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2022 woojin's portfolio</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/font.css" />
 </head>
 
 <body>
+  <div class="scrollTop">0</div>
   <header id="header">
     <div>
       <a class="link" href="">INDEPENDENT</a><a class="link" href="">ABOUT</a>
@@ -67,19 +67,29 @@
         <p class="text2">SITE</p>
       </div>
     </section>
+    <section id="section3" class="mainSecter">
+      <h2>WEBSTANDARD</h2>
+      <p>
+        웹 표준 지침서를 준수하고 크로스브라우징 작업을 한 사이트입니다. 
+        모든 사용자가 이용에 불편이 없도록 대체 텍스트로 웹 접근성 또한 고려하였습니다.
+        슬라이드, 탭, 메뉴, 팝업, 동영상 기능을 작업하였으며, 
+        동적인 부분을 더하기 위해 slick.js 등과 같은 플러그인을 이용하여 배너와 갤러리에 효과를 주었습니다. 
+        크로스 브라우징은 익스플로러 8버전부터 지원합니다.
+      </p>
+      <div>
+        <div class="img">
+        </div>
+      </div>
+      <img src="./assets/img/webs.png" alt="">
+    </section>
   </main>
   <footer id="footer">
     <div class="roller">
-      <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-      <div class="PORTFOLIO">2022 PORTFOLIO</div>
-      <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-      <div class="PORTFOLIO">2022 PORTFOLIO</div>
-      <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-      <div class="PORTFOLIO">2022 PORTFOLIO</div>
-      <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-      <div class="PORTFOLIO">2022 PORTFOLIO</div>
-      <div class="INDEPENDENT">INDEPENDENT FRONTEND WEB DEVELOPOER</div>
-      <div class="PORTFOLIO">2022 PORTFOLIO</div>
+      <div class="independent">INDEPENDENT FRONTEND WEB DEVELOPOER <em class="portfolio">2022 PORTFOLIO</em> </div>
+      <div class="independent">INDEPENDENT FRONTEND WEB DEVELOPOER <em class="portfolio">2022 PORTFOLIO</em> </div>
+      <div class="independent">INDEPENDENT FRONTEND WEB DEVELOPOER <em class="portfolio">2022 PORTFOLIO</em> </div>
+      <div class="independent">INDEPENDENT FRONTEND WEB DEVELOPOER <em class="portfolio">2022 PORTFOLIO</em> </div>
+      <div class="independent">INDEPENDENT FRONTEND WEB DEVELOPOER <em class="portfolio">2022 PORTFOLIO</em> </div>
     </div>
   </footer>
 </body>
@@ -108,13 +118,13 @@
     let betweenDistance = 1; //이동 크기 - 정수여야 함
     originalID = window.setInterval(
       betweenRollCallback,
-      parseInt(1920 / 100),
+      parseInt(1000 / 100),
       betweenDistance,
       document.querySelector(".roller1")
     );
     cloneID = window.setInterval(
       betweenRollCallback,
-      parseInt(1920 / 100),
+      parseInt(1000 / 100),
       betweenDistance,
       document.querySelector(".roller2")
     );
@@ -179,10 +189,49 @@
   {
     const parallaxCont = document.getElementById("main");
     const contentItem = document.querySelector(".mainSecter");
+    const mainTitle = document.querySelector(".mainTitle")
+
+    setTimeout(() => {
+      gsap.to("#header", {
+        duration: 2,
+        top: 0,
+        ease: "expo",
+      });
+      gsap.to("#footer", {
+        duration: 2,
+        bottom: 0,
+        ease: "expo",
+      });
+      gsap.to(mainTitle, {
+        duration: 3.5,
+        x: 0,
+        y: 0,
+        opacity: 1,
+        ease: "expo",
+        delay: 1.7
+      })
+    }, 10);
 
     //스크롤 했을 때 left: scrollTop
     function scroll() {
       let scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
+
+      if (scrollTop >= document.querySelector("#section2").offsetHeight - 400) {
+        setTimeout(() => {
+          gsap.to(".text1", {
+            duration: 1.5,
+            opacity: 1,
+            delay: 1,
+            ease: "sine.out"
+          });
+          gsap.to(".text2", {
+            duration: 1.5,
+            opacity: 1,
+            delay: 1.5,
+            ease: "sine.out"
+          });
+        }, 10);
+      }
 
       //박스 전체 가로 값
       let parallaxWidth = parallaxCont.getBoundingClientRect().width;
@@ -199,6 +248,7 @@
         left: -goLeft
       })
 
+      document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
       requestAnimationFrame(scroll);
     }
     scroll();

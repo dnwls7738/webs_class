@@ -1,21 +1,35 @@
 body {
     width: 100%;
     background: #000;
+    -ms-overflow-style: none;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 * {
     margin: 0;
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: #ffff;
-}
-
 #wrap {
     height: 100vh;
     width: 100%;
+}
+
+.scrollTop {
+    position: fixed;
+    left: 30px;
+    top: 100px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    z-index: 10000;
 }
 
 #header {
@@ -28,6 +42,7 @@ a {
     position: fixed;
     width: 100%;
     padding: 10px 0;
+    top: -100%;
 }
 
 #header div {
@@ -78,9 +93,10 @@ a {
     position: absolute;
 }
 
-#header a {
+#header .link {
     padding: 0 20px;
     font-family: "abel";
+    color: #fff;
 }
 
 .menu {
@@ -196,6 +212,7 @@ a {
     max-width: 100%;
     margin: auto;
     clear: both;
+    opacity: 0;
 }
 
 #main #section1 .mainTitle p {
@@ -247,6 +264,7 @@ a {
     font-family: "Syncopate";
     font-size: 7rem;
     color: #fff;
+    opacity: 0;
 }
 
 #main #section2 .mainTitle .text2 {
@@ -254,10 +272,78 @@ a {
     font-family: "Tulpen One";
     font-size: 7rem;
     color: #fff;
+    opacity: 0;
+}
+
+#main #section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#section3 div {
+    display: inline-block;
+    position: relative;
+    right: 7vw;
+    bottom: 10vh;
+    width: 1100px;
+    height: 530px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section3 .img {
+    background-image: url(../img/Rectangle.png);
+    filter: blur(10px) brightness(50%);
+    position: absolute;
+    top: 8px;
+    /* equal to border thickness */
+    left: 8px;
+    /* equal to border thickness */
+    width: 1084px;
+    /* container height - (border thickness * 2) */
+    height: 514px;
+    /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section3 img {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    top: 40%;
+}
+#section3 h2 {
+    color: #fff;
+    position: absolute;
+    z-index: 99999;
+    font-family: "Tulpen One";
+    font-size: 7rem;
+    font-weight: normal;
+    right: 63%;
+    bottom: 70%;
+}
+#section3 p {
+    color: #fff;
+    position: absolute;
+    z-index: 99999;
+    font-family: 'ChosunNm';
+    font-size: 1rem;
+    font-weight: normal;
+    width: 500px;
+    right: 55.5%;
+    bottom: 50%;
+    line-height: 1.8;
+
 }
 
 #footer {
-    bottom: 0px;
+    bottom: -100%;
     left: 0;
     border-top: 1px solid #ffff;
     font-size: 1rem;
@@ -282,32 +368,34 @@ a {
     white-space: nowrap;
 }
 
-/* #footer .roller .PORTFOLIO::before {
+/* #footer .roller .independent::after {
     content: "";
-    left: -0px;
+    right: 0px;
     top: 45%;
     width: 5px;
     height: 5px;
     border-radius: 50%;
     background-color: #c2ff04;
-}
-
-#footer .roller .PORTFOLIO::after {
-    content: "";
-    right: -0px;
-    top: 45%;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #c2ff04;
+    position: absolute;
 } */
 
-#footer .roller .PORTFOLIO {
+/* #footer .roller .portfolio::after {
+    content: "";
+    right: 2px;
+    top: 45%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #c2ff04;
+    position: absolute;
+} */
+
+
+#footer .roller .portfolio {
     color: #fff;
     font-size: 1.5rem;
     padding: 5px;
     color: #c2ff04;
-
     padding: 0 10px;
 }
 
@@ -391,10 +479,12 @@ a {
         bottom: 0px;
         padding: 10px;
     }
-    #main #section2 .mainTitle .text1{
+
+    #main #section2 .mainTitle .text1 {
         font-size: 5rem;
     }
-    #main #section2 .mainTitle .text2{
+
+    #main #section2 .mainTitle .text2 {
         font-size: 5rem;
     }
 }
@@ -407,10 +497,12 @@ a {
     #main #section1 .mainTitle {
         letter-spacing: -2px;
     }
-    #main #section2 .mainTitle .text1{
+
+    #main #section2 .mainTitle .text1 {
         font-size: 4rem;
     }
-    #main #section2 .mainTitle .text2{
+
+    #main #section2 .mainTitle .text2 {
         font-size: 4rem;
     }
 }
@@ -429,10 +521,12 @@ a {
     #main #section1 .mainTitle .images {
         display: none;
     }
-    #main #section2 .mainTitle .text1{
+
+    #main #section2 .mainTitle .text1 {
         font-size: 2rem;
     }
-    #main #section2 .mainTitle .text2{
+
+    #main #section2 .mainTitle .text2 {
         font-size: 2rem;
     }
 }
