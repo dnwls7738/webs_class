@@ -47,17 +47,6 @@ section {
   display: block;
   box-sizing: border-box;
 }
-/* 폰트 초기화 */
-body,
-button,
-input,
-select,
-table,
-textarea {
-  color: #222;
-  font-family: "NexonLv1Gothic", "AppleSDGothicNeo-Regular", "Malgun Gothic",
-    "맑은 고딕", dotum, 돋움;
-}
 /* 링크 초기화 */
 a {
   color: #222;

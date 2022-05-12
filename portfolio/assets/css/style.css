@@ -44,6 +44,7 @@ body {
     padding: 10px 0;
     top: -100%;
     z-index: 99999;
+    font-family: "abel";
 }
 
 #header div {
@@ -96,7 +97,7 @@ body {
 
 #header .link {
     padding: 0 20px;
-    font-family: "abel";
+
     color: #fff;
 }
 
@@ -383,12 +384,128 @@ body {
     justify-content: center;
     font-family: "Tulpen One";
     font-size: 3rem;
+    transition: color 0.3s;
 
 }
 
 #section3 .buttons:hover {
     background: #C2FF04;
 }
+#section3 .button:hover {
+    color: #C2FF04;
+}
+
+/* #main #section4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} */
+
+/* #section4 .imgTitle {
+    opacity: 0;
+    display: inline-block;
+    position: relative;
+    right: -7vw;
+    bottom: 10vh;
+    width: 1100px;
+    height: 530px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+   
+}
+
+#section4 .img {
+    background-image: url(../img/Rectangle.png);
+    background-attachment: fixed;
+    filter: blur(10px) brightness(50%);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 1084px;
+    height: 514px;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section4 img {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    top: 40%;
+    opacity: 0;
+}
+
+#section4 h2 {
+    color: #fff;
+    position: absolute;
+    z-index: 99999;
+    font-family: "Tulpen One";
+    font-size: 7rem;
+    font-weight: normal;
+    right: 63%;
+    bottom: 70%;
+    opacity: 0;
+}
+
+#section4 p {
+    color: #fff;
+    position: absolute;
+    z-index: 99999;
+    font-family: 'ChosunNm';
+    font-size: 1rem;
+    font-weight: normal;
+    width: 500px;
+    right: 55.5%;
+    bottom: 50%;
+    line-height: 1.8;
+    opacity: 0;
+}
+
+#section4 .buttons {
+    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+    right: 44vw;
+    top: 35vh;
+    width: 255px;
+    height: 80px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    transition: background-color 0.3s;
+    opacity: 0;
+}
+
+#section4 .button {
+    position: absolute;
+    top: 4px;
+
+    left: 4px;
+
+    right: -4px;
+    width: 247px;
+
+    height: 72px;
+
+    background: #000;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Tulpen One";
+    font-size: 3rem;
+}
+
+#section4 .buttons:hover {
+    background: #C2FF04;
+} */
 
 #footer {
     bottom: -100%;
@@ -447,24 +564,163 @@ body {
     padding: 0 10px;
 }
 
-@media (max-width: 1700px) {
-    #main .mainTitle p {
+@media (max-width: 1600px) {
+    #main #section1 .mainTitle p {
         font-size: 6rem;
         white-space: nowrap;
     }
 
-    #main .mainTitle p:nth-child(1) {
+    #main #section1 .mainTitle p:nth-child(1) {
         text-align: center;
     }
 
-    #main .mainTitle p:nth-child(2) {
+    #main #section1 .mainTitle p:nth-child(2) {
         text-align: center;
     }
 
-    #main .mainTitle p:nth-child(3) {
+    #main #section1 .mainTitle p:nth-child(3) {
         padding-left: 25vh;
         text-align: center;
         clear: both;
+    }
+    #section3 h2 {
+        right: 58%;
+        bottom: 65%;
+    }
+    #section3 p {
+        right: 48%;
+    }
+    #section3 .imgTitle {
+        width: 900px;
+        height: 430px;
+    }
+    #section3 .img {
+        width: 880px;
+        height: 409px;
+    }
+    #section3 .buttons {
+        right: 50vw;
+        top: 35vh;
+        width: 255px;
+        height: 80px;
+    }
+    #section3 .button {
+        width: 247px;
+        height: 72px;
+    }
+    #section3 img {
+        width: 550px;
+        height: 450px;
+        left: 55%;
+        top: 45%;
+    }
+}
+
+@media (max-height: 910px) {
+    #main #section1 .mainTitle p {
+        font-size: 6rem;
+        white-space: nowrap;
+    }
+
+    #main #section1 .mainTitle p:nth-child(1) {
+        text-align: center;
+    }
+
+    #main #section1 .mainTitle p:nth-child(2) {
+        text-align: center;
+    }
+
+    #main #section1 .mainTitle p:nth-child(3) {
+        padding-left: 25vh;
+        text-align: center;
+        clear: both;
+    }
+    #section3 h2 {
+        right: 60%;
+        bottom: 68%;
+    }
+    #section3 p {
+        right: 52%;
+        bottom: 50%;
+    }
+    #section3 .imgTitle {
+        width: 900px;
+        height: 430px;
+    }
+    #section3 .img {
+        width: 880px;
+        height: 409px;
+    }
+    #section3 .buttons {
+        right: 35vw;
+        top: 35vh;
+        width: 255px;
+        height: 80px;
+    }
+    #section3 .button {
+        width: 247px;
+        height: 72px;
+    }
+    #section3 img {
+        width: 550px;
+        height: 350px;
+        left: 55%;
+        top: 45%;
+    }
+}
+@media (max-height: 710px) {
+    #main #section1 .mainTitle p {
+        font-size: 6rem;
+        white-space: nowrap;
+    }
+
+    #main #section1 .mainTitle p:nth-child(1) {
+        text-align: center;
+    }
+
+    #main #section1 .mainTitle p:nth-child(2) {
+        text-align: center;
+    }
+
+    #main #section1 .mainTitle p:nth-child(3) {
+        padding-left: 25vh;
+        text-align: center;
+        clear: both;
+    }
+    #section3 h2 {
+        font-size: 5rem;
+        right: 64%;
+        bottom: 68%;
+    }
+    #section3 p {
+        right: 51%;
+        bottom: 48%;
+        font-size: 0.9rem;
+
+    }
+    #section3 .imgTitle {
+        width: 900px;
+        height: 330px;
+    }
+    #section3 .img {
+        width: 880px;
+        height: 309px;
+    }
+    #section3 .buttons {
+        right: 39vw;
+        top: 35vh;
+        width: 255px;
+        height: 80px;
+    }
+    #section3 .button {
+        width: 247px;
+        height: 72px;
+    }
+    #section3 img {
+        width: 550px;
+        height: 300px;
+        left: 55%;
+        top: 45%;
     }
 }
 
@@ -486,6 +742,37 @@ body {
         padding-left: 0;
         text-align: center;
         clear: both;
+    }
+    #section3 h2 {
+        right: 67.5%;
+        bottom: 67%;
+    }
+    #section3 p {
+        right: 48%;
+    }
+    #section3 .imgTitle {
+        width: 800px;
+        height: 330px;
+    }
+    #section3 .img {
+        width: 726px;
+        height: 309px;
+    }
+    #section3 .buttons {
+        right: 45vw;
+        top: 26vh;
+        width: 255px;
+        height: 80px;
+    }
+    #section3 .button {
+        width: 230px;
+        height: 72px;
+    }
+    #section3 img {
+        width: 500px;
+        height: 300px;
+        left: 55%;
+        top: 45%;
     }
 }
 
@@ -535,6 +822,42 @@ body {
     #main #section2 .mainTitle .text2 {
         font-size: 5rem;
     }
+
+    #section3 h2 {
+        right: 64%;
+        bottom: 67%;
+    }
+    #section3 p {
+        right: 50%;
+        bottom: 50%;
+        font-size: 0.8em;
+        width: 400px;
+    }
+    #section3 .imgTitle {
+        width: 1100px;
+        height: 330px;
+    }
+    #section3 .img {
+        width: 687px;
+        height: 309px;
+    }
+    #section3 .buttons {
+        right: 50vw;
+        top: 33vh;
+        width: 255px;
+        height: 60px;
+    }
+    #section3 .button {
+        width: 155px;
+        height: 52px;
+        font-size: 2rem;
+    }
+    #section3 img {
+        width: 450px;
+        height: 300px;
+        left: 55%;
+        top: 45%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -552,6 +875,42 @@ body {
 
     #main #section2 .mainTitle .text2 {
         font-size: 4rem;
+    }
+
+    #section3 h2 {
+        right: 60%;
+        bottom: 67%;
+    }
+    #section3 p {
+        right: 50%;
+        bottom: 50%;
+        font-size: 0.7em;
+        width: 350px;
+    }
+    #section3 .imgTitle {
+        width: 1100px;
+        height: 330px;
+    }
+    #section3 .img {
+        width: 567px;
+        height: 309px;
+    }
+    #section3 .buttons {
+        right: 50vw;
+        top: 33vh;
+        width: 255px;
+        height: 60px;
+    }
+    #section3 .button {
+        width: 128px;
+        height: 52px;
+        font-size: 2rem;
+    }
+    #section3 img {
+        width: 350px;
+        height: 300px;
+        left: 55%;
+        top: 45%;
     }
 }
 
