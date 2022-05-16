@@ -110,6 +110,7 @@ body {
     transition: 0.5s ease;
     z-index: 1;
     display: none;
+    color: #fff;
 }
 
 .menu ul {
@@ -386,8 +387,6 @@ body {
     color: #C2FF04;
 }
 
-
-
 #main #section4 {
     display: flex;
     align-items: center;
@@ -407,7 +406,7 @@ body {
     box-sizing: border-box;
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
-    opacity: 0;
+   
 }
 
 #section4 .img {
@@ -497,6 +496,122 @@ body {
 #section4 .button:hover {
     color: #C2FF04;
 }
+
+#main #section5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+} 
+
+ #section5 .imgTitle {
+    opacity: 0;
+    display: inline-block;
+    position: relative;
+    right: -7vw;
+    bottom: 10vh;
+    width: 1100px;
+    height: 530px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+   
+}
+
+#section5 .img {
+    background-image: url(../img/Rectangle.png);
+    filter: blur(10px) brightness(50%);
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 1084px;
+    height: 514px;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section5 img {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    left: 50%;
+    top: 40%;
+    opacity: 0;
+}
+
+#section5 h2 {
+    color: #fff;
+    position: absolute;
+    z-index: 99999;
+    font-family: "Tulpen One";
+    font-size: 7rem;
+    font-weight: normal;
+    right: 63%;
+    bottom: 70%;
+    opacity: 0;
+}
+
+#section5 p {
+    color: #fff;
+    position: absolute;
+    z-index: 99999;
+    font-family: 'ChosunNm';
+    font-size: 1rem;
+    font-weight: normal;
+    width: 500px;
+    right: 55.5%;
+    bottom: 50%;
+    line-height: 1.8;
+    opacity: 0;
+}
+
+#section5 .buttons {
+    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+    right: 44vw;
+    top: 35vh;
+    width: 255px;
+    height: 80px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    transition: background-color 0.3s;
+    opacity: 0;
+}
+
+#section5 .button {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: -4px;
+    width: 247px;
+    height: 72px;
+    background: #000;
+    -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Tulpen One";
+    font-size: 3rem;
+}
+
+#section5 .buttons:hover {
+    background: #C2FF04;
+}
+#section5 .button:hover {
+    color: #C2FF04;
+}
+
+
+
+
+
+
 
 #footer {
     bottom: -100%;
