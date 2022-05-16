@@ -127,6 +127,50 @@
         <a href="" class="button">SITE VIEW</a>
       </div>
     </section>
+
+    <section id="section2" class="mainSecter">
+      <div class="mainTitle">
+        <p class="text1">PROJECT</p>
+        <p class="text2">SCRIPT</p>
+      </div>
+    </section>
+
+    <section id="scriptEffect">
+      <section id="section6" class="effect">
+        <div class="slide">
+          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+        </div>
+        <p>SLIDER EFFECT</p>
+      </section>
+      <section id="section7" class="effect">
+        <div class="mouse">
+          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <p>MOUSE EFFECT</p>
+          <img class="Img" src="./assets/img/mouse.png" alt="">
+        </div>
+      </section>
+      <section id="section8" class="effect">
+        <div class="search">
+          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <img class="Img" src="./assets/img/search.png" alt="">
+          <p>SEARCH EFFECT</p>
+        </div>
+      </section>
+      <section id="section9" class="effect">
+        <div class="parallax">
+          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <p>PARALLAX EFFECT</p>
+          <img class="Img" src="./assets/img/parallax.png" alt="">
+        </div>
+      </section>
+    </section>
+
+    <section id="section2" class="mainSecter">
+      <div class="mainTitle">
+        <p class="text1">PROJECT</p>
+        <p class="text2">GAME</p>
+      </div>
+    </section>
   </main>
   <footer id="footer">
     <div class="roller">
@@ -279,102 +323,6 @@
         window.scrollY ||
         window.pageYOffset ||
         document.documentElement.scrollTop;
-
-      if (
-        scrollTop >=
-        document.getElementById("section2").offsetHeight - 400
-      ) {
-        setTimeout(() => {
-          gsap.to(".text1", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1,
-            ease: "sine.out",
-          });
-          gsap.to(".text2", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1.5,
-            ease: "sine.out",
-          });
-        }, 10);
-      }
-
-      if (
-        scrollTop >=
-        document.getElementById("section3").offsetHeight + 1600
-      ) {
-        setTimeout(() => {
-          gsap.to(".imgTitle", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1.5,
-            ease: "sine.out",
-          });
-          gsap.to("h2", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1.5,
-            ease: "sine.out",
-          });
-          gsap.to("p", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1.5,
-            ease: "sine.out",
-          });
-          gsap.to("img", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 2.1,
-            ease: "sine.out",
-          });
-          gsap.to(".buttons", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 2.5,
-            ease: "sine.out",
-          });
-        }, 10);
-      }
-
-      if (
-        scrollTop >=
-        document.getElementById("section4").offsetHeight + 1200
-      ) {
-        setTimeout(() => {
-          gsap.to(".imgTitle", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1.5,
-            ease: "sine.out",
-          });
-          gsap.to("h2", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1.5,
-            ease: "sine.out",
-          });
-          gsap.to("p", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 1.5,
-            ease: "sine.out",
-          });
-          gsap.to("img", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 2.1,
-            ease: "sine.out",
-          });
-          gsap.to(".buttons", {
-            duration: 1.5,
-            opacity: 1,
-            delay: 2.5,
-            ease: "sine.out",
-          });
-        }, 10);
-      }
 
       //박스 전체 가로 값
       let parallaxWidth = parallaxCont.getBoundingClientRect().width;
