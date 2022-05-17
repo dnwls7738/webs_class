@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트</title>
+    <style>
+        @import url(../effect/css/nexon.css);
+        @import url(../effect/css/custom.css);
+
+        /* slider */
+        .slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .slider__img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px 10px 3px;
+        }
+
+        .slider:nth-child(1)::before {
+            content: '이미지1';
+        }
+
+        .slider:nth-child(2)::before {
+            content: '이미지2';
+        }
+
+        .slider:nth-child(3)::before {
+            content: '이미지3';
+        }
+
+        .slider:nth-child(4)::before {
+            content: '이미지4';
+        }
+
+        .slider:nth-child(5)::before {
+            content: '이미지5';
+        }
+
+        .slider:nth-child(1) {
+            z-index: 5;
+        }
+
+        .slider:nth-child(2) {
+            z-index: 4;
+        }
+
+        .slider:nth-child(3) {
+            z-index: 3;
+        }
+
+        .slider:nth-child(4) {
+            z-index: 2;
+        }
+
+        .slider:nth-child(5) {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body class="img01">
+
+    <!-- main -->
+    <main>
+        <section>
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider"><img src="img/img1-min.jpg" alt="이미지1"></div>
+                    <div class="slider"><img src="img/img2-min.jpg" alt="이미지2"></div>
+                    <div class="slider"><img src="img/img3-min.jpg" alt="이미지3"></div>
+                    <div class="slider"><img src="img/img4-min.jpg" alt="이미지4"></div>
+                    <div class="slider"><img src="img/img5-min.jpg" alt="이미지5"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- //main -->
+
+
+    <!-- info -->
+    <div class="info">
+        <div class="list">
+            <ul>
+                <li class="active"><a href="sliderEffect01.html">1</a></li>
+                <li><a href="sliderEffect02.html">2</a></li>
+                <li><a href="sliderEffect03.html">3</a></li>
+                <li><a href="sliderEffect04.html">4</a></li>
+                <li><a href="sliderEffect05.html">5</a></li>
+                <li><a href="sliderEffect06.html">6</a></li>
+                <li><a href="sliderEffect08.html">7</a></li>
+                <li><a href="sliderEffect07.html">8</a></li>
+                <li><a href="sliderEffect09.html">9</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- //info -->
+
+
+    <!-- script -->
+    <script>
+        // slider01
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = document.querySelector(".slider__img");
+        const slider = document.querySelectorAll(".slider");
+
+        let currentIndex = 0; //현재 보이는 이미지
+        let sliderCount = slider.length; //이미지 갯수
+        gotosilder = setInterval(() => {
+            let nextIndex = (currentIndex + 1) % 5; //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0
+
+            slider[currentIndex].style.opacity = "0"; //첫 번째 이미지를 안보이게
+            slider[nextIndex].style.opacity = "1"; //두 번째 이미지를 보이게
+
+            //각 슬라이더마다 효과 주기
+            slider.forEach(slider => {
+                slider.style.transition = "all 0.3s";
+            })
+
+            currentIndex = nextIndex; //nextIndex를 currentIndex를 대입
+
+        }, 2000);
+
+
+    </script>
+</body>
+
+</html>

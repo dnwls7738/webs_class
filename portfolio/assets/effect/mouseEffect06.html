@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이펙트</title>
+
+    <link rel="stylesheet" href="css/nexon.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        body::before{
+            background: rgba(62, 42, 27, 0.8);;
+        }
+
+        /* mouse */
+        .mouse__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            cursor: none;
+        }
+        .mouse__img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 50%;
+        }
+        .mouse__text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -20%);
+            color: #fff;
+            font-size: 3vw;
+            line-height: 1.5;
+        }
+        .mouse__text .line {
+            width: 100%;
+            display: flex;
+        }
+        .mouse__text .line .left {
+            width: 50vw;
+            color: orange;
+            transform: skew(0deg, -15deg);
+            overflow: hidden;
+        }
+        .mouse__text .line .left .spanWrap{
+            width: 100vw;
+            text-align: center;
+        }
+        .mouse__text .line .right {
+            width: 50vw;
+            overflow: hidden;
+            transform: skew(0deg, 15deg);
+        }
+        .mouse__text .line .right .spanWrap {
+            width: 100vw;
+            text-align: center;
+            transform: translateX(-50vw);
+        }
+        .cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            z-index: 99999;
+            border-radius: 50%;
+            background-color: #fff;
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="img06">
+
+    <!-- main -->
+    <main>
+        <section id="mouseTpye01">
+            <div class="cursor"></div>
+
+            <div class="mouse__wrap">
+                <div class="mouse__img">
+                    <figure>
+                        <img src="img/img6-min.jpg" alt="">
+                    </figure>
+                </div>    
+                <div class="mouse__text">
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanSlow">No, Pain</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanSlow">No, Pain</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanFast">No, Gain</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanFast">No, Gain</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanSlow">고통 없이는</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanSlow">고통 없이는</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanFast">얻는 것도 없다</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanFast">얻는 것도 없다</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </section>
+    </main>
+    <!-- // main -->
+    
+
+     <!-- info -->
+     <div class="info">
+        <div class="title">
+            <h1><a href="mouseEffect.html">JavaScript mouse Effect06</a></h1>
+            <p>마우스 이펙트 - 텍스트 효과</p>
+        </div>
+
+        <div class="list">
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+                <li class="active"><a href="mouseEffect06.html">6</a></li>
+                <li><a href="mouseEffect07.html">7</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- //info -->
+
+    <!-- script -->
+
+    <script src="js/gsap.min.js"></script>
+
+    <script>
+
+        function mousemove(e){
+            let positionSlow = (e.pageX -(window.innerWidth/2))*0.1
+            let positionFast = (e.pageX -(window.innerWidth/2))*0.2
+            gsap.to(".spanSlow", {duration: 0.4, x:positionSlow})
+            gsap.to(".spanFast", {duration: 0.4, x:-positionFast})
+            gsap.to(".cursor", {duration: 0.4, left: e.pageX, top: e.pageY})
+        }
+
+        document.addEventListener("mousemove", mousemove);
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NexonLv1Gothic';
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.2s;
+}
+
+li {
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    vertical-align: top; /* 이미지 여백 제거*/
+    
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    color: #000;
+}
+body.img01{
+    background-image: url(../img/img1-min.jpg);
+}
+body.img02{
+    background-image: url(../img/img2-min.jpg);
+}
+body.img03{
+    background-image: url(../img/img3-min.jpg);
+}
+body.img04{
+    background-image: url(../img/img4-min.jpg);
+}
+body.img05{
+    background-image: url(../img/img5-min.jpg);
+}
+body.img06{
+    background-image: url(../img/img6-min.jpg);
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(62, 42, 27, 0.8);
+    z-index: -1;
+}
+.list {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 99999;
+}
+
+.list li {
+    display: inline-block;
+}
+
+.list li a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px dashed #000;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.list li a:hover,
+.list li.active a {
+    background: #000;
+    color: #fff;
+}

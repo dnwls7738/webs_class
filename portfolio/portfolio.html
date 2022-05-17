@@ -69,7 +69,7 @@
       </div>
     </section>
 
-    <section id="section3" class="mainSecter">
+    <section id="section3" class="site" class="site1">
       <h2>WEBSTANDARD</h2>
       <p>
         웹 표준 지침서를 준수하고 크로스브라우징 작업을 한 사이트입니다. 모든
@@ -91,7 +91,7 @@
       </div>
     </section>
 
-    <section id="section4" class="mainSecter">
+    <section id="section4" class="site" class="site2">
       <h2>PHP PROJECT</h2>
       <p>
         기본적인 게시판 기능과 회원가입 및 로그인에 관련된 기능과 댓글, 퀴즈,
@@ -110,7 +110,7 @@
       </div>
     </section>
 
-    <section id="section5" class="mainSecter">
+    <section id="section5" class="site" class="site3">
       <h2>REACT PROJECT</h2>
       <p>
         React.JS를 사용해 기존의 HTML구조의 사이트를 React.JS 방식으로 변경 하였고 YouTube API와 TMDB API를 이용해 유튜브 영상 검색 및 차트
@@ -138,29 +138,33 @@
     <section id="scriptEffect">
       <section id="section6" class="effect">
         <div class="slide">
-          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <iframe width="100%" height="100%" frameborder=0 src="./assets/effect/sliderEffect01.html"></iframe>
+          <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
         </div>
         <p>SLIDER EFFECT</p>
       </section>
       <section id="section7" class="effect">
+        <p>MOUSE EFFECT</p>
         <div class="mouse">
-          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-          <p>MOUSE EFFECT</p>
-          <img class="Img" src="./assets/img/mouse.png" alt="">
+          <iframe width="100%" height="100%" frameborder=0 src="./assets/effect/mouseEffect01.html"></iframe>
+          <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <!-- <img class="Img" src="./assets/img/mouse.png" alt=""> -->
         </div>
       </section>
       <section id="section8" class="effect">
         <div class="search">
-          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-          <img class="Img" src="./assets/img/search.png" alt="">
-          <p>SEARCH EFFECT</p>
+          <iframe width="100%" height="100%" frameborder=0 src="./assets/effect/searchEffect01.html"></iframe>
+          <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <!-- <img class="Img" src="./assets/img/search.png" alt=""> -->
         </div>
+        <p>SEARCH EFFECT</p>
       </section>
       <section id="section9" class="effect">
+        <p>PARALLAX EFFECT</p>
         <div class="parallax">
-          <a href="/" >CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-          <p>PARALLAX EFFECT</p>
-          <img class="Img" src="./assets/img/parallax.png" alt="">
+          <iframe width="100%" height="100%" frameborder=0 src="./assets/effect/parallaxEffect01.html"></iframe>
+          <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <!-- <img class="Img" src="./assets/img/parallax.png" alt=""> -->
         </div>
       </section>
     </section>
@@ -199,97 +203,6 @@
 </body>
 <script src="./assets/js/gsap.min.js"></script>
 <script>
-  //footer
-  {
-    //롤링 배너 복제본 생성
-    let roller = document.querySelector(".roller");
-    roller.classList.add("roller1");
-
-    let clone = roller.cloneNode(true);
-    clone.classList.add("roller2");
-    document.querySelector("#footer").appendChild(clone); //부착
-
-    //원본, 복제본 배너 위치 지정
-    document.querySelector(".roller1").style.left = "0px";
-    document.querySelector(".roller2").style.left =
-      document.querySelector(".roller").offsetWidth + "px";
-
-    //클래스 할당
-    roller.classList.add("original");
-    clone.classList.add("clone");
-
-    //인터벌 메서드로 애니메이션 생성
-    let rollerWidth = document.querySelector(".roller").offsetWidth; //회전 배너 너비값
-    let betweenDistance = 1; //이동 크기 - 정수여야 함
-    originalID = window.setInterval(
-      betweenRollCallback,
-      parseInt(1000 / 100),
-      betweenDistance,
-      document.querySelector(".roller1")
-    );
-    cloneID = window.setInterval(
-      betweenRollCallback,
-      parseInt(1000 / 100),
-      betweenDistance,
-      document.querySelector(".roller2")
-    );
-
-    //인터벌 애니메이션 함수(공용)
-    function betweenRollCallback(d, roller) {
-      let left = parseInt(roller.style.left);
-      roller.style.left = left - d + "px"; //이동
-      //조건부 위치 리셋
-      if (rollerWidth + (left - d) <= 0) {
-        roller.style.left = rollerWidth + "px";
-      }
-    }
-  }
-
-  //header
-  {
-    //롤링 배너 복제본 생성
-    let roller = document.querySelector(".roller0");
-    roller.id = "roller1";
-
-    let clone = roller.cloneNode(true);
-    clone.id = "roller2";
-    document.querySelector("#header div:nth-child(2)").appendChild(clone); //부착
-
-    //원본, 복제본 배너 위치 지정
-    document.querySelector("#roller1").style.left = "0px";
-    document.querySelector("#roller2").style.left =
-      document.querySelector(".roller0").offsetWidth + "px";
-
-    //클래스 할당
-    roller.classList.add("original");
-    clone.classList.add("clone");
-
-    //인터벌 메서드로 애니메이션 생성
-    let rollerWidth = document.querySelector(".roller0").offsetWidth; //회전 배너 너비값
-    let betweenDistance = 1; //이동 크기 - 정수여야 함
-    originalID = window.setInterval(
-      betweenRollCallback,
-      parseInt(300 / 20),
-      betweenDistance,
-      document.querySelector("#roller1")
-    );
-    cloneID = window.setInterval(
-      betweenRollCallback,
-      parseInt(300 / 20),
-      betweenDistance,
-      document.querySelector("#roller2")
-    );
-
-    //인터벌 애니메이션 함수(공용)
-    function betweenRollCallback(d, roller) {
-      let left = parseInt(roller.style.left);
-      roller.style.left = left - d + "px"; //이동
-      //조건부 위치 리셋
-      if (rollerWidth + (left - d) <= 0) {
-        roller.style.left = rollerWidth + "px";
-      }
-    }
-  }
 
   {
     const parallaxCont = document.getElementById("main");
@@ -317,6 +230,8 @@
       });
     }, 10);
 
+
+
     //스크롤 했을 때 left: scrollTop
     function scroll() {
       let scrollTop =
@@ -339,11 +254,32 @@
         left: -goLeft,
       });
 
-      document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
-      requestAnimationFrame(scroll);
-    }
-    scroll();
-    window.addEventListener("resize", scroll);
+      if (scrollTop >= document.querySelector("#section2").offsetWidth/2) {
+        gsap.to(".text1", {
+          duration: 2.5,
+          x: 0,
+          y: 0,
+          opacity: 1,
+          ease: "sine.out",
+          delay: 1.7,
+        });
+        gsap.to(".text2", {
+          duration: 2.5,
+          x: 0,
+          y: 0,
+          opacity: 1,
+          ease: "sine.out",
+          delay: 2,
+        });
+      }
+
+    document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+
+
+    requestAnimationFrame(scroll);
+  }
+  scroll();
+  window.addEventListener("resize", scroll);
   }
 </script>
 
