@@ -47,7 +47,7 @@ body {
     top: -100%;
     z-index: 99999;
     font-family: "abel";
-
+    height: 60px;
 }
 
 #header div {
@@ -93,14 +93,13 @@ body {
 }
 
 #header div:nth-child(2) span {
-    padding: 0 10px;
+    padding: 0 1vw;
     white-space: nowrap;
     position: absolute;
 }
 
 #header .link {
-    padding: 0 20px;
-
+    padding: 0 2vw;
     color: #fff;
 }
 
@@ -114,6 +113,8 @@ body {
     z-index: 1;
     display: none;
     color: #fff;
+    font-size: 2em;
+    width: 150px;
 }
 
 .menu ul {
@@ -141,10 +142,11 @@ body {
 .burger-icon .burger-sticks {
     background: #fff;
     display: none;
-    height: 2px;
+    height: 3px;
     position: relative;
     transition: background 0.2s ease-out;
     width: 30px;
+    top: 19px;
 }
 
 .burger-icon .burger-sticks:before,
@@ -275,7 +277,6 @@ body {
     font-family: "Syncopate";
     font-size: 7em;
     color: #fff;
-    opacity: 0;
 }
 
 #main #section2 .mainTitle .text2 {
@@ -283,7 +284,6 @@ body {
     font-family: "Tulpen One";
     font-size: 7em;
     color: #fff;
-    opacity: 0;
 }
 
 #main #section3 {
@@ -304,7 +304,6 @@ body {
     box-sizing: border-box;
     -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
     clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
-
 }
 
 #section3 .img {
@@ -607,10 +606,10 @@ body {
     color: #C2FF04;
 }
 
-
+/* section10 */
 #section6 .slide {
-    width: 1000px;
-    height: 500px;
+    width: 52.0833vw;
+    height: 26.0417vw;
     position: relative;
     background-image: url(../img/slider.png);
     background-repeat: no-repeat;
@@ -631,8 +630,8 @@ body {
 }
 
 #section6 a {
-    width: 220px;
-    height: 60px;
+    width: 11.4583vw;
+    height: 3.1250vw;
     position: absolute;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
@@ -644,19 +643,20 @@ body {
     align-items: center;
     left: 3%;
     font-size: 2em;
-    padding-left: 13px;
+    padding-left: 0.6771vw;
     opacity: 0;
     transition: all 0.5s;
 }
 #section6 a .arrow {
     position: absolute;
-    left: 100px;
+    left: 5.2083vw;
 }
 
+/* section11 */
 #section7 .mouse {
-    width: 690px;
-    height: 350px;
-    margin-top:50%;
+    width: 35.9375vw;
+    height: 18.2292vw;
+    margin-top: 50%;
     position: relative;
     background-image: url(../img/mouse.png);
     background-repeat: no-repeat;
@@ -679,8 +679,8 @@ body {
     margin-top:43%;
 }
 #section7 a {
-    width: 220px;
-    height: 60px;
+    width: 11.4583vw;
+    height: 3.1250vw;
     position: absolute;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
@@ -693,7 +693,7 @@ body {
     justify-content: left;
     left: 4%;
     font-size: 2em;
-    padding-left: 13px;
+    padding-left: 0.6771vw;
     opacity: 0;
     transition: all 0.5s;
 }
@@ -702,9 +702,11 @@ body {
     left: 100px;
 }
 
+
+/* section8 */
 #section8 .search {
-    width: 950px;
-    height: 450px;
+    width: 49.4792vw;
+    height: 23.4375vw;
     position: relative;
     background-image: url(../img/search.png);
     background-repeat: no-repeat;
@@ -725,8 +727,8 @@ body {
     margin-bottom: 10%;
 }
 #section8 a {
-    width: 220px;
-    height: 60px;
+    width: 11.4583vw;
+    height: 3.1250vw;
     position: absolute;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
@@ -739,18 +741,19 @@ body {
     justify-content: left;
     left: 3%;
     font-size: 2em;
-    padding-left: 10px;
+    padding-left: 0.6771vw;
     opacity: 0;
     transition: all 0.5s;
 }
 #section8 a .arrow {
     position: absolute;
-    left: 100px;
+    left: 5.2083vw;
 }
 
+/* section9 */
 #section9 .parallax {
-    width: 750px;
-    height: 350px;
+    width: 39.0625vw;
+    height: 18.2292vw;
     margin-top: 30%;
     position: relative;
     background-image: url(../img/parallax.png);
@@ -774,8 +777,8 @@ body {
     margin-top:23.5%;
 }
 #section9 a {
-    width: 220px;
-    height: 60px;
+    width: 11.4583vw;
+    height: 3.1250vw;
     position: absolute;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
@@ -788,16 +791,234 @@ body {
     justify-content: left;
     left: 3%;
     font-size: 2em;
-    padding-left: 10px;
+    padding-left: 0.6771vw;
     opacity: 0;
     transition: all 0.5s;
 }
 #section9 a .arrow {
     position: absolute;
+    left: 5.2083vw;
+}
+
+
+
+
+
+
+
+
+
+
+/* section10 */
+#section10 .tetris {
+    width: 25.6771vw;
+    height: 31.4063vw;
+    position: relative;
+    background-image: url(../img/tetris.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+}
+.tetris iframe {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#section10 p {
+    font-family: "Tulpen One";
+    font-size: 3em;
+    color: #fff;
+    float: right;
+    width: 150px;
+    margin-left: 5px;
+    margin-top: -1%;
+}
+
+#section10 a {
+    width: 11.4583vw;
+    height: 3.1250vw;
+    position: absolute;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    color: #fff;
+    font-family: "Tulpen One";
+    outline: 1px solid #fff;
+    top: 82%;
+    display: flex;
+    align-items: center;
+    left: 3%;
+    font-size: 2em;
+    padding-left: 0.6771vw;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#section10 a .arrow {
+    position: absolute;
+    left: 5.2083vw;
+}
+
+/* section11 */
+#section11 .memory {
+    width: 19.9479vw;
+    height: 31.4063vw;
+    margin-top: 35%;
+    position: relative;
+    background-image: url(../img/memory.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.memory iframe {
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+}
+
+#section11 p {
+    font-family: "Tulpen One";
+    font-size: 3em;
+    color: #fff;
+    float: right;
+    width: 150px;
+    margin-left: 5px;
+    margin-top: 34%;
+}
+#section11 a {
+    width: 11.4583vw;
+    height: 3.1250vw;
+    position: absolute;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    color: #fff;
+    font-family: "Tulpen One";
+    border: 1px solid #fff;
+    top: 74%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    left: 4%;
+    font-size: 2em;
+    padding-left: 0.6771vw;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#section11 a .arrow {
+    position: absolute;
     left: 100px;
 }
 
+
+/* section12 */
+#section12 .typing {
+    width: 20.1563vw;
+    height: 24.6354vw;
+    position: relative;
+    background-image: url(../img/typing.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.typing iframe {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+#section12 p {
+    font-family: "Tulpen One";
+    font-size: 3em;
+    color: #fff;
+    float: right;
+    width: 150px;
+    margin-left: 5px;
+    margin-top: -1%;
+}
+#section12 a {
+    width: 11.4583vw;
+    height: 3.1250vw;
+    position: absolute;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    color: #fff;
+    font-family: "Tulpen One";
+    border: 1px solid #fff;
+    top: 79%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    left: 3%;
+    font-size: 2em;
+    padding-left: 0.6771vw;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#section12 a .arrow {
+    position: absolute;
+    left: 5.2083vw;
+}
+
+/* section13 */
+#section13 .music {
+    width: 20.1146vw;
+    height: 24.7531vw;
+    margin-top: 30%;
+    position: relative;
+    background-image: url(../img/musicplayer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.music iframe {
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+}
+
+#section13 p {
+    font-family: "Tulpen One";
+    font-size: 3em;
+    color: #fff;
+    float: right;
+    width: 150px;
+    margin-left: 5px;
+    margin-top: 29%;
+}
+#section13 a {
+    width: 11.4583vw;
+    height: 3.1250vw;
+    position: absolute;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    color: #fff;
+    font-family: "Tulpen One";
+    outline: 1px solid #fff;
+    top: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    left: 3%;
+    font-size: 2em;
+    padding-left: 0.6771vw;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#section13 a .arrow {
+    position: absolute;
+    left: 5.2083vw;
+}
+
+
+
 #scriptEffect {
+    display: flex;
+    align-items: center;
+}
+
+#scriptGame {
     display: flex;
     align-items: center;
 }
@@ -805,6 +1026,13 @@ body {
 #scriptEffect .effect {
     margin-right: 10vw;
 }
+
+#scriptGame .game {
+    margin-right: 10vw;
+    display: flex;
+}
+
+
 #scriptEffect .slide:hover > a,
 #scriptEffect .mouse:hover > a,
 #scriptEffect .search:hover > a,
@@ -826,11 +1054,32 @@ body {
 
 
 
+#scriptGame .tetris:hover > a,
+#scriptGame .memory:hover > a,
+#scriptGame .typing:hover > a,
+#scriptGame .music:hover > a{
+    opacity: 1;
+}
+#scriptGame .tetris:hover,
+#scriptGame .memory:hover,
+#scriptGame .typing:hover,
+#scriptGame .music:hover {
+    outline: 6px solid #C2FF04;
+}
+#scriptGame .tetris:hover > iframe,
+#scriptGame .memory:hover > iframe,
+#scriptGame .typing:hover > iframe,
+#scriptGame .music:hover > iframe {
+    opacity: 1;
+}
+
+
+
 #footer {
     bottom: -100%;
     left: 0;
     border-top: 1px solid #ffff;
-    font-size: 1em;
+    font-size: 15px;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
     position: fixed;
@@ -838,7 +1087,6 @@ body {
     height: 41px;
     overflow: hidden;
     font-family: "abel";
-    max-height: 2.5vw;
 }
 
 #footer .roller {

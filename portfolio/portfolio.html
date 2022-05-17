@@ -28,6 +28,7 @@
     <div>
       <a class="link" href="">WORK</a><a class="link" href="">CONTACT</a>
     </div>
+    
     <input class="burger-check" type="checkbox" id="burger-check" />
     <label class="burger-icon" for="burger-check">
       <span class="burger-sticks"></span>
@@ -51,6 +52,9 @@
       </div>
     </div>
   </header>
+  <!-- /header -->
+
+
   <main id="main">
     <section id="section1" class="mainSecter">
       <div class="mainTitle">
@@ -61,6 +65,7 @@
         <em>2022 PORTFOLIO</em>
       </div>
     </section>
+    <!-- /section1 -->
 
     <section id="section2" class="mainSecter">
       <div class="mainTitle">
@@ -68,6 +73,7 @@
         <p class="text2">SITE</p>
       </div>
     </section>
+    <!-- /section2 -->
 
     <section id="section3" class="site" class="site1">
       <h2>WEBSTANDARD</h2>
@@ -90,6 +96,7 @@
         <a href="" class="button">SITE VIEW</a>
       </div>
     </section>
+    <!-- /section3 -->
 
     <section id="section4" class="site" class="site2">
       <h2>PHP PROJECT</h2>
@@ -109,6 +116,7 @@
         <a href="" class="button">SITE VIEW</a>
       </div>
     </section>
+    <!-- /section4 -->
 
     <section id="section5" class="site" class="site3">
       <h2>REACT PROJECT</h2>
@@ -127,6 +135,7 @@
         <a href="" class="button">SITE VIEW</a>
       </div>
     </section>
+    <!-- /section5 -->
 
     <section id="section2" class="mainSecter">
       <div class="mainTitle">
@@ -134,6 +143,7 @@
         <p class="text2">SCRIPT</p>
       </div>
     </section>
+    <!-- /section2 -->
 
     <section id="scriptEffect">
       <section id="section6" class="effect">
@@ -143,6 +153,8 @@
         </div>
         <p>SLIDER EFFECT</p>
       </section>
+      <!-- /section6 -->
+
       <section id="section7" class="effect">
         <p>MOUSE EFFECT</p>
         <div class="mouse">
@@ -151,6 +163,8 @@
           <!-- <img class="Img" src="./assets/img/mouse.png" alt=""> -->
         </div>
       </section>
+      <!-- /section7 -->
+
       <section id="section8" class="effect">
         <div class="search">
           <iframe width="100%" height="100%" frameborder=0 src="./assets/effect/searchEffect01.html"></iframe>
@@ -159,6 +173,8 @@
         </div>
         <p>SEARCH EFFECT</p>
       </section>
+      <!-- /section8 -->
+
       <section id="section9" class="effect">
         <p>PARALLAX EFFECT</p>
         <div class="parallax">
@@ -167,6 +183,7 @@
           <!-- <img class="Img" src="./assets/img/parallax.png" alt=""> -->
         </div>
       </section>
+      <!-- /section9 -->
     </section>
 
     <section id="section2" class="mainSecter">
@@ -174,6 +191,47 @@
         <p class="text1">PROJECT</p>
         <p class="text2">GAME</p>
       </div>
+    </section>
+
+    <section id="scriptGame">
+      <section id="section10" class="game">
+        <div class="tetris" class="game2">
+          <iframe frameborder=0 src="./assets/game/tetrisGame/index.html"></iframe>
+          <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+        </div>
+        <p>TETRIS GAME</p>
+      </section>
+      <!-- /section6 -->
+
+      <section id="section11" class="game">
+        <div class="memory" class="game2">
+          <iframe frameborder=0 src="./assets/game/index2.html"></iframe>
+          <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <!-- <img class="Img" src="./assets/img/mouse.png" alt=""> -->
+        </div>
+        <p>MEMORY GAME</p>
+      </section>
+      <!-- /section7 -->
+
+      <section id="section12" class="game">
+        <div class="typing" class="game2">
+          <iframe frameborder=0 src="./assets/game/typingGame/index.html"></iframe>
+          <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <!-- <img class="Img" src="./assets/img/search.png" alt=""> -->
+        </div>
+        <p>TYPING GAMIE</p>
+      </section>
+      <!-- /section8 -->
+
+      <section id="section13" class="game">
+        <div class="music" class="game2">
+          <iframe frameborder=0 src="./assets/game/musicplayer/index.html"></iframe>
+          <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+          <!-- <img class="Img" src="./assets/img/parallax.png" alt=""> -->
+        </div>
+        <p>MUSIC PLAYER</p>
+      </section>
+      <!-- /section9 -->
     </section>
   </main>
   <footer id="footer">
@@ -253,25 +311,6 @@
       gsap.to(parallaxCont, {
         left: -goLeft,
       });
-
-      if (scrollTop >= document.querySelector("#section2").offsetWidth/2) {
-        gsap.to(".text1", {
-          duration: 2.5,
-          x: 0,
-          y: 0,
-          opacity: 1,
-          ease: "sine.out",
-          delay: 1.7,
-        });
-        gsap.to(".text2", {
-          duration: 2.5,
-          x: 0,
-          y: 0,
-          opacity: 1,
-          ease: "sine.out",
-          delay: 2,
-        });
-      }
 
     document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
 
