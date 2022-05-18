@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,56 +16,67 @@
             box-sizing: border-box;
             font-family: "Poppins";
         }
+
         body {
             background: #17A2B8;
         }
+
         .typing__wrap {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
         }
+
         .typing__inner {
-            width: 60vw;
-            min-width: 900px;
+            width: 10vw;
+            height: 60vh;
+            min-width: 300px;
             min-height: 40vh;
             background: #fff;
             border-radius: 20px;
-            padding: 40px;
+            padding: 10px;
         }
+
         .input__field {
             position: absolute;
             left: 10px;
             top: 10px;
             padding: 10px;
         }
+
         .typing__text {
             border: 1px solid #C3C3C3;
             border-radius: 10px;
-            padding: 30px;
-            min-height: 300px;
-            font-size: 22px;
+            padding: 10px;
+            height: 40vh;
+            font-size: 0.5em;
             font-weight: 300;
             text-align: justify;
             word-break: break-all;
         }
+
         .typing__text p span {
             position: relative;
         }
+
         .typing__text p span.correct {
             color: rgb(2, 145, 97);
             background: rgb(127, 246, 98);
             border-radius: 4px;
         }
+
         .typing__text p span.incorrect {
             color: rgb(248, 40, 40);
             background: rgb(248, 157, 157);
             border-radius: 4px;
         }
-        .typing__text p span.active{
+
+        .typing__text p span.active {
             color: rgba(94, 94, 94, 0.477);
         }
-        .typing__text p span.active::before{
+
+        .typing__text p span.active::before {
             content: '';
             position: absolute;
             left: 0;
@@ -75,55 +87,68 @@
             animation: blink 1s ease-in-out infinite;
             opacity: 0;
         }
+
         @keyframes blink {
+
             /* 0% {opacity: 0;} */
-            50% {opacity: 1;}
+            50% {
+                opacity: 1;
+            }
+
             /* 100% {opacity: 0;} */
         }
+
         .typing__info {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 30px;
+            margin-top: 20px;
+
         }
+
         .typing__info button {
             width: 210px;
             background: #17A2B8;
-            color:#fff;
+            color: #fff;
             font-family: "Poppins";
             border: 0;
             border-radius: 5px;
-            padding: 10px;
-            font-size: 22px;
-            margin-left: 20px;
+            padding: 5px;
+            font-size: 0.5em;
+            margin-left: 10px;
             cursor: pointer;
         }
+
         .typing__info ul {
             display: flex;
             width: 100%;
-            justify-content: space-around;
+            justify-content: space-between;
         }
+
         .typing__info ul li {
             width: 20%;
             list-style: none;
             display: flex;
-            font-size: 20px;
+            font-size: 0.5em;
             border-left: 1px solid #C3C3C3;
-            padding-left: 40px;
+            padding: 0 10px;
         }
+
         .typing__info ul li:first-child {
             padding-left: 0;
             border-left: 0;
         }
+
         .typing__info li p {
             white-space: nowrap;
         }
-        
-        .typing__info li span {
+
+        /* .typing__info li span {
             padding: 0 10px;
-        }
+        } */
     </style>
 </head>
+
 <body>
     <div class="typing__wrap">
         <input type="text" class="input__field">
@@ -134,8 +159,7 @@
             <div class="typing__info">
                 <ul>
                     <li class="time">
-                        <p>Time Left:</p>
-                        <span><b>60</b>s</span>
+                        <p>Time: </p><span><b>60</b>s</span>
                     </li>
                     <li class="mistake">
                         <p>Miss</p>
@@ -185,7 +209,7 @@
         const typingText = document.querySelector(".typing__text p");
         const inputField = document.querySelector(".input__field");
         const typingMistake = document.querySelector(".typing__info .mistake span")
-        const typingTime = document.querySelector(".time span b") 
+        const typingTime = document.querySelector(".time span b")
         const typingWpm = document.querySelector(".wpm span") // 1분동안 친 단어
         const typingCpm = document.querySelector(".cpm span") // 1분동안 친 글자
 
@@ -197,62 +221,62 @@
         let isTyping = 0;
 
         // 랜덤 문장 나오기
-        function randomParagraph(){
+        function randomParagraph() {
             let randIndex = Math.floor(Math.random() * paragraphs.length);
-            typingText.innerHTML ="";
+            typingText.innerHTML = "";
             paragraphs[randIndex].split("").forEach(span => {
                 let spanTag = `<span>${span}</span>`;
                 typingText.innerHTML += spanTag;
             });
-            document.addEventListener("keydown", ()=>inputField.focus());
-            typingText.addEventListener("click", ()=>inputField.focus());
+            document.addEventListener("keydown", () => inputField.focus());
+            typingText.addEventListener("click", () => inputField.focus());
         }
 
         //타이핑 칠 때마다
-        function initTyping(){
+        function initTyping() {
             const characters = typingText.querySelectorAll("span");
             let typedChar = inputField.value.split("")[charIndex];
 
-            if(charIndex < characters.length-1 && timeLeft > 0){
-                if(!isTyping){
-                timer = setInterval(initTimer, 1000);
-                isTyping = true;
-            }
+            if (charIndex < characters.length - 1 && timeLeft > 0) {
+                if (!isTyping) {
+                    timer = setInterval(initTimer, 1000);
+                    isTyping = true;
+                }
 
-            if(typedChar == null){
-                charIndex--;
-                if(characters[charIndex].classList.contains("incorrect")){
-                    mistakes--;
+                if (typedChar == null) {
+                    charIndex--;
+                    if (characters[charIndex].classList.contains("incorrect")) {
+                        mistakes--;
+                    }
+                    characters[charIndex].classList.remove("correct", "incorrect");
+                } else {
+                    if (characters[charIndex].innerText === typedChar) {
+                        characters[charIndex].classList.add("correct");
+                    } else {
+                        mistakes++;
+                        characters[charIndex].classList.add("incorrect");
+                    }
+                    charIndex++;
                 }
-                characters[charIndex].classList.remove("correct", "incorrect");
-            }else {
-                if(characters[charIndex].innerText === typedChar){
-                    characters[charIndex].classList.add("correct");
-                }else {
-                    mistakes++;
-                    characters[charIndex].classList.add("incorrect");
-                }
-                charIndex++;
+
             }
-            
-        }
             characters.forEach(span => span.classList.remove("active"));
             characters[charIndex].classList.add("active");
             typingMistake.innerText = mistakes;
 
             // wpm과 cpm
             // 전체 글자 수 = charIndex
-            let wpm = Math.round((((charIndex - mistakes)/5) / (maxTime - timeLeft)) * 60);
+            let wpm = Math.round((((charIndex - mistakes) / 5) / (maxTime - timeLeft)) * 60);
             wpm = wpm < 0 || !wpm || wpm == Infinity ? 0 : wpm;
             typingWpm.innerText = wpm;
-            let cpm = Math.round((charIndex - mistakes)/(maxTime - timeLeft) * 60);
+            let cpm = Math.round((charIndex - mistakes) / (maxTime - timeLeft) * 60);
             cpm = cpm < 0 || !cpm || cpm == Infinity ? 0 : cpm;
             typingCpm.innerText = cpm
         }
 
         // 타이머
-        function initTimer(){
-            if(timeLeft > 0){
+        function initTimer() {
+            if (timeLeft > 0) {
                 timeLeft--;
                 typingTime.innerText = timeLeft;
             } else {
@@ -260,10 +284,10 @@
             }
         }
 
-        function resetGame(){
+        function resetGame() {
             randomParagraph();
             clearInterval(timer)
-            inputField.value ="";
+            inputField.value = "";
             timeLeft = maxTime;
             isTyping = charIndex = mistakes = 0;
             typingMistake.innerText = 0;
@@ -275,4 +299,5 @@
         inputField.addEventListener("input", initTyping);
     </script>
 </body>
+
 </html>

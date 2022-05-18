@@ -5,9 +5,9 @@ body {
     font-size: 0.8vw;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 #wrap {
     margin: 0 auto;
@@ -38,7 +38,7 @@ body {
     border-bottom: 1px solid #ffff;
     display: flex;
     justify-content: space-between;
-    font-size: 1em;
+    font-size: 16px;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
     position: fixed;
@@ -47,7 +47,7 @@ body {
     top: -100%;
     z-index: 99999;
     font-family: "abel";
-    height: 60px;
+    height: 62px;
 }
 
 #header div {
@@ -843,10 +843,10 @@ body {
     color: #fff;
     font-family: "Tulpen One";
     outline: 1px solid #fff;
-    top: 82%;
+    top: 5%;
     display: flex;
     align-items: center;
-    left: 3%;
+    left: 45%;
     font-size: 2em;
     padding-left: 0.6771vw;
     opacity: 0;
@@ -894,11 +894,11 @@ body {
     color: #fff;
     font-family: "Tulpen One";
     border: 1px solid #fff;
-    top: 74%;
+    top: 83%;
     display: flex;
     align-items: center;
     justify-content: left;
-    left: 4%;
+    left: 8%;
     font-size: 2em;
     padding-left: 0.6771vw;
     opacity: 0;
@@ -944,11 +944,11 @@ body {
     color: #fff;
     font-family: "Tulpen One";
     border: 1px solid #fff;
-    top: 79%;
+    top: 81%;
     display: flex;
     align-items: center;
     justify-content: left;
-    left: 3%;
+    left: 6%;
     font-size: 2em;
     padding-left: 0.6771vw;
     opacity: 0;
@@ -996,11 +996,11 @@ body {
     color: #fff;
     font-family: "Tulpen One";
     outline: 1px solid #fff;
-    top: 75%;
+    top: 7%;
     display: flex;
     align-items: center;
     justify-content: left;
-    left: 3%;
+    left: 31%;
     font-size: 2em;
     padding-left: 0.6771vw;
     opacity: 0;
