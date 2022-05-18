@@ -406,7 +406,7 @@
         y: 0,
         opacity: 1,
         ease: "expo",
-        delay: 1.7,
+        delay: 3.5,
       });
     }, 10);
 
@@ -434,16 +434,17 @@
       //   left: -goLeft,
       // });
 
+      gsap.registerPlugin(ScrollTrigger);
+
       gsap.to('.box-3', {
         scrollTrigger: {
           trigger: '.box-3',
-          markers: true,
-          start: 'top 100%',
-          end: "bottom, 10%",
           toggleActions: 'play pause resume none',
         },
         left: -goLeft,
-        duration: 3,
+        duration: 2,
+        rotation: 360,
+        duration: 1,
       });
 
 
