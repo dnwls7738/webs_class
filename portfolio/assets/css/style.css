@@ -1078,14 +1078,14 @@ body {
 }
 
 #section14 {
-    margin-bottom: 20%;
+    margin-bottom: 15%;
 }
 #section15 {
     margin-bottom: -25%;
 }
 
 #section17 {
-    margin-bottom: -30%;
+    margin-bottom: -27%;
 }
 #section18 {
     margin-bottom: 10%;
@@ -1114,8 +1114,8 @@ body {
 }
 
 #main #section19 img{
-    width: 24%;
-    height: 100%;
+    width: 38.5417vw;
+    height: 56.2500vw;
     position: absolute;
     right: 0;
     z-index: -99999;
@@ -1138,14 +1138,46 @@ body {
 }
 #main #section19 .mainTitle p:nth-child(6) {
     margin-left: 18vw;
-    width: 550px;
-    outline: 10px solid #C2FF04;
+    width: 28.6458vw;
+    outline: 0.5208vw solid #C2FF04;
 }
 
+#main #section20 {
+    width: 65vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 3px solid #fff;
+}
 
+#main #section20 .mainTitle1 {
+    position: absolute;
+    width: 480px;
+    font-size: 1.5em;
+    color: #fff;
+    font-family: "ChosunNm";
+    letter-spacing: -2px;
+    line-height: 1.3;
+    max-width: 100%;
+    top: 15%;
+    left: 10%;
+}
+
+#main #section20 .mainTitle2 {
+    position: absolute;
+    width: 520px;
+    font-size: 1.5em;
+    color: #fff;
+    font-family: "ChosunNm";
+    letter-spacing: -2px;
+    line-height: 1.3;
+    max-width: 100%;
+    top: 55%;
+    left: 50%;
+}
 
 #scriptEffect {
-
     display: flex;
     align-items: center;
 }
