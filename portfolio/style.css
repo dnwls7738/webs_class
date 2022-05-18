@@ -1,0 +1,164 @@
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 1000vh;
+}
+
+[data-scroll-direction='horizontal'] [data-scroll-container] {
+  white-space: nowrap;
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction='horizontal'] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.content {
+  left: 0;
+  top: 0;
+  display: flex;
+}
+
+.sec_wrap {
+  display: flex;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  border-right: 1px solid #000;
+}
+
+#header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 100vw;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding: 0.8vw 0;
+  text-transform: uppercase;
+  z-index: 10000;
+  font-family: "Abel";
+  white-space: nowrap;
+}
+
+#header a {
+  padding: 0 0.5vw;
+  font-size: 1.1em;
+}
+
+#header div:nth-child(2) {
+  outline: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 0.9em;
+}
+
+#header div {
+  padding: 0.3vw 0.8vw;
+}
+
+#section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syncopate';
+  font-weight: 700;
+  line-height: 1;
+}
+
+#section1 .sec_text {
+  color: #fff;
+  font-size: 6vw;
+  text-align: center;
+
+}
+
+.sec_text .t2 {
+  padding-right: 40vw;
+}
+
+.sec_text .t4 {
+  font-size: 1vw;
+  font-family: "Abel";
+  font-weight: normal;
+  text-align: right;
+  padding-right: 8vw;
+  margin-top: -1vw;
+}
+#container{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	display:block;
+  z-index: -1;
+}
+
+#footer {
+  font-family: "Abel";
+  width: 100vw;
+  position: fixed;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.8);
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 0.5vw 1vw;
+  text-transform: uppercase;
+  display: flex;
+  font-size: 1em;
+  white-space: nowrap;
+}
+#footer div {
+  position: relative;
+}
+
+#footer span {
+  padding: 0 20px;
+}
+
+#footer em {
+  color: #C2FF04;
+}
+#footer span::before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius:50px;
+  background-color: #C2FF04;
+  top: 8px;
+  margin-left: -14px;
+}
+#footer span::after {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius:50px;
+  background-color: #C2FF04;
+  top: 8px;
+  margin-left: 10px;
+}
