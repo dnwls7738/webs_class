@@ -1114,15 +1114,11 @@ body {
 }
 
 #main #section19 img{
-    width: 20%;
+    width: 24%;
     height: 100%;
     position: absolute;
     right: 0;
     z-index: -99999;
-}
-
-#main #section19 .mainTitle p:nth-child(1) {
-
 }
 
 #main #section19 .mainTitle p:nth-child(2) {
@@ -1149,11 +1145,13 @@ body {
 
 
 #scriptEffect {
+
     display: flex;
     align-items: center;
 }
 
 #scriptGame {
+
     display: flex;
     align-items: center;
 }
