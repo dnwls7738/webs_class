@@ -10,7 +10,12 @@ html.has-scroll-dragging {
 }
 
 .has-scroll-smooth body {
+  height: 100%;
   overflow: hidden;
+}
+
+.has-scroll-smooth body * {
+  touch-action: none;
 }
 
 .has-scroll-smooth [data-scroll-container] {
@@ -87,13 +92,14 @@ html.has-scroll-dragging {
   font-family: 'Syncopate';
   font-weight: 700;
   line-height: 1;
+
 }
 
 #section1 .sec_text {
   color: #fff;
   font-size: 6vw;
   text-align: center;
-
+  letter-spacing: -1px;
 }
 
 .sec_text .t2 {
@@ -107,12 +113,14 @@ html.has-scroll-dragging {
   text-align: right;
   padding-right: 8vw;
   margin-top: -1vw;
+  letter-spacing: -1px;
 }
-#container{
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	display:block;
+
+#container {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  display: block;
   z-index: -1;
 }
 
@@ -131,6 +139,7 @@ html.has-scroll-dragging {
   font-size: 1em;
   white-space: nowrap;
 }
+
 #footer div {
   position: relative;
 }
@@ -142,22 +151,24 @@ html.has-scroll-dragging {
 #footer em {
   color: #C2FF04;
 }
+
 #footer span::before {
   position: absolute;
   content: '';
   width: 5px;
   height: 5px;
-  border-radius:50px;
+  border-radius: 50px;
   background-color: #C2FF04;
   top: 8px;
   margin-left: -14px;
 }
+
 #footer span::after {
   position: absolute;
   content: '';
   width: 5px;
   height: 5px;
-  border-radius:50px;
+  border-radius: 50px;
   background-color: #C2FF04;
   top: 8px;
   margin-left: 10px;
