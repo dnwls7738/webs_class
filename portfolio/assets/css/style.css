@@ -861,7 +861,7 @@ body {
 #section11 .memory {
     width: 19.9479vw;
     height: 31.4063vw;
-    margin-top: 35%;
+    margin-top: 20%;
     position: relative;
     background-image: url(../img/memory.png);
     background-repeat: no-repeat;
@@ -882,8 +882,8 @@ body {
     color: #fff;
     float: right;
     width: 150px;
-    margin-left: 5px;
-    margin-top: 34%;
+    margin-left: 6px;
+    margin-top: 19%;
 }
 #section11 a {
     width: 11.4583vw;
@@ -932,7 +932,7 @@ body {
     color: #fff;
     float: right;
     width: 150px;
-    margin-left: 5px;
+    margin-left: 6px;
     margin-top: -1%;
 }
 #section12 a {
@@ -984,7 +984,7 @@ body {
     color: #fff;
     float: right;
     width: 150px;
-    margin-left: 5px;
+    margin-left: 6px;
     margin-top: 29%;
 }
 #section13 a {
@@ -1013,6 +1013,121 @@ body {
 
 
 
+
+
+/* section14 */
+#section14 .mysql {
+    width: 13.9583vw;
+    height: 13.9583vw;
+    margin-top: -120%;
+    position: relative;
+    background-image: url(../img/mysql.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+#section14 p {
+    font-family: "Tulpen One";
+    font-size: 5em;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 30%;
+}
+
+#section15 .html {
+    width: 13.9583vw;
+    height: 13.9583vw;
+    margin-top: 130%;
+    position: relative;
+    background-image: url(../img/html.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+#section15 p {
+    font-family: "Tulpen One";
+    font-size: 5em;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 15%;
+}
+
+#section16 .layout {
+    width: 13.9583vw;
+    height: 13.9583vw;
+    margin-top: -30%;
+    position: relative;
+    background-image: url(../img/css.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+#section16 p {
+    font-family: "Tulpen One";
+    font-size: 5em;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 29%;
+}
+
+#section17 .javascript {
+    width: 13.9583vw;
+    height: 13.9583vw;
+    margin-top: 150%;
+    position: relative;
+    background-image: url(../img/javascript.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+    border-radius: 50%;
+}
+
+#section17 p {
+    font-family: "Tulpen One";
+    font-size: 5em;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    margin-top: 60%;
+    margin-left: 15%;
+}
+
+#section18 .algorithm {
+    width: 13.9583vw;
+    height: 13.9583vw;
+    margin-top: -100%;
+    position: relative;
+    background-image: url(../img/algorithm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.5s;
+        border-radius: 50%;
+}
+
+#section18 .algorithm p {
+    position: absolute;
+    font-family: "Tulpen One";
+    font-size: 5em;
+    color: #fff;
+    text-align: center;
+    margin-top: 60%;
+    margin-left: 15%;
+}
+
+
+
 #scriptEffect {
     display: flex;
     align-items: center;
@@ -1022,6 +1137,16 @@ body {
     display: flex;
     align-items: center;
 }
+
+#scriptStudy {
+    display: flex;
+    align-items: center;
+}
+
+#scriptStudy .study {
+    margin-right: 2vw;
+}
+
 
 #scriptEffect .effect {
     margin-right: 10vw;
@@ -1045,6 +1170,7 @@ body {
 #scriptEffect .parallax:hover {
     outline: 6px solid #C2FF04;
 }
+
 #scriptEffect .slide:hover > iframe,
 #scriptEffect .mouse:hover > iframe,
 #scriptEffect .search:hover > iframe,
@@ -1071,6 +1197,16 @@ body {
 #scriptGame .typing:hover > iframe,
 #scriptGame .music:hover > iframe {
     opacity: 1;
+}
+
+
+#scriptStudy .mysql:hover,
+#scriptStudy .html:hover,
+#scriptStudy .layout:hover,
+#scriptStudy .javascript:hover,
+#scriptStudy .algorithm:hover {
+    outline: 6px solid #fff;
+
 }
 
 
