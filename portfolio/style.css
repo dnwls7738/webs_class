@@ -226,8 +226,8 @@ html.has-scroll-dragging {
   font-family: "Tulpen One";
   font-size: 7em;
   font-weight: normal;
-  right: 57%;
-  bottom: 67%;
+  right: 53.5%;
+  bottom: 68%;
 }
 
 #section3 p {
@@ -237,11 +237,11 @@ html.has-scroll-dragging {
   font-family: 'ChosunNm';
   font-size: 0.8em;
   font-weight: normal;
-  width: 20.8333vw;
-  right: 54.5%;
-  bottom: 58%;
+  width: 400px;
+  right: 53%;
+  bottom: 55%;
   line-height: 1.8;
-word-break: break-all;
+  white-space: normal;
 }
 
 #section3 .buttons {
@@ -288,7 +288,7 @@ word-break: break-all;
 
 
 
-/* #section4 {
+#section4 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,8 +298,8 @@ word-break: break-all;
 #section4 .imgTitle {
   display: inline-block;
   position: relative;
-  right: -7%;
-  bottom: 5%;
+  right: -7vw;
+  bottom: 10vh;
   width: 46.8750vw;
   height: 22.3958vw;
   background: rgb(255, 255, 255);
@@ -310,7 +310,7 @@ word-break: break-all;
 
 #section4 .img {
   background-image: url(./assets/img/Rectangle.png);
-   filter: blur(10px) brightness(50%); 
+  filter: blur(10px) brightness(50%);
   position: absolute;
   top: 0.4167vw;
   left: 0.4167vw;
@@ -330,30 +330,35 @@ word-break: break-all;
 
 #section4 h2 {
   color: #fff;
+  position: absolute;
   z-index: 99999;
   font-family: "Tulpen One";
-  font-size: 6vw;
+  font-size: 7em;
   font-weight: normal;
-  white-space: pre;
-  margin-left: 3.5vw;
+  right: 53.5%;
+  bottom: 68%;
 }
 
-#section4 span {
+#section4 p {
   color: #fff;
+  position: absolute;
   z-index: 99999;
   font-family: 'ChosunNm';
-  font-size: 0.7vw;
+  font-size: 0.8em;
   font-weight: normal;
-  line-height: 1;
-  white-space: pre;
+  width: 400px;
+  right: 53%;
+  bottom: 55%;
+  line-height: 1.8;
+  white-space: normal;
 }
 
 #section4 .buttons {
   margin-right: 20px;
   display: inline-block;
   position: relative;
-  right: 39%;
-  top: 30%;
+  right: 39vw;
+  top: 12.5000vw;
   width: 10.6771vw;
   height: 3.6458vw;
   background: rgb(255, 255, 255);
@@ -367,6 +372,7 @@ word-break: break-all;
   position: absolute;
   top: 0.2083vw;
   left: 0.2083vw;
+  right: -4px;
   width: 10.1563vw;
   height: 3.2292vw;
   background: #000;
@@ -387,7 +393,203 @@ word-break: break-all;
 
 #section4 .button:hover {
   color: #C2FF04;
-} */
+}
+
+
+
+
+
+#section5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#section5 .imgTitle {
+  display: inline-block;
+  position: relative;
+  right: -7vw;
+  bottom: 10vh;
+  width: 46.8750vw;
+  height: 22.3958vw;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section5 .img {
+  background-image: url(./assets/img/Rectangle.png);
+  filter: blur(10px) brightness(50%);
+  position: absolute;
+  top: 0.4167vw;
+  left: 0.4167vw;
+  width: 46.1458vw;
+  height: 21.5625vw;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section5 img {
+  position: absolute;
+  width: 31.2500vw;
+  height: 23.4375vw;
+  left: 50%;
+  top: 40%;
+}
+
+#section5 h2 {
+  color: #fff;
+  position: absolute;
+  z-index: 99999;
+  font-family: "Tulpen One";
+  font-size: 7em;
+  font-weight: normal;
+  right: 53.5%;
+  bottom: 68%;
+}
+
+#section5 p {
+  color: #fff;
+  position: absolute;
+  z-index: 99999;
+  font-family: 'ChosunNm';
+  font-size: 0.8em;
+  font-weight: normal;
+  width: 400px;
+  right: 53%;
+  bottom: 55%;
+  line-height: 1.8;
+  white-space: normal;
+}
+
+#section5 .buttons {
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  right: 39vw;
+  top: 12.5000vw;
+  width: 10.6771vw;
+  height: 3.6458vw;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  transition: background-color 0.3s;
+}
+
+#section5 .button {
+  position: absolute;
+  top: 0.2083vw;
+  left: 0.2083vw;
+  right: -4px;
+  width: 10.1563vw;
+  height: 3.2292vw;
+  background: #000;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Tulpen One";
+  font-size: 2em;
+  transition: color 0.3s;
+}
+
+#section5 .buttons:hover {
+  background: #C2FF04;
+}
+
+#section5 .button:hover {
+  color: #C2FF04;
+}
+
+
+
+
+#section6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section6 .mainTitle .text1 {
+  text-align: center;
+  font-weight: 700;
+  font-family: "Syncopate";
+  font-size: 6vw;
+  color: #fff;
+}
+
+#section6 .mainTitle .text2 {
+  text-align: center;
+  font-family: "Tulpen One";
+  font-size: 6vw;
+  color: #fff;
+}
+
+
+
+
+/* section10 */
+#section7 {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+#section7 .tetris {
+  width: 25.6771vw;
+  height: 31.4063vw;
+  position: relative;
+  background-image: url(./assets/img/tetris.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+  outline: 6px solid #000;
+}
+.tetris iframe {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+#section7 p {
+  font-family: "Tulpen One";
+  font-size: 3em;
+  color: #fff;
+  float: right;
+  width: 181px;
+  margin-left: 5px;
+  margin-top: -1%;
+}
+
+#section7 a {
+  width: 11.4583vw;
+  height: 3.1250vw;
+  position: absolute;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  color: #fff;
+  font-family: "Tulpen One";
+  outline: 1px solid #fff;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  left: 45%;
+  font-size: 2em;
+  padding-left: 0.6771vw;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+#section7 a .arrow {
+  position: absolute;
+  left: 5.2083vw;
+}
+
+
+
+
 
 #footer {
   font-family: "Abel";
@@ -447,6 +649,20 @@ word-break: break-all;
   will-change: transform;
   animation: marquee 5s linear infinite;
   display: inline-block;
+}
+
+
+.tetris:hover > a,
+.memory:hover > a,
+.typing:hover > a,
+.music:hover > a{
+    opacity: 1;
+}
+.tetris:hover > iframe,
+.memory:hover > iframe,
+.typing:hover > iframe,
+.music:hover > iframe {
+    opacity: 1;
 }
 
 @keyframes marquee {
