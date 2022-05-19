@@ -1,3 +1,7 @@
+body {
+  background: #000;
+}
+
 html.has-scroll-smooth {
   overflow: hidden;
 }
@@ -10,13 +14,9 @@ html.has-scroll-dragging {
 }
 
 .has-scroll-smooth body {
-  height: 100%;
   overflow: hidden;
 }
 
-.has-scroll-smooth body * {
-  touch-action: none;
-}
 
 .has-scroll-smooth [data-scroll-container] {
   min-height: 1000vh;
@@ -26,13 +26,11 @@ html.has-scroll-dragging {
   white-space: nowrap;
   height: 100vh;
   display: inline-block;
-  white-space: nowrap;
 }
 
 [data-scroll-direction='horizontal'] [data-scroll-section] {
   display: inline-block;
   vertical-align: top;
-  white-space: nowrap;
   height: 100%;
 }
 
@@ -42,20 +40,22 @@ html.has-scroll-dragging {
   display: flex;
 }
 
+
 .sec_wrap {
   display: flex;
+
 }
 
 .section {
   width: 100vw;
   height: 100vh;
   position: relative;
-  border-right: 1px solid #000;
+  border-right: 1px solid #fff;
+  background: #000;
 }
 
 #header {
   display: flex;
-  align-content: center;
   justify-content: space-between;
   width: 100vw;
   position: fixed;
@@ -63,26 +63,57 @@ html.has-scroll-dragging {
   top: 0;
   left: 0;
   color: #fff;
-  padding: 0.8vw 0;
+  padding: 0.5vw 1vw;
   text-transform: uppercase;
   z-index: 10000;
   font-family: "Abel";
   white-space: nowrap;
 }
 
+#header .menu {
+  padding: 2px;
+}
+
 #header a {
   padding: 0 0.5vw;
   font-size: 1.1em;
+  margin-top: 1vw;
 }
 
-#header div:nth-child(2) {
-  outline: 1px solid #fff;
+#header .center {
+  border: 1px solid #fff;
   border-radius: 50px;
-  font-size: 0.9em;
+  font-size: 1em;
+  padding: 0.2vw 1vw;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* #header .marquee_box span::before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #C2FF04;
+  top: 8px;
+  margin-left: -14px;
+} */
+#header span::before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #C2FF04;
+  top: 8px;
+  margin-left: -1.1vw;
 }
 
 #header div {
-  padding: 0.3vw 0.8vw;
+  padding: 0vw 0.8vw;
+  text-align: center;
 }
 
 #section1 {
@@ -92,7 +123,6 @@ html.has-scroll-dragging {
   font-family: 'Syncopate';
   font-weight: 700;
   line-height: 1;
-
 }
 
 #section1 .sec_text {
@@ -100,6 +130,7 @@ html.has-scroll-dragging {
   font-size: 6vw;
   text-align: center;
   letter-spacing: -1px;
+  z-index: 99999;
 }
 
 .sec_text .t2 {
@@ -121,7 +152,233 @@ html.has-scroll-dragging {
   width: 100%;
   text-align: center;
   display: block;
-  z-index: -1;
+}
+
+
+#section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(25, 25, 25));
+}
+
+#section2 .mainTitle .text1 {
+  text-align: center;
+  font-weight: 700;
+  font-family: "Syncopate";
+  font-size: 6vw;
+  color: #fff;
+}
+
+#section2 .mainTitle .text2 {
+  text-align: center;
+  font-family: "Tulpen One";
+  font-size: 6vw;
+  color: #fff;
+}
+
+
+
+#section3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#section3 .imgTitle {
+  display: inline-block;
+  position: relative;
+  right: -7%;
+  bottom: 5%;
+  width: 46.8750vw;
+  height: 22.3958vw;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section3 .img {
+  background-image: url(./assets/img/Rectangle.png);
+  /* filter: blur(10px) brightness(50%); */
+  position: absolute;
+  top: 0.4167vw;
+  left: 0.4167vw;
+  width: 46.1458vw;
+  height: 21.5625vw;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section3 img {
+  position: absolute;
+  width: 31.2500vw;
+  height: 23.4375vw;
+  left: 50%;
+  top: 40%;
+}
+
+#section3 h2 {
+  color: #fff;
+  font-family: "Tulpen One";
+  font-size: 6vw;
+  font-weight: normal;
+  white-space: pre;
+  margin-left: 3.5vw;
+}
+
+#section3 span {
+  color: #fff;
+  font-family: 'ChosunNm';
+  font-size: 0.7vw;
+  font-weight: normal;
+  line-height: 1;
+  white-space: pre;
+}
+
+#section3 .buttons {
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  right: 39%;
+  top: 30%;
+  width: 10.6771vw;
+  height: 3.6458vw;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  transition: background-color 0.3s;
+}
+
+#section3 .button {
+  position: absolute;
+  top: 0.2083vw;
+  left: 0.2083vw;
+  width: 10.1563vw;
+  height: 3.2292vw;
+  background: #000;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Tulpen One";
+  font-size: 2em;
+  transition: color 0.3s;
+}
+
+#section3 .buttons:hover {
+  background: #C2FF04;
+}
+
+#section3 .button:hover {
+  color: #C2FF04;
+}
+
+
+
+#section4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#section4 .imgTitle {
+  display: inline-block;
+  position: relative;
+  right: -7%;
+  bottom: 5%;
+  width: 46.8750vw;
+  height: 22.3958vw;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section4 .img {
+  background-image: url(./assets/img/Rectangle.png);
+  /* filter: blur(10px) brightness(50%); */
+  position: absolute;
+  top: 0.4167vw;
+  left: 0.4167vw;
+  width: 46.1458vw;
+  height: 21.5625vw;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+}
+
+#section4 img {
+  position: absolute;
+  width: 31.2500vw;
+  height: 23.4375vw;
+  left: 50%;
+  top: 40%;
+}
+
+#section4 h2 {
+  color: #fff;
+  z-index: 99999;
+  font-family: "Tulpen One";
+  font-size: 6vw;
+  font-weight: normal;
+  white-space: pre;
+  margin-left: 3.5vw;
+}
+
+#section4 span {
+  color: #fff;
+  z-index: 99999;
+  font-family: 'ChosunNm';
+  font-size: 0.7vw;
+  font-weight: normal;
+  line-height: 1;
+  white-space: pre;
+}
+
+#section4 .buttons {
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  right: 39%;
+  top: 30%;
+  width: 10.6771vw;
+  height: 3.6458vw;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  transition: background-color 0.3s;
+}
+
+#section4 .button {
+  position: absolute;
+  top: 0.2083vw;
+  left: 0.2083vw;
+  width: 10.1563vw;
+  height: 3.2292vw;
+  background: #000;
+  -webkit-clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  clip-path: polygon(0 0, 88% 0, 100% 28%, 100% 70%, 100% 100%, 12% 100%, 0 72%, 0% 30%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Tulpen One";
+  font-size: 2em;
+  transition: color 0.3s;
+}
+
+#section4 .buttons:hover {
+  background: #C2FF04;
+}
+
+#section4 .button:hover {
+  color: #C2FF04;
 }
 
 #footer {
@@ -138,10 +395,6 @@ html.has-scroll-dragging {
   display: flex;
   font-size: 1em;
   white-space: nowrap;
-}
-
-#footer div {
-  position: relative;
 }
 
 #footer span {
@@ -172,4 +425,28 @@ html.has-scroll-dragging {
   background-color: #C2FF04;
   top: 8px;
   margin-left: 10px;
+}
+
+.marquee_wrap {
+  white-space: nowrap;
+  font-size: calc(14vw);
+  display: flex;
+  align-items: center;
+  will-change: transform;
+}
+
+.marquee_box {
+  will-change: transform;
+  animation: marquee 5s linear infinite;
+  display: inline-block;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateZ(0)
+  }
+
+  to {
+    transform: translate3d(-100%, 0, 0)
+  }
 }
