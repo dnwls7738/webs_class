@@ -288,7 +288,7 @@ body {
     color: #fff;
 }
 
- #section3 {
+#section3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -347,10 +347,9 @@ body {
     font-size: 0.8em;
     font-weight: normal;
     width: 20.8333vw;
-    right: 54%;
-    bottom: 53%;
+    right: 54.5%;
+    bottom: 58%;
     line-height: 1.8;
-    white-space: nowrap;
 }
 
 #section3 .buttons {

@@ -189,8 +189,8 @@ html.has-scroll-dragging {
 #section3 .imgTitle {
   display: inline-block;
   position: relative;
-  right: -7%;
-  bottom: 5%;
+  right: -7vw;
+  bottom: 10vh;
   width: 46.8750vw;
   height: 22.3958vw;
   background: rgb(255, 255, 255);
@@ -201,7 +201,7 @@ html.has-scroll-dragging {
 
 #section3 .img {
   background-image: url(./assets/img/Rectangle.png);
-  /* filter: blur(10px) brightness(50%); */
+  filter: blur(10px) brightness(50%);
   position: absolute;
   top: 0.4167vw;
   left: 0.4167vw;
@@ -221,28 +221,35 @@ html.has-scroll-dragging {
 
 #section3 h2 {
   color: #fff;
+  position: absolute;
+  z-index: 99999;
   font-family: "Tulpen One";
-  font-size: 6vw;
+  font-size: 7em;
   font-weight: normal;
-  white-space: pre;
-  margin-left: 3.5vw;
+  right: 57%;
+  bottom: 67%;
 }
 
-#section3 span {
+#section3 p {
   color: #fff;
+  position: absolute;
+  z-index: 99999;
   font-family: 'ChosunNm';
-  font-size: 0.7vw;
+  font-size: 0.8em;
   font-weight: normal;
-  line-height: 1;
-  white-space: pre;
+  width: 20.8333vw;
+  right: 54.5%;
+  bottom: 58%;
+  line-height: 1.8;
+word-break: break-all;
 }
 
 #section3 .buttons {
   margin-right: 20px;
   display: inline-block;
   position: relative;
-  right: 39%;
-  top: 30%;
+  right: 39vw;
+  top: 12.5000vw;
   width: 10.6771vw;
   height: 3.6458vw;
   background: rgb(255, 255, 255);
@@ -256,6 +263,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0.2083vw;
   left: 0.2083vw;
+  right: -4px;
   width: 10.1563vw;
   height: 3.2292vw;
   background: #000;
@@ -280,7 +288,7 @@ html.has-scroll-dragging {
 
 
 
-#section4 {
+/* #section4 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -302,7 +310,7 @@ html.has-scroll-dragging {
 
 #section4 .img {
   background-image: url(./assets/img/Rectangle.png);
-  /* filter: blur(10px) brightness(50%); */
+   filter: blur(10px) brightness(50%); 
   position: absolute;
   top: 0.4167vw;
   left: 0.4167vw;
@@ -379,7 +387,7 @@ html.has-scroll-dragging {
 
 #section4 .button:hover {
   color: #C2FF04;
-}
+} */
 
 #footer {
   font-family: "Abel";
