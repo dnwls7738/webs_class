@@ -533,11 +533,12 @@ html.has-scroll-dragging {
 
 
 
-/* section10 */
+/* section7 */
 #section7 {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  width: 120vw;
 }
 #section7 .tetris {
   width: 25.6771vw;
@@ -548,6 +549,7 @@ html.has-scroll-dragging {
   background-size: cover;
   transition: all 0.5s;
   outline: 6px solid #000;
+  margin-bottom: 10%;
 }
 .tetris iframe {
   opacity: 0;
@@ -558,13 +560,11 @@ html.has-scroll-dragging {
   font-family: "Tulpen One";
   font-size: 3em;
   color: #fff;
-  float: right;
-  width: 181px;
-  margin-left: 5px;
+  width: 180px;
   margin-top: -1%;
 }
 
-#section7 a {
+.tetris a {
   width: 11.4583vw;
   height: 3.1250vw;
   position: absolute;
@@ -582,12 +582,193 @@ html.has-scroll-dragging {
   opacity: 0;
   transition: all 0.5s ease-in;
 }
-#section7 a .arrow {
+.tetris a .arrow {
+  position: absolute;
+  left: 5.2083vw;
+}
+
+.typing {
+  width: 20.1563vw;
+  height: 24.6354vw;
+  position: relative;
+  background-image: url(./assets/img/typing.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+  outline: 6px solid #000;
+  margin-bottom: -5%;
+}
+.typing iframe {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.typing a {
+  width: 11.4583vw;
+  height: 3.1250vw;
+  position: absolute;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  color: #fff;
+  font-family: "Tulpen One";
+  outline: 1px solid #fff;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  left: 45%;
+  font-size: 2em;
+  padding-left: 0.6771vw;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.typing a .arrow {
+  position: absolute;
+  left: 5.2083vw;
+}
+.memory {
+  width: 19.9479vw;
+  height: 31.4063vw;
+  position: relative;
+  background-image: url(./assets/img/memory.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+  outline: 6px solid #000;
+  margin-bottom: 5%;
+}
+.memory iframe {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.memory a {
+  width: 11.4583vw;
+  height: 3.1250vw;
+  position: absolute;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  color: #fff;
+  font-family: "Tulpen One";
+  outline: 1px solid #fff;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  left: 45%;
+  font-size: 2em;
+  padding-left: 0.6771vw;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.memory a .arrow {
+  position: absolute;
+  left: 5.2083vw;
+}
+.music {
+  width: 20.1146vw;
+  height: 24.7531vw;
+  position: relative;
+  background-image: url(./assets/img/musicplayer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s;
+  outline: 6px solid #000;
+  margin-bottom: -10%;
+}
+.music iframe {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.music a {
+  width: 11.4583vw;
+  height: 3.1250vw;
+  position: absolute;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  color: #fff;
+  font-family: "Tulpen One";
+  outline: 1px solid #fff;
+  top: 5%;
+  display: flex;
+  align-items: center;
+  left: 45%;
+  font-size: 2em;
+  padding-left: 0.6771vw;
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.music a .arrow {
   position: absolute;
   left: 5.2083vw;
 }
 
 
+
+#section8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section8 .mainTitle .text1 {
+  text-align: center;
+  font-weight: 700;
+  font-family: "Syncopate";
+  font-size: 6vw;
+  color: #fff;
+}
+
+#section8 .mainTitle .text2 {
+  text-align: center;
+  font-family: "Tulpen One";
+  font-size: 6vw;
+  color: #fff;
+}
+
+
+
+#section9 .slide {
+  width: 52.0833vw;
+  height: 26.0417vw;
+  position: relative;
+  background-image: url(./assets/img/slider.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease-in;
+  outline: 6px solid #000;
+}
+.slide iframe {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+#section9 p {
+  font-family: "Tulpen One";
+  font-size: 3em;
+  color: #fff;
+  float: right;
+  margin-bottom: 15%;
+}
+
+#section9 a {
+  width: 11.4583vw;
+  height: 3.1250vw;
+  position: absolute;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  color: #fff;
+  font-family: "Tulpen One";
+  outline: 1px solid #fff;
+  top: 82%;
+  display: flex;
+  align-items: center;
+  left: 3%;
+  font-size: 2em;
+  padding-left: 0.6771vw;
+  /* opacity: 0; */
+  transition: all 0.5s ease-in;
+}
+#section9 a .arrow {
+  position: absolute;
+  left: 5.2083vw;
+}
 
 
 
@@ -638,17 +819,33 @@ html.has-scroll-dragging {
 }
 
 .marquee_wrap {
-  white-space: nowrap;
-  font-size: calc(14vw);
-  display: flex;
-  align-items: center;
   will-change: transform;
 }
 
 .marquee_box {
   will-change: transform;
-  animation: marquee 5s linear infinite;
+  animation: marquee 20s linear infinite running;
   display: inline-block;
+}
+
+.slide:hover > a,
+.mouse:hover > a,
+.search:hover > a,
+.parallax:hover > a{
+    opacity: 1;
+}
+.slide:hover,
+.mouse:hover,
+.search:hover,
+.parallax:hover {
+    outline: 6px solid #C2FF04;
+}
+
+.slide:hover > iframe,
+.mouse:hover > iframe,
+.search:hover > iframe,
+.parallax:hover > iframe {
+    opacity: 1;
 }
 
 
@@ -658,6 +855,12 @@ html.has-scroll-dragging {
 .music:hover > a{
     opacity: 1;
 }
+.tetris:hover,
+.memory:hover,
+.typing:hover,
+.music:hover {
+    outline: 6px solid #C2FF04;
+}
 .tetris:hover > iframe,
 .memory:hover > iframe,
 .typing:hover > iframe,
@@ -666,11 +869,11 @@ html.has-scroll-dragging {
 }
 
 @keyframes marquee {
-  from {
-    transform: translateZ(0)
+  0% {
+    transform: translateX(0)
   }
 
-  to {
-    transform: translate3d(-100%, 0, 0)
+  100% {
+    transform: translateX(-100%)
   }
 }
