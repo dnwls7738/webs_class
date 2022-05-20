@@ -8,131 +8,86 @@
     <title>Document</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+            width: 40vw;
+        }
+
+        .gallery {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            /*   position: relative; */
+            /*   will-change: transform; */
+            padding: 2vw 10vw 2vw 0;
+        }
+
+        .image {
+            background-size: cover;
+            height: 100%;
+            /*   will-change: transform; */
+
+            width: 100%;
+        }
+
+        .wrapper {
+            display: flex;
+            padding-right: 12vw;
+            margin-left: 5vw;
+            width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <div id="container"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script id="vertexShader" type="x-shader/x-vertex">
-        void main() {
-                gl_Position = vec4( position, 1.0 );
-            }
-        </script>
+    <div data-scroll-container>
 
-    <script id="fragmentShader" type="x-shader/x-fragment">
-        #ifdef GL_ES
-            precision mediump float;
-            #endif
+        <div class="wrapper">
+            <div class="item" data-scroll-section>
+                <h1 data-scroll>Hey</h1>
+                <div class="gallery">
+                    <div class="image"
+                        style="background-image: url('https://tympanus.net/Development/HorizontalSmoothScrollLayout/1.b2dd7476.jpg');">
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-scroll-section>
+                <h1 data-scroll>Hey</h1>
+                <div class="gallery">
+                    <div class="image"
+                        style="background-image: url('https://tympanus.net/Development/HorizontalSmoothScrollLayout/1.b2dd7476.jpg');">
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-scroll-section>
+                <h1 data-scroll>Hey</h1>
+                <div class="gallery">
+                    <div class="image"
+                        style="background-image: url('https://tympanus.net/Development/HorizontalSmoothScrollLayout/1.b2dd7476.jpg');">
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-scroll-section>
+                <h1 data-scroll>Hey</h1>
+                <div class="gallery">
+                    <div class="image"
+                        style="background-image: url('https://tympanus.net/Development/HorizontalSmoothScrollLayout/1.b2dd7476.jpg');">
+                    </div>
+                </div>
+            </div>
+            <div class="item" data-scroll-section>
+                <h1 data-scroll>Hey</h1>
+                <div class="gallery">
+                    <div class="image"
+                        style="background-image: url('https://tympanus.net/Development/HorizontalSmoothScrollLayout/1.b2dd7476.jpg');">
+                    </div>
+                </div>
+            </div>
 
-            uniform float time;
-            uniform vec2 resolution;
-
-            float noise(vec2 p) {
-                p=(p);
-                return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*2.-1.0;
-            }      
-        
-            float map(vec2 p) {
-                return length(p) - 0.2;
-            }
-        
-            void main() {
-                vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-                vec3 col;
-                vec3 color = vec3(1.,1.,1.);
-            
-            for(float j = 0.0; j < 4.0; j++){
-                for(float i = 1.; i < 8.0; i++){
-                    uv.x += (1.0 * (
-                    0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
-                ));
-                uv.y += (1.0 *(
-                    1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
-                ));
-                }
-                uv.x += noise(sin(uv+time))*0.01;
-                uv.y += noise(cos(uv+time))*0.2;
-                col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
-            }
-        
-            vec3 bg = vec3(0.9,0.9,0.8);
-                color = mix(
-                col,
-                bg,
-                smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
-            );
-        
-            gl_FragColor = vec4(color, 1.);
-        }
-    </script>
-    <script>
-        var container;
-        var camera, scene, renderer;
-        var uniforms;
-
-        init();
-        animate();
-
-        function init() {
-            container = document.getElementById('container');
-
-            camera = new THREE.Camera();
-            camera.position.z = 1;
-
-            scene = new THREE.Scene();
-
-            var geometry = new THREE.PlaneBufferGeometry(2, 2);
-
-            uniforms = {
-                time: {
-                    type: "f",
-                    value: 1.0
-                },
-                resolution: {
-                    type: "v2",
-                    value: new THREE.Vector2()
-                }
-            };
-
-            var material = new THREE.ShaderMaterial({
-                uniforms: uniforms,
-                vertexShader: document.getElementById('vertexShader').textContent,
-                fragmentShader: document.getElementById('fragmentShader').textContent
-            });
-
-            var mesh = new THREE.Mesh(geometry, material);
-            scene.add(mesh);
-
-            renderer = new THREE.WebGLRenderer();
-            renderer.setPixelRatio(window.devicePixelRatio);
-
-            container.appendChild(renderer.domElement);
-
-            onWindowResize();
-            window.addEventListener('resize', onWindowResize, false);
-
-        }
-
-        function onWindowResize(event) {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            uniforms.resolution.value.x = renderer.domElement.width;
-            uniforms.resolution.value.y = renderer.domElement.height;
-        }
-
-        function animate() {
-            requestAnimationFrame(animate);
-            render();
-        }
-
-        function render() {
-            uniforms.time.value += 0.05;
-            renderer.render(scene, camera);
-        }
-    </script>
+        </div>
+    </div>
 </body>
 
 </html>

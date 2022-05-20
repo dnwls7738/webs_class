@@ -30,11 +30,20 @@
 </head>
 
 <body>
+    <div class="scrollTop">0</div>
     <header id="header">
         <div class="menu">
             <a href="">portfolio</a>
+            <div class="dot"></div>
             <a href="">about</a>
         </div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
         <div class="center" class="marquee_wrap">
             <div class="marquee_box box1">
                 <span class="marquee_text">INDEPENDENT FRONT-END WEB DEVELOPER</span>
@@ -46,14 +55,22 @@
                 <span class="marquee_text">INDEPENDENT FRONT-END WEB DEVELOPER</span>
             </div>
         </div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
 
         <div class="menu">
             <a href="">work</a>
+            <div class="dot"></div>
             <a href="">contact</a>
         </div>
     </header>
-    <main data-scroll-container class="data-scroll-container">
+    <main data-scroll-container data-scroll-offset class="data-scroll-container">
         <div class="content">
+            <div class="wheel"></div>
             <div class="sec_wrap">
                 <section id="section1" class="section">
                     <div class="sec_text">
@@ -71,8 +88,8 @@
                     </div>
                 </section>
                 <section id="section3" class="section">
-                    <h2>WEBSTANDARD</h2>
-                    <p>
+                    <h2 data-scroll-speed="3">WEBSTANDARD</h2>
+                    <p data-scroll data-scroll-speed="3">
                         웹 표준 지침서를 준수하고 크로스브라우징 작업을 한 사이트입니다.
                         모든사용자가 이용에 불편이 없도록 대체 텍스트로 웹 접근성 또한
                         고려하였습니다. 슬라이드, 탭, 메뉴, 팝업, 동영상 기능을 작업하였으며,
@@ -80,7 +97,7 @@
                         배너와 갤러리에 효과를 주었습니다. 크로스 브라우징은 익스플로러
                         8버전부터 지원합니다.
                     </p>
-                    <div data-scroll data-scroll-speed="1" class="imgTitle">
+                    <div data-scroll data-scroll-speed="2" class="imgTitle">
 
                         <div class="img">
 
@@ -138,30 +155,31 @@
                     </div>
                 </section>
                 <section id="section7" class="section">
-                    <div class="tetris" class="game2" class="gallery">
+                    <div class="tetris" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0
                             src="./assets/game/tetrisGame/index.html"></iframe>
                         <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>TETRIS GAME</p>
+                        <p data-scroll data-scroll-speed="-1">TETRIS GAME</p>
                     </div>
-                    <div class="typing" class="game2">
+
+                    <div class="typing" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0
                             src="./assets/game/typingGame/index.html"></iframe>
                         <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>TYPING GAMIE</p>
+                        <p data-scroll data-scroll-speed="-1">TYPING GAMIE</p>
                     </div>
 
-                    <div class="memory" class="game2">
+                    <div class="memory" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0 src="./assets/game/index2.html"></iframe>
                         <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>MEMORY GAME</p>
+                        <p data-scroll data-scroll-speed="-1">MEMORY GAME</p>
                     </div>
 
-                    <div class="music" class="game2">
+                    <div class="music" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0
                             src="./assets/game/musicplayer/index.html"></iframe>
                         <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>MUSIC PLAYER</p>
+                        <p data-scroll data-scroll data-scroll-speed="-1">MUSIC PLAYER</p>
                     </div>
                 </section>
                 <section id="section8" class="section">
@@ -203,7 +221,7 @@
                         <!-- <img class="Img" src="./assets/img/parallax.png" alt=""> -->
                     </div>
                 </section>
-
+                <section id="section10" class="section">
                 </section>
             </div>
         </div>
@@ -231,8 +249,74 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
+        document.querySelector(".wheel").addEventListener('mousewheel', function (e) {
+            var wheel = e.wheelDeltaY;
+            // 스크롤값을 가져온다.
+            if (wheel > 0) {
+                //스크롤 올릴때
+                gsap.to("#container", {
+                    duration: 5.5,
+                    opacity: 1,
+                    ease: "expo",
+                });
+                console.log("object")
 
+            } else {
+                // 스크롤 내릴때
+                gsap.to("#container", {
+                    duration: 5.5,
+                    opacity: 0,
+                    ease: "expo",
+                });
+                console.log("dfsdf")
+
+            }
+        });
+        setTimeout(() => {
+            gsap.to("#header", {
+                duration: 2,
+                top: 0,
+                ease: "expo",
+            });
+            gsap.to("#footer", {
+                duration: 2,
+                bottom: 0,
+                ease: "expo",
+            });
+            gsap.to(".t1", {
+                duration: 3.5,
+                x: 0,
+                y: 0,
+                opacity: 1,
+                ease: "expo",
+                delay: 1.5,
+            });
+            gsap.to(".t2", {
+                duration: 3.5,
+                x: 0,
+                y: 0,
+                opacity: 1,
+                ease: "expo",
+                delay: 2,
+            });
+            gsap.to(".t3", {
+                duration: 3.5,
+                x: 0,
+                y: 0,
+                opacity: 1,
+                ease: "expo",
+                delay: 2.5,
+            });
+            gsap.to(".t4", {
+                duration: 3.5,
+                opacity: 1,
+                ease: "expo",
+                delay: 2.5,
+            });
+        }, 10);
     </script>
 
 
@@ -240,29 +324,45 @@
         import locomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll@4.0.6";
 
         const lscroll = new locomotiveScroll({
-            el: document.querySelector("[data-scroll-container]"),
+            el: document.querySelector('[data-scroll-container]'),
+            offset : [0,0],
             smooth: true,
-            direction: "horizontal",
+            direction: 'horizontal',
         });
 
-        const map = (x, a, b, c, d) => (x - a) * (d - c) / (b - a) + c;
+        const parallaxCont = document.querySelector(".content");
 
-        const clamp = (num, min, max) => num <= min ? min : num >= max ? max : num;
+        function scroll() {
+            let sction1 = document.querySelector("#section1");
+            let scrollTop = document.querySelector('[data-scroll-offset]')
+            // console.log(scrollTop)
 
-        let scroll = {cache: 0, current: 0};
+            //박스 전체 가로 값
+            // let parallaxWidth = parallaxCont.getBoundingClientRect().left;
 
-        const allImgs = [...document.querySelectorAll('.gallery')];
-        lscroll.on('scroll', (obj) => {
-            scroll.current = obj.scroll.x;
-            const distance = scroll.current - scroll.cache;
-            scroll.cache = scroll.current;
-            const skewVal = map(distance, -50, 50, -15, 15);
-            allImgs.forEach(el => el.style.transform = 'skewX('+clamp(skewVal, -15, 15)+'deg)');
-        });
-        lscroll.update();
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            if (scrollTop > sction1.offsetTop) {
+                gsap.to("#container", {
+                    duration: 5.5,
+                    opacity: 0,
+                    ease: "expo",
+                });
+            }
+
+
+            document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
+
+
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+        window.addEventListener("resize", scroll);
+
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <script id="vertexShader" type="x-shader/x-vertex">
         void main() {
             gl_Position = vec4( position, 1.0 );
@@ -379,20 +479,11 @@
             renderer.render(scene, camera);
         }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script src="./assets/js/gsap.min.js"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to('.content', {
-            scrollTrigger: {
-                trigger: '.content',
-                toggleActions: 'play pause resume none',
-                horizontal: true,
-            },
-            duration: 2,
-        });
     </script>
+
+
 
 </body>
 

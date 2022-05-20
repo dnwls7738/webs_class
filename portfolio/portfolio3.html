@@ -401,7 +401,7 @@
         bottom: 0,
         ease: "expo",
       });
-      gsap.to(mainTitle, {
+      gsap.to(".sec_text", {
         duration: 3.5,
         x: 0,
         y: 0,
@@ -419,6 +419,7 @@
         window.scrollY ||
         window.pageYOffset ||
         document.documentElement.scrollTop;
+        console.log(scrollTop)
 
       //박스 전체 가로 값
       let parallaxWidth = parallaxCont.getBoundingClientRect().width;
