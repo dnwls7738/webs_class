@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Document</title>
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./reset.css">
+
+
 
     <link
         href="https://fonts.googleapis.com/css2?family=Abel&family=Syncopate:wght@400;700&family=Tulpen+One&display=swap"
@@ -30,7 +33,6 @@
 </head>
 
 <body>
-    <div class="scrollTop">0</div>
     <header id="header">
         <div class="menu">
             <a href="">portfolio</a>
@@ -104,10 +106,10 @@
                         </div>
                     </div>
                     <img data-scroll data-scroll-speed="2" src="./assets/img/webs.png" alt="" />
-                    <div class="buttons">
+                    <div class="buttons" id="btn1">
                         <a href="" class="button">CODE VIEW</a>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" id="btn1">
                         <a href="" class="button">SITE VIEW</a>
                     </div>
                 </section>
@@ -122,10 +124,10 @@
                         <div class="img"></div>
                     </div>
                     <img data-scroll data-scroll-speed="2" src="./assets/img/php.png" alt="" />
-                    <div class="buttons">
+                    <div class="buttons" id="btn2">
                         <a href="" class="button">CODE VIEW</a>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" id="btn2">
                         <a href="" class="button">SITE VIEW</a>
                     </div>
                 </section>
@@ -141,51 +143,56 @@
                         <div class="img"></div>
                     </div>
                     <img data-scroll data-scroll-speed="2" src="./assets/img/react.png" alt="" />
-                    <div class="buttons">
+                    <div class="buttons" id="btn3">
                         <a href="" class="button">CODE VIEW</a>
                     </div>
-                    <div class="buttons">
+                    <div class="buttons" id="btn3">
                         <a href="" class="button">SITE VIEW</a>
                     </div>
                 </section>
                 <section id="section6" class="section">
+
                     <div class="mainTitle">
                         <p class="text1" data-scroll data-scroll-speed="2">PROJECT</p>
                         <p class="text2" data-scroll data-scroll-speed="1">GAME</p>
                     </div>
+
                 </section>
                 <section id="section7" class="section">
                     <div class="tetris" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0
                             src="./assets/game/tetrisGame/index.html"></iframe>
                         <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p data-scroll data-scroll-speed="-1">TETRIS GAME</p>
+                        <p>TETRIS GAME</p>
                     </div>
 
                     <div class="typing" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0
                             src="./assets/game/typingGame/index.html"></iframe>
                         <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p data-scroll data-scroll-speed="-1">TYPING GAMIE</p>
+                        <p>TYPING GAMIE</p>
                     </div>
 
                     <div class="memory" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0 src="./assets/game/index2.html"></iframe>
                         <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p data-scroll data-scroll-speed="-1">MEMORY GAME</p>
+                        <p>MEMORY GAME</p>
                     </div>
 
                     <div class="music" class="gallery">
                         <iframe width="100%" height="100%" frameborder=0
                             src="./assets/game/musicplayer/index.html"></iframe>
                         <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p data-scroll data-scroll data-scroll-speed="-1">MUSIC PLAYER</p>
+                        <p>MUSIC PLAYER</p>
                     </div>
                 </section>
                 <section id="section8" class="section">
-                    <div class="mainTitle">
-                        <p class="text1" data-scroll data-scroll-speed="2">PROJECT</p>
-                        <p class="text2" data-scroll data-scroll-speed="1">SCRIPT</p>
+                    <div id="myCanvas">
+                        <canvas></canvas>
+                        <div class="mainTitle">
+                            <p class="text1" data-scroll data-scroll-speed="2">PROJECT</p>
+                            <p class="text2" data-scroll data-scroll-speed="1">SCRIPT</p>
+                        </div>
                     </div>
                 </section>
                 <section id="section9" class="section">
@@ -248,9 +255,134 @@
         </div>
     </footer>
 
+    <script src="https://dl.dropbox.com/s/m1qor6z15o64wkc/stats.min.js?dl=0"></script>
+    <script src="./assets/js/locomotive.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="./assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        (function () {
+
+            // window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window
+            //     .webkitRequestAnimationFrame;
+
+            var canvas = document.querySelector("canvas");
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight;
+
+            var ctx = canvas.getContext("2d");
+            ctx.globalCompositeOperation = "source-over"; //合成方法
+
+            //stats.js
+            var stats = new Stats();
+            // document.body.appendChild(stats.dom);
+            var particles = [];
+            var objectPool = []; // オブジェクトプール
+            var pIndex = 0;
+            var x, y, frameId;
+            var particleImage = new Image();
+            particleImage.src = "https://dl.dropbox.com/s/fjb0ak4h8hktr2o/smoke.png?dl=0";
+
+            //Particle作成
+            function Particle(x, vx, vy, size) {
+                this.x = x;
+                this.y = canvas.height + canvas.height / 2 * Math.random();
+                this.vx = vx;
+                this.vy = vy;
+                particles[pIndex] = this;
+                this.id = pIndex;
+                pIndex++;
+                this.life = 0;
+                this.maxlife = 1;
+                this.degree = getRandom(0, 360); //開始角度をずらす
+                this.width = getRandom(size, size * 2)
+                this.height = getRandom(size, size * 2)
+            };
+
+            Particle.prototype.draw = function () {
+                this.degree += 0.001;
+                this.vx *= 0.95; //重力
+                this.vy *= 0.995; //重力
+                this.x += this.vx + Math.cos(this.degree * Math.PI / 180); //蛇行
+                this.y -= this.vy + Math.sin(this.degree / 2 * Math.PI / 180) * 0.001;
+
+                ctx.globalAlpha = 1 - this.life; //lifeがへるごとに透明度が上がる
+
+                ctx.drawImage(particleImage, this.x, this.y, this.width - this.life * this.width, this.height -
+                    this.life * this.height);
+
+                this.life += 0.001;
+
+                //lifeがなくなったら紙吹雪を削除
+                if (this.life >= this.maxlife) {
+                    delete particles[this.id];
+                }
+            }
+
+            //GUI
+            var params, params_A, params_B, params_C;
+
+            function setGUI() {
+
+                params = {
+                    'amount': 1,
+                    'bg_color': "rgb(25,25,25)",
+                    'vx': 2,
+                    'vy': 3,
+                    'size': 400
+                };
+
+
+            }
+            setGUI();
+
+            //アニメーション
+            function loop() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height); //画面の更新
+                canvas.style.background = params.bg_color; //背景色変更
+                if (frameId % 3 == 0) { //量を制御
+                    for (var i = 0; i < params.amount; i++) {
+                        new Particle(
+                            getRandom(canvas.width / 8, canvas.width - canvas.width / 8),
+                            getRandom(-params.vx, params.vx),
+                            getRandom(params.vy / 2, params.vy * 2),
+                            params.size + Math.cos(frameId) * 100 //大きさを時間で変化させる
+                        );
+                    }
+                }
+                for (var i in particles) {
+                    particles[i].draw();
+                }
+
+
+                frameId = requestAnimationFrame(loop);
+                if (frameId % 2 == 0) {
+                    return;
+                } //60fpsを30fpsにする
+                stats.update();
+            }
+            loop();
+
+            //全画面リサイズ
+            window.addEventListener("resize", function () {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                x = canvas.width / 2;
+                y = canvas.height / 2;
+            });
+
+            function getRandom(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+
+
+        })();
+    </script>
+
+
+
+
     <script>
         document.querySelector(".wheel").addEventListener('mousewheel', function (e) {
             var wheel = e.wheelDeltaY;
@@ -275,6 +407,72 @@
 
             }
         });
+        document.querySelector("#section3").addEventListener('mouseover', function (e) {
+            var wheel = e.wheelDeltaY;
+            gsap.to("#btn1", {
+                duration: 5.5,
+                opacity: 1,
+                ease: "expo",
+            });
+            console.log("object")
+        });
+        document.querySelector("#section3").addEventListener('mouseleave', function (e) {
+            
+            gsap.to("#btn1", {
+                duration: 5.5,
+                opacity: 0,
+                ease: "expo",
+            });
+
+            console.log("dfsdf")
+        });
+
+
+        document.querySelector("#section4").addEventListener('mouseover', function (e) {
+            var wheel = e.wheelDeltaY;
+       
+            gsap.to("#btn2", {
+                duration: 5.5,
+                opacity: 1,
+                ease: "expo",
+            });
+            console.log("object")
+        });
+        document.querySelector("#section4").addEventListener('mouseleave', function (e) {
+           
+            gsap.to("#btn2", {
+                duration: 5.5,
+                opacity: o,
+                ease: "expo",
+            });
+
+            console.log("dfsdf")
+        });
+
+
+
+        document.querySelector("#section5").addEventListener('mouseover', function (e) {
+            var wheel = e.wheelDeltaY;
+           
+            gsap.to("#btn3", {
+                duration: 5.5,
+                opacity: 1,
+                ease: "expo",
+            });
+            console.log("object")
+        });
+        document.querySelector("#section5").addEventListener('mouseleave', function (e) {
+            
+            gsap.to("#btn3", {
+                duration: 5.5,
+                opacity: 0,
+                ease: "expo",
+            });
+
+            console.log("dfsdf")
+        });
+
+
         setTimeout(() => {
             gsap.to("#header", {
                 duration: 2,
@@ -325,41 +523,9 @@
 
         const lscroll = new locomotiveScroll({
             el: document.querySelector('[data-scroll-container]'),
-            offset : [0,0],
             smooth: true,
             direction: 'horizontal',
         });
-
-        const parallaxCont = document.querySelector(".content");
-
-        function scroll() {
-            let sction1 = document.querySelector("#section1");
-            let scrollTop = document.querySelector('[data-scroll-offset]')
-            // console.log(scrollTop)
-
-            //박스 전체 가로 값
-            // let parallaxWidth = parallaxCont.getBoundingClientRect().left;
-
-
-            gsap.registerPlugin(ScrollTrigger);
-
-            if (scrollTop > sction1.offsetTop) {
-                gsap.to("#container", {
-                    duration: 5.5,
-                    opacity: 0,
-                    ease: "expo",
-                });
-            }
-
-
-            document.querySelector(".scrollTop").innerText = Math.round(scrollTop);
-
-
-            requestAnimationFrame(scroll);
-        }
-        scroll();
-        window.addEventListener("resize", scroll);
-
     </script>
 
 
