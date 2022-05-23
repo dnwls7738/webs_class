@@ -510,7 +510,7 @@
 
     <script id="vertexShader2" type="x-shader/x-vertex">
         void main() {
-        gl_Position = vec4( position, 1.5 );
+        gl_Position = vec4( position, 2 );
     }
 </script>
 
@@ -577,7 +577,7 @@
 
             scene = new THREE.Scene();
 
-            var geometry = new THREE.PlaneBufferGeometry(2, 2);
+            var geometry = new THREE.PlaneBufferGeometry(4, 1.5);
 
             uniforms = {
                 time: {
@@ -642,7 +642,7 @@
 
             scene1 = new THREE.Scene();
 
-            var geometry1 = new THREE.PlaneBufferGeometry(2, 2);
+            var geometry1 = new THREE.PlaneBufferGeometry(4, 1.5);
 
             uniforms = {
                 time: {
@@ -707,7 +707,7 @@
 
         scene2 = new THREE.Scene();
 
-        var geometry2 = new THREE.PlaneBufferGeometry(2, 2);
+        var geometry2 = new THREE.PlaneBufferGeometry(4, 1.5);
 
         uniformss = {
             time: {
