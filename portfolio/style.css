@@ -811,8 +811,8 @@ align-items: center;
   background-size: cover;
   transition: all 0.3s ease-in;
   /* outline: 6px solid #000; */
-  margin-bottom: 10%;
-  margin-right: 15vw;
+  margin-bottom: 8%;
+  margin-right: 25vw;
 }
 .slide iframe {
   opacity: 0;
@@ -860,7 +860,7 @@ top: 82%;
   transition: all 0.5s ease-in;
   /* outline: 6px solid #000; */
   margin-top: 5%;
-  margin-right: 15vw;
+  margin-right: 25vw;
 }
 
 .mouse iframe {
@@ -911,7 +911,7 @@ top: 82%;
   transition: all 0.5s ease-in;
   /* outline: 6px solid #000; */
   margin-bottom: 7%;
-  margin-right: 15vw;
+  margin-right: 25vw;
 }
 
 .search iframe {
@@ -959,7 +959,7 @@ top: 82%;
   transition: all 0.5s ease-in;
   /* outline: 6px solid #000; */
   margin-top: 7%;
-  margin-right: 15vw;
+  margin-right: 25vw;
 }
 
 .parallax iframe {
