@@ -6,144 +6,254 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background: radial-gradient(#fff 50%, #aaa) fixed;
-        }
-
-        .imac {
-            padding: 4% 6%;
-            margin: 0 auto;
-            max-width: 620px;
-        }
-
-        .screen {
-            background: #000;
-            border-radius: 3% 3% 0 0 / 5% 5% 0 0;
-            /* for aspect ratio */
-            position: relative;
-            width: 100%;
-        }
-
-        .screen:before {
-            content: "";
-            display: block;
-            /* for aspect ratio ~3:5 */
-            padding-top: 60%;
-        }
-
-        .logo {
-            background: linear-gradient(90deg, #A6A6AA, #E1E2E4);
-            border-radius: 0 0 3% 3%/ 0 0 33.33% 33.33%;
-            /* for aspect ratio */
-            position: relative;
-            width: 100%;
-        }
-
-        .logo:before {
-            content: "";
-            display: block;
-            /* for aspect ratio ~9:100 */
-            padding-top: 9%;
-        }
-
-        .logo:after {
-            content: "";
-            background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgdmVyc2lvbj0nMS4xJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB2aWV3Qm94PScwIDAgMTAwIDEwMCcgc3R5bGU9J2hlaWdodDoyNHB4O3dpZHRoOjI0cHg7Jz4NCgk8cGF0aCBkPSdNNzcuMjk1IDUzLjEzNGMtMC4xMjYtMTIuNjY0IDEwLjMyOC0xOC43MzggMTAuNzk1LTE5LjA0MC01Ljg3NC04LjU5Ni0xNS4wMjQtOS43NzMtMTguMjg1LTkuOTA5LTcuNzg3LTAuNzg4LTE1LjE5NSA0LjU4NS0xOS4xNDcgNC41ODUtMy45NDIgMC0xMC4wNDEtNC40NjgtMTYuNDk5LTQuMzUxLTguNDg4IDAuMTI2LTE2LjMxNCA0LjkzNS0yMC42ODUgMTIuNTM3LTguODE5IDE1LjMwMy0yLjI1OCAzNy45NzMgNi4zMzcgNTAuMzgzIDQuMiA2LjA3NSA5LjIwOCAxMi44OTggMTUuNzg0IDEyLjY1NCA2LjMzMi0wLjI1MyA4LjcyNy00LjA5NyAxNi4zODItNC4wOTcgNy42NTYgMCA5LjgwNyA0LjA5NyAxNi41MDkgMy45NzIgNi44MTQtMC4xMjcgMTEuMTMxLTYuMTkxIDE1LjMwMi0xMi4yODUgNC44MjMtNy4wNDggNi44MDktMTMuODcxIDYuOTI2LTE0LjIyMS0wLjE1MS0wLjA2OS0xMy4yODctNS4xMDEtMTMuNDE5LTIwLjIyOHpNNjQuNzAzIDE1Ljk2OWMzLjQ5LTQuMjM0IDUuODQ2LTEwLjEwOSA1LjIwMy0xNS45NjktNS4wMjcgMC4yMDUtMTEuMTIxIDMuMzQ5LTE0LjcyOCA3LjU3My0zLjIzNyAzLjc0OC02LjA2OSA5LjcyOS01LjMxIDE1LjQ3MiA1LjYxMiAwLjQzOCAxMS4zNDEtMi44NTIgMTQuODM0LTcuMDc3eicgLz4NCjwvc3ZnPg0KDQo=");
-            left: 50%;
-            margin-left: -2.4%;
-            position: absolute;
-            top: 20%;
-            width: 4.8%;
-            padding-top: 4.8%;
-        }
-
-        .viewport {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 0;
-            margin: 4%;
-            background: #333;
-        }
-
-        .leg {
-            margin: 0 auto;
-            /* for aspect ratio */
-            position: relative;
-            width: 20%;
-        }
-
-        .leg:before {
-            content: "";
-            display: block;
-            /* for aspect ratio ~46:100 */
-            padding-top: 46%;
-            background: linear-gradient(#7a7b80, #abacaf 26%, #d0d1d2 57%, #f2f2f2 76%, #e4e4e4 84%, #787878);
-        }
-
-        .foot {
-            /* for aspect ratio */
-            position: relative;
-            width: 20%;
-            margin: 0 auto;
-            /* for perspective */
-            perspective: 180px;
-        }
-
-        .foot:before {
-            content: "";
-            display: block;
-            /* for aspect ratio ~2:5 */
-            padding-top: 40%;
-            /* for perspective */
-            transform: rotateX(68deg);
-            transform-origin: center top;
-            background: linear-gradient(#7b7b7b, #7f7f7f 39%, #a6a6a6 53%, #ccc 67%, #aaa 86%, #eee 88%, #fff 95%, #a9a9a9 95%, #000);
-            border-radius: 0 0 10% 10% / 0 0 30% 30%;
-            box-shadow: 0 -10px 5px rgba(255, 255, 255, 0.1) inset, 0 -17px 6px rgba(0, 0, 0, 0.1) inset;
-        }
-
-
-        /* Screenshot Hover Scroll Additions
--------------------------------------------------------------- */
-
-        .imac .viewport {
-            transition: background-position 3s ease;
-            background-position: 0 0;
-            background-size: 100% auto;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .imac:hover .viewport {
-            background-position: 0 100%;
-        }
-
-        .imac .viewport:after {
-            background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
-            bottom: 0;
-            content: "";
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="imac">
-        <div class="screen">
-            <div class="viewport"
-                style="background-image:url('./assets/img/webSite.png');">
-            </div>
-        </div>
-        <div class="logo"></div>
-        <div class="leg"></div>
-        <div class="foot"></div>
-    </div>
+    <div id="container"></div>
+    <div id="container2"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script id="vertexShader" type="x-shader/x-vertex">
+    void main() {
+        gl_Position = vec4( position, 1.0 );
+    }
+</script>
+
+<script id="fragmentShader" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+
+    uniform float time;
+    uniform vec2 resolution;
+
+    float noise(vec2 p) {
+        p=(p);
+        return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*1.-1.0;
+    }      
+
+    float map(vec2 p) {
+        return length(p) - 0.2;
+    }
+
+    void main() {
+        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+        vec3 col;
+        vec3 color = vec3(1.,1.,1.);
+    
+    for(float j = 0.0; j < 4.0; j++){
+        for(float i = 1.; i < 8.0; i++){
+            uv.x += (1.0 * (
+            0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
+        ));
+        uv.y += (1.0 *(
+            1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
+        ));
+        }
+        uv.x += noise(sin(uv+time))*0.01;
+        uv.y += noise(cos(uv+time))*0.2;
+        col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
+    }
+
+    vec3 bg = vec3(0.1,0.1,0.1);
+        color = mix(
+        col,
+        bg,
+        smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
+    );
+
+        gl_FragColor = vec4(color, 1.);
+    }
+</script>
+<script>
+      var container;
+var camera, scene, renderer;
+var uniforms;
+
+init();
+animate();
+
+function init() {
+    container = document.getElementById('container');
+
+    camera = new THREE.Camera();
+    camera.position.z = 1;
+
+    scene = new THREE.Scene();
+
+    var geometry = new THREE.PlaneBufferGeometry(2, 2);
+
+    uniforms = {
+        time: {
+            type: "f",
+            value: 1.0
+        },
+        resolution: {
+            type: "v2",
+            value: new THREE.Vector2()
+        }
+    };
+
+    var material = new THREE.ShaderMaterial({
+        uniforms: uniforms,
+        vertexShader: document.getElementById('vertexShader').textContent,
+        fragmentShader: document.getElementById('fragmentShader').textContent
+    });
+
+    var mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    container.appendChild(renderer.domElement);
+
+    onWindowResize();
+    window.addEventListener('resize', onWindowResize, false);
+
+}
+
+function onWindowResize(event) {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    uniforms.resolution.value.x = renderer.domElement.width;
+    uniforms.resolution.value.y = renderer.domElement.height;
+}
+
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+}
+
+function render() {
+    uniforms.time.value += 0.05;
+    renderer.render(scene, camera);
+}
+</script>
+
+
+
+<script id="vertexShader2" type="x-shader/x-vertex">
+    void main() {
+        gl_Position = vec4( position, 2.0 );
+    }
+</script>
+
+<script id="fragmentShader2" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision mediump float;
+    #endif
+
+    uniform float time;
+    uniform vec2 resolution;
+
+    float noise(vec2 p) {
+        p=(p);
+        return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*3.-1.0;
+    }      
+
+    float map(vec2 p) {
+        return length(p) - 0.2;
+    }
+
+    void main() {
+        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+        vec3 col;
+        vec3 color = vec3(1.,1.,1.);
+    
+    for(float j = 0.0; j < 4.0; j++){
+        for(float i = 1.; i < 8.0; i++){
+            uv.x += (1.0 * (
+            0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
+        ));
+        uv.y += (1.0 *(
+            1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
+        ));
+        }
+        uv.x += noise(sin(uv+time))*0.01;
+        uv.y += noise(cos(uv+time))*0.2;
+        col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
+    }
+
+    vec3 bg = vec3(0.1,0.1,0.1);
+        color = mix(
+        col,
+        bg,
+        smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
+    );
+
+        gl_FragColor = vec4(color, 1.);
+    }
+</script>
+<script>
+var container2;
+var camera2, scene2, renderer2;
+var uniforms2;
+
+init1();
+animate1();
+
+function init1() {
+    container2 = document.getElementById('container2');
+
+    camera2 = new THREE.Camera();
+    camera2.position.z = 1;
+
+    scene2 = new THREE.Scene();
+
+    var geometry2 = new THREE.PlaneBufferGeometry(1, 1);
+
+    uniforms2 = {
+        time: {
+            type: "f",
+            value: 2.0
+        },
+        resolution: {
+            type: "v2",
+            value: new THREE.Vector2()
+        }
+    };
+
+    var material2 = new THREE.ShaderMaterial({
+        uniforms: uniforms,
+        vertexShader: document.getElementById('vertexShader').textContent,
+        fragmentShader: document.getElementById('fragmentShader').textContent
+    });
+
+    var mesh2 = new THREE.Mesh(geometry2, material2);
+    scene.add(mesh2);
+
+    renderer2 = new THREE.WebGLRenderer();
+    renderer2.setPixelRatio(window.devicePixelRatio);
+
+    container2.appendChild(renderer2.domElement);
+
+    onWindowResize();
+    window.addEventListener('resize', onWindowResize, false);
+
+}
+
+function onWindowResize(event) {
+    renderer2.setSize(window.innerWidth, window.innerHeight);
+    uniforms2.resolution.value.x = renderer.domElement.width;
+    uniforms2.resolution.value.y = renderer.domElement.height;
+}
+
+function animate1() {
+    requestAnimationFrame(animate1);
+    render1();
+}
+
+function render1() {
+    uniforms2.time.value += 0.1;
+    renderer2.render(scene, camera);
+}
+</script>
+
+
+
+
+
 </body>
 
 </html>

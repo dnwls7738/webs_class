@@ -70,8 +70,8 @@
             <a href="">contact</a>
         </div>
     </header>
-    <main data-scroll-container data-scroll-offset class="data-scroll-container">
-        <div class="content">
+    <main data-scroll-container>
+        <div class="content" data-scroll-container>
             <div class="wheel"></div>
             <div class="sec_wrap">
                 <section id="section1" class="section">
@@ -177,82 +177,100 @@
                     </div>
                 </section>
                 <section id="section6" class="section">
+                    <div id="container2"></div>
                     <div class="wheel2"></div>
-                    <div id="myCanvas">
-                        <canvas class="canvas"></canvas>
-                        <div class="mainTitle">
-                            <p class="text1" data-scroll data-scroll-speed="2">PROJECT</p>
-                            <p class="text2" data-scroll data-scroll-speed="1">GAME</p>
+                    <div class="mainTitle">
+                        <p class="text1" data-scroll data-scroll-speed="2">PROJECT</p>
+                        <p class="text2" data-scroll data-scroll-speed="1">GAME</p>
+                    </div>
+                </section>
+                <section id="section7" class="section">
+                    <div class="tetris" data-scroll data-scroll-speed="1">
+                        <div class="tetrisImg">
+                            <iframe width="100%" height="100%" frameborder=0
+                                src="./assets/game/tetrisGame/index.html"></iframe>
+                            <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+                            <p>TETRIS GAME</p>
                         </div>
                     </div>
 
-                </section>
-                <section id="section7" class="section">
-                    <div class="tetris" class="gallery">
-                        <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/game/tetrisGame/index.html"></iframe>
-                        <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>TETRIS GAME</p>
+                    <div class="typing" class="gallery" data-scroll data-scroll-speed="2">
+                        <div class="typingImg">
+                            <iframe width="100%" height="100%" frameborder=0
+                                src="./assets/game/typingGame/index2.html"></iframe>
+                            <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+                            <p>TYPING GAMIE</p>
+                        </div>
                     </div>
 
-                    <div class="typing" class="gallery">
-                        <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/game/typingGame/index.html"></iframe>
-                        <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>TYPING GAMIE</p>
+                    <div class="memory" class="gallery" data-scroll data-scroll-speed="3">
+                        <div class="memoryImg">
+                            <iframe width="100%" height="100%" frameborder=0 src="./assets/game/index2.html"></iframe>
+                            <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg"
+                                    alt=""></a>
+                            <p>MEMORY GAME</p>
+                        </div>
+
                     </div>
 
-                    <div class="memory" class="gallery">
-                        <iframe width="100%" height="100%" frameborder=0 src="./assets/game/index2.html"></iframe>
-                        <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>MEMORY GAME</p>
-                    </div>
+                    <div class="music" class="gallery" data-scroll data-scroll-speed="4">
+                        <div class="musicImg">
+                            <iframe width="100%" height="100%" frameborder=0
+                                src="./assets/game/musicplayer/index.html"></iframe>
+                            <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+                            <p>MUSIC PLAYER</p>
+                        </div>
 
-                    <div class="music" class="gallery">
-                        <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/game/musicplayer/index.html"></iframe>
-                        <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p>MUSIC PLAYER</p>
                     </div>
                 </section>
                 <section id="section8" class="section">
-
                     <div class="mainTitle">
                         <p class="text1" data-scroll data-scroll-speed="2">PROJECT</p>
                         <p class="text2" data-scroll data-scroll-speed="1">SCRIPT</p>
                     </div>
                 </section>
+
                 <section id="section9" class="section">
-                    <div class="slide">
-                        <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/effect/sliderEffect01.html"></iframe>
-                        <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <p data-scroll data-scroll-speed="1">SLIDER EFFECT</p>
+                    <div class="slide" data-scroll data-scroll-speed="1" class="reveal">
+                        <div class="slideImg" class="img">
+                            <iframe width="100%" height="100%" frameborder=0
+                                src="./assets/effect/sliderEffect01.html"></iframe>
+                            <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+                            <p>SLIDER EFFECT</p>
+                        </div>
                     </div>
 
 
-                    <div class="mouse">
-                        <p data-scroll data-scroll-speed="1">MOUSE EFFECT</p>
-                        <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/effect/mouseEffect01.html"></iframe>
-                        <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+                    <div class="mouse" data-scroll data-scroll-speed="1" class="reveal">
+                        <div class="mouseImg" class="img">
+                            <p>MOUSE EFFECT</p>
+                            <iframe width="100%" height="100%" frameborder=0
+                                src="./assets/effect/mouseEffect01.html"></iframe>
+                            <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg"
+                                    alt=""></a>
+                        </div>
+
                         <!-- <img class="Img" src="./assets/img/mouse.png" alt=""> -->
                     </div>
 
-                    <div class="search">
-                        <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/effect/searchEffect01.html"></iframe>
-                        <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <!-- <img class="Img" src="./assets/img/search.png" alt=""> -->
-                        <p data-scroll data-scroll-speed="1">SEARCH EFFECT</p>
+                    <div class="search" data-scroll data-scroll-speed="1" class="reveal">
+                        <div class="searchImg" class="img">
+                            <iframe width="100%" height="100%" frameborder=0
+                                src="./assets/effect/searchEffect01.html"></iframe>
+                            <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+                            <!-- <img class="Img" src="./assets/img/search.png" alt=""> -->
+                            <p>SEARCH EFFECT</p>
+                        </div>
                     </div>
 
-                    <div class="parallax">
-                        <p data-scroll data-scroll-speed="1">PARALLAX EFFECT</p>
-                        <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/effect/parallaxEffect01.html"></iframe>
-                        <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                        <!-- <img class="Img" src="./assets/img/parallax.png" alt=""> -->
+                    <div class="parallax" class="reveal" data-scroll data-scroll-speed="1" class="reveal">
+                        <div class="parallaxImg" class="img">
+                            <p>PARALLAX EFFECT</p>
+                            <iframe width="100%" height="100%" frameborder=0
+                                src="./assets/effect/parallaxEffect01.html"></iframe>
+                            <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
+                            <!-- <img class="Img" src="./assets/img/parallax.png" alt=""> -->
+                        </div>
                     </div>
                 </section>
                 <section id="section10" class="section">
@@ -290,165 +308,6 @@
     <script src="./assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-        (function () {
-
-            window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window
-                .webkitRequestAnimationFrame;
-
-            var canvas = document.querySelector("canvas");
-            canvas.width = window.innerWidth
-            canvas.height = window.innerHeight;
-
-
-            var ctx = canvas.getContext("2d");
-            //stats.js
-            var stats = new Stats();
-            // document.body.appendChild( stats.dom );
-
-            var particles = [];
-            var pIndex = 0;
-            var x, y, frameId;
-
-            //Particle作成
-            function Particle(x, y, scaleX, scaleY, color, accel, lineWidth) {
-                this.x = x;
-                this.y = y;
-                this.scaleX = scaleX;
-                this.scaleY = scaleY;
-                this.vx = 1;
-                this.accel = accel;
-                particles[pIndex] = this;
-                this.id = pIndex;
-                pIndex++;
-                this.life = 0;
-                this.radius = getRandom(canvas.height / 2, canvas.height);
-                this.width = 0;
-                this.color = color;
-                this.rotate = Math.PI / 180 * getRandom(0, 360);
-                this.lineWidth = getRandom(.1, lineWidth);
-                this.degree = 0;
-                this.maxlife = 50;
-            };
-            Particle.prototype.draw = function () {
-
-                this.vx *= this.accel;
-                this.width = this.vx;
-
-                ctx.strokeStyle = this.color;
-                ctx.beginPath();
-                ctx.ellipse(this.x, this.y, this.radius * this.scaleX, this.radius * this.scaleY, this.rotate,
-                    0 * Math.PI / 180, (this.width) * Math.PI / 180);
-                ctx.lineWidth = this.lineWidth;
-                ctx.lineWidth -= this.vx;
-                ctx.stroke();
-                ctx.globalAlpha = (1 - this.life / this.maxlife) * 0.5;
-                ctx.closePath();
-
-
-
-                this.life++;
-                if (this.life >= this.maxlife) {
-                    delete particles[this.id];
-                }
-            }
-
-
-            //GUI
-            var params, params_A, params_B;
-
-            function setGUI() {
-
-                params = {
-                    'colorful_mode': true,
-                    'amount': 2,
-                    'bg_color': "rgb(25,25,25)",
-                    'afterimage': 0.1,
-                };
-
-                params_A = {
-                    'active': true,
-                    'scaleX': 0.5,
-                    'scaleY': 2,
-                    'color': "#47f4ff",
-                    'accel': 1.2,
-                    'lineWidth': 2
-                };
-
-                params_B = {
-                    'active': true,
-                    'scaleX': 2,
-                    'scaleY': 0.5,
-                    'color': "#47f4ff",
-                    'accel': 1.2,
-                    'lineWidth': 2
-                };
-            }
-            setGUI();
-
-            //アニメーション
-            function loop() {
-                ctx.fillStyle = params.bg_color;
-                ctx.globalAlpha = params.afterimage;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                canvas.style.background = params.bg_color; //背景色変更
-
-                var cw = canvas.width;
-                var ch = canvas.height;
-                for (var i = 0; i < params.amount; i++) {
-                    if (frameId % 10 == 0) {
-
-                        var colorA, colorB;
-                        if (params.colorful_mode) {
-                            var hue = Math.floor(getRandom(0, 12.99)) * 30;
-                            var hsl_color = "hsl(" + hue + ", 100%, 50%)";
-                            colorA = colorB = hsl_color;
-                        } else {
-                            colorA = params_A.color;
-                            colorB = params_B.color;
-                        }
-
-                        if (params_A.active) {
-                            new Particle(cw / 2, ch * 1.5, params_A.scaleX, params_A.scaleY, colorA, params_A.accel,
-                                params_A.lineWidth);
-                        }
-                        if (params_B.active) {
-                            new Particle(cw / 2, ch - ch * 1.5, params_B.scaleX, params_B.scaleY, colorB, params_B
-                                .accel, params_B.lineWidth);
-                        }
-                    }
-                }
-
-                for (var i in particles) {
-                    particles[i].draw();
-                }
-                frameId = requestAnimationFrame(loop);
-                if (frameId % 2 == 0) {
-                    return;
-                } //60fpsを30fpsにする
-                stats.update();
-            }
-            loop();
-
-
-            //全画面リサイズ
-            window.addEventListener("resize", function () {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                x = canvas.width / 2;
-                y = canvas.height / 2;
-            });
-
-            function getRandom(min, max) {
-                return Math.random() * (max - min) + min;
-            }
-
-        })();
-    </script>
-
-
-
-
-    <script>
         document.querySelector(".wheel").addEventListener('mousewheel', function (e) {
             var wheel = e.wheelDeltaY;
             // 스크롤값을 가져온다.
@@ -477,7 +336,7 @@
             // 스크롤값을 가져온다.
             if (wheel > 0) {
                 //스크롤 올릴때
-                gsap.to(".canvas", {
+                gsap.to("#container2", {
                     duration: 5.5,
                     opacity: 1,
                     ease: "expo",
@@ -486,7 +345,7 @@
 
             } else {
                 // 스크롤 내릴때
-                gsap.to(".canvas", {
+                gsap.to("#container2", {
                     duration: 5.5,
                     opacity: 0,
                     ease: "expo",
@@ -616,59 +475,59 @@
         });
     </script>
 
-
-    <script id="vertexShader" type="x-shader/x-vertex">
+    <script id="vertexShader2" type="x-shader/x-vertex">
         void main() {
-            gl_Position = vec4( position, 1.0 );
-        }
-    </script>
+        gl_Position = vec4( position, 1.5 );
+    }
+</script>
 
-    <script id="fragmentShader" type="x-shader/x-fragment">
+
+    <script id="fragmentShader2" type="x-shader/x-fragment">
         #ifdef GL_ES
-        precision mediump float;
-        #endif
+    precision mediump float;
+    #endif
 
-        uniform float time;
-        uniform vec2 resolution;
+    uniform float time;
+    uniform vec2 resolution;
 
-        float noise(vec2 p) {
-            p=(p);
-            return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*2.-1.0;
-        }      
+    float noise(vec2 p) {
+        p=(p);
+        return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*3.-1.0;
+    }      
+
+    float map(vec2 p) {
+        return length(p) - 0.2;
+    }
+
+    void main() {
+        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+        vec3 col;
+        vec3 color = vec3(1.,1.,1.);
     
-        float map(vec2 p) {
-            return length(p) - 0.2;
+    for(float j = 0.0; j < 4.0; j++){
+        for(float i = 1.; i < 8.0; i++){
+            uv.x += (1.0 * (
+            0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
+        ));
+        uv.y += (1.0 *(
+            1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
+        ));
         }
-    
-        void main() {
-            vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-            vec3 col;
-            vec3 color = vec3(1.,1.,1.);
-        
-        for(float j = 0.0; j < 4.0; j++){
-            for(float i = 1.; i < 8.0; i++){
-                uv.x += (1.0 * (
-                0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
-            ));
-            uv.y += (1.0 *(
-                1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
-            ));
-            }
-            uv.x += noise(sin(uv+time))*0.01;
-            uv.y += noise(cos(uv+time))*0.2;
-            col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
-        }
-    
-        vec3 bg = vec3(0.1,0.1,0.1);
-            color = mix(
-            col,
-            bg,
-            smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
-        );
-    
-            gl_FragColor = vec4(color, 1.);
-        }
-    </script>
+        uv.x += noise(sin(uv+time))*0.01;
+        uv.y += noise(cos(uv+time))*0.2;
+        col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
+    }
+
+    vec3 bg = vec3(0.,0.,0.);
+        color = mix(
+        col,
+        bg,
+        smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
+    );
+
+        gl_FragColor = vec4(color, 1.);
+    }
+</script>
     <script>
         var container;
         var camera, scene, renderer;
@@ -700,8 +559,8 @@
 
             var material = new THREE.ShaderMaterial({
                 uniforms: uniforms,
-                vertexShader: document.getElementById('vertexShader').textContent,
-                fragmentShader: document.getElementById('fragmentShader').textContent
+                vertexShader: document.getElementById('vertexShader2').textContent,
+                fragmentShader: document.getElementById('fragmentShader2').textContent
             });
 
             var mesh = new THREE.Mesh(geometry, material);
@@ -733,10 +592,118 @@
             renderer.render(scene, camera);
         }
     </script>
+
     <script>
+        var container1;
+        var camera1, scene1, renderer1;
+        var uniforms;
 
+        init1();
+        animate1();
+
+        function init1() {
+            container1 = document.getElementById('container2');
+
+            camera1 = new THREE.Camera();
+            camera1.position.z = 1;
+
+            scene1 = new THREE.Scene();
+
+            var geometry1 = new THREE.PlaneBufferGeometry(2, 2);
+
+            uniforms = {
+                time: {
+                    type: "f",
+                    value: 1.0
+                },
+                resolution: {
+                    type: "v2",
+                    value: new THREE.Vector2()
+                }
+            };
+
+            var material1 = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: document.getElementById('vertexShader2').textContent,
+                fragmentShader: document.getElementById('fragmentShader2').textContent
+            });
+
+            var mesh1 = new THREE.Mesh(geometry1, material1);
+            scene.add(mesh1);
+
+            renderer1 = new THREE.WebGLRenderer();
+            renderer1.setPixelRatio(window.devicePixelRatio);
+
+            container1.appendChild(renderer1.domElement);
+
+            onWindowResize();
+            window.addEventListener('resize', onWindowResize, false);
+
+        }
+
+        function onWindowResize(event) {
+            renderer1.setSize(window.innerWidth, window.innerHeight);
+            uniforms.resolution.value.x = renderer1.domElement.width;
+            uniforms.resolution.value.y = renderer1.domElement.height;
+        }
+
+        function animate1() {
+            requestAnimationFrame(animate1);
+            renders();
+        }
+
+        function renders() {
+            uniforms.time.value += 0.05;
+            renderer1.render(scene, camera1);
+        }
     </script>
+    <script>
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.9
+        };
 
+        let revealCallback = (entries, self) => {
+            entries.forEach((entry) => {
+                let container = entry.target;
+                let img = entry.target.querySelector(".Img");
+                const easeInOut = "power3.out";
+                const revealAnim = gsap.timeline({
+                    ease: easeInOut
+                });
+
+                if (entry.isIntersecting) {
+                    revealAnim.set(container, {
+                        visibility: "visible"
+                    });
+                    revealAnim.fromTo(
+                        container, {
+                            clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                            webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"
+                        }, {
+                            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                            webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                            duration: 1,
+                            ease: easeInOut
+                        }
+                    );
+                    revealAnim.from(img, 4, {
+                        scale: 1.4,
+                        ease: easeInOut,
+                        delay: -1
+                    });
+                    self.unobserve(entry.target);
+                }
+            });
+        };
+
+        let revealObserver = new IntersectionObserver(revealCallback, options);
+
+        document.querySelectorAll(".reveal").forEach((reveal) => {
+            revealObserver.observe(reveal);
+        });
+    </script>
 
 
 </body>
