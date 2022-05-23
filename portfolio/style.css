@@ -615,7 +615,7 @@ align-items: center;
   width: 25.6771vw;
   height: 31.4063vw;
   position: relative;
-
+  transition: opacity 0.5s;
   outline: 6px solid #fff;
   margin-bottom: 7%;
   display: flex;
@@ -626,7 +626,7 @@ align-items: center;
 }
 .tetrisImg iframe {
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 
 #section7 .tetris p {
@@ -655,7 +655,7 @@ align-items: center;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 .tetris a .arrow {
   position: absolute;
@@ -666,7 +666,7 @@ align-items: center;
   width: 25.6771vw;
   height: 31.4063vw;
   position: relative;
-  transition: all 0.5s;
+  transition: opacity 0.5s;
   outline: 6px solid #fff;
   margin-bottom: -4%;
   margin-right: 15vw;
@@ -676,7 +676,7 @@ align-items: center;
 }
 .typingImg iframe {
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 #section7 .typingImg p {
   font-family: "Tulpen One";
@@ -703,7 +703,7 @@ align-items: center;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 .typingImg a .arrow {
   position: absolute;
@@ -717,14 +717,14 @@ align-items: center;
   background-image: url(./assets/img/memory.png);
   background-repeat: no-repeat;
   background-size: cover;
-
+  transition: opacity 0.5s;
   outline: 6px solid #fff;
   margin-bottom: 5%;
   margin-right: 15vw;
 }
 .memoryImg iframe {
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 #section7 .memoryImg p {
   font-family: "Tulpen One";
@@ -751,7 +751,7 @@ align-items: center;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 .memoryImg a .arrow {
   position: absolute;
@@ -765,13 +765,13 @@ align-items: center;
   background-image: url(./assets/img/musicplayer.png);
   background-repeat: no-repeat;
   background-size: cover;
-
+  transition: opacity 0.5s;
   outline: 6px solid #fff;
   margin-bottom: -7%;
 }
 .musicImg iframe {
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 #section7 .musicImg p {
   font-family: "Tulpen One";
@@ -798,7 +798,7 @@ align-items: center;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 .musicImg a .arrow {
   position: absolute;
@@ -849,14 +849,12 @@ align-items: center;
   background-image: url(./assets/img/slider.png);
   background-repeat: no-repeat;
   background-size: cover;
-
-
   margin-bottom: 8%;
   margin-right: 15vw;
 }
 .slide iframe {
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 
 .slide p {
@@ -884,7 +882,7 @@ top: 82%;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 #section9 a .arrow {
   position: absolute;
@@ -909,7 +907,7 @@ top: 82%;
 
 .mouse iframe {
   opacity: 0;
-
+  transition: opacity 0.5s;
   position: absolute;
   top: 0;
 }
@@ -940,7 +938,7 @@ top: 82%;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 .mouse a .arrow {
   position: absolute;
@@ -966,7 +964,7 @@ top: 82%;
 
 .search iframe {
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 
 .search p {
@@ -994,7 +992,7 @@ top: 82%;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-
+  transition: opacity 0.5s;
 }
 .search a .arrow {
   position: absolute;
@@ -1016,7 +1014,7 @@ top: 82%;
 
 .parallax iframe {
   opacity: 0;
-
+transition: opacity 0.5s;
   position: absolute;
   top: 0;
 }
@@ -1046,7 +1044,7 @@ top: 82%;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
-  transition: all 0.5s;
+  transition: opacity 0.5s;
 }
 .parallax a .arrow {
   position: absolute;
