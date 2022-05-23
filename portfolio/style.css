@@ -615,8 +615,8 @@ align-items: center;
   width: 25.6771vw;
   height: 31.4063vw;
   position: relative;
-  transition: opacity 0.5s;
-  outline: 6px solid #fff;
+  transition: border 0.5s;
+  border: 6px solid #fff;
   margin-bottom: 7%;
   display: flex;
   margin-right: 15vw;
@@ -666,8 +666,8 @@ align-items: center;
   width: 25.6771vw;
   height: 31.4063vw;
   position: relative;
-  transition: opacity 0.5s;
-  outline: 6px solid #fff;
+  transition: border 0.5s;
+  border: 6px solid #fff;
   margin-bottom: -4%;
   margin-right: 15vw;
   background-image: url(./assets/img/typing.png);
@@ -717,10 +717,10 @@ align-items: center;
   background-image: url(./assets/img/memory.png);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: opacity 0.5s;
-  outline: 6px solid #fff;
+  border: 6px solid #fff;
   margin-bottom: 5%;
   margin-right: 15vw;
+  transition: border 0.5s;
 }
 .memoryImg iframe {
   opacity: 0;
@@ -766,8 +766,9 @@ align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
   transition: opacity 0.5s;
-  outline: 6px solid #fff;
+  border: 6px solid #fff;
   margin-bottom: -7%;
+  transition: border 0.5s;
 }
 .musicImg iframe {
   opacity: 0;
@@ -848,9 +849,11 @@ align-items: center;
   position: relative;
   background-image: url(./assets/img/slider.png);
   background-repeat: no-repeat;
+  border: 6px solid #fff;
   background-size: cover;
   margin-bottom: 8%;
   margin-right: 15vw;
+  transition: border 0.5s;
 }
 .slide iframe {
   opacity: 0;
@@ -899,8 +902,8 @@ top: 82%;
   background-image: url(./assets/img/mouse.png);
   background-repeat: no-repeat;
   background-size: cover;
-
-
+  border: 6px solid #fff;
+  transition: border 0.5s;
   margin-bottom: -8%;
   margin-right: 15vw;
 }
@@ -952,8 +955,8 @@ top: 82%;
   background-image: url(./assets/img/search.png);
   background-repeat: no-repeat;
   background-size: cover;
-
-
+  border: 6px solid #fff;
+  transition: border 0.5s;
   margin-bottom: 8%;
   margin-right: 15vw;
 }
@@ -1006,9 +1009,9 @@ top: 82%;
   background-image: url(./assets/img/parallax.png);
   background-repeat: no-repeat;
   background-size: cover;
-
-
   margin-bottom: -8%;
+  border: 6px solid #fff;
+  transition: border 0.5s;
 }
 
 
@@ -1125,8 +1128,12 @@ transition: opacity 0.5s;
 .tetrisImg:hover,
 .memoryImg:hover,
 .typingImg:hover,
-.musicImg:hover {
-    outline: 6px solid #C2FF04;
+.musicImg:hover,
+.slideImg:hover,
+.mouseImg:hover,
+.searchImg:hover,
+.parallaxImg:hover {
+    border: 6px solid #C2FF04;
 }
 
 .tetrisImg:hover > iframe,
