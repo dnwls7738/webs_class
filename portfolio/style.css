@@ -682,7 +682,7 @@ align-items: center;
   display: flex;
   align-items: center;
   top: 103%;
-  left: 42%;
+  left: 41.4%;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
@@ -720,7 +720,7 @@ align-items: center;
   display: flex;
   align-items: center;
   top: 103%;
-  left: 41%;
+  left: 40.5%;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
@@ -757,7 +757,7 @@ align-items: center;
   display: flex;
   align-items: center;
   top: 103%;
-  left: 42%;
+  left: 41%;
   font-size: 2em;
   padding-left: 0.6771vw;
   opacity: 0;
@@ -797,7 +797,7 @@ align-items: center;
 #section9 {
   display: flex;
   align-items: center;
-  width: 250vw;
+  width: 249vw;
   position: relative;
 }
 
@@ -812,7 +812,7 @@ align-items: center;
   transition: all 0.3s ease-in;
   /* outline: 6px solid #000; */
   margin-bottom: 8%;
-  margin-right: 25vw;
+  margin-right: 24vw;
 }
 .slide iframe {
   opacity: 0;
@@ -860,7 +860,7 @@ top: 82%;
   transition: all 0.5s ease-in;
   /* outline: 6px solid #000; */
   margin-top: 5%;
-  margin-right: 25vw;
+  margin-right: 24vw;
 }
 
 .mouse iframe {
@@ -911,7 +911,7 @@ top: 82%;
   transition: all 0.5s ease-in;
   /* outline: 6px solid #000; */
   margin-bottom: 7%;
-  margin-right: 25vw;
+  margin-right: 24vw;
 }
 
 .search iframe {
@@ -959,7 +959,6 @@ top: 82%;
   transition: all 0.5s ease-in;
   /* outline: 6px solid #000; */
   margin-top: 7%;
-  margin-right: 25vw;
 }
 
 .parallax iframe {
