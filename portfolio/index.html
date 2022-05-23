@@ -6,254 +6,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* .notification {
+            font-size: 0.9rem;
+            font-family: termina, sans-serif;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #b6916d;
+            color: #3c564f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9;
+            font-weight: 700;
+            text-align: center;
+            padding: 20px;
+        } */
+        .notification:hover {
+                background: #bcb8ad;
+            }
+
+        .effect {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .container:nth-child(1) {
+            background: #3c564f;
+        }
+
+        .container:nth-child(2) {
+            background: #b69187;
+        }
+
+        .container:nth-child(3) {
+            background: #bcb8ad;
+        }
+
+        .container:nth-child(4) {
+            background: #b6916d;
+        }
+
+        img {
+            height: 150%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .reveal {
+            visibility: hidden;
+            position: relative;
+            width: 60%;
+            height: 60%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="container"></div>
-    <div id="container2"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-<script id="vertexShader" type="x-shader/x-vertex">
-    void main() {
-        gl_Position = vec4( position, 1.0 );
-    }
-</script>
-
-<script id="fragmentShader" type="x-shader/x-fragment">
-    #ifdef GL_ES
-    precision mediump float;
-    #endif
-
-    uniform float time;
-    uniform vec2 resolution;
-
-    float noise(vec2 p) {
-        p=(p);
-        return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*1.-1.0;
-    }      
-
-    float map(vec2 p) {
-        return length(p) - 0.2;
-    }
-
-    void main() {
-        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-        vec3 col;
-        vec3 color = vec3(1.,1.,1.);
-    
-    for(float j = 0.0; j < 4.0; j++){
-        for(float i = 1.; i < 8.0; i++){
-            uv.x += (1.0 * (
-            0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
-        ));
-        uv.y += (1.0 *(
-            1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
-        ));
-        }
-        uv.x += noise(sin(uv+time))*0.01;
-        uv.y += noise(cos(uv+time))*0.2;
-        col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
-    }
-
-    vec3 bg = vec3(0.1,0.1,0.1);
-        color = mix(
-        col,
-        bg,
-        smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
-    );
-
-        gl_FragColor = vec4(color, 1.);
-    }
-</script>
-<script>
-      var container;
-var camera, scene, renderer;
-var uniforms;
-
-init();
-animate();
-
-function init() {
-    container = document.getElementById('container');
-
-    camera = new THREE.Camera();
-    camera.position.z = 1;
-
-    scene = new THREE.Scene();
-
-    var geometry = new THREE.PlaneBufferGeometry(2, 2);
-
-    uniforms = {
-        time: {
-            type: "f",
-            value: 1.0
-        },
-        resolution: {
-            type: "v2",
-            value: new THREE.Vector2()
-        }
-    };
-
-    var material = new THREE.ShaderMaterial({
-        uniforms: uniforms,
-        vertexShader: document.getElementById('vertexShader').textContent,
-        fragmentShader: document.getElementById('fragmentShader').textContent
-    });
-
-    var mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
-
-    renderer = new THREE.WebGLRenderer();
-    renderer.setPixelRatio(window.devicePixelRatio);
-
-    container.appendChild(renderer.domElement);
-
-    onWindowResize();
-    window.addEventListener('resize', onWindowResize, false);
-
-}
-
-function onWindowResize(event) {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    uniforms.resolution.value.x = renderer.domElement.width;
-    uniforms.resolution.value.y = renderer.domElement.height;
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-    render();
-}
-
-function render() {
-    uniforms.time.value += 0.05;
-    renderer.render(scene, camera);
-}
-</script>
-
-
-
-<script id="vertexShader2" type="x-shader/x-vertex">
-    void main() {
-        gl_Position = vec4( position, 2.0 );
-    }
-</script>
-
-<script id="fragmentShader2" type="x-shader/x-fragment">
-    #ifdef GL_ES
-    precision mediump float;
-    #endif
-
-    uniform float time;
-    uniform vec2 resolution;
-
-    float noise(vec2 p) {
-        p=(p);
-        return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*3.-1.0;
-    }      
-
-    float map(vec2 p) {
-        return length(p) - 0.2;
-    }
-
-    void main() {
-        vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-        vec3 col;
-        vec3 color = vec3(1.,1.,1.);
-    
-    for(float j = 0.0; j < 4.0; j++){
-        for(float i = 1.; i < 8.0; i++){
-            uv.x += (1.0 * (
-            0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
-        ));
-        uv.y += (1.0 *(
-            1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
-        ));
-        }
-        uv.x += noise(sin(uv+time))*0.01;
-        uv.y += noise(cos(uv+time))*0.2;
-        col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
-    }
-
-    vec3 bg = vec3(0.1,0.1,0.1);
-        color = mix(
-        col,
-        bg,
-        smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
-    );
-
-        gl_FragColor = vec4(color, 1.);
-    }
-</script>
-<script>
-var container2;
-var camera2, scene2, renderer2;
-var uniforms2;
-
-init1();
-animate1();
-
-function init1() {
-    container2 = document.getElementById('container2');
-
-    camera2 = new THREE.Camera();
-    camera2.position.z = 1;
-
-    scene2 = new THREE.Scene();
-
-    var geometry2 = new THREE.PlaneBufferGeometry(1, 1);
-
-    uniforms2 = {
-        time: {
-            type: "f",
-            value: 2.0
-        },
-        resolution: {
-            type: "v2",
-            value: new THREE.Vector2()
-        }
-    };
-
-    var material2 = new THREE.ShaderMaterial({
-        uniforms: uniforms,
-        vertexShader: document.getElementById('vertexShader').textContent,
-        fragmentShader: document.getElementById('fragmentShader').textContent
-    });
-
-    var mesh2 = new THREE.Mesh(geometry2, material2);
-    scene.add(mesh2);
-
-    renderer2 = new THREE.WebGLRenderer();
-    renderer2.setPixelRatio(window.devicePixelRatio);
-
-    container2.appendChild(renderer2.domElement);
-
-    onWindowResize();
-    window.addEventListener('resize', onWindowResize, false);
-
-}
-
-function onWindowResize(event) {
-    renderer2.setSize(window.innerWidth, window.innerHeight);
-    uniforms2.resolution.value.x = renderer.domElement.width;
-    uniforms2.resolution.value.y = renderer.domElement.height;
-}
-
-function animate1() {
-    requestAnimationFrame(animate1);
-    render1();
-}
-
-function render1() {
-    uniforms2.time.value += 0.1;
-    renderer2.render(scene, camera);
-}
-</script>
-
-
-
-
-
+    <div class='effect'>
+        <a href="https://codepen.io/cameronknight/full/pogQKwR" target="_blank">
+            <div class='notification'>Try this new version for better performance</div>
+        </a>
+        <div class='reveal' class='effect'>
+            <img
+                src='https://images.unsplash.com/photo-1580215935060-a5adc57c5157?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80'>
+        </div>
+    </div>
+    <div class='effect'>
+        <div class='reveal'class='effect'>
+            <img
+                src='https://images.unsplash.com/photo-1580215935060-a5adc57c5157?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80'>
+        </div>
+    </div>
+    <div class='effect'>
+        <div class='reveal'>
+            <img
+                src='https://images.unsplash.com/photo-1580215935060-a5adc57c5157?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80'>
+        </div>
+    </div>
+    <div class='effect'>
+        <div class='reveal'>
+            <img
+                src='https://images.unsplash.com/photo-1580215935060-a5adc57c5157?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80'>
+        </div>
+    </div>
 </body>
+<script src="./assets/js/gsap.min.js"></script>
+<script>
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9
+    };
+
+    let revealCallback = (entries, self) => {
+        entries.forEach((entry) => {
+            let container = entry.target;
+            let img = entry.target.querySelector(".reveal");
+            const easeInOut = "power3.out";
+            const revealAnim = gsap.timeline({
+                ease: easeInOut
+            });
+
+            if (entry.isIntersecting) {
+                revealAnim.set(container, {
+                    visibility: "visible"
+                });
+                revealAnim.fromTo(
+                    container, {
+                        clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                        webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"
+                    }, {
+                        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                        webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                        duration: 1,
+                        ease: easeInOut
+                    }
+                );
+                revealAnim.from(img, 4, {
+                    scale: 1.4,
+                    ease: easeInOut,
+                    delay: -1
+                });
+                self.unobserve(entry.target);
+            }
+        });
+    };
+
+    let revealObserver = new IntersectionObserver(revealCallback, options);
+
+    document.querySelectorAll(".reveal").forEach((reveal) => {
+        revealObserver.observe(reveal);
+    });
+</script>
 
 </html>

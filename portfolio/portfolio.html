@@ -194,7 +194,7 @@
                         </div>
                     </div>
 
-                    <div class="typing" class="gallery" data-scroll data-scroll-speed="2">
+                    <div class="typing" class="gallery" data-scroll data-scroll-speed="1">
                         <div class="typingImg">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/game/typingGame/index2.html"></iframe>
@@ -203,7 +203,7 @@
                         </div>
                     </div>
 
-                    <div class="memory" class="gallery" data-scroll data-scroll-speed="3">
+                    <div class="memory" class="gallery" data-scroll data-scroll-speed="1">
                         <div class="memoryImg">
                             <iframe width="100%" height="100%" frameborder=0 src="./assets/game/index2.html"></iframe>
                             <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg"
@@ -213,7 +213,7 @@
 
                     </div>
 
-                    <div class="music" class="gallery" data-scroll data-scroll-speed="4">
+                    <div class="music" class="gallery" data-scroll data-scroll-speed="1">
                         <div class="musicImg">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/game/musicplayer/index.html"></iframe>
@@ -231,41 +231,43 @@
                 </section>
 
                 <section id="section9" class="section">
-                    <div class="slide" data-scroll data-scroll-speed="1" class="reveal">
-                        <div class="slideImg" class="img">
+                    <div class="slide" data-scroll data-scroll-speed="1">
+                        <div class="slideImg reveal effect">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/effect/sliderEffect01.html"></iframe>
                             <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                            <p>SLIDER EFFECT</p>
                         </div>
+                        <p class="reveal effect">SLIDER EFFECT</p>
                     </div>
 
 
                     <div class="mouse" data-scroll data-scroll-speed="1" class="reveal">
-                        <div class="mouseImg" class="img">
-                            <p>MOUSE EFFECT</p>
+                        <p class="reveal effect">MOUSE EFFECT</p>
+                        <div class="mouseImg reveal effect">
+                        
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/effect/mouseEffect01.html"></iframe>
                             <a href="/"><span>CODE VIEW</span> <img class="arrow" src="./assets/img/Arrow.svg"
                                     alt=""></a>
                         </div>
 
-                        <!-- <img class="Img" src="./assets/img/mouse.png" alt=""> -->
+                        <!-- <img src="./assets/img/mouse.png" alt=""> -->
                     </div>
 
                     <div class="search" data-scroll data-scroll-speed="1" class="reveal">
-                        <div class="searchImg" class="img">
+                        <div class="searchImg reveal effect">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/effect/searchEffect01.html"></iframe>
                             <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
-                            <!-- <img class="Img" src="./assets/img/search.png" alt=""> -->
-                            <p>SEARCH EFFECT</p>
+                            <!-- <img src="./assets/img/search.png" alt=""> -->
+
                         </div>
+                        <p class="reveal effect">SEARCH EFFECT</p>
                     </div>
 
-                    <div class="parallax" class="reveal" data-scroll data-scroll-speed="1" class="reveal">
-                        <div class="parallaxImg" class="img">
-                            <p>PARALLAX EFFECT</p>
+                    <div class="parallax" data-scroll data-scroll-speed="1">
+                        <p class="reveal effect">PARALLAX EFFECT</p>
+                        <div class="parallaxImg reveal effect">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/effect/parallaxEffect01.html"></iframe>
                             <a href="/">CODE VIEW <img class="arrow" src="./assets/img/Arrow.svg" alt=""></a>
@@ -304,7 +306,6 @@
     <script src="https://dl.dropbox.com/s/sk7fbhx9burholi/dat.gui.min.js?dl=0"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
     <script src="https://dl.dropbox.com/s/m1qor6z15o64wkc/stats.min.js?dl=0"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="./assets/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
@@ -657,6 +658,7 @@
             renderer1.render(scene, camera1);
         }
     </script>
+    
     <script>
         const options = {
             root: null,
@@ -667,7 +669,7 @@
         let revealCallback = (entries, self) => {
             entries.forEach((entry) => {
                 let container = entry.target;
-                let img = entry.target.querySelector(".Img");
+                let img = entry.target.querySelector(".effect");
                 const easeInOut = "power3.out";
                 const revealAnim = gsap.timeline({
                     ease: easeInOut
