@@ -688,7 +688,18 @@ html.has-scroll-dragging {
   background: #000;
 }
 
-
+.slide {
+  position: relative;
+}
+.mouse {
+  position: relative;
+}
+.search {
+  position: relative;
+}
+.parallax {
+  position: relative;
+}
 
 .slideImg {
   width: 52.0833vw;
@@ -716,7 +727,7 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  bottom: -24%;
+  bottom: -20%;
   right: 15%;
 }
 
@@ -743,7 +754,7 @@ html.has-scroll-dragging {
 #section7 .slide p {
   line-height: 1.3;
   white-space: normal;
-  width: 25vw;
+  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
@@ -751,6 +762,7 @@ html.has-scroll-dragging {
   text-transform: uppercase;
   margin-bottom: 1vw;
 }
+
 
 .mouseImg {
   width: 52.0833vw;
@@ -778,7 +790,7 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  bottom: -24%;
+  bottom: -20%;
   right: 15%;
 }
 
@@ -805,7 +817,7 @@ html.has-scroll-dragging {
 #section7 .mouse p {
   line-height: 1.3;
   white-space: normal;
-  width: 25vw;
+  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
@@ -813,7 +825,6 @@ html.has-scroll-dragging {
   text-transform: uppercase;
   margin-bottom: 1vw;
 }
-
 
 
 .searchImg {
@@ -842,7 +853,7 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  bottom: -24%;
+  bottom: -20%;
   right: 15%;
 }
 
@@ -869,7 +880,7 @@ html.has-scroll-dragging {
 #section7 .search p {
   line-height: 1.3;
   white-space: normal;
-  width: 25vw;
+  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
@@ -877,8 +888,6 @@ html.has-scroll-dragging {
   text-transform: uppercase;
   margin-bottom: 1vw;
 }
-
-
 
 
 .parallaxImg {
@@ -907,7 +916,7 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  bottom: -24%;
+  bottom: -20%;
   right: 15%;
 }
 
@@ -934,7 +943,7 @@ html.has-scroll-dragging {
 #section7 .parallax p {
   line-height: 1.3;
   white-space: normal;
-  width: 25vw;
+  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
