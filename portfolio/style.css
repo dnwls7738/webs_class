@@ -1061,6 +1061,7 @@ html.has-scroll-dragging {
 /* section10 */
 #section10 {
   width: 150vw;
+  height: 100vh;
   display: flex;
   position: relative;
   align-items: center;
@@ -1082,7 +1083,6 @@ html.has-scroll-dragging {
 
 #section10 .img{
   width: 38.5417vw;
-  height: 100vh;
   position: absolute;
   right: 0;
 }
@@ -1160,21 +1160,27 @@ html.has-scroll-dragging {
 #section12 .skill_box {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
+
 #section12 .skill {
   margin-left: 100px;
 }
-#section12 .skill_box .skill img {
-  width: 30vw;
-  height: 25vh;
+
+#section12 .skill img {
+  width: 24vw;
+  height: 12vw;
 }
-#section12 .skill_box .photo {
-  margin-left: 700px;
+#section12 .photo {
+  position: absolute;
+  right: 10%;
+  top: 15%;
 }
-/* #section12 .skill_box .photo img {
-  width: 30vw;
-  height: 25vh;
-} */
+#section12 .photo img {
+  width: 18vw;
+  height: 18vw;
+}
 
 #section12 .skill h2 {
   font-family: "Abhaya Libre";
@@ -1190,10 +1196,10 @@ margin-left: 100px;
 }
 
 #section12 .intro .intro_text1 {
-  margin-right: 100px;
+  margin-right: 3vw;
 }
 #section12 .intro .intro_text2 {
-  margin-right: 100px;
+  margin-right: 3vw;
 }
 #section12 .intro .intro_text1 h2 {
   font-family: "Abhaya Libre";
