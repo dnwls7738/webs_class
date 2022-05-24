@@ -24,9 +24,24 @@ html.has-scroll-dragging {
   display: inline-block;
 }
 
+.script_text.show {
+  opacity: 0;
+}
+
+.reveal img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .reveal {
   visibility: hidden;
+  position: relative;
+  width: 50%;
+  height: 50%;
 }
+
+
 
 .content {
   left: 0;
@@ -585,6 +600,7 @@ html.has-scroll-dragging {
 
 #section5 .view1 .script_view:hover {
   outline: 6px solid #C2FF04;
+
 }
 
 #section5 .view1 .script_view:hover>iframe {
@@ -708,9 +724,9 @@ html.has-scroll-dragging {
   width: 52.0833vw;
   height: 26.0417vw;
   position: relative;
-  background-image: url(./assets/img/slider.png);
+  /* background-image: url(./assets/img/slider.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   border: 6px solid #fff;
   transition: border 0.5s;
   margin-right: 15vw;
@@ -1406,6 +1422,16 @@ html.has-scroll-dragging {
   }
 }
 
+.slideImg img:hover > iframe
+ {
+    opacity: 1;
+}
+
+.slideImg img:hover > img
+{
+    opacity: 0;
+}
+
 @media (max-width:1200px) {
 
   #section3 .view1 .site_view,
@@ -1434,9 +1460,17 @@ html.has-scroll-dragging {
 
 }
 
-@media (max-width:768px) {}
+
+@media (max-width:768px) {
+  #header .dot {
+    display: none;
+  }
+}
 
 @media (max-width:480px) {
+  #header .center {
+    display: none;
+  }
 
   #section3 .view p {
     overflow: hidden;

@@ -233,8 +233,9 @@
                 <section id="section7" class="section">
                     <div class="slide" data-scroll data-scroll-speed="1">
                         <div class="slideImg reveal effect">
+                            <img src="./assets/img/slider.png" alt="">
                             <iframe width="100%" height="100%" frameborder=0
-                                src="./assets/effect/sliderEffect01.html"></iframe>
+                            src="./assets/effect/sliderEffect01.html"></iframe>
                         </div>
                         <div class="script_text" data-scroll data-scroll-speed="1">
                             <h2>slide effect</h2>
@@ -246,8 +247,9 @@
                     </div>
 
 
-                    <div class="mouse" data-scroll data-scroll-speed="1" class="reveal">
-                        <div class="mouseImg reveal effect">
+                    <div class="mouse" data-scroll data-scroll-speed="1">
+                        <div class="mouseImg reveal">
+
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/effect/mouseEffect01.html"></iframe>
                         </div>
@@ -530,6 +532,22 @@
                 delay: 2.5,
             });
         }, 10);
+
+        // const scriptText = document.querySelectorAll("#section5 .view .script_text");
+
+        // document.querySelectorAll("#section5 .view .script_view").forEach(el => {
+        //     el.addEventListener("mouseover", event => {
+        //         target = event.target.parentNode.querySelector(".script_text");
+        //         target.classList.add("show");
+        //     })
+        // })
+
+        // document.querySelectorAll("#section5 .view .script_view").forEach(el => {
+        //     el.addEventListener("mouseleave", event => {
+        //         target = event.target.parentNode.querySelector(".script_text");
+        //         target.classList.remove("show");
+        //     })
+        // })
     </script>
 
 
@@ -671,7 +689,7 @@
         let revealCallback = (entries, self) => {
             entries.forEach((entry) => {
                 let container = entry.target;
-                let img = entry.target.querySelector(".reveal");
+                let img = entry.target.querySelector("img");
                 const easeInOut = "power3.out";
                 const revealAnim = gsap.timeline({
                     ease: easeInOut
@@ -688,12 +706,12 @@
                         }, {
                             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
                             webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                            duration: 1.5,
+                            duration: 1,
                             ease: easeInOut
                         }
                     );
                     revealAnim.from(img, 4, {
-                        scale: 1.4,
+                        scale: 1,
                         ease: easeInOut,
                         delay: -1
                     });
