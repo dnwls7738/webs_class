@@ -691,12 +691,15 @@ html.has-scroll-dragging {
 .slide {
   position: relative;
 }
+
 .mouse {
   position: relative;
 }
+
 .search {
   position: relative;
 }
+
 .parallax {
   position: relative;
 }
@@ -754,7 +757,6 @@ html.has-scroll-dragging {
 #section7 .slide p {
   line-height: 1.3;
   white-space: normal;
-  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
@@ -817,7 +819,6 @@ html.has-scroll-dragging {
 #section7 .mouse p {
   line-height: 1.3;
   white-space: normal;
-  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
@@ -880,7 +881,6 @@ html.has-scroll-dragging {
 #section7 .search p {
   line-height: 1.3;
   white-space: normal;
-  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
@@ -943,7 +943,6 @@ html.has-scroll-dragging {
 #section7 .parallax p {
   line-height: 1.3;
   white-space: normal;
-  width: 17.4vw;
   font-weight: 700;
   font-family: "ChosunNm";
   font-size: 0.8vw;
@@ -1068,11 +1067,13 @@ html.has-scroll-dragging {
   justify-content: space-between;
   background-color: #000;
 }
+
 #section10 .mainTitle {
   line-height: 1.03;
   margin: auto;
   z-index: 1;
 }
+
 #section10 .mainTitle p {
   font-size: 6vw;
   color: #fff;
@@ -1081,7 +1082,7 @@ html.has-scroll-dragging {
   letter-spacing: -4px;
 }
 
-#section10 .img{
+#section10 .img {
   width: 38.5417vw;
   position: absolute;
   right: 0;
@@ -1095,13 +1096,16 @@ html.has-scroll-dragging {
 #section10 .mainTitle p:nth-child(3) {
   padding-left: 1vw;
 }
+
 #section10 .mainTitle p:nth-child(4) {
   font-weight: 400;
   padding-left: 21vw;
 }
+
 #section10 .mainTitle p:nth-child(5) {
   padding-left: 13vw;
 }
+
 #section10 .mainTitle p:nth-child(6) {
   margin-left: 18vw;
   width: 28.6458vw;
@@ -1126,7 +1130,7 @@ html.has-scroll-dragging {
   font-size: 1.5vw;
   color: #fff;
   font-family: "ChosunNm";
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   line-height: 1.3;
   max-width: 100%;
   top: 15%;
@@ -1139,7 +1143,7 @@ html.has-scroll-dragging {
   font-size: 1.5vw;
   color: #fff;
   font-family: "ChosunNm";
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   line-height: 1.3;
   max-width: 100%;
   top: 55%;
@@ -1155,8 +1159,9 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-content: space-around
+  justify-content: space-evenly;
 }
+
 #section12 .skill_box {
   display: flex;
   align-items: center;
@@ -1172,11 +1177,13 @@ html.has-scroll-dragging {
   width: 24vw;
   height: 12vw;
 }
+
 #section12 .photo {
   position: absolute;
   right: 10%;
   top: 15%;
 }
+
 #section12 .photo img {
   width: 18vw;
   height: 18vw;
@@ -1190,17 +1197,19 @@ html.has-scroll-dragging {
 }
 
 #section12 .intro {
-display: flex;
-align-items: flex-start;
-margin-left: 100px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 100px;
 }
 
 #section12 .intro .intro_text1 {
   margin-right: 3vw;
 }
+
 #section12 .intro .intro_text2 {
   margin-right: 3vw;
 }
+
 #section12 .intro .intro_text1 h2 {
   font-family: "Abhaya Libre";
   font-size: 2vw;
@@ -1208,13 +1217,15 @@ margin-left: 100px;
   color: #fff;
   margin-bottom: 5px;
 }
+
 #section12 .intro .intro_text1 h2>em {
   font-family: "Abhaya Libre";
   font-size: 1vw;
   text-transform: uppercase;
   color: #C2FF04;
 }
-#section12 .intro .intro_text1 p{
+
+#section12 .intro .intro_text1 p {
   font-family: "ChosunNm";
   font-size: 1vw;
   color: #fff;
@@ -1229,13 +1240,15 @@ margin-left: 100px;
   text-transform: uppercase;
   color: #fff;
 }
+
 #section12 .intro .intro_text2 h2>em {
   font-family: "Abhaya Libre";
   font-size: 1vw;
   text-transform: uppercase;
   color: #C2FF04;
 }
-#section12 .intro .intro_text2 p{
+
+#section12 .intro .intro_text2 p {
   font-family: "ChosunNm";
   font-size: 1vw;
   color: #fff;
@@ -1250,13 +1263,15 @@ margin-left: 100px;
   text-transform: uppercase;
   color: #fff;
 }
+
 #section12 .intro .intro_text3 h2>em {
   font-family: "Abhaya Libre";
   font-size: 1vw;
   text-transform: uppercase;
   color: #C2FF04;
 }
-#section12 .intro .intro_text3 p{
+
+#section12 .intro .intro_text3 p {
   font-family: "ChosunNm";
   font-size: 1vw;
   color: #fff;
@@ -1279,12 +1294,12 @@ margin-left: 100px;
   margin-left: 5vw;
 }
 
-#section13 span{
+#section13 span {
   color: #fff;
   font-size: 8vw;
   font-weight: 700;
   font-family: "Syncopate";
-  
+
 }
 
 #section13 .p1 {
@@ -1296,6 +1311,7 @@ margin-left: 100px;
   text-transform: uppercase;
   margin-top: 2vw;
 }
+
 #section13 a {
   font-family: "Abhaya Libre";
   text-transform: uppercase;
@@ -1309,6 +1325,7 @@ margin-left: 100px;
   margin-top: 3vw;
   display: inline-block;
 }
+
 #section13 .p2 {
   width: 25vw;
   white-space: normal;
@@ -1379,10 +1396,6 @@ margin-left: 100px;
   display: inline-block;
 }
 
-
-
-
-
 @keyframes marquee {
   0% {
     transform: translateX(0)
@@ -1390,5 +1403,110 @@ margin-left: 100px;
 
   100% {
     transform: translateX(-100%)
+  }
+}
+
+@media (max-width:1200px) {
+
+  #section3 .view1 .site_view,
+  #section3 .view2 .site_view,
+  #section3 .view3 .site_view,
+  #section3 .view4 .site_view,
+  #section3 .view5 .site_view {
+    height: 25vh;
+  }
+
+  #section3 .view1 .site,
+  #section3 .view2 .site,
+  #section3 .view3 .site,
+  #section3 .view4 .site,
+  #section3 .view5 .site {
+    background-size: contain;
+    height: 15vh;
+  }
+
+  #section5 .view1 .script_view,
+  #section5 .view2 .script_view,
+  #section5 .view3 .script_view,
+  #section5 .view4 .script_view {
+    height: 60vh;
+  }
+
+}
+
+@media (max-width:768px) {}
+
+@media (max-width:480px) {
+
+  #section3 .view p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    width: 42vw;
+  }
+
+  #section3 .view1 .site,
+  #section3 .view2 .site,
+  #section3 .view3 .site,
+  #section3 .view4 .site,
+  #section3 .view5 .site {
+    top: 52%;
+  }
+
+  #section3 .view1 .site_view,
+  #section3 .view2 .site_view,
+  #section3 .view3 .site_view,
+  #section3 .view4 .site_view,
+  #section3 .view5 .site_view {
+    height: 20vh;
+  }
+
+  #section5 .view1 .script_view,
+  #section5 .view2 .script_view,
+  #section5 .view3 .script_view,
+  #section5 .view4 .script_view {
+    height: 30vh;
+  }
+
+  #section5 .view1 .script_text,
+  #section5 .view3 .script_text,
+  #section5 .view2 .script_text,
+  #section5 .view4 .script_text {
+    margin-left: 9vw;
+    top: -12%;
+  }
+
+  #section7 .slide .script_text,
+  #section7 .mouse .script_text,
+  #section7 .search .script_text,
+  #section7 .parallax .script_text {
+    bottom: -55%;
+  }
+
+  #section11 .mainTitle1 {
+    top: 36%;
+  }
+
+  #section11 .mainTitle2 {
+    top: 51.5%;
+    left: 30%;
+  }
+
+  #section12 {
+    justify-content: center;
+  }
+
+  #section12 .intro {
+    margin-top: 100px;
+  }
+
+  #section12 .photo {
+    top: 34%;
+  }
+
+  #section13 a {
+    width: 18vw;
   }
 }
