@@ -9450,6 +9450,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         }); // let's rotate the elements when scrolling.
 
         var elems = _toConsumableArray(document.querySelectorAll('.script_view'));
+        var allImgs = _toConsumableArray(document.querySelectorAll('.gallery__item-img'));
 
         var rotationsArr = Array.from({
             length: elems.length
@@ -9461,7 +9462,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         }, function () {
             return (0, _utils.randomNumber)(-100, 100);
         });
+        
         lscroll.on('scroll', function (obj) {
+            
+            scroll.current = obj.scroll.x;
+            var distance = scroll.current - scroll.cache;
+            scroll.cache = scroll.current;
+            var skewVal = (0, _utils.map)(distance, -50, 50, -15, 15);
+            allImgs.forEach(function (el) {
+                return el.style.transform = 'skewX(' + (0, _utils.clamp)(skewVal, -15, 15) + 'deg)';
+            });
+            
+            
             for (var _i = 0, _Object$keys = Object.keys(obj.currentElements); _i < _Object$keys.length; _i++) {
                 var key = _Object$keys[_i];
                 var el = obj.currentElements[key].el;
@@ -9475,13 +9487,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
                     obj.currentElements[key].el.style.transform = "translateY(".concat(translationVal, "%) rotate(").concat(rotationVal, "deg)");
                 }
-                
+
                 if (obj.currentElements[key].el.classList.contains('effect')) {
                     var progress = obj.currentElements[key].progress;
                     var saturateVal = progress < 0.5 ? (0, _utils.clamp)((0, _utils.map)(progress, 0, 0.5, 0, 1), 0, 1) : (0, _utils.clamp)((0, _utils.map)(progress, 0.5, 1, 1, 0), 0, 1);
                     var brightnessVal = progress < 0.5 ? (0, _utils.clamp)((0, _utils.map)(progress, 0, 0.5, 0, 1), 0, 1) : (0, _utils.clamp)((0, _utils.map)(progress, 0.5, 1, 1, 0), 0, 1);
                     obj.currentElements[key].el.style.filter = "saturate(".concat(saturateVal, ") brightness(").concat(brightnessVal, ")");
-                  }
+                }
 
             }
         });

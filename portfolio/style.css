@@ -1029,81 +1029,119 @@ html.has-scroll-dragging {
 #section9 {
   display: flex;
   align-items: center;
-  justify-content: center;
   background: #000;
+  width: 270vw;
+}
+.rotate {
+	transform: rotate(-2deg);
+}
+.gallery {
+	display: flex;
+	padding-right: 12vw;
+	margin-left: 5vw;
 }
 
-.container {
-  width: 13.9583vw;
-  height: 13.9583vw;
-  /*        부모의 자식 요소가 3차원의 애니메이션 효과를 가질때, 300px의 거리에서 보는 원근감을 줌*/
-  perspective: 300px;
+.gallery__item {
+	margin: 0 3vw;
+	display: grid;
+	grid-template-areas: '... ...' 
+						 '... gallery-image'
+						 '... ...' ;
+	grid-template-columns: 8rem 21vmax;
+	grid-template-rows: 8rem 28vmax 3rem;
 }
 
-.container .study2 {
-  width: 13.9583vw;
-  height: 13.9583vw;
-  outline: 6px solid #ffff;
-  border-radius: 50%;
-  font-size: 35px;
-  /*카드의 뒷면을 안보이게 처리-카드가 뒤집히면 뒷면이 안보임*/
-  backface-visibility: hidden;
-  transition: 1s;
-  position: relative;
+.gallery__item-img {
+	grid-area: gallery-image;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	will-change: transform;
 }
 
-.container .study2.front {
-  /* 앞면 카드가 부유하게 되어, 뒷면 카드가 아래에서 위로 올라감 -> 요소 두개가 겹치게 됨*/
-  position: absolute;
-  /* 명시적으로 기본값 설정, 없어도 됨*/
-  transform: rotateY(0deg);
+.gallery__item-imginner {
+	background-size: cover;
+    background-position: 50% 0;
+	width: calc(100% + 10vw);
+	margin-left: -5vw;
+    height: 100%;
+    will-change: transform;
 }
 
-.container:hover .study2.front {
-  transform: rotateY(180deg);
+.gallery__item-caption {
+	grid-area: 1 / 1 / 4 / 3;
+	display: grid;
+	grid-template-areas: 'gallery-number gallery-title' 
+						 'gallery-link ...'
+						 'gallery-link gallery-tags' ;
+	grid-template-columns: 8rem auto;
+	grid-template-rows: 8rem auto 3rem;
+
 }
 
-.container .study2.back {
-  /*y축을 중심으로 -180도 회전*/
-  transform: rotateY(-180deg);
+.gallery__item-number {
+	grid-area: gallery-number;
+	font-size: 6rem;
+	font-size: clamp(2.5rem,9vw,6.5rem);
+	justify-self: end;
+	padding-right: 2rem;
+	color: #ffff;
 }
 
-.container:hover .study2.back {
-  transform: rotateY(0deg);
+.gallery__item-title {
+	grid-area: gallery-title;
+	margin: 0;
+	font-size: 4rem;
+	font-size: clamp(2rem,5vw,4rem);
+	color: #fff;
 }
 
-.container p {
-  position: absolute;
-  width: inherit;
-  text-align: center;
-  font-size: 4vw;
-  font-family: "Tulpen One";
-  bottom: 10%;
+.gallery__item-number,
+.gallery__item-title,
+.gallery__text {
+	font-family: "Tulpen One";
+	font-weight: 800;
+	font-style: italic;
+	align-self: center;
+}
+.gallery__item-link {
+  font-family: "Abel";
 }
 
-#study_view1 {
-  margin-bottom: 15%;
-  margin-right: 2%;
+.gallery__item-link {
+	grid-area: gallery-link;
+	align-self: end;
+	font-size: 1.5rem;
+	background: #C2FF04;
+	color: #000;
+	text-decoration: underline;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.gallery__text {
+	font-size: 20vw;
+	line-height: 0.8;
+	margin: 0 12vw;
+	text-transform: lowercase;
+	color: transparent;
+	-webkit-text-stroke: 1px #645c5b;
+	text-stroke: 1px #645c5b;
+	-webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
 }
 
-#study_view2 {
-  margin-bottom: -25%;
-  margin-right: 2%;
+.gallery__text-inner {
+	display: block;
 }
 
-#study_view3 {
-  margin-bottom: -5%;
-  margin-right: 2%;
-}
 
-#study_view4 {
-  margin-bottom: 20%;
-  margin-right: 2%;
-}
-
-#study_view5 {
-  margin-bottom: -10%;
-}
 
 
 /* section10 */
