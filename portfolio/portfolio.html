@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./reset.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Abel&family=Abhaya+Libre:wght@400;500;600;700;800&family=Syncopate:wght@400;700&family=Tulpen+One&display=swap"
         rel="stylesheet">
@@ -58,7 +58,7 @@
     </header>
     <!-- //header -->
 
-    <main data-scroll-container>
+    <main data-scroll-container="">
         <div class="content">
             <div class="sec_wrap">
                 <section id="section1" class="section">
@@ -170,10 +170,10 @@
 
                 <section id="section5" class="section">
                     <div class="view view1">
-                        <div class="script_view">
+                        <div class="script_view" data-scroll="" data-scroll-speed="1">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/game/tetrisGame/index.html"></iframe>
-                            <div class="script_text" data-scroll data-scroll-speed="1">
+                            <div class="script_text">
                                 <h2>tetris game</h2>
                                 <p>
                                     자바스크립트를 이용하여 만든 테트리스 게임입니다. 배경음악을 켜고 끌 수 있으며 블록이 삭제 될 때 마다 점수가 올라가도록 만들었습니다.
@@ -183,22 +183,22 @@
                         </div>
                     </div>
                     <div class="view view2">
-                        <div class="script_view">
-                            <iframe width="100%" height="100%" frameborder=0
-                                src="./assets/game/typingGame/index.html"></iframe>
-                            <div class="script_text" data-scroll data-scroll-speed="1">
-                                <h2>typing game</h2>
-                                <p>
-                                    자바스크립트를 이용하여 만든 타자 게임입니다. 타자속도를 구현했고 오타를 찾을 수 있도록 구현했습니다.
-                                </p>
-                                <a href="">code view</a>
+                            <div class="script_view" data-scroll="" data-scroll-speed="1">
+                                <iframe width="100%" height="100%" frameborder=0
+                                    src="./assets/game/typingGame/index.html"></iframe>
+                                <div class="script_text">
+                                    <h2>typing game</h2>
+                                    <p>
+                                        자바스크립트를 이용하여 만든 타자 게임입니다. 타자속도를 구현했고 오타를 찾을 수 있도록 구현했습니다.
+                                    </p>
+                                    <a href="">code view</a>
+                                </div>
                             </div>
-                        </div>
                     </div>
                     <div class="view view3">
-                        <div class="script_view">
+                        <div class="script_view" data-scroll="" data-scroll-speed="1">
                             <iframe width="100%" height="100%" frameborder=0 src="./assets/game/index2.html"></iframe>
-                            <div class="script_text" data-scroll data-scroll-speed="1">
+                            <div class="script_text">
                                 <h2>memory game</h2>
                                 <p>
                                     자바스크립트를 이용하여 만든 카드 게임입니다. 기회는 3번이며 배경음악을 켜고 끌 수 있으며 맞추거나 틀릴때마다 소리가 나도록 구현했습니다.
@@ -208,10 +208,10 @@
                         </div>
                     </div>
                     <div class="view view4">
-                        <div class="script_view">
+                        <div class="script_view" data-scroll="" data-scroll-speed="1">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/game/musicplayer/index.html"></iframe>
-                            <div class="script_text" data-scroll data-scroll-speed="1">
+                            <div class="script_text">
                                 <h2>music player</h2>
                                 <p>
                                     자바스크립트를 이용하여 만든 뮤직 플레이어 입니다. 뮤직플레이어의 전반적인 기능을 구현하였습니다.
@@ -232,11 +232,11 @@
                 <!-- //section6 -->
 
                 <section id="section7" class="section">
-                    <div class="slide" data-scroll data-scroll-speed="1">
-                        <div class="slideImg reveal effect">
+                    <div class="slide effect" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                        <div class="slideImg reveal">
                             <img src="./assets/img/slider.png" alt="">
                             <iframe width="100%" height="100%" frameborder=0
-                            src="./assets/effect/sliderEffect01.html"></iframe>
+                                src="./assets/effect/sliderEffect01.html"></iframe>
                         </div>
                         <div class="script_text" data-scroll data-scroll-speed="1">
                             <h2>slide effect</h2>
@@ -248,7 +248,7 @@
                     </div>
 
 
-                    <div class="mouse" data-scroll data-scroll-speed="1">
+                    <div class="mouse effect" data-scroll data-scroll-speed="-1" data-scroll-direction="vertical">
                         <div class="mouseImg reveal">
                             <img src="./assets/img/mouse.png" alt="">
                             <iframe width="100%" height="100%" frameborder=0
@@ -263,8 +263,8 @@
                         </div>
                     </div>
 
-                    <div class="search" data-scroll data-scroll-speed="1" class="reveal">
-                        <div class="searchImg reveal effect">
+                    <div class="search effect" data-scroll data-scroll-speed="1" data-scroll-direction="vertical">
+                        <div class="searchImg reveal">
                             <img src="./assets/img/search.png" alt="">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/effect/searchEffect01.html"></iframe>
@@ -278,8 +278,8 @@
                         </div>
                     </div>
 
-                    <div class="parallax" data-scroll data-scroll-speed="1">
-                        <div class="parallaxImg reveal effect">
+                    <div class="parallax effect" data-scroll data-scroll-speed="-1" data-scroll-direction="vertical">
+                        <div class="parallaxImg reveal">
                             <img src="./assets/img/parallax.png" alt="">
                             <iframe width="100%" height="100%" frameborder=0
                                 src="./assets/effect/parallaxEffect01.html"></iframe>
@@ -465,7 +465,9 @@
             </div>
         </div>
     </main>
-
+    <svg class="cursor" width="20" height="20" viewBox="0 0 20 20">
+        <circle class="cursor__inner" cx="10" cy="10" r="5"></circle>
+    </svg>
     <footer id="footer" class="marquee_wrap">
         <div class="marquee_box box1">
             <span class="marquee_text">INDEPENDENT FRONTEND WEB DEVELOPOER</span> <em>2022 portfolio</em>
@@ -489,10 +491,11 @@
 
     <script src="https://dl.dropbox.com/s/m1qor6z15o64wkc/stats.min.js?dl=0"></script>
     <script src="https://dl.dropbox.com/s/sk7fbhx9burholi/dat.gui.min.js?dl=0"></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
     <script src="https://dl.dropbox.com/s/m1qor6z15o64wkc/stats.min.js?dl=0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./assets/js/demo.js"></script>
+    <!-- <script src="./assets/js/demo2.js"></script> -->
     <script>
         setTimeout(() => {
             gsap.to("#header", {
@@ -552,17 +555,6 @@
         //         target.classList.remove("show");
         //     })
         // })
-    </script>
-
-
-    <script type="module">
-        import locomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll@4.0.6";
-
-        const lscroll = new locomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true,
-            direction: 'horizontal',
-        });
     </script>
 
     <script id="vertexShader2" type="x-shader/x-vertex">

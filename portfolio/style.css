@@ -13,15 +13,78 @@ html.has-scroll-dragging {
   overflow: hidden;
 }
 
-
 .has-scroll-smooth [data-scroll-container] {
   min-height: 100vh;
 }
 
-[data-scroll-direction='horizontal'] [data-scroll-container] {
+[data-scroll-direction="horizontal"] [data-scroll-container] {
   white-space: nowrap;
   height: 100vh;
   display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
 }
 
 .script_text.show {
@@ -32,7 +95,7 @@ html.has-scroll-dragging {
   height: 100%;
   width: 100%;
   object-fit: cover;
-
+  will-change: transform;
 }
 
 .reveal {
@@ -42,6 +105,9 @@ html.has-scroll-dragging {
   height: 100%;
 }
 
+.effect {
+  will-change: transform;
+}
 
 
 .content {
@@ -275,6 +341,7 @@ html.has-scroll-dragging {
   background: #000;
   background: url(https://www.cappen.com/2022/img/cases/desktop/neondoor.4b62864487.png) no-repeat center center;
   background-size: cover;
+
 }
 
 #section3 .view2 .site_view {
@@ -466,6 +533,7 @@ html.has-scroll-dragging {
   width: 80vw;
   height: 100vh;
   position: relative;
+
 }
 
 #section5 .view1 .script_view {
@@ -475,6 +543,7 @@ html.has-scroll-dragging {
   background: url(./assets/img/tetris.png) no-repeat center center;
   background-size: cover;
   position: relative;
+  transform-origin: 100% 50%;
 }
 
 #section5 .view2 .script_view {
@@ -484,6 +553,7 @@ html.has-scroll-dragging {
   background: url(./assets/img/typing.png) no-repeat center center;
   background-size: cover;
   position: relative;
+  transform-origin: 100% 50%;
 }
 
 #section5 .view3 .script_view {
@@ -493,6 +563,8 @@ html.has-scroll-dragging {
   background: url(./assets/img/memory.png) no-repeat center center;
   background-size: cover;
   position: relative;
+  transform-origin: 100% 50%;
+
 }
 
 #section5 .view4 .script_view {
@@ -502,6 +574,8 @@ html.has-scroll-dragging {
   background: url(./assets/img/musicplayer.png) no-repeat center center;
   background-size: cover;
   position: relative;
+  transform-origin: 100% 50%;
+
 }
 
 #section5 .view .script_text {
@@ -702,7 +776,6 @@ html.has-scroll-dragging {
   width: 52.0833vw;
   height: 26.0417vw;
   position: relative;
-  border: 6px solid #fff;
   transition: border 0.5s;
   margin-right: 15vw;
 }
@@ -760,7 +833,6 @@ html.has-scroll-dragging {
   width: 52.0833vw;
   height: 26.0417vw;
   position: relative;
-  border: 6px solid #fff;
   transition: border 0.5s;
   margin-right: 15vw;
 }
@@ -818,7 +890,6 @@ html.has-scroll-dragging {
   width: 52.0833vw;
   height: 26.0417vw;
   position: relative;
-  border: 6px solid #fff;
   transition: border 0.5s;
   margin-right: 15vw;
 }
@@ -876,7 +947,6 @@ html.has-scroll-dragging {
   width: 52.0833vw;
   height: 26.0417vw;
   position: relative;
-  border: 6px solid #fff;
   transition: border 0.5s;
   margin-right: 15vw;
 }
@@ -1384,27 +1454,25 @@ html.has-scroll-dragging {
   }
 }
 
-.slideImg:hover > iframe,
-.mouseImg:hover > iframe,
-.searchImg:hover > iframe,
-.parallaxImg:hover > iframe
- {
-    opacity: 1;
+.slideImg:hover>iframe,
+.mouseImg:hover>iframe,
+.searchImg:hover>iframe,
+.parallaxImg:hover>iframe {
+  opacity: 1;
 }
 
-.slideImg:hover > img,
-.mouseImg:hover > img,
-.searchImg:hover > img,
-.parallaxImg:hover > img
-{
-    display: none;
+.slideImg:hover>img,
+.mouseImg:hover>img,
+.searchImg:hover>img,
+.parallaxImg:hover>img {
+  display: none;
 }
+
 .slideImg:hover,
 .mouseImg:hover,
 .searchImg:hover,
-.parallaxImg:hover
-{
-    border: 6px solid #C2FF04;
+.parallaxImg:hover {
+  border: 6px solid #C2FF04;
 }
 
 
@@ -1520,4 +1588,28 @@ html.has-scroll-dragging {
   #section13 a {
     width: 18vw;
   }
+}
+@media (any-pointer:fine) {
+	.cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+	}
+
+	.cursor__inner {
+		fill: var(--cursor-fill);
+		stroke: var(--cursor-stroke);
+		stroke-width: var(--cursor-stroke-width);
+		opacity: 0.7;
+	}
+
+	.no-js .cursor {
+		display: none;
+	}
+
+}
+.cursor {
+	display: none;
 }
