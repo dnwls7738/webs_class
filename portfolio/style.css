@@ -1125,6 +1125,14 @@ html.has-scroll-dragging {
 	align-items: center;
 	cursor: pointer;
 }
+
+.gallery__item-link:focus,
+.gallery__item-link:hover {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+}
+
 .gallery__text {
 	font-size: 20vw;
 	line-height: 0.8;
