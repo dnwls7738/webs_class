@@ -32,6 +32,7 @@ html.has-scroll-dragging {
   height: 100%;
   width: 100%;
   object-fit: cover;
+
 }
 
 .reveal {
@@ -79,7 +80,7 @@ html.has-scroll-dragging {
 }
 
 
-
+/* header */
 #header {
   display: flex;
   justify-content: space-between;
@@ -153,33 +154,8 @@ html.has-scroll-dragging {
   align-items: center;
 }
 
-.wheel {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 190vw;
-  height: 100vh;
-  z-index: 100;
-}
 
-.wheel2 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-}
-
-.wheel3 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-}
-
+/* section1 */
 #section1 {
   display: flex;
   align-items: center;
@@ -230,6 +206,8 @@ html.has-scroll-dragging {
   display: block;
 }
 
+
+/* section2 */
 #section2 {
   display: flex;
   align-items: center;
@@ -424,7 +402,7 @@ html.has-scroll-dragging {
 }
 
 
-
+/* section4 */
 #section4 {
   display: flex;
   align-items: center;
@@ -451,7 +429,7 @@ html.has-scroll-dragging {
 }
 
 
-
+/* section5 */
 #section5 {
   display: flex;
   align-items: center;
@@ -542,7 +520,7 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  top: 60%;
+  top: 69%;
 }
 
 #section5 .view4 .script_text {
@@ -552,7 +530,7 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  top: 60%;
+  top: 69%;
 }
 
 #section5 .view .script_text a {
@@ -778,7 +756,6 @@ html.has-scroll-dragging {
   margin-bottom: 1vw;
 }
 
-
 .mouseImg {
   width: 52.0833vw;
   height: 26.0417vw;
@@ -837,7 +814,6 @@ html.has-scroll-dragging {
   margin-bottom: 1vw;
 }
 
-
 .searchImg {
   width: 52.0833vw;
   height: 26.0417vw;
@@ -895,7 +871,6 @@ html.has-scroll-dragging {
   text-transform: uppercase;
   margin-bottom: 1vw;
 }
-
 
 .parallaxImg {
   width: 52.0833vw;
@@ -1138,7 +1113,7 @@ html.has-scroll-dragging {
   line-height: 1.3;
   max-width: 100%;
   top: 15%;
-  left: 10%;
+  left: 7%;
 }
 
 #section11 .mainTitle2 {
@@ -1150,7 +1125,7 @@ html.has-scroll-dragging {
   letter-spacing: -1px;
   line-height: 1.3;
   max-width: 100%;
-  top: 55%;
+  top: 50%;
   left: 50%;
 }
 
@@ -1341,8 +1316,7 @@ html.has-scroll-dragging {
 }
 
 
-
-
+/* footer */
 #footer {
   font-family: "Abel";
   width: 100vw;
@@ -1433,6 +1407,8 @@ html.has-scroll-dragging {
     border: 6px solid #C2FF04;
 }
 
+
+/* media */
 @media (max-width:1200px) {
 
   #section3 .view1 .site_view,
@@ -1526,7 +1502,7 @@ html.has-scroll-dragging {
 
   #section11 .mainTitle2 {
     top: 51.5%;
-    left: 30%;
+    left: 38%;
   }
 
   #section12 {
