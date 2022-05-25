@@ -9492,7 +9492,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
                     var progress = obj.currentElements[key].progress;
                     var saturateVal = progress < 0.5 ? (0, _utils.clamp)((0, _utils.map)(progress, 0, 0.5, 0, 1), 0, 1) : (0, _utils.clamp)((0, _utils.map)(progress, 0.5, 1, 1, 0), 0, 1);
                     var brightnessVal = progress < 0.5 ? (0, _utils.clamp)((0, _utils.map)(progress, 0, 0.5, 0, 1), 0, 1) : (0, _utils.clamp)((0, _utils.map)(progress, 0.5, 1, 1, 0), 0, 1);
-                    obj.currentElements[key].el.style.filter = "saturate(".concat(saturateVal, ") brightness(").concat(brightnessVal, ")");
+                    obj.currentElements[key].el.style.filter = "saturate(".concat(saturateVal, ")");
+                    // brightness(").concat(brightnessVal, ")
                 }
 
             }
