@@ -336,49 +336,48 @@ html.has-scroll-dragging {
 }
 
 #section3 .view1 .site_view {
-  width: 55vw;
+  width: 50vw;
   height: 50vh;
   background: #000;
   background: url(https://www.cappen.com/2022/img/cases/desktop/neondoor.4b62864487.png) no-repeat center center;
   background-size: cover;
-
+  padding: 2.5vw 3vw;
 }
 
 #section3 .view2 .site_view {
-  width: 55vw;
+  width: 50vw;
   height: 50vh;
   background: #000;
   background: url(https://images.unsplash.com/photo-1649015890522-6c64181b0abe?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932) no-repeat center center;
   background-size: cover;
+  padding: 2.5vw 3vw;
 }
 
 #section3 .view3 .site_view {
-  width: 55vw;
+  width: 50vw;
   height: 50vh;
   background: #000;
   background: url(https://images.unsplash.com/photo-1649353935169-fe9911bf240f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332) no-repeat center center;
   background-size: cover;
+  padding: 2.5vw 3vw;
 }
 
 #section3 .view4 .site_view {
-  width: 55vw;
+  width: 50vw;
   height: 50vh;
   background: #000;
   background: url(https://images.unsplash.com/photo-1644251966508-47b1a3d2e56d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332) no-repeat center center;
   background-size: cover;
+  padding: 2.5vw 3vw;
 }
 
 #section3 .view5 .site_view {
-  width: 55vw;
+  width: 50vw;
   height: 50vh;
   background: #000;
   background: url(https://images.unsplash.com/photo-1644251966613-170a26996adb?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332) no-repeat center center;
   background-size: cover;
-}
-
-#section3 .view .site_view .site_text {
-  margin-top: 2vw;
-  margin-left: 4vw;
+  padding: 2.5vw 3vw;
 }
 
 #section3 .view .site_view .site_text a {
@@ -388,7 +387,7 @@ html.has-scroll-dragging {
   color: #000;
   text-transform: uppercase;
   background: #fff;
-  padding: 0.7vw 0.7vw;
+  padding: 0.7vw 2vw 0.5vw 2vw;
 
 }
 
@@ -464,7 +463,7 @@ html.has-scroll-dragging {
   font-size: 0.8vw;
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 1vw;
+  margin-bottom: 20px;
 }
 
 
@@ -539,7 +538,7 @@ html.has-scroll-dragging {
   width: 25vw;
   height: 80vh;
   background: #000;
-  background: url(./assets/img/tetris.png) no-repeat center center;
+  background: url(https://images.unsplash.com/photo-1598008058973-9c3bae051393?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1225) no-repeat center center;
   background-size: cover;
   position: relative;
   transform-origin: 100% 50%;
@@ -549,7 +548,7 @@ html.has-scroll-dragging {
   width: 25vw;
   height: 80vh;
   background: #000;
-  background: url(./assets/img/typing.png) no-repeat center center;
+  background: url(https://images.unsplash.com/photo-1597423244668-2b3aabf55a9e?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074) no-repeat center center;
   background-size: cover;
   position: relative;
   transform-origin: 100% 50%;
@@ -559,7 +558,7 @@ html.has-scroll-dragging {
   width: 25vw;
   height: 80vh;
   background: #000;
-  background: url(./assets/img/memory.png) no-repeat center center;
+  background: url(https://images.unsplash.com/photo-1598008058899-4167c1b3d75d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974) no-repeat center center;
   background-size: cover;
   position: relative;
   transform-origin: 100% 50%;
@@ -570,7 +569,7 @@ html.has-scroll-dragging {
   width: 25vw;
   height: 80vh;
   background: #000;
-  background: url(./assets/img/musicplayer.png) no-repeat center center;
+  background: url(https://images.unsplash.com/photo-1597423244036-ef5020e83f3c?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074) no-repeat center center;
   background-size: cover;
   position: relative;
   transform-origin: 100% 50%;
@@ -578,7 +577,7 @@ html.has-scroll-dragging {
 }
 
 #section5 .view .script_text {
-  margin-top: 2vw;
+  margin-top: 5vw;
   margin-left: 4vw;
   position: absolute;
   display: flex;
@@ -613,7 +612,7 @@ html.has-scroll-dragging {
   color: #000;
   text-transform: uppercase;
   background: #fff;
-  padding: 0.7vw 0.7vw;
+  padding: 0.7vw 2vw 0.5vw 2vw;
   display: inline-block;
 }
 
@@ -630,7 +629,6 @@ html.has-scroll-dragging {
   line-height: 1.3;
   white-space: normal;
   width: 25vw;
-  font-weight: 700;
   font-family: "IropkeBatang";
   font-size: 0.8vw;
   color: #fff;
@@ -799,7 +797,6 @@ html.has-scroll-dragging {
 #section7 .slide p {
   line-height: 1.3;
   white-space: normal;
-  font-weight: 700;
   font-family: "IropkeBatang";
   font-size: 0.8vw;
   color: #fff;
@@ -856,7 +853,6 @@ html.has-scroll-dragging {
 #section7 .mouse p {
   line-height: 1.3;
   white-space: normal;
-  font-weight: 700;
   font-family: "IropkeBatang";
   font-size: 0.8vw;
   color: #fff;
@@ -913,7 +909,6 @@ html.has-scroll-dragging {
 #section7 .search p {
   line-height: 1.3;
   white-space: normal;
-  font-weight: 700;
   font-family: "IropkeBatang";
   font-size: 0.8vw;
   color: #fff;
@@ -970,7 +965,6 @@ html.has-scroll-dragging {
 #section7 .parallax p {
   line-height: 1.3;
   white-space: normal;
-  font-weight: 700;
   font-family: "IropkeBatang";
   font-size: 0.8vw;
   color: #fff;
@@ -1027,6 +1021,7 @@ html.has-scroll-dragging {
 						 '... ...' ;
 	grid-template-columns: 8rem 21vmax;
 	grid-template-rows: 8rem 28vmax 3rem;
+
 }
 
 .gallery__item-img {
@@ -1036,6 +1031,7 @@ html.has-scroll-dragging {
 	overflow: hidden;
 	position: relative;
 	will-change: transform;
+  border-radius: 50px;
 }
 
 .gallery__item-imginner {
@@ -1064,7 +1060,7 @@ html.has-scroll-dragging {
 	font-size: clamp(2.5rem,9vw,6.5rem);
 	justify-self: end;
 	padding-right: 2rem;
-	color: #ffff;
+	color: #C2FF04;
 }
 
 .gallery__item-title {
@@ -1085,6 +1081,7 @@ html.has-scroll-dragging {
 }
 .gallery__item-link {
   font-family: "Abel";
+  text-transform: uppercase;
 }
 
 .gallery__item-link {
@@ -1107,7 +1104,7 @@ html.has-scroll-dragging {
 .gallery__item-link:focus,
 .gallery__item-link:hover {
 	background: #fff;
-	color: #000;
+	color: #C2FF04;
 	text-decoration: none;
 }
 
