@@ -192,6 +192,14 @@ html.has-scroll-dragging {
   bottom: 0;
 }
 
+body {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
 .script_text.show {
   opacity: 0;
   transition: all 0.3s;
