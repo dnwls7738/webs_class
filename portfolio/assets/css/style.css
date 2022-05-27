@@ -77,6 +77,11 @@ html {
   height: 3px;
   background: rgba(255, 255, 255, 0.1);
 }
+.line span {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Abel";
+  font-size: 1vw;
+}
 .line:before {
   -webkit-animation: progress1 4s infinite;
           animation: progress1 4s infinite;
