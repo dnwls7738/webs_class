@@ -3,7 +3,6 @@ html {
   background: #000;
 }
 
-
 @-webkit-keyframes progress1 {
   0% {
     transform: scalex(0);
