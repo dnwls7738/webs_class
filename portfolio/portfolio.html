@@ -18,10 +18,9 @@
 </head>
 
 <body>
-    <div class="line">
-        <div>
-            <span>LOADING...</span>
-        </div>
+
+    <div class="progress">
+        <span>LOADING</span>
     </div>
     <div id="container"></div>
     <header id="header">
@@ -534,7 +533,6 @@
             <span class="marquee_text">INDEPENDENT FRONTEND WEB DEVELOPOER</span> <em>2022 portfolio</em>
         </div>
     </footer>
-
     <script src="https://dl.dropbox.com/s/m1qor6z15o64wkc/stats.min.js?dl=0"></script>
     <script src="https://dl.dropbox.com/s/sk7fbhx9burholi/dat.gui.min.js?dl=0"></script>
     <script src="https://dl.dropbox.com/s/m1qor6z15o64wkc/stats.min.js?dl=0"></script>
@@ -545,7 +543,7 @@
     <!-- <script src="./assets/js/demo2.js"></script> -->
     <script>
         setTimeout(() => {
-            $(".line").fadeOut();
+            $(".progress").fadeOut();
         }, 2900);
 
         $(function () {

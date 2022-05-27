@@ -9443,11 +9443,16 @@ parcelRequire = (function (modules, cache, entry, globalName) {
             return arr2;
         }
 
-        var lscroll = new _locomotiveScroll.default({
+        const lscroll = new _locomotiveScroll.default({
             el: document.querySelector('[data-scroll-container]'),
             smooth: true,
+            lerp: 0.05,
+            mobile: {
+                smooth: false,
+            },
             direction: 'horizontal'
         }); // let's rotate the elements when scrolling.
+        
 
         var elems = _toConsumableArray(document.querySelectorAll('.script_view'));
         var allImgs = _toConsumableArray(document.querySelectorAll('.gallery__item-img'));
@@ -9462,9 +9467,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         }, function () {
             return (0, _utils.randomNumber)(-100, 100);
         });
-        
+
         lscroll.on('scroll', function (obj) {
-            
+
             scroll.current = obj.scroll.x;
             var distance = scroll.current - scroll.cache;
             scroll.cache = scroll.current;
@@ -9472,8 +9477,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
             allImgs.forEach(function (el) {
                 return el.style.transform = 'skewX(' + (0, _utils.clamp)(skewVal, -15, 15) + 'deg)';
             });
-            
-            
+
+
             for (var _i = 0, _Object$keys = Object.keys(obj.currentElements); _i < _Object$keys.length; _i++) {
                 var key = _Object$keys[_i];
                 var el = obj.currentElements[key].el;
