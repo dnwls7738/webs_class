@@ -17,18 +17,18 @@
     <link href="https://webfontworld.github.io/iropke/IropkeBatang.css" rel="stylesheet">
 </head>
 
-<body >
+<body>
     <div class="line">
         <div>
             <span>LOADING...</span>
         </div>
     </div>
-    <div id="container" class="hide"></div>
+    <div id="container"></div>
     <header id="header">
         <div class="menu">
             <a href="">portfolio</a>
             <div class="dot"></div>
-            <a href="">about</a>
+            <a href="data-scroll-container">about</a>
         </div>
         <div class="dot"></div>
         <div class="dot"></div>
@@ -541,13 +541,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="./assets/js/demo.js"></script>
-    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- <script src="./assets/js/demo2.js"></script> -->
     <script>
-            setTimeout(() => {
-                $(".line").fadeOut();
-            }, 2900); 
+        setTimeout(() => {
+            $(".line").fadeOut();
+        }, 2900);
 
+        $(function () {
+            $('li > a').click(function () {
+                $('html, body').animate({
+                    scrollTop: $(this.hash).offset.top
+                }, 300);
+            });
+        });
 
         document.querySelectorAll('.reveal').forEach(el => {
             el.addEventListener("mouseover", event => {
