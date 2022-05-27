@@ -3,6 +3,7 @@ html {
   background: #000;
 }
 
+
 @-webkit-keyframes progress1 {
   0% {
     transform: scalex(0);
@@ -76,6 +77,7 @@ html {
   margin-left: -150px;
   height: 3px;
   background: rgba(255, 255, 255, 0.1);
+  z-index: 999999;
 }
 .line span {
   color: rgba(255, 255, 255, 0.5);
@@ -390,6 +392,7 @@ body {
   width: 100%;
   text-align: center;
   display: block;
+  opacity: 0;
 }
 
 

@@ -17,13 +17,13 @@
     <link href="https://webfontworld.github.io/iropke/IropkeBatang.css" rel="stylesheet">
 </head>
 
-<body>
+<body >
     <div class="line">
         <div>
             <span>LOADING...</span>
         </div>
     </div>
-    <div id="container"></div>
+    <div id="container" class="hide"></div>
     <header id="header">
         <div class="menu">
             <a href="">portfolio</a>
@@ -541,20 +541,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="./assets/js/demo.js"></script>
-    <script src="../script/jquery-1.12.4.min2.js"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- <script src="./assets/js/demo2.js"></script> -->
     <script>
-        window.onkeydown = function () {
-            var kcode = event.keyCode;
-            if (kcode == 116) {
-                history.replaceState({}, null, location.pathname);
-            }
-        }
-
         $(window).load(function () {
             setTimeout(() => {
                 $(".line").fadeOut();
-            }, 5000);
+            }, 2900);
 
         });
 
@@ -617,7 +610,14 @@
                 ease: "expo",
                 delay: 2.5,
             });
-        }, 10);
+            gsap.to("#container", {
+                duration: 3.5,
+                x: 0,
+                y: 0,
+                opacity: 1,
+                ease: "expo",
+            });
+        }, 4000);
 
         const scriptText = document.querySelectorAll("#section5 .view .script_text");
 
