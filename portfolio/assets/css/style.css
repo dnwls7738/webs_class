@@ -1340,7 +1340,7 @@ body {
 #section11 .mainTitle1 {
   position: absolute;
   width: 480px;
-  font-size: 1vw;
+  font-size: 0.8vw;
   color: #fff;
   font-family: "IropkeBatang";
   letter-spacing: -1px;
@@ -1353,7 +1353,7 @@ body {
 #section11 .mainTitle2 {
   position: absolute;
   width: 520px;
-  font-size: 1vw;
+  font-size: 0.8vw;
   color: #fff;
   font-family: "IropkeBatang";
   letter-spacing: -1px;
