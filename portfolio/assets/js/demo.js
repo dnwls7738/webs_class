@@ -9400,7 +9400,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
         var _utils = require("../utils");
 
-        var _cursor = _interopRequireDefault(require("../cursor"));
+        // var _cursor = _interopRequireDefault(require("../cursor"));
 
         var _locomotiveScroll = _interopRequireDefault(require("locomotive-scroll"));
 
