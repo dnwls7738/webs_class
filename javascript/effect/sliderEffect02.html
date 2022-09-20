@@ -1,291 +1,177 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>슬라이드 이펙트</title>
     <style>
-        @import url(../effect/css/nexon.css);
-        @import url(../effect/css/custom.css);
-        @import url(../effect/css/prism.css);
+      @import url(../effect/css/nexon.css);
+      @import url(../effect/css/custom.css);
+      @import url(../effect/css/prism.css);
 
-/* slider */
- .slider__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+      /* slider */
+      .slider__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
 
-.slider__img {           /* 화면 보이는 영역 */
-    width: 800px;
-    height: 480px;
-    overflow: hidden;
-}
-.slider__inner {        /* 이미지 움직이는 영역 */
-    display: flex;
-    flex-wrap: wrap;
-    width: 4000px;
-    position: relative;     /* left를 사용하기 위해서*/
-}
+      .slider__img {
+        /* 화면 보이는 영역 */
+        width: 800px;
+        height: 480px;
+        overflow: hidden;
+      }
+      .slider__inner {
+        /* 이미지 움직이는 영역 */
+        display: flex;
+        flex-wrap: wrap;
+        width: 4000px;
+        position: relative; /* left를 사용하기 위해서*/
+      }
 
-.slider {
-    width: 800px;
-    position: relative;
-}
+      .slider {
+        width: 800px;
+        position: relative;
+      }
 
-.slider::before {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    padding: 5px 10px 3px;
-}
+      .slider::before {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 5px 10px 3px;
+      }
 
-.slider:nth-child(1)::before { content: '이미지1'; }
+      .slider:nth-child(1)::before {
+        content: "이미지1";
+      }
 
-.slider:nth-child(2)::before {
-    content: '이미지2';
-}
+      .slider:nth-child(2)::before {
+        content: "이미지2";
+      }
 
-.slider:nth-child(3)::before {
-    content: '이미지3';
-}
+      .slider:nth-child(3)::before {
+        content: "이미지3";
+      }
 
-.slider:nth-child(4)::before {
-    content: '이미지4';
-}
+      .slider:nth-child(4)::before {
+        content: "이미지4";
+      }
 
-.slider:nth-child(5)::before {
-    content: '이미지5';
-}
-
+      .slider:nth-child(5)::before {
+        content: "이미지5";
+      }
     </style>
-</head>
+  </head>
 
-<body class="img02">
-
+  <body class="img02">
     <!-- main -->
     <main>
-        <section id="sliderType02">
-            <div class="slider__wrap">
-                <div class="slider__img">
-                    <div class="slider__inner">
-                        <div class="slider"><img src="img/img6-min.jpg" alt="이미지1"></div>
-                        <div class="slider"><img src="img/img7-min.jpg" alt="이미지2"></div>
-                        <div class="slider"><img src="img/img8-min.jpg" alt="이미지3"></div>
-                        <div class="slider"><img src="img/img9-min.jpg" alt="이미지4"></div>
-                        <div class="slider"><img src="img/img10-min.jpg" alt="이미지5"></div>
-                    </div>
-                </div>
+      <section id="sliderType02">
+        <div class="slider__wrap">
+          <div class="slider__img">
+            <div class="slider__inner">
+              <div class="slider">
+                <img src="img/img6-min.jpg" alt="이미지1" />
+              </div>
+              <div class="slider">
+                <img src="img/img7-min.jpg" alt="이미지2" />
+              </div>
+              <div class="slider">
+                <img src="img/img8-min.jpg" alt="이미지3" />
+              </div>
+              <div class="slider">
+                <img src="img/img9-min.jpg" alt="이미지4" />
+              </div>
+              <div class="slider">
+                <img src="img/img10-min.jpg" alt="이미지5" />
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- //main -->
 
-
     <!-- info -->
     <div class="info">
-        <div class="title">
-            <h1><a href="sliderEffect.html">JavaScript slider Effect02</a></h1>
-            <p>이미지 슬라이드 - 좌로 움직이기</p>
-        </div>
-        <div class="list">
-            <ul>
-                <li><a href="sliderEffect01.html">1</a></li>
-                <li class="active"><a href="sliderEffect02.html">2</a></li>
-                <li><a href="sliderEffect03.html">3</a></li>
-                <li><a href="sliderEffect04.html">4</a></li>
-                <li><a href="sliderEffect05.html">5</a></li>
-                <li><a href="sliderEffect06.html">6</a></li>
-            </ul>
-        </div>
-        <div class="source">
-            <button class="source_btn">소스보기</button>
-            <div id="modal">
-                <div class="modal_wrap">
-                    <div class="modal_cont">
-                        <div class="code_view">
-                            <div class="view_header" aria-hidden="true">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="view_title">
-                                <ul>
-                                    <li class="active"><a href="#">HTML</a></li>
-                                    <li><a href="#">CSS</a></li>
-                                    <li><a href="#">JavaScript</a></li>
-                                    <li><a href="#">jQuery</a></li>
-                                </ul>
-                            </div>
-                            <div class="view_cont">
-                                <div>
-<pre class="line-numbers"><code class="language-js">&lt;main>
-    &lt;section id="sliderType02">
-        &lt;div class="slider__wrap">
-            &lt;div class="slider__img">
-                &lt;div class="slider__inner">
-                    &lt;div class="slider">&lt;img src="img/img6-min.jpg" alt="이미지1">&lt;/div>
-                    &lt;div class="slider">&lt;img src="img/img7-min.jpg" alt="이미지2">&lt;/div>
-                    &lt;div class="slider">&lt;img src="img/img8-min.jpg" alt="이미지3">&lt;/div>
-                    &lt;div class="slider">&lt;img src="img/img9-min.jpg" alt="이미지4">&lt;/div>
-                    &lt;div class="slider">&lt;img src="img/img10-min.jpg" alt="이미지5">&lt;/div>
-                &lt;/div>
-            &lt;/div>
-        &lt;/div>
-    &lt;/section>
-&lt;/main>
-</code></pre>
-                                </div>
-                                <div>
-<pre class="line-numbers"><code class="language-js">/* slider */
-.slider__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.slider__img {           /* 화면 보이는 영역 */
-    width: 800px;
-    height: 480px;
-    overflow: hidden;
-}
-.slider__inner {        /* 이미지 움직이는 영역 */
-    display: flex;
-    flex-wrap: wrap;
-    width: 4000px;
-    position: relative;     /* left를 사용하기 위해서*/
-}
-
-.slider {
-    width: 800px;
-    position: relative;
-}
-
-.slider::before {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    background: rgba(0, 0, 0, 0.4);
-    color: #fff;
-    padding: 5px 10px 3px;
-}
-
-.slider:nth-child(1)::before { content: '이미지1'; }
-
-.slider:nth-child(2)::before {
-    content: '이미지2';
-}
-
-.slider:nth-child(3)::before {
-    content: '이미지3';
-}
-
-.slider:nth-child(4)::before {
-    content: '이미지4';
-}
-
-.slider:nth-child(5)::before {
-    content: '이미지5';
-}
-</code></pre>
-                                </div>
-                                <div>
-<pre class="line-numbers"><code class="language-js">const sliderWrap = document.querySelector(".slider__wrap");
-const sliderImg = document.querySelector(".slider__img");     
-const sliderInner = document.querySelector(".slider__inner");  
-const slider = document.querySelectorAll(".slider");  
-
-let currentIndex = -1;                 
-let sliderCount = slider.length;     
-
-setInterval(() => {
-    (currentIndex &lt; sliderCount-1) ? currentIndex++ : currentIndex = 0;
-
-    gsap.to(sliderInner, {duration: 2.5, ease:"expo.out", left: -800 * currentIndex})
-
-}, 2000 )
-</code></pre>
-                                </div>
-                                <div>
-                                    <pre class="line-numbers"><code class="language-js">
-
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="modal_close">닫기</button>
-                </div>
-            </div>
-        </div>
+      <div class="title">
+        <h1><a href="sliderEffect.html">JavaScript slider Effect02</a></h1>
+        <p>이미지 슬라이드 - 좌로 움직이기</p>
+      </div>
+      <div class="list">
+        <ul>
+          <li><a href="sliderEffect01.html">1</a></li>
+          <li class="active"><a href="sliderEffect02.html">2</a></li>
+          <li><a href="sliderEffect03.html">3</a></li>
+          <li><a href="sliderEffect04.html">4</a></li>
+          <li><a href="sliderEffect05.html">5</a></li>
+          <li><a href="sliderEffect06.html">6</a></li>
+        </ul>
+      </div>
     </div>
     <!-- //info -->
-
 
     <!-- script -->
     <script src="js/gsap.min.js"></script>
     <script src="../effect/js/prism.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        modal();
-        tabMenu();
+      const sliderWrap = document.querySelector(".slider__wrap");
+      const sliderImg = document.querySelector(".slider__img");
+      const sliderInner = document.querySelector(".slider__inner");
+      const slider = document.querySelectorAll(".slider");
 
-        const sliderWrap = document.querySelector(".slider__wrap");
-        const sliderImg = document.querySelector(".slider__img");     
-        const sliderInner = document.querySelector(".slider__inner");  
-        const slider = document.querySelectorAll(".slider");               
-        
-        let currentIndex = -1;                 
-        let sliderCount = slider.length;     
+      let currentIndex = -1;
+      let sliderCount = slider.length;
 
-        setInterval(() => {
-            (currentIndex < sliderCount-1) ? currentIndex++ : currentIndex = 0;
+      setInterval(() => {
+        currentIndex < sliderCount - 1 ? currentIndex++ : (currentIndex = 0);
 
-            gsap.to(sliderInner, {duration: 2.5, ease:"expo.out", left: -800 * currentIndex})
+        gsap.to(sliderInner, {
+          duration: 2.5,
+          ease: "expo.out",
+          left: -800 * currentIndex,
+        });
+      }, 2000);
 
-        }, 2000 )
+      // const sliderWrap = document.querySelector(".slider__wrap");
+      // const sliderImg = document.querySelector(".slider__img");      //이미지 보이는 영역
+      // const sliderInner = document.querySelector(".slider__inner");  //이미지 움직이는 영역
+      // const slider = document.querySelectorAll(".slider");               // 5개의 이미지
+      // let currentIndex = -1;                  //첫 번째 이미지(현재 보이는 이미지)
+      // let sliderCount = slider.length;     // 이미지 갯수
 
+      // setInterval(() => {
+      //     console.log(currentIndex);
+      //     currentIndex = (currentIndex + 1) % 5;     //0 1 2 3 4 0 1 2 3 4 ...
 
-// const sliderWrap = document.querySelector(".slider__wrap");
-// const sliderImg = document.querySelector(".slider__img");      //이미지 보이는 영역
-// const sliderInner = document.querySelector(".slider__inner");  //이미지 움직이는 영역
-// const slider = document.querySelectorAll(".slider");               // 5개의 이미지
-// let currentIndex = -1;                  //첫 번째 이미지(현재 보이는 이미지)
-// let sliderCount = slider.length;     // 이미지 갯수
+      //     if(currentIndex < sliderCount -1){
+      //         currentIndex++;
+      //     } else {
+      //         currentIndex = 0;
+      //     }
 
-// setInterval(() => {
-//     console.log(currentIndex);
-//     currentIndex = (currentIndex + 1) % 5;     //0 1 2 3 4 0 1 2 3 4 ...
+      //     (currentIndex < sliderCount-1) ? currentIndex++ : currentIndex = 0;    //삼항연산자
 
-//     if(currentIndex < sliderCount -1){
-//         currentIndex++;
-//     } else {
-//         currentIndex = 0;
-//     }
+      //     sliderInner.style.left = "-0px";          800 * 0     첫번째 이미지
+      //     sliderInner.style.left = "-800px";       800 * 1     두번째 이미지
+      //     sliderInner.style.left = "-1600px";     800 * 2     세번째 이미지
+      //     sliderInner.style.left = "-2400px";     800 * 3     네번째 이미지
+      //     sliderInner.style.left = "-3200px";     800 * 4     다섯번째 이미지
 
-//     (currentIndex < sliderCount-1) ? currentIndex++ : currentIndex = 0;    //삼항연산자
+      //     Javascript 애니메이션
+      //     sliderInner.style.left = -800 * currentIndex + "px";
+      //     sliderInner.style.transition = "all 0.6s ease"        //슬라이드 효과
 
-//     sliderInner.style.left = "-0px";          800 * 0     첫번째 이미지
-//     sliderInner.style.left = "-800px";       800 * 1     두번째 이미지
-//     sliderInner.style.left = "-1600px";     800 * 2     세번째 이미지
-//     sliderInner.style.left = "-2400px";     800 * 3     네번째 이미지
-//     sliderInner.style.left = "-3200px";     800 * 4     다섯번째 이미지
+      //     GSAP 애니메이션
+      //     gsap.to(sliderInner, {duration: 2.5, ease:"expo.out", left: -800 * currentIndex})
 
-//     Javascript 애니메이션
-//     sliderInner.style.left = -800 * currentIndex + "px";
-//     sliderInner.style.transition = "all 0.6s ease"        //슬라이드 효과
-
-//     GSAP 애니메이션
-//     gsap.to(sliderInner, {duration: 2.5, ease:"expo.out", left: -800 * currentIndex})
-
-// }, 2000 )
+      // }, 2000 )
     </script>
-</body>
-
+  </body>
 </html>

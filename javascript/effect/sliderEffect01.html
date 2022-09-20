@@ -117,117 +117,6 @@
                 <li><a href="sliderEffect06.html">6</a></li>
             </ul>
         </div>
-        <div class="source">
-            <button class="source_btn">소스보기</button>
-            <div id="modal">
-                <div class="modal_wrap">
-                    <div class="modal_cont">
-                        <div class="code_view">
-                            <div class="view_header" aria-hidden="true">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="view_title">
-                                <ul>
-                                    <li class="active"><a href="#">HTML</a></li>
-                                    <li><a href="#">CSS</a></li>
-                                    <li><a href="#">JavaScript</a></li>
-                                    <li><a href="#">jQuery</a></li>
-                                </ul>
-                            </div>
-                            <div class="view_cont">
-                                <div>
-                                    <pre class="line-numbers"><code class="language-js"> &lt;main&gt;
-    &lt;section&gt;
-        &lt;div class="slider__wrap"&gt;
-             &lt;div class="slider__img"&gt;
-                 &lt;div class="slider"&gt;&lt;img src="img/img1-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                 &lt;div class="slider"&gt;&lt;img src="img/img2-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                 &lt;div class="slider"&gt;&lt;img src="img/img3-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                 &lt;div class="slider"&gt;&lt;img src="img/img4-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                 &lt;div class="slider"&gt;&lt;img src="img/img5-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-     &lt;/section&gt;
- &lt;/main&gt;
-</code></pre>
-                                </div>
-                                <div>
-                                    <pre class="line-numbers"><code class="language-js"> /* slider */
-    .slider__wrap {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-    .slider__img {
-        position: relative;
-        width: 800px;
-        height: 480px;
-    }
-    .slider {
-        position: absolute;
-        left: '0';
-        top: '0';
-    }
-    .slider::before {
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        background: rbga('0','0','0','0.4');
-        color: #fff;
-        padding: 5px 10px 3px;
-    }
-    .slider:nth-child('1')::before{content: '이미지1';}
-    .slider:nth-child('2')::before{content: '이미지2';}
-    .slider:nth-child('3')::before{content: '이미지3';}
-    .slider:nth-child('4')::before{content: '이미지4';}
-    .slider:nth-child('5')::before{content: '이미지5';}
-    .slider:nth-child('1') {z-index: '5';}
-    .slider:nth-child('2') {z-index: '4';}
-    .slider:nth-child('3') {z-index: '3';}
-    .slider:nth-child('4') {z-index: '2';}
-    .slider:nth-child('5') {z-index: '1';}
-</code></pre>
-                                </div>
-                                <div>
-                                    <pre class="line-numbers"><code class="language-js"> // slider01
-    const sliderWrap = document.querySelector(".slider__wrap");
-    const sliderImg = document.querySelector(".slider__img");
-    const slider = document.querySelectorAll(".slider");
-
-    let currentIndex = '0'; //현재 보이는 이미지
-    let sliderCount = slider.length; //이미지 갯수
-
-    setInterval (()=> {
-        let nextIndex = (currentIndex+'1') % '5';   //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0
-    
-        slider[currentIndex].style.opacity = "0";   //첫 번째 이미지를 안보이게
-        slider[nextIndex].style.opacity = "1";   //두 번째 이미지를 보이게
-
-        //각 슬라이더마다 효과 주기
-        slider.forEach(slider => {
-            slider.style.transition = "all 0.3s";
-        })
-
-        currentIndex = nextIndex; //nextIndex를 currentIndex를 대입
-
-    }, '2000');
-</code></pre>
-                                </div>
-                                <div>
-                                    <pre class="line-numbers"><code class="language-js">
-
-</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="modal_close">닫기</button>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- //info -->
 
@@ -236,8 +125,6 @@
     <script src="../effect/js/prism.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        modal();
-        tabMenu();
 
         // slider01
         const sliderWrap = document.querySelector(".slider__wrap");
