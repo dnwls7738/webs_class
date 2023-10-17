@@ -1,132 +1,148 @@
 <!DOCTYPE html>
 <html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Css Reference</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css Reference</title>
+		<!-- 파비콘 -->
+		<link rel="shortcut icon" href="../assets/face/css.png" />
+		<link
+			rel="apple-touch-icon-precomposed"
+			href="../assets/face/css.png"
+		/>
+		<link rel="icon" href="../assets/face/css.png" sizes="128x128" />
 
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../assets/face/css.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
-    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/prism.css" />
+	</head>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
-</head>
+	<body>
+		<header id="header">
+			<h1><a href="index.html"> 코딩초짜</a></h1>
+			<strong>천우진</strong>
+		</header>
 
-<body>
+		<main id="contents">
+			<h2>
+				<a href="css.html">CSS <em>CSS 색상</em></a>
+			</h2>
 
-    <header id="header">
-        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
-        <strong>천우진</strong>
-    </header>
+			<div class="menu">
+				<ul>
+					<li><a href="css.html">속성</a></li>
+					<li><a href="cssRefer01.html">기초 문법</a></li>
+					<li><a href="cssRefer02.html">Block/Inline</a></li>
+					<li><a href="cssRefer03.html">CSS 단위</a></li>
+					<li class="active"><a href="cssRefer04.html">CSS 색상</a></li>
+					<li><a href="cssRefer05.html">id/class 차이점</a></li>
+					<li><a href="cssRefer06.html">float 영역 깨짐 현상</a></li>
+					<li><a href="cssRefer07.html">벤더 프리픽스</a></li>
+					<li><a href="cssRefer08.html">이미지 문법</a></li>
+					<li><a href="cssRefer09.html">IR 효과</a></li>
+				</ul>
+			</div>
+			<!-- //menu -->
 
-    <main id="contents">
-        <h2><a href="css.html">CSS <em>CSS 색상</em></a></h2>
-
-        <div class="menu">
-            <ul>
-                <li><a href="css.html">속성</a></li>
-                <li><a href="cssRefer01.html">기초 문법</a></li>
-                <li><a href="cssRefer02.html">Block/Inline</a></li>
-                <li><a href="cssRefer03.html">CSS 단위</a></li>
-                <li class="active"><a href="cssRefer04.html">CSS 색상</a></li>
-                <li><a href="cssRefer05.html">id/class 차이점</a></li>
-                <li><a href="cssRefer06.html">float 영역 깨짐 현상</a></li>
-                <li><a href="cssRefer07.html">벤더 프리픽스</a></li>
-                <li><a href="cssRefer08.html">이미지 문법</a></li>
-                <li><a href="cssRefer09.html">IR 효과</a></li>
-            </ul>
-        </div>
-        <!-- //menu -->
-
-        <div class="refer">
-            <div class="doc">
-                <h3>CSS 색상</h3>
-                <p>CSS로 색을 표현할 수 있는데 색을 표현하는 방법에는 다음과 같은 방법이 있다.</p>
-                <ul>
-                    <li>색상 이름으로 표현</li>
-                    <li>RGB 색상값으로 표현</li>
-                    <li>16진수 색상값으로 표현</li>
-                    <li>RGBA 색상값으로 표현</li>
-                    <li>HSL 색상값으로 표현</li>
-                    <li>HSLA 색상값으로 표현</li>
-                </ul>
-                <h4>색상이름으로 표현</h4>
-                <p>색상 이름으로 표현가능하다. W3C에서 정의한 16개의 HTML4 표준 색상 이름은 다음과 같다.</p>
-                <div class="table">
-                    <table>
-                        <tr>
-                            <th>aqua</th>
-                            <th>black</th>
-                            <th>blue</th>
-                            <th>fuchsia</th>
-                        </tr>
-                        <tr>
-                            <th>gray</th>
-                            <th>green</th>
-                            <th>lime</th>
-                            <th>maroon</th>
-                        </tr>
-                        <tr>
-                            <th>navy</th>
-                            <th>olive</th>
-                            <th>purple</th>
-                            <th>yellow</th>
-                        </tr>
-                        <tr>
-                            <th>silver</th>
-                            <th>teal</th>
-                            <th>white</th>
-                            <th>yellow</th>
-                        </tr>
-                    </table>
-                </div>
-                <p>HTML에서 색상 이름은 대소문자를 구분하지 않는다.</p>
-                <div class="code">
-<pre><code>&lt;style&gt;
+			<div class="refer">
+				<div class="doc">
+					<h3>CSS 색상</h3>
+					<p>
+						CSS로 색을 표현할 수 있는데 색을 표현하는 방법에는 다음과 같은
+						방법이 있다.
+					</p>
+					<ul>
+						<li>색상 이름으로 표현</li>
+						<li>RGB 색상값으로 표현</li>
+						<li>16진수 색상값으로 표현</li>
+						<li>RGBA 색상값으로 표현</li>
+						<li>HSL 색상값으로 표현</li>
+						<li>HSLA 색상값으로 표현</li>
+					</ul>
+					<h4>색상이름으로 표현</h4>
+					<p>
+						색상 이름으로 표현가능하다. W3C에서 정의한 16개의 HTML4 표준
+						색상 이름은 다음과 같다.
+					</p>
+					<div class="table">
+						<table>
+							<tr>
+								<th>aqua</th>
+								<th>black</th>
+								<th>blue</th>
+								<th>fuchsia</th>
+							</tr>
+							<tr>
+								<th>gray</th>
+								<th>green</th>
+								<th>lime</th>
+								<th>maroon</th>
+							</tr>
+							<tr>
+								<th>navy</th>
+								<th>olive</th>
+								<th>purple</th>
+								<th>yellow</th>
+							</tr>
+							<tr>
+								<th>silver</th>
+								<th>teal</th>
+								<th>white</th>
+								<th>yellow</th>
+							</tr>
+						</table>
+					</div>
+					<p>HTML에서 색상 이름은 대소문자를 구분하지 않는다.</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     .blue { color: blue; }
     .green { color: green; }
     .silver { color: silver; }
 &lt;/style&gt;
 </code></pre>
-                </div>
+					</div>
 
-                <h4>RGB 색상값으로 표현</h4>
-                <p>모니터나 스크린은 빨간색, 녹색, 파란색을 혼합하여 색을 표현한다.
-                    따라서 HTML에서도 이 세 가지 색을 가지고 색을 표현하는 RGB 색상을 사용한다.
-                    RGB 색상의 기본(Red, Green, Blue)은 각각 0부터 255까지의 범위를 가진다.
-                </p>
-                <div class="code">
-<pre><code>&lt;style&gt;
+					<h4>RGB 색상값으로 표현</h4>
+					<p>
+						모니터나 스크린은 빨간색, 녹색, 파란색을 혼합하여 색을 표현한다.
+						따라서 HTML에서도 이 세 가지 색을 가지고 색을 표현하는 RGB
+						색상을 사용한다. RGB 색상의 기본(Red, Green, Blue)은 각각 0부터
+						255까지의 범위를 가진다.
+					</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     .blue { color: rgb(0,0,255); }
     .green { color: rgb(0,128,0); }
     .silver { color: rgb(192,192,192); }
 &lt;/style&gt;
 </code></pre>
-                </div>
+					</div>
 
-                <h4>16진수 색상값으로 표현</h4>
-                <p>16진수 색상값은 RGB 색상값을 각각 16진수로 변환한 것이다.
-                    따라서 RGB 색상의 기본색은 각각 00부터 FF까지의 범위를 가진다.
-                </p>
-                <div class="code">
-<pre><code>&lt;style&gt;
+					<h4>16진수 색상값으로 표현</h4>
+					<p>
+						16진수 색상값은 RGB 색상값을 각각 16진수로 변환한 것이다. 따라서
+						RGB 색상의 기본색은 각각 00부터 FF까지의 범위를 가진다.
+					</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     .blue { color: #0000FF; }
     .green { color: #008000; }
     .silver { color: #C0C0C0; }
 &lt;/style&gt;
 </code></pre>
-                </div>
-                <h4>RGBA 색상값으로 표현</h4>
-                <p>RGBA 색상값은 RGB 색상값에 알파 채널 값을 더한 색상값이다.
-                    알파채널이란 색상의 투명도를 나타내는 채널이다.
-                </p>
-                <div class="code">
-<pre><code>&lt;style&gt;
+					</div>
+					<h4>RGBA 색상값으로 표현</h4>
+					<p>
+						RGBA 색상값은 RGB 색상값에 알파 채널 값을 더한 색상값이다.
+						알파채널이란 색상의 투명도를 나타내는 채널이다.
+					</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     #header_01 {background-color: rgba(0,255,0,0);}
     #header_02 {background-color: rgba(0,255,0,0.2);}
     #header_03 {background-color: rgba(0,255,0,0.4);}
@@ -135,16 +151,22 @@
     #header_06 {background-color: rgba(0,255,0,1);}
 &lt;/style&gt;
 </code></pre>
-                </div>
+					</div>
 
-                <h4>HSL 색상값으로 표현</h4>
-                <p>HSL 색상값은 빛의 삼원색으로 색을 표현하는 RGB 색상값과는 달리 색상, 채도, 명도를 사용해서 색을 표현한다.
-                    HSL 색상값에서 HSL은 각각 색상(Hue), 채도(Saturation), 명도(Lightness)를 의미한다.</p>
-                    <br>
-                 <p>색상은 0부터 360 사이의 값을 가지며, 색상환(color wheel)의 각도를 나타낸다.
-                    색상 값이 0 또는 360이면 빨간색(red)이 되며, 120이면 녹색(green), 240이면 파란색(blue)이 된다.</p>
-                <div class="code">
-<pre><code>&lt;style&gt;
+					<h4>HSL 색상값으로 표현</h4>
+					<p>
+						HSL 색상값은 빛의 삼원색으로 색을 표현하는 RGB 색상값과는 달리
+						색상, 채도, 명도를 사용해서 색을 표현한다. HSL 색상값에서 HSL은
+						각각 색상(Hue), 채도(Saturation), 명도(Lightness)를 의미한다.
+					</p>
+					<br />
+					<p>
+						색상은 0부터 360 사이의 값을 가지며, 색상환(color wheel)의
+						각도를 나타낸다. 색상 값이 0 또는 360이면 빨간색(red)이 되며,
+						120이면 녹색(green), 240이면 파란색(blue)이 된다.
+					</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     #header_01 {background-color: rgba(0,255,0,0);}
     #header_02 {background-color: rgba(0,255,0,0.2);}
     #header_03 {background-color: rgba(0,255,0,0.4);}
@@ -153,12 +175,14 @@
     #header_06 {background-color: rgba(0,255,0,1);}
 &lt;/style&gt;
 </code></pre>
-                </div>
-                
-                <p>채도는 0%부터 100% 사이의 값을 가지며, 색상의 연하고 짙은 정도를 나타낸다.
-                    채도 값이 0%면 회색이 되고, 100%면 원래 색상이 된다.</p>
-                <div class="code">
-<pre><code>&lt;style&gt;
+					</div>
+
+					<p>
+						채도는 0%부터 100% 사이의 값을 가지며, 색상의 연하고 짙은 정도를
+						나타낸다. 채도 값이 0%면 회색이 되고, 100%면 원래 색상이 된다.
+					</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     #header_01 {background-color: hsl(0, 0%, 50%);}
     #header_02 {background-color: hsl(0, 20%, 50%);}
     #header_03 {background-color: hsl(0, 40%, 50%);}
@@ -167,12 +191,15 @@
     #header_06 {background-color: hsl(0, 100%, 50%);}
 &lt;/style&gt;
 </code></pre>
-                </div>
-                
-                <p>명도는 0%부터 100% 사이의 값을 가지며, 색상의 밝고 어두운 정도를 나타낸다.
-                    명도 값이 0%면 검정색이 되고, 50%면 원래 색상, 100%면 흰색이 된다.</p>
-                    <div class="code">
-<pre><code>&lt;style&gt;
+					</div>
+
+					<p>
+						명도는 0%부터 100% 사이의 값을 가지며, 색상의 밝고 어두운 정도를
+						나타낸다. 명도 값이 0%면 검정색이 되고, 50%면 원래 색상, 100%면
+						흰색이 된다.
+					</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     #header_01 {background-color: hsl(0, 100%, 0%);}
     #header_02 {background-color: hsl(0, 100%, 20%);}
     #header_03 {background-color: hsl(0, 100%, 40%);}
@@ -182,11 +209,11 @@
     #header_07 {background-color: hsl(0, 100%, 100%);}
 &lt;/style&gt;
 </code></pre>
-                </div>
-                <h4>HSLA 색상값으로 표현</h4>
-                <p>HSLA 색상값은 HSL 색상값에 알파 채널 값을 더한 색상값이다.</p>
-                <div class="code">
-<pre><code>&lt;style&gt;
+					</div>
+					<h4>HSLA 색상값으로 표현</h4>
+					<p>HSLA 색상값은 HSL 색상값에 알파 채널 값을 더한 색상값이다.</p>
+					<div class="code">
+						<pre><code>&lt;style&gt;
     #header_01 {background-color: hsl(0, 100%, 0%);}
     #header_02 {background-color: hsl(0, 100%, 20%);}
     #header_03 {background-color: hsl(0, 100%, 40%);}
@@ -196,15 +223,13 @@
     #header_07 {background-color: hsl(0, 100%, 100%);}
 &lt;/style&gt;
 </code></pre>
-                </div>
-            </div>
-        </div>
-        <!-- //refer -->
+					</div>
+				</div>
+			</div>
+			<!-- //refer -->
+		</main>
 
-    </main>
-
-    <!-- script -->
-    <script src="assets/js/prism.js"></script>
-</body>
-
+		<!-- script -->
+		<script src="assets/js/prism.js"></script>
+	</body>
 </html>

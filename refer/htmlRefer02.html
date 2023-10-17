@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 웹표준/웹접근성/웹호환성</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>HTML 웹표준/웹접근성/웹호환성</title>
 
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../assets/face/html.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
-    <link rel="icon" href="../assets/face/html.png" sizes="128x128">
+		<!-- 파비콘 -->
+		<link rel="shortcut icon" href="../assets/face/html.png" />
+		<link
+			rel="apple-touch-icon-precomposed"
+			href="../assets/face/html.png"
+		/>
+		<link rel="icon" href="../assets/face/html.png" sizes="128x128" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/prism.css">
-</head>
-<body>
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/prism.css" />
+	</head>
+	<body>
+		<header id="header">
+			<h1><a href="index.html"> 코딩초짜</a></h1>
+			<strong>천우진</strong>
+		</header>
 
-    <header id="header">
-        <h1><a href="index.html">라인 중학교 1학년 코딩반</a></h1>
-        <strong>천우진</strong>
-    </header>
+		<main id="contents">
+			<h2>
+				<a href="html.html">HTML <em>웹표준/웹접근성/웹호환성</em></a>
+			</h2>
 
-    <main id="contents">
-        <h2><a href="html.html">HTML <em>웹표준/웹접근성/웹호환성</em></a></h2>
+			<div class="menu">
+				<ul>
+					<li><a href="html.html">속성</a></li>
+					<li><a href="htmlRefer01.html">기초 문법</a></li>
+					<li class="active">
+						<a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a>
+					</li>
+					<li><a href="htmlRefer03.html">시멘틱 태그</a></li>
+					<li><a href="htmlRefer04.html">SEO</a></li>
+					<li><a href="htmlRefer05.html">그리드 시스템</a></li>
+				</ul>
+			</div>
+			<!-- //menu -->
 
-        <div class="menu">
-            <ul>
-                <li><a href="html.html">속성</a></li>
-                <li><a href="htmlRefer01.html">기초 문법</a></li>
-                <li class="active"><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
-                <li><a href="htmlRefer03.html">시멘틱 태그</a></li>
-                <li><a href="htmlRefer04.html">SEO</a></li>
-                <li><a href="htmlRefer05.html">그리드 시스템</a></li>
-                
-            </ul>
-        </div>
-        <!-- //menu -->
+			<div class="refer">
+				<div class="doc">
+					<h3>웹표준</h3>
+					<p>
+						구글, 파이어폭스, 사파리 등 세상에는 브라우저 종류가 참
+						많습니다. 우리나라에도 네이버에서 개발한 웨일이라는 브라우저가
+						있죠. 나라마다 우리는 알지 못하는 브라우저의 종류들이 다양하게
+						많을 겁니다. 여기서, 우리가 코딩을 할 때, 각 브라우저마다 다른
+						것이 보여진다면? 혼란스럽겠죠? 그래서 이를 막기 위해 표준화 된
+						언어를 사용함으로써 동일한 결과물을 보여주는 것을 웹표준이라고
+						합니다. 웹표준은 2007년도부터 대중화 되기 시작하였습니다.
+					</p>
 
-        <div class="refer">
-            <div class="doc">
-                <h3>웹표준</h3>
-                <p>구글, 파이어폭스, 사파리 등 세상에는 브라우저 종류가 참 많습니다. 우리나라에도 네이버에서 개발한 웨일이라는 브라우저가 있죠. 나라마다 우리는 알지 못하는 브라우저의 종류들이 다양하게 많을 겁니다.
-                    여기서, 우리가 코딩을 할 때, 각 브라우저마다 다른 것이 보여진다면? 혼란스럽겠죠? 그래서 이를 막기 위해 표준화 된 언어를 사용함으로써 동일한 결과물을 보여주는 것을 웹표준이라고 합니다.
-                    웹표준은 2007년도부터 대중화 되기 시작하였습니다. </p>
+					<h3>웹접근성</h3>
+					<p>
+						모두가 차별없이 웹에서 제공하는 정보를 이용할 수 있도록 하는
+						것입니다. (일반인, 장애인, 고령자 등)
+					</p>
 
-                <h3>웹접근성</h3>    
-                <p>모두가 차별없이 웹에서 제공하는 정보를 이용할 수 있도록 하는 것입니다. (일반인, 장애인, 고령자 등)</p>
+					<h3>웹호환성</h3>
+					<p>
+						OS, 브라우저에 상관없이 유사한 화면으로 동일한 정보에 접근이
+						가능해야 합니다. 브라우저마다 코드를 표현하는 방식이 조금씩
+						다르기 때문에 100% 동을한 화면은 불가합니다. 그러나 정보는
+						동일해야하죠. 웹표준을 기술을 지킨다고 해도 웹호환성을 100%
+						만족시키기는 어렵습니다.
+					</p>
+				</div>
+			</div>
+			<!-- //refer -->
+		</main>
 
-                <h3>웹호환성</h3>
-                <p>OS, 브라우저에 상관없이 유사한 화면으로 동일한 정보에 접근이 가능해야 합니다. 브라우저마다 코드를 표현하는 방식이 조금씩 다르기 때문에 100% 동을한 화면은 불가합니다. 그러나 정보는 동일해야하죠. 웹표준을 기술을 지킨다고 해도 웹호환성을 100% 만족시키기는 어렵습니다.</p>
-            </div>
-
-            
-        </div>
-        <!-- //refer -->
-
-    </main>
-
-    <!-- script -->
-    <script src="assets/js/prism.js"></script>
-</body>
+		<!-- script -->
+		<script src="assets/js/prism.js"></script>
+	</body>
 </html>
